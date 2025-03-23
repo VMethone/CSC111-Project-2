@@ -2,6 +2,8 @@ import pandas as pd
 import networkx as nx
 import kagglehub
 from scipy.stats import pearsonr
+import matplotlib.pyplot as plt
+import plotly.graph_objects as go
 
 def download_dataset():
     print("Downloading dataset from KaggleHub...")
@@ -45,14 +47,14 @@ def print_graph_summary(name, G):
     print(f"{name} Graph: {G.number_of_nodes()} nodes, {G.number_of_edges()} edges")
 
 def show_shortest_path(G, origin, destination, max_cost=None, direct_only=False, unit="USD"):
-    label = "$" if unit == "USD" else "miles"
+    label = "$" if unit.upper() == "USD" else "miles"
     if direct_only:
         if G.has_edge(origin, destination):
             cost = G[origin][destination]["weight"]
             if max_cost is None or cost <= max_cost:
-                print(f"Direct flight from {origin} to {destination} for {cost:.2f} {label}")
+                print(f"Direct flight from {origin} to {destination}: {cost:.2f} {label}")
             else:
-                print(f"Direct flight costs {cost:.2f} {label}, over your budget of {max_cost:.2f} {label}")
+                print(f"Direct flight costs {cost:.2f} {label}, over your limit of {max_cost:.2f} {label}")
         else:
             print(f"No direct flight from {origin} to {destination}")
     else:
@@ -61,29 +63,23 @@ def show_shortest_path(G, origin, destination, max_cost=None, direct_only=False,
             cost = nx.shortest_path_length(G, origin, destination, weight="weight")
             if max_cost is None or cost <= max_cost:
                 print(f"Best path from {origin} to {destination}: {path}")
-                print(f"Total {unit.lower()}: {cost:.2f} {label}")
+                print(f"Total {label}: {cost:.2f}")
+                return path
             else:
-                print(f"Best path costs {cost:.2f} {label}, over your budget of {max_cost:.2f} {label}")
+                print(f"Best path costs {cost:.2f} {label}, over your limit of {max_cost:.2f} {label}")
         except nx.NetworkXNoPath:
             print(f"No route from {origin} to {destination}")
-
+    return []
 
 def fare_trend_analysis(df_pre, df_during, df_post):
     print("Average Fare Trends:")
     for label, df in [("Pre", df_pre), ("During", df_during), ("Post", df_post)]:
         avg_fare = df["fare"].mean()
-        print(f"- {label}-pandemic: ${avg_fare:.2f}")
+        print(f"{label}-pandemic: ${avg_fare:.2f}")
 
 def fare_distance_correlation(df, label):
     corr, _ = pearsonr(df["fare"], df["nsmiles"])
     print(f"Correlation between fare and distance ({label}-pandemic): {corr:.3f}")
-
-def alternative_route_comparison(G_fare, G_distance, origin, destination):
-    print("Fare-optimized route:")
-    show_shortest_path(G_fare, origin, destination)
-
-    print("Distance-optimized route:")
-    show_shortest_path(G_distance, origin, destination)
 
 def get_user_inputs():
     origin = input("Enter origin airport code (e.g., JFK): ").strip().upper()
@@ -94,41 +90,73 @@ def get_user_inputs():
     max_budget = float(budget_input) if budget_input else None
     return origin, destination, direct_only, max_budget
 
+def draw_network(G, title="Airline Route Graph"):
+    pos = nx.spring_layout(G, seed=42)
+    plt.figure(figsize=(12, 8))
+    nx.draw(G, pos, with_labels=True, node_color='lightblue', edge_color='gray', node_size=500)
+    plt.title(title)
+    plt.show()
+
+def plot_route_on_map(route, title="Route Map"):
+    coords = {
+        "JFK": (-73.7781, 40.6413),
+        "MCI": (-94.7139, 39.2976),
+        "LAX": (-118.4085, 33.9416),
+        "ORD": (-87.9048, 41.9742),
+        "ASE": (-106.8677, 39.2232)
+    }
+
+    lons = [coords[airport][0] for airport in route if airport in coords]
+    lats = [coords[airport][1] for airport in route if airport in coords]
+
+    if not lons or not lats:
+        print("Map plotting skipped: missing coordinates for some airports.")
+        return
+
+    fig = go.Figure(go.Scattergeo(
+        lon=lons,
+        lat=lats,
+        mode='lines+markers',
+        line=dict(width=2, color='blue'),
+        marker=dict(size=6),
+    ))
+
+    fig.update_layout(
+        title=title,
+        geo=dict(
+            scope='usa',
+            projection_type='albers usa',
+            showland=True,
+        )
+    )
+
+    fig.show()
+
 def main():
     csv_path = download_dataset()
     df_pre, df_during, df_post, origin_col, dest_col, fare_col, distance_col = load_and_filter_data(csv_path)
 
-    # Build graphs for all periods
-    G_pre = build_graph(df_pre, origin_col, dest_col, fare_col)
-    G_during = build_graph(df_during, origin_col, dest_col, fare_col)
     G_post_fare = build_graph(df_post, origin_col, dest_col, fare_col)
     G_post_distance = build_graph(df_post, origin_col, dest_col, distance_col)
 
-    # Stats
     print("Graph Stats:")
-    print_graph_summary("Pre-pandemic", G_pre)
-    print_graph_summary("During-pandemic", G_during)
     print_graph_summary("Post-pandemic (fare)", G_post_fare)
 
-    # Trend analysis
     fare_trend_analysis(df_pre, df_during, df_post)
-
-    # Correlation analysis
     fare_distance_correlation(df_post, "Post")
 
-    # User input
-    print("Route Finder")
     origin, destination, direct_only, max_budget = get_user_inputs()
 
-    # Route suggestions
     print("Fare-based route:")
-    show_shortest_path(G_post_fare, origin, destination, max_cost=max_budget, direct_only=direct_only)
+    fare_route = show_shortest_path(G_post_fare, origin, destination, max_cost=max_budget, direct_only=direct_only, unit="USD")
 
     print("Distance-based route:")
-    show_shortest_path(G_post_distance, origin, destination, direct_only=direct_only)
+    dist_route = show_shortest_path(G_post_distance, origin, destination, direct_only=direct_only, unit="miles")
 
-    alternative_route_comparison(G_post_fare, G_post_distance, origin, destination)
+    draw_network(G_post_fare, title="Post-Pandemic Fare Network")
 
+    if fare_route:
+        plot_route_on_map(fare_route, title="Optimal Fare Route on Map")
 
 if __name__ == "__main__":
     main()
