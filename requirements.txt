@@ -1,0 +1,6 @@
+pandas
+networkx
+kagglehub
+matplotlib
+plotly
+scipy
