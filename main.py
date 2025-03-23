@@ -4,6 +4,7 @@ import kagglehub
 from scipy.stats import pearsonr
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
+from collections import defaultdict
 
 def download_dataset():
     print("Downloading dataset from KaggleHub...")
@@ -158,5 +159,28 @@ def main():
     if fare_route:
         plot_route_on_map(fare_route, title="Optimal Fare Route on Map")
 
+def check_city_mappings():
+    csv_path = download_dataset()
+    df = pd.read_csv(csv_path, low_memory=False)
+    df.columns = df.columns.str.strip()
+    
+    id_to_city_map: dict[int, str] = defaultdict(str)
+
+    def add_city(city_id: int, city_name: str):
+        if not city_id in id_to_city_map:
+            id_to_city_map[city_id] = city_name
+        
+        else:
+            if city_name != id_to_city_map[city_id]:
+                print(f"Found Duplicate for {city_name}: {city_name} != {id_to_city_map[city_id]}")
+
+
+    for index, row in df.iterrows():
+        row_dict = row.to_dict()
+        # city_id, city_name = row_dict['citymarketid_1'], row_dict['city1']
+        add_city(row_dict['citymarketid_1'], row_dict["city1"])
+        add_city(row_dict['citymarketid_2'], row_dict["city2"])
+        
 if __name__ == "__main__":
-    main()
+    # main()
+    check_city_mappings()
