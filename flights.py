@@ -44,6 +44,7 @@ class Flights():
     def __init__(self):
         self.cities = set()
         self.flight_routes = defaultdict(list)
+        self.id_to_city = defaultdict(Location)
         pass
 
     def load_from_cvs(self, csv_path: str):
