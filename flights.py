@@ -34,6 +34,9 @@ class Route():
         self.dist = dist
         self.fare = fare
 
+    def __str__(self):
+        return f"Route: {self.depart_loc} -> {self.arrival_loc} for ${self.fare} in {self.year} (Q{self.quarter})"
+
 class Flights():
     """
     Parent class storing flight information
@@ -41,13 +44,17 @@ class Flights():
     id_to_city: dict[int, Location]
     cities: set[Location]
     flight_routes: dict[Location, list[Route]]
-    def __init__(self):
+    def __init__(self, csv: str=""):
         self.cities = set()
         self.flight_routes = defaultdict(list)
         self.id_to_city = defaultdict(Location)
-        pass
+        if csv:
+            self.load_from_cvs(csv)
 
     def load_from_cvs(self, csv_path: str):
+        """
+        Load csv file into the Flights class extracting relevant information
+        """
         df = pd.read_csv(csv_path, low_memory=False)
         df.columns = df.columns.str.strip()
         
@@ -57,8 +64,8 @@ class Flights():
             self._add_city(row_dict['citymarketid_1'], row_dict["city1"])
             self._add_city(row_dict['citymarketid_2'], row_dict["city2"])
 
-            start_location = self.id_to_city[row_dict['citymarketid_1']]
-            end_location = self.id_to_city[row_dict['citymarketid_2']]
+            start_location: Location = self.id_to_city[row_dict['citymarketid_1']]
+            end_location: Location = self.id_to_city[row_dict['citymarketid_2']]
 
             self._add_route(
                 route_id=row_dict['tbl1apk'],
@@ -69,7 +76,6 @@ class Flights():
                 dist=row_dict['nsmiles'],
                 fare=row_dict['fare']
             )
-
 
     def _add_city(self, city_id: int, city_name: str) -> None:
         """
@@ -87,7 +93,9 @@ class Flights():
 
     def _add_route(self, route_id: str, depart_loc: Location, arrival_loc: Location,
                    year: int, quarter: int, dist: float, fare: float) -> None:
-        
+        """
+        Add at r
+        """
         self.flight_routes[depart_loc].append(Route(
             route_id=route_id, departure_city=depart_loc, arrival_city=arrival_loc,
             year=year, quarter=quarter, dist=dist, fare=fare
