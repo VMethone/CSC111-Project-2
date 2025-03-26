@@ -6,6 +6,7 @@ from sklearn.linear_model import Ridge
 import matplotlib.pyplot as plt
 import numpy as np
 
+# === Load data and prepare graphs ===
 def load_dataset(filepath="Final.csv"):
     df = pd.read_csv(filepath, low_memory=False)
     df.columns = df.columns.str.strip()
@@ -158,7 +159,7 @@ if __name__ == "__main__":
     future_graphs = {}
     last_known_period = max(graphs.keys())
     G_last = graphs[last_known_period]
-    future_periods = [(2024, 1), (2024, 2), (2024, 3), (2024, 4)]
+    future_periods = [(2025, 1), (2025, 2), (2025, 3), (2025, 4)]
 
     for period in future_periods:
         features = generate_features_for_prediction(G_last, route_avg)
