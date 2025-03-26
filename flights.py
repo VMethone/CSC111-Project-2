@@ -57,8 +57,8 @@ class Flights():
             self._add_city(row_dict['citymarketid_1'], row_dict["city1"])
             self._add_city(row_dict['citymarketid_2'], row_dict["city2"])
 
-            start_location = self.id_to_city(row_dict['citymarketid_1'])
-            end_location = self.id_to_city(row_dict['citymarketid_2'])
+            start_location = self.id_to_city[row_dict['citymarketid_1']]
+            end_location = self.id_to_city[row_dict['citymarketid_2']]
 
             self._add_route(
                 route_id=row_dict['tbl1apk'],
@@ -76,8 +76,9 @@ class Flights():
         Add a new location to the list of locations
         """
         if not city_id in self.id_to_city:
-            self.id_to_city[city_id] = city_name
-            self.cities.add(Location(city_id, city_name))
+            new_city = Location(city_id, city_name)
+            self.id_to_city[city_id] = new_city
+            self.cities.add(new_city)
             return
         
         

@@ -161,16 +161,14 @@ def main():
         plot_route_on_map(fare_route, title="Optimal Fare Route on Map")
 
 def check_city_mappings():
-    csv_path = download_dataset()
     graph = Flights()
-    graph.load_from_cvs(csv_path=csv_path)
-    for key, value in graph.flight_routes:
-        assert isinstance(key, Location)
+    graph.load_from_cvs("mini.csv")
+    for key, value in graph.flight_routes.keys():
+        assert isinstance(key, Location), f"{key} is type {type(key)}"
         print(f"Departure - {key.city_name}: ")
         for route in value:
             assert isinstance(route, Route)
-            print(f"    TO {route.arrival_loc.city_name} for {route.fare} during {route.year} (Q{route.quarter})")
-    print(graph.flight_routes)
+            print(f"    TO {route.arrival_loc.city_name} for ${route.fare} during {route.year} (Q{route.quarter})")
 
 if __name__ == "__main__":
     # main()
