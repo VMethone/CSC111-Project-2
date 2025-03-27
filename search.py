@@ -216,10 +216,14 @@ def plot_map(flights: Flights):
         # Collect line segments for all flight routes
     line_lons = []
     line_lats = []
+    done = set()
     for location in flights.flight_routes:
         for route in flights.flight_routes[location]:
             dep_city = route.depart_loc.airport_code
             arr_city = route.arrival_loc.airport_code
+            if (dep_city, arr_city) in done:
+                continue
+            done.add((dep_city, arr_city))
             if dep_city in coords and arr_city in coords:
                 # Add departure and arrival coordinates, separated by None
                 line_lons.extend([coords[dep_city][1], coords[arr_city][1], None])
@@ -234,7 +238,7 @@ def plot_map(flights: Flights):
             line=dict(width=1, color='red'),
             name='Flight Routes'
         ))
-        
+
     fig.update_layout(
         title="Airports and Flight Routes",
         geo=dict(
