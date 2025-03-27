@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 from collections import defaultdict
 from flights import Flights, Location, Route
+import search
 
 def download_dataset():
     print("Downloading dataset from KaggleHub...")
@@ -99,40 +100,6 @@ def draw_network(G, title="Airline Route Graph"):
     plt.title(title)
     plt.show()
 
-def plot_route_on_map(route, title="Route Map"):
-    coords = {
-        "JFK": (-73.7781, 40.6413),
-        "MCI": (-94.7139, 39.2976),
-        "LAX": (-118.4085, 33.9416),
-        "ORD": (-87.9048, 41.9742),
-        "ASE": (-106.8677, 39.2232)
-    }
-
-    lons = [coords[airport][0] for airport in route if airport in coords]
-    lats = [coords[airport][1] for airport in route if airport in coords]
-
-    if not lons or not lats:
-        print("Map plotting skipped: missing coordinates for some airports.")
-        return
-
-    fig = go.Figure(go.Scattergeo(
-        lon=lons,
-        lat=lats,
-        mode='lines+markers',
-        line=dict(width=2, color='blue'),
-        marker=dict(size=6),
-    ))
-
-    fig.update_layout(
-        title=title,
-        geo=dict(
-            scope='usa',
-            projection_type='albers usa',
-            showland=True,
-        )
-    )
-
-    fig.show()
 
 def main():
     csv_path = download_dataset()
@@ -157,8 +124,8 @@ def main():
 
     draw_network(G_post_fare, title="Post-Pandemic Fare Network")
 
-    if fare_route:
-        plot_route_on_map(fare_route, title="Optimal Fare Route on Map")
+    # if fare_route:
+    #     plot_route_on_map(fare_route, title="Optimal Fare Route on Map")
 
 def check_city_mappings():
     graph = Flights()
@@ -169,6 +136,34 @@ def check_city_mappings():
         for route in value:
             assert isinstance(route, Route)
             print(f"    TO {route.arrival_loc.city_name} for ${route.fare} during {route.year} (Q{route.quarter})")
+
+def find_transfer_over_price():
+    test = Flights("Final.csv")
+    
+    locations = test.cities
+    def valid(item: Route) -> bool:
+        return item.year == 2020 and item.quarter == 2 
+    
+    for start in locations:
+        dist1, pred1 = search.find_all_shortest_paths(test, start, ["fare", "transfers"], valid)
+        dist2, pred2 = search.find_all_shortest_paths(test, start, ["transfers", "fare"], valid)
+        for end in locations:
+            if start == end:
+                continue
+            print(f"Testing {start} -> {end}")
+            if end.location_id not in dist1:
+                continue
+            if end.location_id not in dist2:
+                continue
+            if sorted(dist1[end.location_id]) != sorted(dist2[end.location_id]):
+                route1 = search.reconstruct(end, pred1)
+                route2 = search.reconstruct(end, pred2)
+                print("Route 1")
+                for r in route1:
+                    print(f"    {r}")
+                print("Route 2")
+                for r in route2:
+                    print(f"    {r}")
 
 if __name__ == "__main__":
     # main()
