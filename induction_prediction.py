@@ -1,177 +1,254 @@
 import pandas as pd
 import networkx as nx
 from collections import defaultdict
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.linear_model import Ridge
-import matplotlib.pyplot as plt
 import numpy as np
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.experimental import enable_hist_gradient_boosting
+from sklearn.ensemble import HistGradientBoostingRegressor
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import FunctionTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import mean_absolute_percentage_error
+import matplotlib.pyplot as plt
 
-# === Load data and prepare graphs ===
+MAJOR_HUBS = {'ATL', 'JFK', 'LAX', 'ORD', 'DFW', 'DEN', 'SFO'}
+MIN_PASSENGERS = 50
+FARE_PER_MILE = (0.10, 0.30)
+
 def load_dataset(filepath="Final.csv"):
     df = pd.read_csv(filepath, low_memory=False)
     df.columns = df.columns.str.strip()
+    df = df[df["passengers"].between(1, 500)]
+    df = df.dropna(subset=["city1", "city2", "airport_1", "airport_2", "fare"])
     df["period"] = list(zip(df["year"], df["quarter"]))
     return df
 
-def build_graphs_by_quarter(df, origin_col="airport_1", dest_col="airport_2", weight_col="fare"):
-    graphs = {}
-    for (year, quarter), group in df.groupby(["year", "quarter"]):
-        G = nx.Graph()
-        for _, row in group.iterrows():
-            G.add_edge(row[origin_col], row[dest_col], weight=row[weight_col])
-        graphs[(year, quarter)] = G
-    return graphs
+def compute_route_stats(df):
+    stats = defaultdict(lambda: {
+        'fares': [],
+        'passengers': [],
+        'distance': [],
+        'frequency': 0
+    })
 
-def compute_route_averages(df):
-    route_avg = {}
     for _, row in df.iterrows():
         route = tuple(sorted((row["airport_1"], row["airport_2"])))
-        if route not in route_avg:
-            route_avg[route] = {"fares": [], "passengers": []}
-        route_avg[route]["fares"].append(row["fare"])
-        route_avg[route]["passengers"].append(row["passengers"])
+        stats[route]['fares'].append(row["fare"])
+        stats[route]['passengers'].append(row["passengers"])
+        stats[route]['distance'].append(row.get("nsmiles", 0))
+        stats[route]['frequency'] += 1
+
     return {
         route: {
-            "avg_fare": sum(vals["fares"]) / len(vals["fares"]),
-            "avg_passengers": sum(vals["passengers"]) / len(vals["passengers"])
+            'avg_fare': np.mean(vals['fares']),
+            'std_fare': np.std(vals['fares']),
+            'avg_passengers': np.mean(vals['passengers']),
+            'max_passengers': np.max(vals['passengers']),
+            'min_passengers': np.min(vals['passengers']),
+            'distance': np.mean(vals['distance']),
+            'frequency': vals['frequency']
         }
-        for route, vals in route_avg.items()
+        for route, vals in stats.items()
     }
 
-def generate_features_for_prediction(G_prev, route_avg):
+def generate_features(G, route_stats):
     features = []
-    seen_routes = set()
-    nodes = list(G_prev.nodes())
+    nodes = list(G.nodes())
+    pagerank = nx.pagerank(G)
+    betweenness = nx.betweenness_centrality(G)
+
     for i in range(len(nodes)):
-        for j in range(i + 1, len(nodes)):
+        for j in range(i+1, len(nodes)):
             u, v = nodes[i], nodes[j]
             route = tuple(sorted((u, v)))
-            if route in seen_routes:
-                continue
-            seen_routes.add(route)
-            degree_u = G_prev.degree(u)
-            degree_v = G_prev.degree(v)
-            avg_fare = route_avg.get(route, {}).get("avg_fare", 0)
-            avg_pax = route_avg.get(route, {}).get("avg_passengers", 0)
-            features.append({
-                "route": route,
-                "existed_last_q": int(G_prev.has_edge(u, v)),
-                "degree_u": degree_u,
-                "degree_v": degree_v,
-                "sum_degree": degree_u + degree_v,
-                "diff_degree": abs(degree_u - degree_v),
-                "avg_fare": avg_fare,
-                "avg_passengers": avg_pax
-            })
+
+            base_feature = {
+                'route': route,
+                'existed_last_q': int(G.has_edge(u, v)),
+                'degree_u': G.degree(u),
+                'degree_v': G.degree(v),
+                'distance': route_stats.get(route, {}).get('distance', 0)
+            }
+
+            network_feature = {
+                'pagerank_u': pagerank.get(u, 0),
+                'pagerank_v': pagerank.get(v, 0),
+                'betweenness_u': betweenness.get(u, 0),
+                'betweenness_v': betweenness.get(v, 0),
+                'hub_u': int(u in MAJOR_HUBS),
+                'hub_v': int(v in MAJOR_HUBS)
+            }
+
+            stats = route_stats.get(route, {})
+            stat_feature = {
+                'avg_fare': stats.get('avg_fare', 0),
+                'fare_variation': stats.get('std_fare', 0) / (stats.get('avg_fare', 1e-6) + 1e-6),
+                'passenger_range': stats.get('max_passengers', 0) - stats.get('min_passengers', 0),
+                'frequency': stats.get('frequency', 0)
+            }
+
+            features.append({**base_feature, **network_feature, **stat_feature})
+
     return pd.DataFrame(features)
 
-def build_graph_from_predictions(route_df, fare_preds, passenger_preds):
-    G = nx.Graph()
-    max_passengers = 300
-    for idx, row in route_df.iterrows():
-        if row["predicted"] == 1:
-            u, v = row["route"]
-            fare = fare_preds[idx]
-            pax = int(min(round(passenger_preds[idx]), max_passengers))
-            G.add_edge(u, v, weight=fare, fare=fare, passengers=pax)
-    return G
+def get_fare_pipeline():
+    return Pipeline([
+        ('scaler', StandardScaler()),
+        ('model', HistGradientBoostingRegressor(
+            max_iter=200,
+            learning_rate=0.05,
+            max_depth=5,
+            random_state=42
+        ))
+    ])
 
-def export_graph_to_filled_format(G, period, df_original, filename):
-    city_lookup = {}
-    for _, row in df_original.iterrows():
-        city_lookup[row["airport_1"]] = row["city1"]
-        city_lookup[row["airport_2"]] = row["city2"]
+def get_pax_pipeline():
+    return Pipeline([
+        ('log_transform', FunctionTransformer(np.log1p)),
+        ('model', HistGradientBoostingRegressor(
+            max_iter=200,
+            learning_rate=0.05,
+            max_depth=5,
+            random_state=42
+        ))
+    ])
 
-    rows = []
-    for u, v, data in G.edges(data=True):
-        city1 = city_lookup.get(u, "")
-        city2 = city_lookup.get(v, "")
-        rows.append({
-            "Year": period[0],
-            "quarter": period[1],
-            "city1": city1,
-            "city2": city2,
-            "airport_1": u,
-            "airport_2": v,
-            "fare": round(data.get("fare", 0), 2),
-            "passengers": int(data.get("passengers", 0))
-        })
-    df_out = pd.DataFrame(rows)
-    df_out.to_csv(filename, index=False)
-    print(f"Saved formatted prediction: {filename}")
+def apply_business_rules(df):
+    df['pred_passengers'] = np.where(
+        df['pred_passengers'] < MIN_PASSENGERS,
+        0,
+        np.round(df['pred_passengers'])
+    )
 
-if __name__ == "__main__":
+    min_fare = df['distance'] * FARE_PER_MILE[0]
+    max_fare = df['distance'] * FARE_PER_MILE[1]
+    df['pred_fare'] = np.clip(df['pred_fare'], min_fare, max_fare)
+
+    df.loc[df['pred_passengers'] == 0, 'pred_fare'] = 0
+    return df
+
+def main():
     df = load_dataset()
-    graphs = build_graphs_by_quarter(df)
-    route_avg = compute_route_averages(df)
+    route_stats = compute_route_stats(df)
+
+    graphs = {}
+    for (year, quarter), group in df.groupby(['year', 'quarter']):
+        G = nx.Graph()
+        for _, row in group.iterrows():
+            G.add_edge(row['airport_1'], row['airport_2'],
+                      weight=row['fare'],
+                      passengers=row['passengers'])
+        graphs[(year, quarter)] = G
 
     feature_rows = []
     sorted_periods = sorted(graphs.keys())
+
     for i in range(1, len(sorted_periods)):
+        prev_period = sorted_periods[i-1]
         curr_period = sorted_periods[i]
-        prev_period = sorted_periods[i - 1]
-        G_curr = graphs[curr_period]
-        G_prev = graphs[prev_period]
-        routes = generate_features_for_prediction(G_prev, route_avg)
-        labels, fares, pax = [], [], []
-        df_curr = df[df["period"] == curr_period].copy()
-        df_curr.set_index(["airport_1", "airport_2"], inplace=True)
-        for idx, row in routes.iterrows():
-            u, v = row["route"]
-            exists = G_curr.has_edge(u, v)
-            labels.append(int(exists))
-            if exists:
-                key1 = (u, v)
-                key2 = (v, u)
-                if key1 in df_curr.index:
-                    match = df_curr.loc[key1]
-                elif key2 in df_curr.index:
-                    match = df_curr.loc[key2]
-                else:
-                    match = pd.Series({"fare": None, "passengers": None})
-                fares.append(match["fare"] if pd.notna(match["fare"]) else None)
-                pax.append(match["passengers"] if pd.notna(match["passengers"]) else None)
-            else:
-                fares.append(None)
-                pax.append(None)
-        routes["label"] = labels
-        routes["fare"] = fares
-        routes["passengers"] = pax
-        feature_rows.extend(routes.to_dict("records"))
 
-    feature_df = pd.DataFrame(feature_rows).dropna()
+        features = generate_features(graphs[prev_period], route_stats)
 
-    X_train_route = feature_df[["existed_last_q", "degree_u", "degree_v"]]
-    y_train_route = feature_df["label"]
+        curr_edges = {(u, v): data for u, v, data in graphs[curr_period].edges(data=True)}
+        features['exists'] = features['route'].apply(
+            lambda r: int(r in curr_edges or tuple(reversed(r)) in curr_edges)
+        )
+        features['fare'] = features['route'].apply(
+            lambda r: curr_edges.get(r, {}).get('weight', 0) or curr_edges.get(tuple(reversed(r)), {}).get('weight', 0)
+        )
+        features['passengers'] = features['route'].apply(
+            lambda r: curr_edges.get(r, {}).get('passengers', 0) or curr_edges.get(tuple(reversed(r)), {}).get('passengers', 0)
+        )
 
-    X_train_predict = feature_df[["existed_last_q", "degree_u", "degree_v", "sum_degree", "diff_degree", "avg_fare", "avg_passengers"]]
-    y_train_fare = feature_df["fare"]
-    y_train_pax = np.log1p(feature_df["passengers"])  # log-transform passengers
+        feature_rows.append(features)
 
-    route_model = RandomForestClassifier(random_state=42, n_estimators=50)
-    fare_model = Ridge()
-    pax_model = Ridge()
+    full_features = pd.concat(feature_rows)
 
-    route_model.fit(X_train_route, y_train_route)
-    fare_model.fit(X_train_predict, y_train_fare)
-    pax_model.fit(X_train_predict, y_train_pax)
+    X_route = full_features[['existed_last_q', 'degree_u', 'degree_v', 'hub_u', 'hub_v']]
+    y_route = full_features['exists']
 
-    future_graphs = {}
-    last_known_period = max(graphs.keys())
-    G_last = graphs[last_known_period]
-    future_periods = [(2025, 1), (2025, 2), (2025, 3), (2025, 4)]
+    route_model = RandomForestClassifier(
+        n_estimators=100,
+        max_depth=8,
+        class_weight='balanced',
+        random_state=42
+    )
+    route_model.fit(X_route, y_route)
+
+    fare_features = full_features[full_features['exists'] == 1][[
+        'distance', 'hub_u', 'hub_v', 'pagerank_u', 'pagerank_v',
+        'avg_fare', 'fare_variation', 'frequency'
+    ]]
+    fare_pipeline = get_fare_pipeline()
+    fare_pipeline.fit(fare_features, full_features[full_features['exists'] == 1]['fare'])
+
+    pax_features = full_features[full_features['exists'] == 1][[
+        'distance', 'hub_u', 'hub_v', 'passenger_range', 'frequency'
+    ]]
+    pax_pipeline = get_pax_pipeline()
+    pax_pipeline.fit(pax_features, full_features[full_features['exists'] == 1]['passengers'])
+
+    future_periods = [(2025, q) for q in range(1, 5)]
+    current_graph = graphs[sorted_periods[-1]]
 
     for period in future_periods:
-        features = generate_features_for_prediction(G_last, route_avg)
-        X_route = features[["existed_last_q", "degree_u", "degree_v"]]
-        X_pred = features[["existed_last_q", "degree_u", "degree_v", "sum_degree", "diff_degree", "avg_fare", "avg_passengers"]]
-        features["predicted"] = route_model.predict(X_route)
-        fare_preds = fare_model.predict(X_pred)
-        pax_preds = np.expm1(pax_model.predict(X_pred))  # inverse log-transform
-        G_next = build_graph_from_predictions(features, fare_preds, pax_preds)
-        future_graphs[period] = G_next
-        G_last = G_next
+        pred_features = generate_features(current_graph, route_stats)
 
-        export_graph_to_filled_format(G_next, period, df, f"predicted_graph_{period[0]}Q{period[1]}.csv")
+        X_route_pred = pred_features[['existed_last_q', 'degree_u', 'degree_v', 'hub_u', 'hub_v']]
+        pred_features['exists_pred'] = route_model.predict(X_route_pred)
 
-        print(f"Predicted graph for {period}: {G_next.number_of_nodes()} nodes, {G_next.number_of_edges()} edges")
+        active_routes = pred_features[pred_features['exists_pred'] == 1]
+
+        fare_pred = fare_pipeline.predict(active_routes[
+            ['distance', 'hub_u', 'hub_v', 'pagerank_u', 'pagerank_v',
+             'avg_fare', 'fare_variation', 'frequency']
+        ])
+
+        pax_pred = pax_pipeline.predict(active_routes[
+            ['distance', 'hub_u', 'hub_v', 'passenger_range', 'frequency']
+        ])
+
+        pred_features = pred_features.merge(
+            pd.DataFrame({
+                'route': active_routes['route'],
+                'pred_fare': fare_pred,
+                'pred_passengers': pax_pred
+            }),
+            on='route',
+            how='left'
+        ).fillna(0)
+
+        final_pred = apply_business_rules(pred_features)
+
+        G_pred = nx.Graph()
+        for _, row in final_pred.iterrows():
+            if row['pred_passengers'] > 0:
+                u, v = row['route']
+                G_pred.add_edge(u, v,
+                              fare=round(row['pred_fare'], 2),
+                              passengers=int(row['pred_passengers']))
+
+        export_predictions(G_pred, period, df)
+        current_graph = G_pred
+
+def export_predictions(G, period, df_template):
+    records = []
+    city_map = df_template[['airport_1', 'city1']].drop_duplicates().set_index('airport_1')['city1'].to_dict()
+
+    for u, v, data in G.edges(data=True):
+        records.append({
+            'Year': period[0],
+            'quarter': period[1],
+            'airport_1': u,
+            'airport_2': v,
+            'city1': city_map.get(u, ''),
+            'city2': city_map.get(v, ''),
+            'fare': data['fare'],
+            'passengers': data['passengers']
+        })
+
+    pd.DataFrame(records).to_csv(f"prediction_{period[0]}Q{period[1]}.csv", index=False)
+
+if __name__ == "__main__":
+    main()
