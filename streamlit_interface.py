@@ -25,7 +25,6 @@ with st.spinner("Loading data..."):
 
 label_map = build_airport_labels(df, "airport_1", "city1")
 
-# === 辅助函数：路径总结 ===
 def summarize_route(G, route, label_map):
     total_cost = 0
     total_distance = 0
@@ -36,15 +35,14 @@ def summarize_route(G, route, label_map):
         edge = G.get_edge_data(u, v) or G.get_edge_data(v, u)
         if edge:
             total_cost += edge.get("weight", 0)
-            total_distance += edge.get("distance", 0)
-            segments.append((u, v, edge.get("weight", 0), edge.get("distance", 0)))
+            total_distance += edge.get("distance", edge.get("nsmiles", 0))
+            segments.append((u, v, edge.get("weight", 0), edge.get("distance", edge.get("nsmiles", 0))))
         else:
             segments.append((u, v, "N/A", "N/A"))
 
     names = [label_map.get(code, code) for code in route]
     return total_cost, total_distance, names, segments
 
-# === Tab 1 ===
 with tab1:
     st.subheader("Find the Best Route")
     col1, col2 = st.columns(2)
@@ -67,7 +65,7 @@ with tab1:
     if st.button("Find Route"):
         start_year, end_year = period_map[period]
         df_period = filter_by_period(df, start_year, end_year)
-        G_fare = build_graph(df_period, "airport_1", "airport_2", "fare")
+        G_fare = build_graph(df_period, "airport_1", "airport_2", "fare", extra_cols=["nsmiles"])
 
         st.markdown("### Fare-based Shortest Route")
         route = show_shortest_path(G_fare, origin, dest, allow_transfers, max_cost=max_budget, unit="USD")
@@ -88,7 +86,6 @@ with tab1:
         st.markdown("### Fare Graph Network")
         draw_network(G_fare, f"Fare Graph: {period}", label_map)
 
-# === Tab 2 ===
 with tab2:
     st.subheader("Fare Trend and Correlation Analysis")
     df_pre = filter_by_period(df, 2018, 2020)
@@ -107,7 +104,6 @@ with tab2:
     st.write(f"**Pre-pandemic correlation:** {corr_pre:.3f}")
     st.write(f"**Post-pandemic correlation:** {corr_post:.3f}")
 
-# === Tab 3 ===
 with tab3:
     st.subheader("Load Prediction for 2025")
     quarter = st.selectbox("Select 2025 Quarter", ["Q1", "Q2", "Q3", "Q4"])
@@ -123,10 +119,17 @@ with tab3:
             pred_df = pred_df[pred_df["fare"] > 0]
 
             G_pred = build_graph(pred_df, "airport_1", "airport_2", "fare")
-            for _, row in pred_df.iterrows():
-                u, v = row["airport_1"], row["airport_2"]
-                if G_pred.has_edge(u, v):
-                    G_pred[u][v]["distance"] = row.get("distance", 0)
+
+            # 创建 route → distance 映射表
+            distance_map = {
+                tuple(sorted((row["airport_1"], row["airport_2"]))): row.get("distance", 0)
+                for _, row in pred_df.iterrows()
+            }
+
+            # 为 G_pred 中所有边添加 distance（不依赖 direction）
+            for u, v in G_pred.edges():
+                key = tuple(sorted((u, v)))
+                G_pred[u][v]["distance"] = distance_map.get(key, 0)
 
             st.session_state.pred_df = pred_df
             st.session_state.G_pred = G_pred
