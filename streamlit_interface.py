@@ -4,7 +4,7 @@ import networkx as nx
 from main import (
     load_dataset, filter_by_period, build_graph, build_airport_labels,
     load_airport_coordinates_from_us_airports, show_shortest_path,
-    draw_network, plot_route_on_map
+    draw_network, plot_route_on_map, plot_full_network_routes
 )
 from induction_prediction import main as run_prediction
 import os
@@ -27,6 +27,31 @@ label_map = build_airport_labels(df, "airport_1", "city1")
 
 airport_to_city = build_airport_labels(df, "airport_1", "city1")
 city_to_airport = {v: k for k, v in airport_to_city.items()}
+
+def plot_prediction_map_from_dataframe(df, title="Predicted Routes Map"):
+    import folium
+    from streamlit_folium import st_folium
+
+    m = folium.Map(location=[39.8283, -98.5795], zoom_start=4)
+
+    for _, row in df.iterrows():
+        try:
+            lat1, lon1 = float(row['latitude1']), float(row['longitude1'])
+            lat2, lon2 = float(row['latitude2']), float(row['longitude2'])
+
+            if all([lat1, lon1, lat2, lon2]):
+                folium.PolyLine(
+                    locations=[(lat1, lon1), (lat2, lon2)],
+                    color='blue',
+                    weight=2,
+                    opacity=0.6
+                ).add_to(m)
+        except:
+            continue
+
+    st.markdown(f"### {title}")
+    st_folium(m, width=800, height=600)
+
 
 def summarize_route(G, route, label_map):
     total_cost = 0
@@ -118,6 +143,8 @@ with tab3:
     if "pred_df" not in st.session_state:
         st.session_state.pred_df = None
         st.session_state.G_pred = None
+    if "show_prediction_map" not in st.session_state:
+        st.session_state.show_prediction_map = False
 
     if st.button("Load Prediction File"):
         if os.path.exists(filename):
@@ -127,6 +154,7 @@ with tab3:
             st.session_state.pred_df = pred_df
             st.session_state.G_pred = G_pred
             st.success(f"Loaded prediction data for 2025 {quarter}")
+            st.session_state.show_prediction_map = False
         else:
             st.error(f"Prediction file '{filename}' not found.")
 
@@ -144,10 +172,15 @@ with tab3:
         st.markdown("### Visualize Prediction Graph")
         draw_network(G_pred, f"Predicted Fare Graph ({quarter})", label_map_pred)
 
+        if st.button("Show All Predicted Routes on Map"):
+            st.session_state.show_prediction_map = True
+
+        if st.session_state.show_prediction_map:
+            plot_prediction_map_from_dataframe(pred_df, f"All Predicted Routes ({quarter})")
+
         st.markdown("### Try Route Search on Prediction")
         pred_origin_city = st.selectbox("Origin City (Prediction)", sorted(city_to_airport_pred.keys()), key="pred_origin_city")
         pred_dest_city = st.selectbox("Destination City (Prediction)", sorted(city_to_airport_pred.keys()), key="pred_dest_city")
-
         pred_origin = city_to_airport_pred[pred_origin_city]
         pred_dest = city_to_airport_pred[pred_dest_city]
 
@@ -162,9 +195,6 @@ with tab3:
                     st.write(f"**Total Fare:** ${cost:.2f}")
                     st.write(f"**Total Distance:** {int(dist)} miles")
                     st.write(f"**Stops:** {len(route) - 2 if len(route) > 2 else 0}")
-
-                    if cost < 30 or dist == 0:
-                        st.warning("Predicted fare or distance may be invalid. This route may not be realistic.")
 
                     seg_df = pd.DataFrame(segs, columns=["From", "To", "Fare", "Distance"])
                     st.dataframe(seg_df)
