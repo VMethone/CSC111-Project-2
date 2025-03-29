@@ -1,918 +1,918 @@
-Year,quarter,airport_1,airport_2,city1,city2,fare,passengers,distance
-2025,2,ABQ,DAL,"Albuquerque, NM","Dallas/Fort Worth, TX",174.0,226,580.0
-2025,2,ABQ,DFW,"Albuquerque, NM","Dallas/Fort Worth, TX",174.0,192,580.0
-2025,2,ABQ,BWI,"Albuquerque, NM","Washington, DC (Metropolitan Area)",276.53,176,1670.0
-2025,2,ABQ,DCA,"Albuquerque, NM","Washington, DC (Metropolitan Area)",301.95,148,1670.0
-2025,2,ABQ,IAD,"Albuquerque, NM","Washington, DC (Metropolitan Area)",327.73,63,1670.0
-2025,2,ABQ,MDW,"Albuquerque, NM","Chicago, IL",243.73,107,1121.0
-2025,2,ABQ,ORD,"Albuquerque, NM","Chicago, IL",267.22,150,1121.0
-2025,2,ABQ,HOU,"Albuquerque, NM","Houston, TX",227.7,155,759.0
-2025,2,ABQ,IAH,"Albuquerque, NM","Houston, TX",227.7,129,759.0
-2025,2,ABQ,EWR,"Albuquerque, NM","New York City, NY (Metropolitan Area)",334.12,72,1861.0
-2025,2,ABQ,JFK,"Albuquerque, NM","New York City, NY (Metropolitan Area)",235.9,146,1861.0
-2025,2,ABQ,LGA,"Albuquerque, NM","New York City, NY (Metropolitan Area)",260.12,118,1861.0
-2025,2,ABQ,OAK,"Albuquerque, NM","San Francisco, CA (Metropolitan Area)",191.98,241,896.0
-2025,2,ABQ,SFO,"Albuquerque, NM","San Francisco, CA (Metropolitan Area)",220.02,174,896.0
-2025,2,ABQ,SJC,"Albuquerque, NM","San Francisco, CA (Metropolitan Area)",213.61,124,896.0
-2025,2,ABQ,BUR,"Albuquerque, NM","Los Angeles, CA (Metropolitan Area)",187.95,85,677.0
-2025,2,ABQ,LAX,"Albuquerque, NM","Los Angeles, CA (Metropolitan Area)",176.91,294,677.0
-2025,2,ABQ,LGB,"Albuquerque, NM","Los Angeles, CA (Metropolitan Area)",172.68,61,677.0
-2025,2,ABQ,SNA,"Albuquerque, NM","Los Angeles, CA (Metropolitan Area)",203.1,101,677.0
-2025,2,DAL,ORD,"Dallas/Fort Worth, TX","Chicago, IL",179.17,198,801.2631578947369
-2025,2,DAL,IAH,"Dallas/Fort Worth, TX","Houston, TX",74.1,147,247.0
-2025,2,DAL,OAK,"Dallas/Fort Worth, TX","San Francisco, CA (Metropolitan Area)",190.98,250,1476.0
-2025,2,DAL,SFO,"Dallas/Fort Worth, TX","San Francisco, CA (Metropolitan Area)",189.05,209,1476.0
-2025,2,DAL,SJC,"Dallas/Fort Worth, TX","San Francisco, CA (Metropolitan Area)",200.19,284,1476.0
-2025,2,DAL,BUR,"Dallas/Fort Worth, TX","Los Angeles, CA (Metropolitan Area)",203.69,117,1246.0
-2025,2,DAL,LGB,"Dallas/Fort Worth, TX","Los Angeles, CA (Metropolitan Area)",157.31,150,1246.0
-2025,2,DAL,SNA,"Dallas/Fort Worth, TX","Los Angeles, CA (Metropolitan Area)",229.4,107,1246.0
-2025,2,DAL,ONT,"Dallas/Fort Worth, TX","Los Angeles, CA (Metropolitan Area)",201.01,117,1246.0
-2025,2,DAL,FLL,"Dallas/Fort Worth, TX","Miami, FL (Metropolitan Area)",179.09,225,1121.0
-2025,2,DAL,COS,"Dallas/Fort Worth, TX","Colorado Springs, CO",147.89,195,602.0
-2025,2,DAL,PIT,"Dallas/Fort Worth, TX","Pittsburgh, PA",196.16,123,1067.0
-2025,2,DAL,SEA,"Dallas/Fort Worth, TX","Seattle, WA",207.98,287,1670.0
-2025,2,DAL,ELP,"Dallas/Fort Worth, TX","El Paso, TX",168.6,318,562.0
-2025,2,DAL,JAX,"Dallas/Fort Worth, TX","Jacksonville, FL",208.73,69,918.0
-2025,2,DAL,DTW,"Dallas/Fort Worth, TX","Detroit, MI",178.59,131,986.0
-2025,2,DAL,VPS,"Dallas/Fort Worth, TX",,192.3,72,641.0
-2025,2,DAL,MSP,"Dallas/Fort Worth, TX","Minneapolis/St. Paul, MN",177.36,91,853.0
-2025,2,DAL,RSW,"Dallas/Fort Worth, TX","Fort Myers, FL",222.83,62,1017.0
-2025,2,DAL,IND,"Dallas/Fort Worth, TX","Indianapolis, IN",180.29,168,761.0
-2025,2,DAL,MIA,"Dallas/Fort Worth, TX","Miami, FL (Metropolitan Area)",210.09,145,1121.0
-2025,2,DAL,LIT,"Dallas/Fort Worth, TX","Little Rock, AR",91.2,91,304.0
-2025,2,DAL,LBB,"Dallas/Fort Worth, TX",,87.9,196,293.0
-2025,2,DAL,SDF,"Dallas/Fort Worth, TX","Louisville, KY",181.52,64,733.0
-2025,2,DAL,MAF,"Dallas/Fort Worth, TX",,95.7,212,319.0
-2025,2,DAL,SMF,"Dallas/Fort Worth, TX","Sacramento, CA",244.7,122,1442.0
-2025,2,DAL,MEM,"Dallas/Fort Worth, TX","Memphis, TN",129.3,112,431.0
-2025,2,DAL,OMA,"Dallas/Fort Worth, TX","Omaha, NE",160.64,102,585.88
-2025,2,DAL,MKE,"Dallas/Fort Worth, TX","Milwaukee, WI",183.74,90,853.0
-2025,2,DAL,PNS,"Dallas/Fort Worth, TX","Pensacola, FL",175.81,84,604.0
-2025,2,DAL,PDX,"Dallas/Fort Worth, TX","Portland, OR",224.8,175,1626.0
-2025,2,DAL,PHL,"Dallas/Fort Worth, TX","Philadelphia, PA",207.39,117,1303.0
-2025,2,DAL,RDU,"Dallas/Fort Worth, TX","Raleigh/Durham, NC",207.67,159,1061.0
-2025,2,DAL,RNO,"Dallas/Fort Worth, TX","Reno, NV",241.55,51,1356.0
-2025,2,DAL,SLC,"Dallas/Fort Worth, TX","Salt Lake City, UT",198.29,141,999.0
-2025,2,DAL,TUL,"Dallas/Fort Worth, TX","Tulsa, OK",71.36,123,237.88
-2025,2,DAL,AMA,"Dallas/Fort Worth, TX","Amarillo, TX",96.9,111,323.0
-2025,2,DAL,AUS,"Dallas/Fort Worth, TX","Austin, TX",57.0,278,190.0
-2025,2,DAL,CMH,"Dallas/Fort Worth, TX","Columbus, OH",193.27,127,926.0
-2025,2,DAL,BHM,"Dallas/Fort Worth, TX","Birmingham, AL",177.93,153,597.0
-2025,2,DAL,CLE,"Dallas/Fort Worth, TX","Cleveland, OH (Metropolitan Area)",213.27,50,1023.0
-2025,2,DAL,BOS,"Dallas/Fort Worth, TX","Boston, MA (Metropolitan Area)",193.35,151,1562.0
-2025,2,DAL,CHS,"Dallas/Fort Worth, TX","Charleston, SC",187.27,62,987.0
-2025,2,DAL,CLT,"Dallas/Fort Worth, TX","Charlotte, NC",185.52,126,936.0
-2025,2,DFW,MDW,"Dallas/Fort Worth, TX","Chicago, IL",204.06,158,801.3913043478261
-2025,2,DFW,HOU,"Dallas/Fort Worth, TX","Houston, TX",74.1,146,247.0
-2025,2,DFW,OAK,"Dallas/Fort Worth, TX","San Francisco, CA (Metropolitan Area)",179.29,140,1476.0
-2025,2,DFW,SJC,"Dallas/Fort Worth, TX","San Francisco, CA (Metropolitan Area)",276.25,300,1476.0
-2025,2,DFW,BUR,"Dallas/Fort Worth, TX","Los Angeles, CA (Metropolitan Area)",275.95,163,1246.0
-2025,2,DFW,COS,"Dallas/Fort Worth, TX","Colorado Springs, CO",179.22,195,597.4166666666666
-2025,2,DFW,PIT,"Dallas/Fort Worth, TX","Pittsburgh, PA",253.16,334,1067.0
-2025,2,DFW,ELP,"Dallas/Fort Worth, TX","El Paso, TX",168.6,272,562.0
-2025,2,DFW,JAX,"Dallas/Fort Worth, TX","Jacksonville, FL",261.27,340,918.0
-2025,2,DFW,VPS,"Dallas/Fort Worth, TX",,192.3,270,641.0
-2025,2,DFW,RSW,"Dallas/Fort Worth, TX","Fort Myers, FL",282.5,225,1017.0
-2025,2,DFW,IND,"Dallas/Fort Worth, TX","Indianapolis, IN",219.92,325,761.0
-2025,2,DFW,LIT,"Dallas/Fort Worth, TX","Little Rock, AR",91.2,150,304.0
-2025,2,DFW,LBB,"Dallas/Fort Worth, TX",,87.9,112,293.0
-2025,2,DFW,SDF,"Dallas/Fort Worth, TX","Louisville, KY",219.9,272,733.0
-2025,2,DFW,MAF,"Dallas/Fort Worth, TX",,95.7,103,319.0
-2025,2,DFW,SMF,"Dallas/Fort Worth, TX","Sacramento, CA",290.71,324,1442.0
-2025,2,DFW,MEM,"Dallas/Fort Worth, TX","Memphis, TN",129.3,323,431.0
-2025,2,DFW,OMA,"Dallas/Fort Worth, TX","Omaha, NE",175.76,259,585.88
-2025,2,DFW,MKE,"Dallas/Fort Worth, TX","Milwaukee, WI",235.06,299,853.0
-2025,2,DFW,PNS,"Dallas/Fort Worth, TX","Pensacola, FL",181.2,188,604.0
-2025,2,DFW,RNO,"Dallas/Fort Worth, TX","Reno, NV",307.64,158,1356.0
-2025,2,DFW,TUL,"Dallas/Fort Worth, TX","Tulsa, OK",71.36,157,237.88
-2025,2,DFW,AMA,"Dallas/Fort Worth, TX","Amarillo, TX",96.9,102,323.0
-2025,2,DFW,AUS,"Dallas/Fort Worth, TX","Austin, TX",57.0,293,190.0
-2025,2,DFW,CMH,"Dallas/Fort Worth, TX","Columbus, OH",246.35,345,926.0
-2025,2,DFW,BHM,"Dallas/Fort Worth, TX","Birmingham, AL",179.1,206,597.0
-2025,2,DFW,CHS,"Dallas/Fort Worth, TX","Charleston, SC",242.72,196,987.0
-2025,2,DFW,TUS,"Dallas/Fort Worth, TX","Tucson, AZ",247.2,203,824.0
-2025,2,DFW,BDL,"Dallas/Fort Worth, TX","Hartford, CT",327.78,176,1471.0
-2025,2,DFW,STL,"Dallas/Fort Worth, TX","St. Louis, MO",165.0,349,550.0
-2025,2,DFW,DSM,"Dallas/Fort Worth, TX","Des Moines, IA",187.2,163,624.0
-2025,2,DFW,GSP,"Dallas/Fort Worth, TX","Greenville/Spartanburg, SC",258.6,174,862.0
-2025,2,DFW,GRR,"Dallas/Fort Worth, TX","Grand Rapids, MI",279.3,170,931.0
-2025,2,DFW,BOI,"Dallas/Fort Worth, TX","Boise, ID",294.78,147,1282.0
-2025,2,DFW,MCI,"Dallas/Fort Worth, TX","Kansas City, MO",138.28,329,460.9230769230769
-2025,2,DFW,SAT,"Dallas/Fort Worth, TX","San Antonio, TX",74.13,282,247.0952380952381
-2025,2,DFW,ORF,"Dallas/Fort Worth, TX","Norfolk, VA (Metropolitan Area)",272.91,195,1212.0
-2025,2,DFW,PBI,"Dallas/Fort Worth, TX",,314.5,218,1102.0
-2025,2,DFW,RIC,"Dallas/Fort Worth, TX","Richmond, VA",303.4,218,1158.0
-2025,2,DFW,PVD,"Dallas/Fort Worth, TX","Boston, MA (Metropolitan Area)",285.34,56,1562.0
-2025,2,BWI,MDW,"Washington, DC (Metropolitan Area)","Chicago, IL",134.29,300,621.2222222222222
-2025,2,BWI,JFK,"Washington, DC (Metropolitan Area)","New York City, NY (Metropolitan Area)",73.29,71,244.31578947368422
-2025,2,BWI,OAK,"Washington, DC (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",274.7,158,2457.0
-2025,2,BWI,SFO,"Washington, DC (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",327.96,270,2457.0
-2025,2,BWI,SJC,"Washington, DC (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",300.72,146,2457.0
-2025,2,BWI,SNA,"Washington, DC (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",330.12,74,2329.0
-2025,2,BWI,ONT,"Washington, DC (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",297.94,63,2329.0
-2025,2,BWI,PIT,"Washington, DC (Metropolitan Area)","Pittsburgh, PA",63.0,77,210.0
-2025,2,BWI,SEA,"Washington, DC (Metropolitan Area)","Seattle, WA",290.12,303,2335.0
-2025,2,BWI,ELP,"Washington, DC (Metropolitan Area)","El Paso, TX",321.48,63,1741.0
-2025,2,BWI,JAX,"Washington, DC (Metropolitan Area)","Jacksonville, FL",195.23,311,663.0
-2025,2,BWI,DTW,"Washington, DC (Metropolitan Area)","Detroit, MI",122.7,291,409.0
-2025,2,BWI,MSP,"Washington, DC (Metropolitan Area)","Minneapolis/St. Paul, MN",170.38,298,936.0
-2025,2,BWI,RSW,"Washington, DC (Metropolitan Area)","Fort Myers, FL",208.31,339,919.0
-2025,2,BWI,IND,"Washington, DC (Metropolitan Area)","Indianapolis, IN",154.8,300,516.0
-2025,2,BWI,SDF,"Washington, DC (Metropolitan Area)","Louisville, KY",148.5,241,495.0
-2025,2,BWI,SMF,"Washington, DC (Metropolitan Area)","Sacramento, CA",319.46,159,2395.0
-2025,2,BWI,MEM,"Washington, DC (Metropolitan Area)","Memphis, TN",220.34,163,787.0
-2025,2,BWI,OMA,"Washington, DC (Metropolitan Area)","Omaha, NE",246.52,62,1025.0
-2025,2,BWI,MKE,"Washington, DC (Metropolitan Area)","Milwaukee, WI",191.79,223,641.0
-2025,2,BWI,PNS,"Washington, DC (Metropolitan Area)","Pensacola, FL",235.26,54,846.0
-2025,2,BWI,PDX,"Washington, DC (Metropolitan Area)","Portland, OR",309.83,203,2358.0
-2025,2,BWI,RDU,"Washington, DC (Metropolitan Area)","Raleigh/Durham, NC",76.5,259,255.0
-2025,2,BWI,SLC,"Washington, DC (Metropolitan Area)","Salt Lake City, UT",298.49,282,1865.0
-2025,2,BWI,AUS,"Washington, DC (Metropolitan Area)","Austin, TX",231.02,329,1342.0
-2025,2,BWI,CMH,"Washington, DC (Metropolitan Area)","Columbus, OH",101.1,204,337.0
-2025,2,BWI,BHM,"Washington, DC (Metropolitan Area)","Birmingham, AL",204.6,154,682.0
-2025,2,BWI,CLE,"Washington, DC (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",94.2,173,314.0
-2025,2,BWI,CHS,"Washington, DC (Metropolitan Area)","Charleston, SC",141.6,244,472.0
-2025,2,BWI,TUS,"Washington, DC (Metropolitan Area)","Tucson, AZ",318.91,76,1976.12
-2025,2,BWI,BDL,"Washington, DC (Metropolitan Area)","Hartford, CT",97.73,216,325.76
-2025,2,BWI,STL,"Washington, DC (Metropolitan Area)","St. Louis, MO",215.81,324,738.0
-2025,2,BWI,GSP,"Washington, DC (Metropolitan Area)","Greenville/Spartanburg, SC",127.8,85,426.0
-2025,2,BWI,MCI,"Washington, DC (Metropolitan Area)","Kansas City, MO",231.88,285,967.0
-2025,2,BWI,SAT,"Washington, DC (Metropolitan Area)","San Antonio, TX",262.71,297,1407.0
-2025,2,BWI,PBI,"Washington, DC (Metropolitan Area)",,219.46,272,883.0
-2025,2,BWI,PVD,"Washington, DC (Metropolitan Area)","Boston, MA (Metropolitan Area)",125.4,245,418.0
-2025,2,BWI,ISP,"Washington, DC (Metropolitan Area)","New York City, NY (Metropolitan Area)",73.39,123,244.64
-2025,2,BWI,ALB,"Washington, DC (Metropolitan Area)","Albany, NY",97.5,158,325.0
-2025,2,BWI,MHT,"Washington, DC (Metropolitan Area)","Boston, MA (Metropolitan Area)",125.4,269,418.0
-2025,2,BWI,BNA,"Washington, DC (Metropolitan Area)","Nashville, TN",166.04,319,587.0
-2025,2,BWI,SAN,"Washington, DC (Metropolitan Area)","San Diego, CA",303.16,317,2295.0
-2025,2,BWI,BUF,"Washington, DC (Metropolitan Area)","Buffalo, NY",88.8,200,296.0
-2025,2,BWI,CVG,"Washington, DC (Metropolitan Area)","Cincinnati, OH",129.0,279,430.0
-2025,2,BWI,MSY,"Washington, DC (Metropolitan Area)","New Orleans, LA",187.94,319,998.0
-2025,2,BWI,SAV,"Washington, DC (Metropolitan Area)","Savannah, GA",164.7,189,549.0
-2025,2,BWI,OKC,"Washington, DC (Metropolitan Area)","Oklahoma City, OK",262.53,108,1180.0
-2025,2,BWI,EYW,"Washington, DC (Metropolitan Area)","Key West, FL",298.1,59,1050.0
-2025,2,BWI,PWM,"Washington, DC (Metropolitan Area)","Portland, ME",147.9,197,493.0
-2025,2,BWI,ROC,"Washington, DC (Metropolitan Area)","Rochester, NY",88.8,77,296.0
-2025,2,DCA,HOU,"Washington, DC (Metropolitan Area)","Houston, TX",209.87,316,1246.0
-2025,2,DCA,EWR,"Washington, DC (Metropolitan Area)","New York City, NY (Metropolitan Area)",73.39,202,244.64
-2025,2,DCA,JFK,"Washington, DC (Metropolitan Area)","New York City, NY (Metropolitan Area)",73.41,211,244.71428571428572
-2025,2,DCA,OAK,"Washington, DC (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",274.72,71,2457.0
-2025,2,DCA,SJC,"Washington, DC (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",286.53,116,2457.0
-2025,2,DCA,SNA,"Washington, DC (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",312.71,125,2329.0
-2025,2,DCA,ONT,"Washington, DC (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",294.06,87,2329.0
-2025,2,DCA,PIT,"Washington, DC (Metropolitan Area)","Pittsburgh, PA",63.0,148,210.0
-2025,2,DCA,SEA,"Washington, DC (Metropolitan Area)","Seattle, WA",285.7,285,2335.0
-2025,2,DCA,ELP,"Washington, DC (Metropolitan Area)","El Paso, TX",298.94,90,1741.0
-2025,2,DCA,IND,"Washington, DC (Metropolitan Area)","Indianapolis, IN",154.8,313,516.0
-2025,2,DCA,SDF,"Washington, DC (Metropolitan Area)","Louisville, KY",148.5,189,495.0
-2025,2,DCA,SMF,"Washington, DC (Metropolitan Area)","Sacramento, CA",312.97,128,2395.0
-2025,2,DCA,MEM,"Washington, DC (Metropolitan Area)","Memphis, TN",232.86,218,787.0
-2025,2,DCA,OMA,"Washington, DC (Metropolitan Area)","Omaha, NE",190.63,285,1025.0
-2025,2,DCA,MKE,"Washington, DC (Metropolitan Area)","Milwaukee, WI",179.32,281,641.0
-2025,2,DCA,PNS,"Washington, DC (Metropolitan Area)","Pensacola, FL",236.61,139,846.0
-2025,2,DCA,PDX,"Washington, DC (Metropolitan Area)","Portland, OR",317.19,285,2358.0
-2025,2,DCA,AUS,"Washington, DC (Metropolitan Area)","Austin, TX",259.29,318,1342.0
-2025,2,DCA,CMH,"Washington, DC (Metropolitan Area)","Columbus, OH",101.1,284,337.0
-2025,2,DCA,BHM,"Washington, DC (Metropolitan Area)","Birmingham, AL",204.6,173,682.0
-2025,2,DCA,CLE,"Washington, DC (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",94.2,227,314.0
-2025,2,DCA,CHS,"Washington, DC (Metropolitan Area)","Charleston, SC",141.6,302,472.0
-2025,2,DCA,TUS,"Washington, DC (Metropolitan Area)","Tucson, AZ",318.86,92,1976.12
-2025,2,DCA,BDL,"Washington, DC (Metropolitan Area)","Hartford, CT",97.71,241,325.7142857142857
-2025,2,DCA,GSP,"Washington, DC (Metropolitan Area)","Greenville/Spartanburg, SC",127.8,121,426.0
-2025,2,DCA,MCI,"Washington, DC (Metropolitan Area)","Kansas City, MO",189.96,310,967.0
-2025,2,DCA,SAT,"Washington, DC (Metropolitan Area)","San Antonio, TX",237.83,245,1407.0
-2025,2,DCA,PVD,"Washington, DC (Metropolitan Area)","Boston, MA (Metropolitan Area)",125.4,281,418.0
-2025,2,DCA,ALB,"Washington, DC (Metropolitan Area)","Albany, NY",97.5,151,325.0
-2025,2,DCA,MHT,"Washington, DC (Metropolitan Area)","Boston, MA (Metropolitan Area)",125.4,166,418.0
-2025,2,DCA,SAN,"Washington, DC (Metropolitan Area)","San Diego, CA",288.53,327,2295.0
-2025,2,DCA,BUF,"Washington, DC (Metropolitan Area)","Buffalo, NY",88.8,135,296.0
-2025,2,DCA,CVG,"Washington, DC (Metropolitan Area)","Cincinnati, OH",129.0,298,430.0
-2025,2,DCA,SAV,"Washington, DC (Metropolitan Area)","Savannah, GA",164.7,121,549.0
-2025,2,DCA,OKC,"Washington, DC (Metropolitan Area)","Oklahoma City, OK",215.72,196,1180.0
-2025,2,DCA,EYW,"Washington, DC (Metropolitan Area)","Key West, FL",281.16,123,1050.0
-2025,2,DCA,PWM,"Washington, DC (Metropolitan Area)","Portland, ME",147.9,197,493.0
-2025,2,DCA,ROC,"Washington, DC (Metropolitan Area)","Rochester, NY",88.8,77,296.0
-2025,2,DCA,HPN,"Washington, DC (Metropolitan Area)","New York City, NY (Metropolitan Area)",73.43,129,244.76190476190476
-2025,2,DCA,HSV,"Washington, DC (Metropolitan Area)","Huntsville, AL",192.3,185,641.0
-2025,2,DCA,BTV,"Washington, DC (Metropolitan Area)","Burlington, VT",132.3,99,441.0
-2025,2,DCA,CAE,"Washington, DC (Metropolitan Area)","Columbia, SC",131.4,154,438.0
-2025,2,DCA,TYS,"Washington, DC (Metropolitan Area)","Knoxville, TN",139.4,149,464.6666666666667
-2025,2,DCA,DAY,"Washington, DC (Metropolitan Area)","Dayton, OH",121.8,152,406.0
-2025,2,IAD,MDW,"Washington, DC (Metropolitan Area)","Chicago, IL",186.41,110,621.375
-2025,2,IAD,ORD,"Washington, DC (Metropolitan Area)","Chicago, IL",186.37,282,621.2307692307693
-2025,2,IAD,IAH,"Washington, DC (Metropolitan Area)","Houston, TX",282.8,314,1246.0
-2025,2,IAD,EWR,"Washington, DC (Metropolitan Area)","New York City, NY (Metropolitan Area)",73.39,150,244.64
-2025,2,IAD,JFK,"Washington, DC (Metropolitan Area)","New York City, NY (Metropolitan Area)",73.54,120,245.1304347826087
-2025,2,IAD,LGA,"Washington, DC (Metropolitan Area)","New York City, NY (Metropolitan Area)",73.39,154,244.64
-2025,2,IAD,SJC,"Washington, DC (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",285.05,83,2457.0
-2025,2,IAD,SNA,"Washington, DC (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",296.22,62,2329.0
-2025,2,IAD,FLL,"Washington, DC (Metropolitan Area)","Miami, FL (Metropolitan Area)",194.99,326,946.0
-2025,2,IAD,PIT,"Washington, DC (Metropolitan Area)","Pittsburgh, PA",63.0,65,210.0
-2025,2,IAD,JAX,"Washington, DC (Metropolitan Area)","Jacksonville, FL",183.81,205,663.0
-2025,2,IAD,DTW,"Washington, DC (Metropolitan Area)","Detroit, MI",122.7,247,409.0
-2025,2,IAD,MSP,"Washington, DC (Metropolitan Area)","Minneapolis/St. Paul, MN",216.88,271,936.0
-2025,2,IAD,RSW,"Washington, DC (Metropolitan Area)","Fort Myers, FL",198.51,215,919.0
-2025,2,IAD,IND,"Washington, DC (Metropolitan Area)","Indianapolis, IN",154.8,158,516.0
-2025,2,IAD,MIA,"Washington, DC (Metropolitan Area)","Miami, FL (Metropolitan Area)",208.95,233,946.0
-2025,2,IAD,SDF,"Washington, DC (Metropolitan Area)","Louisville, KY",148.5,56,495.0
-2025,2,IAD,SMF,"Washington, DC (Metropolitan Area)","Sacramento, CA",306.31,175,2395.0
-2025,2,IAD,PDX,"Washington, DC (Metropolitan Area)","Portland, OR",309.85,171,2358.0
-2025,2,IAD,RDU,"Washington, DC (Metropolitan Area)","Raleigh/Durham, NC",76.5,117,255.0
-2025,2,IAD,SLC,"Washington, DC (Metropolitan Area)","Salt Lake City, UT",299.76,177,1865.0
-2025,2,IAD,CMH,"Washington, DC (Metropolitan Area)","Columbus, OH",101.1,108,337.0
-2025,2,IAD,CLE,"Washington, DC (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",94.2,124,314.0
-2025,2,IAD,CHS,"Washington, DC (Metropolitan Area)","Charleston, SC",141.6,168,472.0
-2025,2,IAD,CLT,"Washington, DC (Metropolitan Area)","Charlotte, NC",108.3,215,361.0
-2025,2,IAD,TUS,"Washington, DC (Metropolitan Area)","Tucson, AZ",317.55,53,1976.12
-2025,2,IAD,BDL,"Washington, DC (Metropolitan Area)","Hartford, CT",97.73,163,325.76
-2025,2,IAD,STL,"Washington, DC (Metropolitan Area)","St. Louis, MO",221.4,88,738.0
-2025,2,IAD,GSP,"Washington, DC (Metropolitan Area)","Greenville/Spartanburg, SC",127.8,58,426.0
-2025,2,IAD,MCI,"Washington, DC (Metropolitan Area)","Kansas City, MO",245.7,118,967.0
-2025,2,IAD,SAT,"Washington, DC (Metropolitan Area)","San Antonio, TX",274.21,245,1407.0
-2025,2,IAD,PBI,"Washington, DC (Metropolitan Area)",,206.1,100,883.0
-2025,2,IAD,PVD,"Washington, DC (Metropolitan Area)","Boston, MA (Metropolitan Area)",125.4,60,418.0
-2025,2,IAD,BNA,"Washington, DC (Metropolitan Area)","Nashville, TN",176.1,268,587.0
-2025,2,IAD,BUF,"Washington, DC (Metropolitan Area)","Buffalo, NY",88.8,80,296.0
-2025,2,IAD,CVG,"Washington, DC (Metropolitan Area)","Cincinnati, OH",129.0,99,430.0
-2025,2,IAD,MSY,"Washington, DC (Metropolitan Area)","New Orleans, LA",234.45,175,998.0
-2025,2,IAD,SAV,"Washington, DC (Metropolitan Area)","Savannah, GA",164.7,104,549.0
-2025,2,IAD,OKC,"Washington, DC (Metropolitan Area)","Oklahoma City, OK",271.97,62,1180.0
-2025,2,IAD,EYW,"Washington, DC (Metropolitan Area)","Key West, FL",267.24,104,1050.0
-2025,2,IAD,PWM,"Washington, DC (Metropolitan Area)","Portland, ME",147.9,105,493.0
-2025,2,IAD,ROC,"Washington, DC (Metropolitan Area)","Rochester, NY",88.8,67,296.0
-2025,2,IAD,HSV,"Washington, DC (Metropolitan Area)","Huntsville, AL",192.3,63,641.0
-2025,2,IAD,BTV,"Washington, DC (Metropolitan Area)","Burlington, VT",132.3,99,441.0
-2025,2,IAD,CAE,"Washington, DC (Metropolitan Area)","Columbia, SC",131.4,58,438.0
-2025,2,IAD,TYS,"Washington, DC (Metropolitan Area)","Knoxville, TN",139.4,51,464.6666666666667
-2025,2,IAD,DAY,"Washington, DC (Metropolitan Area)","Dayton, OH",121.8,73,406.0
-2025,2,IAD,TPA,"Washington, DC (Metropolitan Area)","Tampa, FL (Metropolitan Area)",205.22,338,842.8888888888889
-2025,2,IAD,PHX,"Washington, DC (Metropolitan Area)","Phoenix, AZ",292.6,300,1999.0
-2025,2,MDW,IAH,"Chicago, IL","Houston, TX",201.0,179,945.0
-2025,2,MDW,EWR,"Chicago, IL","New York City, NY (Metropolitan Area)",217.05,178,773.0
-2025,2,MDW,OAK,"Chicago, IL","San Francisco, CA (Metropolitan Area)",246.28,281,1855.0
-2025,2,MDW,SFO,"Chicago, IL","San Francisco, CA (Metropolitan Area)",216.33,185,1855.0
-2025,2,MDW,SJC,"Chicago, IL","San Francisco, CA (Metropolitan Area)",258.57,155,1855.0
-2025,2,MDW,BUR,"Chicago, IL","Los Angeles, CA (Metropolitan Area)",258.11,89,1750.0
-2025,2,MDW,LGB,"Chicago, IL","Los Angeles, CA (Metropolitan Area)",194.65,128,1750.0
-2025,2,MDW,SNA,"Chicago, IL","Los Angeles, CA (Metropolitan Area)",263.06,89,1750.0
-2025,2,MDW,ONT,"Chicago, IL","Los Angeles, CA (Metropolitan Area)",245.58,188,1750.0
-2025,2,MDW,PIT,"Chicago, IL","Pittsburgh, PA",123.9,261,413.0
-2025,2,MDW,SEA,"Chicago, IL","Seattle, WA",221.77,188,1733.0
-2025,2,MDW,ELP,"Chicago, IL","El Paso, TX",229.63,52,1237.0
-2025,2,MDW,JAX,"Chicago, IL","Jacksonville, FL",208.76,118,864.0
-2025,2,MDW,DTW,"Chicago, IL","Detroit, MI",70.5,217,235.0
-2025,2,MDW,MSP,"Chicago, IL","Minneapolis/St. Paul, MN",104.7,257,349.0
-2025,2,MDW,SDF,"Chicago, IL","Louisville, KY",85.8,121,286.0
-2025,2,MDW,SMF,"Chicago, IL","Sacramento, CA",279.92,135,1790.0
-2025,2,MDW,MEM,"Chicago, IL","Memphis, TN",147.3,166,491.0
-2025,2,MDW,OMA,"Chicago, IL","Omaha, NE",126.9,234,423.0
-2025,2,MDW,PDX,"Chicago, IL","Portland, OR",256.22,147,1751.0
-2025,2,MDW,PHL,"Chicago, IL","Philadelphia, PA",169.37,304,678.0
-2025,2,MDW,RDU,"Chicago, IL","Raleigh/Durham, NC",160.69,296,646.0
-2025,2,MDW,SLC,"Chicago, IL","Salt Lake City, UT",240.78,89,1259.0
-2025,2,MDW,AUS,"Chicago, IL","Austin, TX",181.32,343,977.0
-2025,2,MDW,CMH,"Chicago, IL","Columbus, OH",88.8,289,296.0
-2025,2,MDW,BHM,"Chicago, IL","Birmingham, AL",175.01,128,583.375
-2025,2,MDW,CLE,"Chicago, IL","Cleveland, OH (Metropolitan Area)",102.9,233,343.0
-2025,2,MDW,BOS,"Chicago, IL","Boston, MA (Metropolitan Area)",142.91,290,867.0
-2025,2,MDW,CHS,"Chicago, IL","Charleston, SC",160.52,121,760.0
-2025,2,MDW,CLT,"Chicago, IL","Charlotte, NC",169.5,210,599.0
-2025,2,MDW,TUS,"Chicago, IL","Tucson, AZ",264.27,52,1440.0
-2025,2,MDW,BDL,"Chicago, IL","Hartford, CT",220.88,122,783.0
-2025,2,MDW,STL,"Chicago, IL","St. Louis, MO",77.4,290,258.0
-2025,2,MDW,MCI,"Chicago, IL","Kansas City, MO",121.5,304,405.0
-2025,2,MDW,SAT,"Chicago, IL","San Antonio, TX",217.46,234,1041.0
-2025,2,MDW,ORF,"Chicago, IL","Norfolk, VA (Metropolitan Area)",165.96,103,717.0
-2025,2,MDW,RIC,"Chicago, IL","Richmond, VA",192.6,85,642.0
-2025,2,MDW,PVD,"Chicago, IL","Boston, MA (Metropolitan Area)",185.12,177,867.0
-2025,2,MDW,ALB,"Chicago, IL","Albany, NY",216.9,87,723.0
-2025,2,MDW,MHT,"Chicago, IL","Boston, MA (Metropolitan Area)",202.46,103,867.0
-2025,2,MDW,BNA,"Chicago, IL","Nashville, TN",122.7,293,409.0
-2025,2,MDW,SAN,"Chicago, IL","San Diego, CA",219.54,307,1728.0
-2025,2,MDW,BUF,"Chicago, IL","Buffalo, NY",142.02,136,473.39130434782606
-2025,2,MDW,CVG,"Chicago, IL","Cincinnati, OH",79.2,152,264.0
-2025,2,MDW,MSY,"Chicago, IL","New Orleans, LA",167.0,307,836.3333333333334
-2025,2,MDW,SAV,"Chicago, IL","Savannah, GA",224.29,121,773.0
-2025,2,MDW,OKC,"Chicago, IL","Oklahoma City, OK",176.99,72,693.0
-2025,2,MDW,SRQ,"Chicago, IL",,248.47,202,1050.0
-2025,2,ORD,OAK,"Chicago, IL","San Francisco, CA (Metropolitan Area)",185.5,196,1855.0
-2025,2,ORD,SJC,"Chicago, IL","San Francisco, CA (Metropolitan Area)",277.29,216,1855.0
-2025,2,ORD,ONT,"Chicago, IL","Los Angeles, CA (Metropolitan Area)",262.84,148,1750.0
-2025,2,ORD,PIT,"Chicago, IL","Pittsburgh, PA",123.9,259,413.0
-2025,2,ORD,ELP,"Chicago, IL","El Paso, TX",266.81,164,1237.0
-2025,2,ORD,JAX,"Chicago, IL","Jacksonville, FL",231.35,345,864.0
-2025,2,ORD,SDF,"Chicago, IL","Louisville, KY",85.8,181,286.0
-2025,2,ORD,SMF,"Chicago, IL","Sacramento, CA",285.51,314,1790.0
-2025,2,ORD,MEM,"Chicago, IL","Memphis, TN",147.3,283,491.0
-2025,2,ORD,OMA,"Chicago, IL","Omaha, NE",126.9,229,423.0
-2025,2,ORD,PNS,"Chicago, IL","Pensacola, FL",222.81,165,794.0
-2025,2,ORD,PDX,"Chicago, IL","Portland, OR",233.34,284,1751.0
-2025,2,ORD,CMH,"Chicago, IL","Columbus, OH",88.8,284,296.0
-2025,2,ORD,BHM,"Chicago, IL","Birmingham, AL",175.01,143,583.375
-2025,2,ORD,CHS,"Chicago, IL","Charleston, SC",201.63,312,760.0
-2025,2,ORD,TUS,"Chicago, IL","Tucson, AZ",288.61,200,1440.0
-2025,2,ORD,BDL,"Chicago, IL","Hartford, CT",234.9,276,783.0
-2025,2,ORD,STL,"Chicago, IL","St. Louis, MO",77.4,276,258.0
-2025,2,ORD,MCI,"Chicago, IL","Kansas City, MO",121.5,241,405.0
-2025,2,ORD,SAT,"Chicago, IL","San Antonio, TX",232.71,316,1041.0
-2025,2,ORD,ORF,"Chicago, IL","Norfolk, VA (Metropolitan Area)",192.15,245,717.0
-2025,2,ORD,RIC,"Chicago, IL","Richmond, VA",192.6,259,642.0
-2025,2,ORD,PVD,"Chicago, IL","Boston, MA (Metropolitan Area)",221.6,176,867.0
-2025,2,ORD,ALB,"Chicago, IL","Albany, NY",216.9,207,723.0
-2025,2,ORD,MHT,"Chicago, IL","Boston, MA (Metropolitan Area)",248.3,57,867.0
-2025,2,ORD,BUF,"Chicago, IL","Buffalo, NY",142.02,294,473.39130434782606
-2025,2,ORD,CVG,"Chicago, IL","Cincinnati, OH",79.2,284,264.0
-2025,2,ORD,SAV,"Chicago, IL","Savannah, GA",231.9,179,773.0
-2025,2,ORD,OKC,"Chicago, IL","Oklahoma City, OK",207.9,174,693.0
-2025,2,ORD,HPN,"Chicago, IL","New York City, NY (Metropolitan Area)",231.8,174,772.68
-2025,2,ORD,TYS,"Chicago, IL","Knoxville, TN",142.5,175,475.0
-2025,2,ORD,SRQ,"Chicago, IL",,260.13,296,1050.0
-2025,2,ORD,CAK,"Chicago, IL","Cleveland, OH (Metropolitan Area)",102.9,87,343.0
-2025,2,ORD,PSP,"Chicago, IL","Palm Springs, CA",312.48,308,1656.6875
-2025,2,HOU,EWR,"Houston, TX","New York City, NY (Metropolitan Area)",239.75,68,1465.0
-2025,2,HOU,JFK,"Houston, TX","New York City, NY (Metropolitan Area)",232.07,127,1465.0
-2025,2,HOU,OAK,"Houston, TX","San Francisco, CA (Metropolitan Area)",220.54,282,1649.0
-2025,2,HOU,SFO,"Houston, TX","San Francisco, CA (Metropolitan Area)",231.31,53,1649.0
-2025,2,HOU,SJC,"Houston, TX","San Francisco, CA (Metropolitan Area)",233.94,136,1649.0
-2025,2,HOU,BUR,"Houston, TX","Los Angeles, CA (Metropolitan Area)",212.08,69,1390.0
-2025,2,HOU,LGB,"Houston, TX","Los Angeles, CA (Metropolitan Area)",185.09,170,1390.0
-2025,2,HOU,SNA,"Houston, TX","Los Angeles, CA (Metropolitan Area)",229.2,133,1390.0
-2025,2,HOU,ONT,"Houston, TX","Los Angeles, CA (Metropolitan Area)",231.14,76,1390.0
-2025,2,HOU,FLL,"Houston, TX","Miami, FL (Metropolitan Area)",171.94,214,966.0
-2025,2,HOU,PIT,"Houston, TX","Pittsburgh, PA",218.36,122,1131.0
-2025,2,HOU,SEA,"Houston, TX","Seattle, WA",254.95,63,1894.0
-2025,2,HOU,ELP,"Houston, TX","El Paso, TX",200.37,210,677.0
-2025,2,HOU,JAX,"Houston, TX","Jacksonville, FL",215.83,66,817.0
-2025,2,HOU,DTW,"Houston, TX","Detroit, MI",185.86,76,1092.0
-2025,2,HOU,MSP,"Houston, TX","Minneapolis/St. Paul, MN",207.7,55,1057.0
-2025,2,HOU,IND,"Houston, TX","Indianapolis, IN",192.51,151,861.0
-2025,2,HOU,MIA,"Houston, TX","Miami, FL (Metropolitan Area)",190.29,229,966.0
-2025,2,HOU,LBB,"Houston, TX",,142.27,87,474.24
-2025,2,HOU,SDF,"Houston, TX","Louisville, KY",189.9,75,803.0
-2025,2,HOU,MAF,"Houston, TX",,132.3,271,441.0
-2025,2,HOU,SMF,"Houston, TX","Sacramento, CA",251.52,91,1624.0
-2025,2,HOU,MEM,"Houston, TX","Memphis, TN",145.2,110,484.0
-2025,2,HOU,OMA,"Houston, TX","Omaha, NE",167.29,87,804.0
-2025,2,HOU,MKE,"Houston, TX","Milwaukee, WI",183.23,103,1004.0
-2025,2,HOU,PDX,"Houston, TX","Portland, OR",243.39,88,1843.24
-2025,2,HOU,PHL,"Houston, TX","Philadelphia, PA",221.63,117,1335.76
-2025,2,HOU,RDU,"Houston, TX","Raleigh/Durham, NC",213.78,131,1050.0
-2025,2,HOU,SLC,"Houston, TX","Salt Lake City, UT",233.76,90,1214.0
-2025,2,HOU,TUL,"Houston, TX","Tulsa, OK",135.9,231,453.0
-2025,2,HOU,CMH,"Houston, TX","Columbus, OH",204.38,108,1000.76
-2025,2,HOU,BHM,"Houston, TX","Birmingham, AL",171.0,112,570.0
-2025,2,HOU,CLE,"Houston, TX","Cleveland, OH (Metropolitan Area)",208.33,62,1106.0
-2025,2,HOU,BOS,"Houston, TX","Boston, MA (Metropolitan Area)",216.86,237,1609.0
-2025,2,HOU,CHS,"Houston, TX","Charleston, SC",189.48,63,928.0
-2025,2,HOU,CLT,"Houston, TX","Charlotte, NC",200.37,91,920.0
-2025,2,HOU,STL,"Houston, TX","St. Louis, MO",194.75,324,687.0
-2025,2,HOU,MCI,"Houston, TX","Kansas City, MO",190.22,256,666.0
-2025,2,HOU,SAT,"Houston, TX","San Antonio, TX",57.6,131,192.0
-2025,2,HOU,BNA,"Houston, TX","Nashville, TN",187.17,316,670.0
-2025,2,HOU,SAN,"Houston, TX","San Diego, CA",208.65,241,1313.0
-2025,2,HOU,OKC,"Houston, TX","Oklahoma City, OK",125.7,194,419.0
-2025,2,HOU,TPA,"Houston, TX","Tampa, FL (Metropolitan Area)",173.44,223,787.0
-2025,2,HOU,AZA,"Houston, TX","Phoenix, AZ",102.0,53,1020.0
-2025,2,HOU,HRL,"Houston, TX","Harlingen/San Benito, TX",88.5,184,295.0
-2025,2,IAH,JFK,"Houston, TX","New York City, NY (Metropolitan Area)",219.45,211,1465.0
-2025,2,IAH,OAK,"Houston, TX","San Francisco, CA (Metropolitan Area)",164.9,146,1649.0
-2025,2,IAH,SJC,"Houston, TX","San Francisco, CA (Metropolitan Area)",290.82,148,1649.0
-2025,2,IAH,SNA,"Houston, TX","Los Angeles, CA (Metropolitan Area)",286.05,294,1390.0
-2025,2,IAH,ONT,"Houston, TX","Los Angeles, CA (Metropolitan Area)",272.57,103,1390.0
-2025,2,IAH,PIT,"Houston, TX","Pittsburgh, PA",282.66,308,1131.0
-2025,2,IAH,ELP,"Houston, TX","El Paso, TX",203.1,125,677.0
-2025,2,IAH,JAX,"Houston, TX","Jacksonville, FL",245.1,162,817.0
-2025,2,IAH,IND,"Houston, TX","Indianapolis, IN",241.73,226,861.0
-2025,2,IAH,LBB,"Houston, TX",,142.27,84,474.24
-2025,2,IAH,SDF,"Houston, TX","Louisville, KY",235.53,123,803.0
-2025,2,IAH,MAF,"Houston, TX",,132.3,267,441.0
-2025,2,IAH,SMF,"Houston, TX","Sacramento, CA",290.19,179,1624.0
-2025,2,IAH,MEM,"Houston, TX","Memphis, TN",145.2,190,484.0
-2025,2,IAH,OMA,"Houston, TX","Omaha, NE",216.83,121,804.0
-2025,2,IAH,MKE,"Houston, TX","Milwaukee, WI",244.65,197,1004.0
-2025,2,IAH,PDX,"Houston, TX","Portland, OR",299.03,311,1843.24
-2025,2,IAH,RDU,"Houston, TX","Raleigh/Durham, NC",244.92,305,1050.0
-2025,2,IAH,TUL,"Houston, TX","Tulsa, OK",135.9,195,453.0
-2025,2,IAH,CMH,"Houston, TX","Columbus, OH",256.67,209,1000.76
-2025,2,IAH,BHM,"Houston, TX","Birmingham, AL",171.0,138,570.0
-2025,2,IAH,CLE,"Houston, TX","Cleveland, OH (Metropolitan Area)",282.66,292,1106.0
-2025,2,IAH,CHS,"Houston, TX","Charleston, SC",238.06,120,928.0
-2025,2,IAH,STL,"Houston, TX","St. Louis, MO",206.1,201,687.0
-2025,2,IAH,MCI,"Houston, TX","Kansas City, MO",199.8,206,666.0
-2025,2,IAH,SAT,"Houston, TX","San Antonio, TX",57.6,102,192.0
-2025,2,IAH,ORF,"Houston, TX","Norfolk, VA (Metropolitan Area)",260.68,119,1209.0
-2025,2,IAH,CVG,"Houston, TX","Cincinnati, OH",219.58,279,886.0
-2025,2,IAH,OKC,"Houston, TX","Oklahoma City, OK",125.7,221,419.0
-2025,2,EWR,OAK,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",261.72,125,2617.1666666666665
-2025,2,EWR,SJC,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",317.77,130,2616.8
-2025,2,EWR,ONT,"New York City, NY (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",308.64,59,2510.0
-2025,2,EWR,PIT,"New York City, NY (Metropolitan Area)","Pittsburgh, PA",112.5,281,375.0
-2025,2,EWR,ELP,"New York City, NY (Metropolitan Area)","El Paso, TX",373.67,50,1944.0
-2025,2,EWR,SDF,"New York City, NY (Metropolitan Area)","Louisville, KY",209.7,157,699.0
-2025,2,EWR,SMF,"New York City, NY (Metropolitan Area)","Sacramento, CA",330.73,209,2546.6
-2025,2,EWR,MEM,"New York City, NY (Metropolitan Area)","Memphis, TN",259.29,185,1002.0
-2025,2,EWR,OMA,"New York City, NY (Metropolitan Area)","Omaha, NE",283.91,152,1188.0
-2025,2,EWR,MKE,"New York City, NY (Metropolitan Area)","Milwaukee, WI",224.19,250,777.0
-2025,2,EWR,PDX,"New York City, NY (Metropolitan Area)","Portland, OR",250.18,264,2472.6666666666665
-2025,2,EWR,RNO,"New York City, NY (Metropolitan Area)","Reno, NV",353.24,67,2436.3333333333335
-2025,2,EWR,CMH,"New York City, NY (Metropolitan Area)","Columbus, OH",155.7,320,519.0
-2025,2,EWR,CLE,"New York City, NY (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",137.7,303,459.0
-2025,2,EWR,TUS,"New York City, NY (Metropolitan Area)","Tucson, AZ",357.72,81,2166.1111111111113
-2025,2,EWR,STL,"New York City, NY (Metropolitan Area)","St. Louis, MO",251.66,287,929.0
-2025,2,EWR,DSM,"New York City, NY (Metropolitan Area)","Des Moines, IA",257.43,84,1057.1176470588234
-2025,2,EWR,GSP,"New York City, NY (Metropolitan Area)","Greenville/Spartanburg, SC",192.9,160,643.0
-2025,2,EWR,GRR,"New York City, NY (Metropolitan Area)","Grand Rapids, MI",196.8,174,656.0
-2025,2,EWR,MCI,"New York City, NY (Metropolitan Area)","Kansas City, MO",242.14,287,1148.0
-2025,2,EWR,SAT,"New York City, NY (Metropolitan Area)","San Antonio, TX",269.84,290,1624.0
-2025,2,EWR,ORF,"New York City, NY (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",98.38,128,327.9166666666667
-2025,2,EWR,RIC,"New York City, NY (Metropolitan Area)","Richmond, VA",96.35,158,321.1818181818182
-2025,2,EWR,MHT,"New York City, NY (Metropolitan Area)","Boston, MA (Metropolitan Area)",62.7,61,209.0
-2025,2,EWR,BUF,"New York City, NY (Metropolitan Area)","Buffalo, NY",97.8,211,326.0
-2025,2,EWR,CVG,"New York City, NY (Metropolitan Area)","Cincinnati, OH",187.8,293,626.0
-2025,2,EWR,SAV,"New York City, NY (Metropolitan Area)","Savannah, GA",169.35,308,752.8636363636364
-2025,2,EWR,OKC,"New York City, NY (Metropolitan Area)","Oklahoma City, OK",330.74,116,1379.88
-2025,2,EWR,EYW,"New York City, NY (Metropolitan Area)","Key West, FL",299.7,160,1234.2777777777778
-2025,2,EWR,PWM,"New York City, NY (Metropolitan Area)","Portland, ME",85.2,158,284.0
-2025,2,EWR,ROC,"New York City, NY (Metropolitan Area)","Rochester, NY",85.5,120,285.0
-2025,2,EWR,BTV,"New York City, NY (Metropolitan Area)","Burlington, VT",79.8,118,266.0
-2025,2,EWR,TYS,"New York City, NY (Metropolitan Area)","Knoxville, TN",168.07,163,679.4761904761905
-2025,2,EWR,CAK,"New York City, NY (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",137.7,86,459.0
-2025,2,EWR,PSP,"New York City, NY (Metropolitan Area)","Palm Springs, CA",407.84,99,2397.9411764705883
-2025,2,EWR,AVL,"New York City, NY (Metropolitan Area)","Asheville, NC",151.02,160,627.6666666666666
-2025,2,EWR,MYR,"New York City, NY (Metropolitan Area)","Myrtle Beach, SC",137.67,236,600.3181818181819
-2025,2,EWR,BZN,"New York City, NY (Metropolitan Area)","Bozeman, MT",383.01,167,1906.4615384615386
-2025,2,EWR,EGE,"New York City, NY (Metropolitan Area)","Eagle, CO",417.36,101,1746.0
-2025,2,EWR,ILM,"New York City, NY (Metropolitan Area)",,159.3,91,531.0
-2025,2,EWR,SYR,"New York City, NY (Metropolitan Area)","Syracuse, NY",66.65,80,222.1578947368421
-2025,2,EWR,XNA,"New York City, NY (Metropolitan Area)","Fayetteville, AR",347.29,86,1169.3157894736842
-2025,2,EWR,GSO,"New York City, NY (Metropolitan Area)","Greensboro/High Point, NC",146.61,165,488.7
-2025,2,EWR,JAC,"New York City, NY (Metropolitan Area)","Jackson, WY",383.01,133,1896.3846153846155
-2025,2,EWR,MSN,"New York City, NY (Metropolitan Area)","Madison, WI",251.74,125,839.15
-2025,2,JFK,OAK,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",273.31,73,2616.8
-2025,2,JFK,SJC,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",261.61,167,2616.1052631578946
-2025,2,JFK,BUR,"New York City, NY (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",251.0,267,2510.0
-2025,2,JFK,LGB,"New York City, NY (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",251.0,180,2510.0
-2025,2,JFK,SNA,"New York City, NY (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",389.03,122,2510.0
-2025,2,JFK,ONT,"New York City, NY (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",251.0,194,2510.0
-2025,2,JFK,PIT,"New York City, NY (Metropolitan Area)","Pittsburgh, PA",112.5,160,375.0
-2025,2,JFK,JAX,"New York City, NY (Metropolitan Area)","Jacksonville, FL",155.46,243,864.6
-2025,2,JFK,DTW,"New York City, NY (Metropolitan Area)","Detroit, MI",162.0,261,540.0
-2025,2,JFK,MSP,"New York City, NY (Metropolitan Area)","Minneapolis/St. Paul, MN",233.4,274,1055.7272727272727
-2025,2,JFK,IND,"New York City, NY (Metropolitan Area)","Indianapolis, IN",182.54,214,701.0
-2025,2,JFK,MIA,"New York City, NY (Metropolitan Area)","Miami, FL (Metropolitan Area)",168.58,235,1128.5
-2025,2,JFK,SMF,"New York City, NY (Metropolitan Area)","Sacramento, CA",255.13,241,2546.6
-2025,2,JFK,MKE,"New York City, NY (Metropolitan Area)","Milwaukee, WI",208.14,140,777.0
-2025,2,JFK,PDX,"New York City, NY (Metropolitan Area)","Portland, OR",246.96,279,2469.5555555555557
-2025,2,JFK,RNO,"New York City, NY (Metropolitan Area)","Reno, NV",269.0,140,2436.3333333333335
-2025,2,JFK,CMH,"New York City, NY (Metropolitan Area)","Columbus, OH",155.7,181,519.0
-2025,2,JFK,CLE,"New York City, NY (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",137.7,180,459.0
-2025,2,JFK,BOS,"New York City, NY (Metropolitan Area)","Boston, MA (Metropolitan Area)",61.35,261,204.5
-2025,2,JFK,CHS,"New York City, NY (Metropolitan Area)","Charleston, SC",148.47,313,670.0
-2025,2,JFK,CLT,"New York City, NY (Metropolitan Area)","Charlotte, NC",171.95,333,575.0
-2025,2,JFK,MCI,"New York City, NY (Metropolitan Area)","Kansas City, MO",197.25,159,1148.0
-2025,2,JFK,SAT,"New York City, NY (Metropolitan Area)","San Antonio, TX",221.19,283,1624.0
-2025,2,JFK,ORF,"New York City, NY (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",98.38,171,327.9166666666667
-2025,2,JFK,RIC,"New York City, NY (Metropolitan Area)","Richmond, VA",96.35,109,321.1818181818182
-2025,2,JFK,BNA,"New York City, NY (Metropolitan Area)","Nashville, TN",174.68,254,803.0
-2025,2,JFK,SAN,"New York City, NY (Metropolitan Area)","San Diego, CA",278.84,173,2481.0
-2025,2,JFK,CVG,"New York City, NY (Metropolitan Area)","Cincinnati, OH",187.8,165,626.0
-2025,2,JFK,MSY,"New York City, NY (Metropolitan Area)","New Orleans, LA",195.1,291,1218.0
-2025,2,JFK,SAV,"New York City, NY (Metropolitan Area)","Savannah, GA",146.0,309,751.7222222222222
-2025,2,JFK,EYW,"New York City, NY (Metropolitan Area)","Key West, FL",267.17,71,1234.2777777777778
-2025,2,JFK,PWM,"New York City, NY (Metropolitan Area)","Portland, ME",85.2,229,284.0
-2025,2,JFK,ROC,"New York City, NY (Metropolitan Area)","Rochester, NY",85.5,265,285.0
-2025,2,JFK,BTV,"New York City, NY (Metropolitan Area)","Burlington, VT",79.8,186,266.0
-2025,2,JFK,PHX,"New York City, NY (Metropolitan Area)","Phoenix, AZ",223.17,294,2189.0
-2025,2,JFK,SRQ,"New York City, NY (Metropolitan Area)",,174.44,170,1074.7826086956522
-2025,2,JFK,PSP,"New York City, NY (Metropolitan Area)","Palm Springs, CA",281.45,200,2397.9411764705883
-2025,2,JFK,AZA,"New York City, NY (Metropolitan Area)","Phoenix, AZ",0.0,186,0.0
-2025,2,JFK,BZN,"New York City, NY (Metropolitan Area)","Bozeman, MT",272.37,127,1906.4615384615386
-2025,2,JFK,EGE,"New York City, NY (Metropolitan Area)","Eagle, CO",386.92,55,1746.0
-2025,2,JFK,SYR,"New York City, NY (Metropolitan Area)","Syracuse, NY",66.65,167,222.1578947368421
-2025,2,JFK,JAC,"New York City, NY (Metropolitan Area)","Jackson, WY",356.44,135,1896.3846153846155
-2025,2,LGA,SFO,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",342.25,125,2616.8
-2025,2,LGA,SJC,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",261.68,68,2616.8
-2025,2,LGA,LAX,"New York City, NY (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",302.4,285,2510.0
-2025,2,LGA,SNA,"New York City, NY (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",319.7,91,2510.0
-2025,2,LGA,ONT,"New York City, NY (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",253.96,73,2510.0
-2025,2,LGA,SEA,"New York City, NY (Metropolitan Area)","Seattle, WA",330.19,55,2442.8
-2025,2,LGA,ELP,"New York City, NY (Metropolitan Area)","El Paso, TX",356.98,111,1944.0
-2025,2,LGA,JAX,"New York City, NY (Metropolitan Area)","Jacksonville, FL",203.33,289,866.5555555555555
-2025,2,LGA,SDF,"New York City, NY (Metropolitan Area)","Louisville, KY",209.7,301,699.0
-2025,2,LGA,SMF,"New York City, NY (Metropolitan Area)","Sacramento, CA",298.77,110,2546.6
-2025,2,LGA,MEM,"New York City, NY (Metropolitan Area)","Memphis, TN",259.82,274,1002.0
-2025,2,LGA,OMA,"New York City, NY (Metropolitan Area)","Omaha, NE",255.35,204,1188.0
-2025,2,LGA,MKE,"New York City, NY (Metropolitan Area)","Milwaukee, WI",233.1,314,777.0
-2025,2,LGA,SLC,"New York City, NY (Metropolitan Area)","Salt Lake City, UT",309.68,115,2020.72
-2025,2,LGA,AUS,"New York City, NY (Metropolitan Area)","Austin, TX",235.37,194,1559.0
-2025,2,LGA,BHM,"New York City, NY (Metropolitan Area)","Birmingham, AL",270.6,254,902.0
-2025,2,LGA,CLE,"New York City, NY (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",137.7,308,459.0
-2025,2,LGA,CHS,"New York City, NY (Metropolitan Area)","Charleston, SC",183.69,331,675.0588235294117
-2025,2,LGA,TUS,"New York City, NY (Metropolitan Area)","Tucson, AZ",356.98,121,2166.1111111111113
-2025,2,LGA,DSM,"New York City, NY (Metropolitan Area)","Des Moines, IA",283.79,142,1057.1176470588234
-2025,2,LGA,GSP,"New York City, NY (Metropolitan Area)","Greenville/Spartanburg, SC",192.9,254,643.0
-2025,2,LGA,GRR,"New York City, NY (Metropolitan Area)","Grand Rapids, MI",196.8,177,656.0
-2025,2,LGA,SAT,"New York City, NY (Metropolitan Area)","San Antonio, TX",251.58,248,1624.0
-2025,2,LGA,ORF,"New York City, NY (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",98.38,190,327.9166666666667
-2025,2,LGA,RIC,"New York City, NY (Metropolitan Area)","Richmond, VA",96.35,294,321.1818181818182
-2025,2,LGA,SAN,"New York City, NY (Metropolitan Area)","San Diego, CA",328.09,96,2481.0
-2025,2,LGA,BUF,"New York City, NY (Metropolitan Area)","Buffalo, NY",97.8,221,326.0
-2025,2,LGA,CVG,"New York City, NY (Metropolitan Area)","Cincinnati, OH",187.8,289,626.0
-2025,2,LGA,SAV,"New York City, NY (Metropolitan Area)","Savannah, GA",182.16,253,752.4583333333334
-2025,2,LGA,OKC,"New York City, NY (Metropolitan Area)","Oklahoma City, OK",284.04,170,1379.88
-2025,2,LGA,EYW,"New York City, NY (Metropolitan Area)","Key West, FL",313.9,98,1234.2777777777778
-2025,2,LGA,PWM,"New York City, NY (Metropolitan Area)","Portland, ME",85.2,177,284.0
-2025,2,LGA,ROC,"New York City, NY (Metropolitan Area)","Rochester, NY",85.5,161,285.0
-2025,2,LGA,BTV,"New York City, NY (Metropolitan Area)","Burlington, VT",79.8,71,266.0
-2025,2,LGA,TYS,"New York City, NY (Metropolitan Area)","Knoxville, TN",203.84,185,679.4761904761905
-2025,2,LGA,PHX,"New York City, NY (Metropolitan Area)","Phoenix, AZ",285.74,174,2189.0
-2025,2,LGA,SRQ,"New York City, NY (Metropolitan Area)",,227.62,275,1074.7826086956522
-2025,2,LGA,AVL,"New York City, NY (Metropolitan Area)","Asheville, NC",188.3,159,627.6666666666666
-2025,2,LGA,MYR,"New York City, NY (Metropolitan Area)","Myrtle Beach, SC",129.33,265,600.2857142857143
-2025,2,LGA,BZN,"New York City, NY (Metropolitan Area)","Bozeman, MT",323.76,53,1906.4615384615386
-2025,2,LGA,EGE,"New York City, NY (Metropolitan Area)","Eagle, CO",452.76,64,1746.0
-2025,2,LGA,ILM,"New York City, NY (Metropolitan Area)",,159.3,221,531.0
-2025,2,LGA,SYR,"New York City, NY (Metropolitan Area)","Syracuse, NY",66.65,128,222.1578947368421
-2025,2,LGA,XNA,"New York City, NY (Metropolitan Area)","Fayetteville, AR",322.81,131,1169.3157894736842
-2025,2,LGA,GSO,"New York City, NY (Metropolitan Area)","Greensboro/High Point, NC",146.56,251,488.5263157894737
-2025,2,LGA,JAC,"New York City, NY (Metropolitan Area)","Jackson, WY",419.06,53,1896.3846153846155
-2025,2,LGA,MSN,"New York City, NY (Metropolitan Area)","Madison, WI",251.74,163,839.15
-2025,2,LGA,ASE,"New York City, NY (Metropolitan Area)","Aspen, CO",462.53,109,1750.0
-2025,2,LGA,LAS,"New York City, NY (Metropolitan Area)","Las Vegas, NV",254.99,176,2282.0
-2025,2,OAK,DTW,"San Francisco, CA (Metropolitan Area)","Detroit, MI",208.08,180,2079.0
-2025,2,OAK,MSP,"San Francisco, CA (Metropolitan Area)","Minneapolis/St. Paul, MN",230.74,90,1589.0
-2025,2,OAK,IND,"San Francisco, CA (Metropolitan Area)","Indianapolis, IN",219.04,121,1943.0
-2025,2,OAK,PHL,"San Francisco, CA (Metropolitan Area)","Philadelphia, PA",252.1,95,2521.0
-2025,2,OAK,RNO,"San Francisco, CA (Metropolitan Area)","Reno, NV",57.6,136,192.0
-2025,2,OAK,AUS,"San Francisco, CA (Metropolitan Area)","Austin, TX",224.37,138,1504.0
-2025,2,OAK,CMH,"San Francisco, CA (Metropolitan Area)","Columbus, OH",252.73,134,2120.0
-2025,2,OAK,BOS,"San Francisco, CA (Metropolitan Area)","Boston, MA (Metropolitan Area)",287.23,93,2704.0
-2025,2,OAK,TUS,"San Francisco, CA (Metropolitan Area)","Tucson, AZ",183.46,56,751.0
-2025,2,OAK,STL,"San Francisco, CA (Metropolitan Area)","St. Louis, MO",253.58,104,1735.0
-2025,2,OAK,BOI,"San Francisco, CA (Metropolitan Area)","Boise, ID",156.9,131,523.0
-2025,2,OAK,MCI,"San Francisco, CA (Metropolitan Area)","Kansas City, MO",252.24,136,1499.0
-2025,2,OAK,SAT,"San Francisco, CA (Metropolitan Area)","San Antonio, TX",217.2,118,1482.0
-2025,2,OAK,BNA,"San Francisco, CA (Metropolitan Area)","Nashville, TN",255.46,121,1969.0
-2025,2,OAK,MSY,"San Francisco, CA (Metropolitan Area)","New Orleans, LA",240.57,173,1911.0
-2025,2,OAK,TPA,"San Francisco, CA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",260.05,51,2393.0
-2025,2,OAK,PSP,"San Francisco, CA (Metropolitan Area)","Palm Springs, CA",126.3,156,421.0
-2025,2,OAK,ATL,"San Francisco, CA (Metropolitan Area)","Atlanta, GA (Metropolitan Area)",248.65,200,2139.0
-2025,2,OAK,DEN,"San Francisco, CA (Metropolitan Area)","Denver, CO",167.53,317,967.0
-2025,2,OAK,GEG,"San Francisco, CA (Metropolitan Area)",,167.71,103,742.0
-2025,2,OAK,MCO,"San Francisco, CA (Metropolitan Area)","Orlando, FL",250.12,122,2446.0
-2025,2,OAK,EUG,"San Francisco, CA (Metropolitan Area)","Eugene, OR",119.41,137,471.0
-2025,2,SFO,LGB,"San Francisco, CA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",111.6,161,372.0
-2025,2,SFO,ONT,"San Francisco, CA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",111.6,235,372.0
-2025,2,SFO,PIT,"San Francisco, CA (Metropolitan Area)","Pittsburgh, PA",335.63,295,2254.0
-2025,2,SFO,JAX,"San Francisco, CA (Metropolitan Area)","Jacksonville, FL",335.81,139,2366.0
-2025,2,SFO,RSW,"San Francisco, CA (Metropolitan Area)","Fort Myers, FL",386.04,142,2481.0
-2025,2,SFO,IND,"San Francisco, CA (Metropolitan Area)","Indianapolis, IN",279.03,299,1943.0
-2025,2,SFO,RNO,"San Francisco, CA (Metropolitan Area)","Reno, NV",57.6,146,192.0
-2025,2,SFO,CMH,"San Francisco, CA (Metropolitan Area)","Columbus, OH",318.06,202,2120.0
-2025,2,SFO,CLE,"San Francisco, CA (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",326.59,306,2187.0
-2025,2,SFO,CLT,"San Francisco, CA (Metropolitan Area)","Charlotte, NC",331.8,313,2296.0
-2025,2,SFO,TUS,"San Francisco, CA (Metropolitan Area)","Tucson, AZ",225.3,166,751.0
-2025,2,SFO,STL,"San Francisco, CA (Metropolitan Area)","St. Louis, MO",303.49,253,1735.0
-2025,2,SFO,BOI,"San Francisco, CA (Metropolitan Area)","Boise, ID",156.9,198,523.0
-2025,2,SFO,MCI,"San Francisco, CA (Metropolitan Area)","Kansas City, MO",277.02,230,1499.0
-2025,2,SFO,SAT,"San Francisco, CA (Metropolitan Area)","San Antonio, TX",257.56,198,1482.0
-2025,2,SFO,BNA,"San Francisco, CA (Metropolitan Area)","Nashville, TN",311.77,296,1969.0
-2025,2,SFO,CVG,"San Francisco, CA (Metropolitan Area)","Cincinnati, OH",294.22,269,2036.0
-2025,2,SFO,MSY,"San Francisco, CA (Metropolitan Area)","New Orleans, LA",286.66,272,1911.0
-2025,2,SFO,GEG,"San Francisco, CA (Metropolitan Area)",,191.83,144,742.0
-2025,2,SFO,EUG,"San Francisco, CA (Metropolitan Area)","Eugene, OR",141.3,113,471.0
-2025,2,SFO,SBA,"San Francisco, CA (Metropolitan Area)",,78.8,191,262.6666666666667
-2025,2,SJC,LGB,"San Francisco, CA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",106.46,246,372.0
-2025,2,SJC,ONT,"San Francisco, CA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",111.6,270,372.0
-2025,2,SJC,PIT,"San Francisco, CA (Metropolitan Area)","Pittsburgh, PA",300.62,60,2254.0
-2025,2,SJC,DTW,"San Francisco, CA (Metropolitan Area)","Detroit, MI",316.34,135,2079.0
-2025,2,SJC,MSP,"San Francisco, CA (Metropolitan Area)","Minneapolis/St. Paul, MN",282.79,151,1589.0
-2025,2,SJC,IND,"San Francisco, CA (Metropolitan Area)","Indianapolis, IN",255.94,63,1943.0
-2025,2,SJC,PHL,"San Francisco, CA (Metropolitan Area)","Philadelphia, PA",308.77,71,2521.0
-2025,2,SJC,RDU,"San Francisco, CA (Metropolitan Area)","Raleigh/Durham, NC",306.14,102,2400.0
-2025,2,SJC,RNO,"San Francisco, CA (Metropolitan Area)","Reno, NV",57.6,165,192.0
-2025,2,SJC,SLC,"San Francisco, CA (Metropolitan Area)","Salt Lake City, UT",179.31,332,599.0
-2025,2,SJC,CMH,"San Francisco, CA (Metropolitan Area)","Columbus, OH",303.58,52,2120.0
-2025,2,SJC,BOS,"San Francisco, CA (Metropolitan Area)","Boston, MA (Metropolitan Area)",270.4,185,2704.0
-2025,2,SJC,CLT,"San Francisco, CA (Metropolitan Area)","Charlotte, NC",317.74,81,2296.0
-2025,2,SJC,TUS,"San Francisco, CA (Metropolitan Area)","Tucson, AZ",175.23,170,751.0
-2025,2,SJC,STL,"San Francisco, CA (Metropolitan Area)","St. Louis, MO",248.74,107,1735.0
-2025,2,SJC,BOI,"San Francisco, CA (Metropolitan Area)","Boise, ID",156.9,177,523.0
-2025,2,SJC,MCI,"San Francisco, CA (Metropolitan Area)","Kansas City, MO",255.83,74,1499.0
-2025,2,SJC,SAT,"San Francisco, CA (Metropolitan Area)","San Antonio, TX",207.51,101,1482.0
-2025,2,SJC,BNA,"San Francisco, CA (Metropolitan Area)","Nashville, TN",257.67,129,1969.0
-2025,2,SJC,CVG,"San Francisco, CA (Metropolitan Area)","Cincinnati, OH",299.02,86,2036.0
-2025,2,SJC,MSY,"San Francisco, CA (Metropolitan Area)","New Orleans, LA",258.96,90,1911.0
-2025,2,SJC,TPA,"San Francisco, CA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",293.25,64,2393.0
-2025,2,SJC,PSP,"San Francisco, CA (Metropolitan Area)","Palm Springs, CA",126.3,81,421.0
-2025,2,SJC,ATL,"San Francisco, CA (Metropolitan Area)","Atlanta, GA (Metropolitan Area)",340.08,257,2139.0
-2025,2,SJC,GEG,"San Francisco, CA (Metropolitan Area)",,174.71,103,742.0
-2025,2,SJC,MCO,"San Francisco, CA (Metropolitan Area)","Orlando, FL",272.26,195,2446.0
-2025,2,SJC,EUG,"San Francisco, CA (Metropolitan Area)","Eugene, OR",141.3,53,471.0
-2025,2,BUR,RNO,"Los Angeles, CA (Metropolitan Area)","Reno, NV",124.5,119,415.0
-2025,2,BUR,SLC,"Los Angeles, CA (Metropolitan Area)","Salt Lake City, UT",172.62,318,590.0
-2025,2,BUR,AUS,"Los Angeles, CA (Metropolitan Area)","Austin, TX",213.91,117,1242.0
-2025,2,BUR,BOS,"Los Angeles, CA (Metropolitan Area)","Boston, MA (Metropolitan Area)",261.1,81,2611.0
-2025,2,BUR,BOI,"Los Angeles, CA (Metropolitan Area)","Boise, ID",164.74,181,688.0
-2025,2,BUR,BNA,"Los Angeles, CA (Metropolitan Area)","Nashville, TN",240.16,91,1797.0
-2025,2,BUR,ATL,"Los Angeles, CA (Metropolitan Area)","Atlanta, GA (Metropolitan Area)",303.91,61,1947.0
-2025,2,BUR,DEN,"Los Angeles, CA (Metropolitan Area)","Denver, CO",172.5,327,862.0
-2025,2,BUR,GEG,"Los Angeles, CA (Metropolitan Area)",,199.86,69,962.0
-2025,2,BUR,EUG,"Los Angeles, CA (Metropolitan Area)","Eugene, OR",165.31,176,776.0
-2025,2,BUR,STS,"Los Angeles, CA (Metropolitan Area)",,129.9,179,433.0
-2025,2,BUR,RDM,"Los Angeles, CA (Metropolitan Area)","Bend/Redmond, OR",153.72,82,751.0
-2025,2,LAX,PIT,"Los Angeles, CA (Metropolitan Area)","Pittsburgh, PA",226.54,302,2136.0
-2025,2,LAX,ELP,"Los Angeles, CA (Metropolitan Area)","El Paso, TX",177.09,270,715.0
-2025,2,LAX,JAX,"Los Angeles, CA (Metropolitan Area)","Jacksonville, FL",290.28,193,2153.0
-2025,2,LAX,RSW,"Los Angeles, CA (Metropolitan Area)","Fort Myers, FL",323.14,167,2238.0
-2025,2,LAX,IND,"Los Angeles, CA (Metropolitan Area)","Indianapolis, IN",244.63,292,1814.0
-2025,2,LAX,SDF,"Los Angeles, CA (Metropolitan Area)","Louisville, KY",245.03,200,1843.0
-2025,2,LAX,MEM,"Los Angeles, CA (Metropolitan Area)","Memphis, TN",226.51,300,1619.0
-2025,2,LAX,OMA,"Los Angeles, CA (Metropolitan Area)","Omaha, NE",200.81,247,1330.0
-2025,2,LAX,MKE,"Los Angeles, CA (Metropolitan Area)","Milwaukee, WI",256.74,277,1756.0
-2025,2,LAX,TUL,"Los Angeles, CA (Metropolitan Area)","Tulsa, OK",203.66,165,1283.0
-2025,2,LAX,CMH,"Los Angeles, CA (Metropolitan Area)","Columbus, OH",240.09,324,1995.0
-2025,2,LAX,CLE,"Los Angeles, CA (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",207.3,278,2073.0
-2025,2,LAX,CHS,"Los Angeles, CA (Metropolitan Area)","Charleston, SC",257.18,206,2206.0
-2025,2,LAX,TUS,"Los Angeles, CA (Metropolitan Area)","Tucson, AZ",135.9,251,453.0
-2025,2,LAX,BDL,"Los Angeles, CA (Metropolitan Area)","Hartford, CT",284.72,311,2527.0
-2025,2,LAX,BOI,"Los Angeles, CA (Metropolitan Area)","Boise, ID",163.36,320,688.0
-2025,2,LAX,ORF,"Los Angeles, CA (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",309.58,156,2371.0
-2025,2,LAX,PBI,"Los Angeles, CA (Metropolitan Area)",,305.89,172,2330.0
-2025,2,LAX,RIC,"Los Angeles, CA (Metropolitan Area)","Richmond, VA",290.28,200,2305.0
-2025,2,LAX,PVD,"Los Angeles, CA (Metropolitan Area)","Boston, MA (Metropolitan Area)",287.19,94,2611.0
-2025,2,LAX,BUF,"Los Angeles, CA (Metropolitan Area)","Buffalo, NY",244.05,280,2218.0
-2025,2,LAX,CVG,"Los Angeles, CA (Metropolitan Area)","Cincinnati, OH",272.28,335,1900.0
-2025,2,LAX,OKC,"Los Angeles, CA (Metropolitan Area)","Oklahoma City, OK",261.38,236,1187.0
-2025,2,LAX,HPN,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",284.74,66,2510.0
-2025,2,LAX,ASE,"Los Angeles, CA (Metropolitan Area)","Aspen, CO",221.1,145,737.0
-2025,2,LAX,GEG,"Los Angeles, CA (Metropolitan Area)",,197.05,230,962.0
-2025,2,LAX,EUG,"Los Angeles, CA (Metropolitan Area)","Eugene, OR",166.46,226,776.0
-2025,2,LAX,STS,"Los Angeles, CA (Metropolitan Area)",,129.9,217,433.0
-2025,2,LAX,RDM,"Los Angeles, CA (Metropolitan Area)","Bend/Redmond, OR",196.11,162,751.0
-2025,2,LAX,MFR,"Los Angeles, CA (Metropolitan Area)",,160.92,185,659.0
-2025,2,LGB,FLL,"Los Angeles, CA (Metropolitan Area)","Miami, FL (Metropolitan Area)",234.3,110,2343.0
-2025,2,LGB,SEA,"Los Angeles, CA (Metropolitan Area)","Seattle, WA",153.55,227,978.0
-2025,2,LGB,ELP,"Los Angeles, CA (Metropolitan Area)","El Paso, TX",198.23,58,715.0
-2025,2,LGB,PDX,"Los Angeles, CA (Metropolitan Area)","Portland, OR",153.52,235,859.0
-2025,2,LGB,RNO,"Los Angeles, CA (Metropolitan Area)","Reno, NV",124.09,221,415.0
-2025,2,LGB,AUS,"Los Angeles, CA (Metropolitan Area)","Austin, TX",158.15,229,1242.0
-2025,2,LGB,BOS,"Los Angeles, CA (Metropolitan Area)","Boston, MA (Metropolitan Area)",261.1,103,2611.0
-2025,2,LGB,STL,"Los Angeles, CA (Metropolitan Area)","St. Louis, MO",226.8,102,1592.0
-2025,2,LGB,MCI,"Los Angeles, CA (Metropolitan Area)","Kansas City, MO",218.81,84,1363.0
-2025,2,LGB,BNA,"Los Angeles, CA (Metropolitan Area)","Nashville, TN",215.6,131,1797.0
-2025,2,LGB,DEN,"Los Angeles, CA (Metropolitan Area)","Denver, CO",139.07,248,862.0
-2025,2,SNA,FLL,"Los Angeles, CA (Metropolitan Area)","Miami, FL (Metropolitan Area)",314.19,63,2343.0
-2025,2,SNA,PIT,"Los Angeles, CA (Metropolitan Area)","Pittsburgh, PA",320.32,88,2136.0
-2025,2,SNA,JAX,"Los Angeles, CA (Metropolitan Area)","Jacksonville, FL",343.2,51,2153.0
-2025,2,SNA,DTW,"Los Angeles, CA (Metropolitan Area)","Detroit, MI",341.73,154,1979.0
-2025,2,SNA,MSP,"Los Angeles, CA (Metropolitan Area)","Minneapolis/St. Paul, MN",312.51,243,1535.0
-2025,2,SNA,IND,"Los Angeles, CA (Metropolitan Area)","Indianapolis, IN",276.74,77,1814.0
-2025,2,SNA,MIA,"Los Angeles, CA (Metropolitan Area)","Miami, FL (Metropolitan Area)",322.5,103,2343.0
-2025,2,SNA,SDF,"Los Angeles, CA (Metropolitan Area)","Louisville, KY",321.35,51,1843.0
-2025,2,SNA,OMA,"Los Angeles, CA (Metropolitan Area)","Omaha, NE",235.5,58,1330.0
-2025,2,SNA,MKE,"Los Angeles, CA (Metropolitan Area)","Milwaukee, WI",291.82,62,1756.0
-2025,2,SNA,PHL,"Los Angeles, CA (Metropolitan Area)","Philadelphia, PA",333.6,121,2402.0
-2025,2,SNA,RDU,"Los Angeles, CA (Metropolitan Area)","Raleigh/Durham, NC",324.29,70,2239.0
-2025,2,SNA,RNO,"Los Angeles, CA (Metropolitan Area)","Reno, NV",124.5,82,415.0
-2025,2,SNA,AUS,"Los Angeles, CA (Metropolitan Area)","Austin, TX",220.33,270,1242.0
-2025,2,SNA,CMH,"Los Angeles, CA (Metropolitan Area)","Columbus, OH",304.96,89,1995.0
-2025,2,SNA,CLE,"Los Angeles, CA (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",324.79,62,2073.0
-2025,2,SNA,BOS,"Los Angeles, CA (Metropolitan Area)","Boston, MA (Metropolitan Area)",349.78,107,2611.0
-2025,2,SNA,CLT,"Los Angeles, CA (Metropolitan Area)","Charlotte, NC",327.52,100,2125.0
-2025,2,SNA,TUS,"Los Angeles, CA (Metropolitan Area)","Tucson, AZ",135.9,75,453.0
-2025,2,SNA,STL,"Los Angeles, CA (Metropolitan Area)","St. Louis, MO",273.31,90,1592.0
-2025,2,SNA,BOI,"Los Angeles, CA (Metropolitan Area)","Boise, ID",182.97,181,688.0
-2025,2,SNA,MCI,"Los Angeles, CA (Metropolitan Area)","Kansas City, MO",263.35,117,1363.0
-2025,2,SNA,SAT,"Los Angeles, CA (Metropolitan Area)","San Antonio, TX",231.36,90,1211.0
-2025,2,SNA,BNA,"Los Angeles, CA (Metropolitan Area)","Nashville, TN",283.77,149,1797.0
-2025,2,SNA,CVG,"Los Angeles, CA (Metropolitan Area)","Cincinnati, OH",309.22,102,1900.0
-2025,2,SNA,MSY,"Los Angeles, CA (Metropolitan Area)","New Orleans, LA",284.69,70,1670.0
-2025,2,SNA,OKC,"Los Angeles, CA (Metropolitan Area)","Oklahoma City, OK",267.94,51,1187.0
-2025,2,SNA,TPA,"Los Angeles, CA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",309.91,84,2158.0
-2025,2,SNA,ATL,"Los Angeles, CA (Metropolitan Area)","Atlanta, GA (Metropolitan Area)",356.95,311,1947.0
-2025,2,SNA,GEG,"Los Angeles, CA (Metropolitan Area)",,201.31,164,962.0
-2025,2,SNA,MCO,"Los Angeles, CA (Metropolitan Area)","Orlando, FL",293.81,197,2218.0
-2025,2,SNA,EUG,"Los Angeles, CA (Metropolitan Area)","Eugene, OR",189.3,68,776.0
-2025,2,SNA,STS,"Los Angeles, CA (Metropolitan Area)",,129.9,119,433.0
-2025,2,ONT,DTW,"Los Angeles, CA (Metropolitan Area)","Detroit, MI",315.76,64,1979.0
-2025,2,ONT,MSP,"Los Angeles, CA (Metropolitan Area)","Minneapolis/St. Paul, MN",286.15,51,1535.0
-2025,2,ONT,IND,"Los Angeles, CA (Metropolitan Area)","Indianapolis, IN",273.77,51,1814.0
-2025,2,ONT,PDX,"Los Angeles, CA (Metropolitan Area)","Portland, OR",184.34,338,859.0
-2025,2,ONT,PHL,"Los Angeles, CA (Metropolitan Area)","Philadelphia, PA",310.89,77,2402.0
-2025,2,ONT,RDU,"Los Angeles, CA (Metropolitan Area)","Raleigh/Durham, NC",291.36,70,2239.0
-2025,2,ONT,SLC,"Los Angeles, CA (Metropolitan Area)","Salt Lake City, UT",177.0,251,590.0
-2025,2,ONT,AUS,"Los Angeles, CA (Metropolitan Area)","Austin, TX",201.67,117,1242.0
-2025,2,ONT,BOS,"Los Angeles, CA (Metropolitan Area)","Boston, MA (Metropolitan Area)",325.41,64,2611.0
-2025,2,ONT,CLT,"Los Angeles, CA (Metropolitan Area)","Charlotte, NC",316.71,88,2125.0
-2025,2,ONT,STL,"Los Angeles, CA (Metropolitan Area)","St. Louis, MO",275.65,51,1592.0
-2025,2,ONT,BOI,"Los Angeles, CA (Metropolitan Area)","Boise, ID",193.45,52,688.0
-2025,2,ONT,SAT,"Los Angeles, CA (Metropolitan Area)","San Antonio, TX",211.18,118,1211.0
-2025,2,ONT,BNA,"Los Angeles, CA (Metropolitan Area)","Nashville, TN",278.13,74,1797.0
-2025,2,ONT,CVG,"Los Angeles, CA (Metropolitan Area)","Cincinnati, OH",300.8,51,1900.0
-2025,2,ONT,TPA,"Los Angeles, CA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",301.88,56,2158.0
-2025,2,ONT,ATL,"Los Angeles, CA (Metropolitan Area)","Atlanta, GA (Metropolitan Area)",299.51,287,1947.0
-2025,2,ONT,GEG,"Los Angeles, CA (Metropolitan Area)",,209.08,62,962.0
-2025,2,ONT,MCO,"Los Angeles, CA (Metropolitan Area)","Orlando, FL",221.8,200,2218.0
-2025,2,FLL,JAX,"Miami, FL (Metropolitan Area)","Jacksonville, FL",100.5,254,335.0
-2025,2,FLL,SDF,"Miami, FL (Metropolitan Area)","Louisville, KY",160.03,200,910.0
-2025,2,FLL,SMF,"Miami, FL (Metropolitan Area)","Sacramento, CA",310.6,100,2552.0
-2025,2,FLL,MEM,"Miami, FL (Metropolitan Area)","Memphis, TN",183.71,126,859.0
-2025,2,FLL,OMA,"Miami, FL (Metropolitan Area)","Omaha, NE",216.44,124,1393.0
-2025,2,FLL,MKE,"Miami, FL (Metropolitan Area)","Milwaukee, WI",202.55,280,1258.0
-2025,2,FLL,PDX,"Miami, FL (Metropolitan Area)","Portland, OR",275.71,144,2700.0
-2025,2,FLL,CHS,"Miami, FL (Metropolitan Area)","Charleston, SC",141.92,217,489.0
-2025,2,FLL,GRR,"Miami, FL (Metropolitan Area)","Grand Rapids, MI",209.0,159,1214.0
-2025,2,FLL,MCI,"Miami, FL (Metropolitan Area)","Kansas City, MO",215.05,298,1251.0
-2025,2,FLL,SAT,"Miami, FL (Metropolitan Area)","San Antonio, TX",195.1,163,1145.0
-2025,2,FLL,ORF,"Miami, FL (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",170.1,169,812.0
-2025,2,FLL,RIC,"Miami, FL (Metropolitan Area)","Richmond, VA",143.33,299,825.0
-2025,2,FLL,PVD,"Miami, FL (Metropolitan Area)","Boston, MA (Metropolitan Area)",169.19,294,1283.0
-2025,2,FLL,ISP,"Miami, FL (Metropolitan Area)","New York City, NY (Metropolitan Area)",169.02,261,1131.44
-2025,2,FLL,ALB,"Miami, FL (Metropolitan Area)","Albany, NY",187.33,320,1225.0
-2025,2,FLL,MHT,"Miami, FL (Metropolitan Area)","Boston, MA (Metropolitan Area)",181.87,90,1283.0
-2025,2,FLL,CVG,"Miami, FL (Metropolitan Area)","Cincinnati, OH",157.65,324,948.0
-2025,2,FLL,ROC,"Miami, FL (Metropolitan Area)","Rochester, NY",208.55,131,1203.0
-2025,2,FLL,TYS,"Miami, FL (Metropolitan Area)","Knoxville, TN",128.39,169,724.0
-2025,2,FLL,TPA,"Miami, FL (Metropolitan Area)","Tampa, FL (Metropolitan Area)",61.2,258,204.0
-2025,2,FLL,AVL,"Miami, FL (Metropolitan Area)","Asheville, NC",105.94,210,677.0
-2025,2,FLL,SYR,"Miami, FL (Metropolitan Area)","Syracuse, NY",174.55,182,1217.0
-2025,2,FLL,MCO,"Miami, FL (Metropolitan Area)","Orlando, FL",57.6,174,192.0
-2025,2,FLL,ACY,"Miami, FL (Metropolitan Area)","Atlantic City, NJ",98.65,267,986.45
-2025,2,FLL,LCK,"Miami, FL (Metropolitan Area)","Columbus, OH",99.0,58,990.0
-2025,2,PIT,MIA,"Pittsburgh, PA","Miami, FL (Metropolitan Area)",202.3,269,1013.0
-2025,2,PIT,PVD,"Pittsburgh, PA","Boston, MA (Metropolitan Area)",148.8,85,496.0
-2025,2,PIT,PHX,"Pittsburgh, PA","Phoenix, AZ",259.93,312,1814.0
-2025,2,PIT,PIE,"Pittsburgh, PA",,96.37,84,878.0
-2025,2,SEA,MIA,"Seattle, WA","Miami, FL (Metropolitan Area)",311.26,300,2724.0
-2025,2,SEA,CMH,"Seattle, WA","Columbus, OH",254.51,278,2016.0
-2025,2,SEA,PVD,"Seattle, WA","Boston, MA (Metropolitan Area)",313.67,52,2496.0
-2025,2,ELP,PHX,"El Paso, TX","Phoenix, AZ",104.1,219,347.0
-2025,2,JAX,MIA,"Jacksonville, FL","Miami, FL (Metropolitan Area)",100.5,209,335.0
-2025,2,JAX,PVD,"Jacksonville, FL","Boston, MA (Metropolitan Area)",195.32,69,1028.0
-2025,2,DTW,PVD,"Detroit, MI","Boston, MA (Metropolitan Area)",189.6,116,632.0
-2025,2,DTW,MHT,"Detroit, MI","Boston, MA (Metropolitan Area)",189.6,57,632.0
-2025,2,DTW,HPN,"Detroit, MI","New York City, NY (Metropolitan Area)",162.0,147,540.0
-2025,2,MSP,CMH,"Minneapolis/St. Paul, MN","Columbus, OH",187.8,234,626.0
-2025,2,MSP,CLE,"Minneapolis/St. Paul, MN","Cleveland, OH (Metropolitan Area)",197.1,292,657.0
-2025,2,MSP,PVD,"Minneapolis/St. Paul, MN","Boston, MA (Metropolitan Area)",190.2,106,1124.0
-2025,2,MSP,AZA,"Minneapolis/St. Paul, MN","Phoenix, AZ",143.57,192,1276.0
-2025,2,MSP,PIE,"Minneapolis/St. Paul, MN",,151.74,100,1307.0
-2025,2,RSW,PVD,"Fort Myers, FL","Boston, MA (Metropolitan Area)",178.48,221,1271.0
-2025,2,RSW,ISP,"Fort Myers, FL","New York City, NY (Metropolitan Area)",158.28,117,1112.08
-2025,2,RSW,MHT,"Fort Myers, FL","Boston, MA (Metropolitan Area)",204.6,89,1271.0
-2025,2,RSW,HPN,"Fort Myers, FL","New York City, NY (Metropolitan Area)",215.23,287,1112.08
-2025,2,RSW,CAK,"Fort Myers, FL","Cleveland, OH (Metropolitan Area)",179.59,62,1025.0
-2025,2,IND,MIA,"Indianapolis, IN","Miami, FL (Metropolitan Area)",225.71,252,1020.0
-2025,2,IND,BOS,"Indianapolis, IN","Boston, MA (Metropolitan Area)",222.21,315,818.0
-2025,2,IND,PVD,"Indianapolis, IN","Boston, MA (Metropolitan Area)",222.49,51,818.0
-2025,2,IND,PIE,"Indianapolis, IN",,101.3,131,840.0
-2025,2,MIA,SDF,"Miami, FL (Metropolitan Area)","Louisville, KY",245.96,126,910.0
-2025,2,MIA,SMF,"Miami, FL (Metropolitan Area)","Sacramento, CA",333.72,112,2552.0
-2025,2,MIA,MEM,"Miami, FL (Metropolitan Area)","Memphis, TN",245.94,161,859.0
-2025,2,MIA,OMA,"Miami, FL (Metropolitan Area)","Omaha, NE",236.55,126,1393.0
-2025,2,MIA,MKE,"Miami, FL (Metropolitan Area)","Milwaukee, WI",223.07,121,1258.0
-2025,2,MIA,PDX,"Miami, FL (Metropolitan Area)","Portland, OR",340.92,149,2700.0
-2025,2,MIA,CMH,"Miami, FL (Metropolitan Area)","Columbus, OH",216.77,193,990.0
-2025,2,MIA,CLE,"Miami, FL (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",176.61,279,1080.0
-2025,2,MIA,CHS,"Miami, FL (Metropolitan Area)","Charleston, SC",146.7,136,489.0
-2025,2,MIA,BDL,"Miami, FL (Metropolitan Area)","Hartford, CT",191.62,265,1194.0
-2025,2,MIA,STL,"Miami, FL (Metropolitan Area)","St. Louis, MO",222.63,296,1068.0
-2025,2,MIA,GRR,"Miami, FL (Metropolitan Area)","Grand Rapids, MI",269.48,128,1214.0
-2025,2,MIA,MCI,"Miami, FL (Metropolitan Area)","Kansas City, MO",253.66,176,1251.0
-2025,2,MIA,SAT,"Miami, FL (Metropolitan Area)","San Antonio, TX",260.91,192,1145.0
-2025,2,MIA,ORF,"Miami, FL (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",231.96,168,812.0
-2025,2,MIA,RIC,"Miami, FL (Metropolitan Area)","Richmond, VA",193.19,136,825.0
-2025,2,MIA,PVD,"Miami, FL (Metropolitan Area)","Boston, MA (Metropolitan Area)",213.71,89,1283.0
-2025,2,MIA,ISP,"Miami, FL (Metropolitan Area)","New York City, NY (Metropolitan Area)",213.07,54,1131.695652173913
-2025,2,MIA,ALB,"Miami, FL (Metropolitan Area)","Albany, NY",242.41,56,1225.0
-2025,2,MIA,SAN,"Miami, FL (Metropolitan Area)","San Diego, CA",302.32,289,2269.0
-2025,2,MIA,BUF,"Miami, FL (Metropolitan Area)","Buffalo, NY",211.57,113,1185.0
-2025,2,MIA,CVG,"Miami, FL (Metropolitan Area)","Cincinnati, OH",200.76,263,948.0
-2025,2,MIA,ROC,"Miami, FL (Metropolitan Area)","Rochester, NY",223.85,112,1203.0
-2025,2,MIA,TYS,"Miami, FL (Metropolitan Area)","Knoxville, TN",217.2,88,724.0
-2025,2,MIA,TPA,"Miami, FL (Metropolitan Area)","Tampa, FL (Metropolitan Area)",61.2,319,204.0
-2025,2,MIA,SYR,"Miami, FL (Metropolitan Area)","Syracuse, NY",247.41,85,1217.0
-2025,2,MIA,MCO,"Miami, FL (Metropolitan Area)","Orlando, FL",57.6,294,192.0
-2025,2,SDF,TPA,"Louisville, KY","Tampa, FL (Metropolitan Area)",176.37,244,729.0
-2025,2,SDF,PHX,"Louisville, KY","Phoenix, AZ",248.05,162,1506.0
-2025,2,SDF,PIE,"Louisville, KY",,90.42,51,729.0
-2025,2,MEM,PHX,"Memphis, TN","Phoenix, AZ",258.91,167,1264.0
-2025,2,OMA,TPA,"Omaha, NE","Tampa, FL (Metropolitan Area)",218.34,138,1190.0
-2025,2,OMA,AZA,"Omaha, NE","Phoenix, AZ",103.7,61,1037.0
-2025,2,OMA,PIE,"Omaha, NE",,119.0,71,1190.0
-2025,2,MKE,BOS,"Milwaukee, WI","Boston, MA (Metropolitan Area)",209.53,330,860.0
-2025,2,MKE,TPA,"Milwaukee, WI","Tampa, FL (Metropolitan Area)",195.6,323,1075.4545454545455
-2025,2,PDX,BOS,"Portland, OR","Boston, MA (Metropolitan Area)",277.17,286,2537.0
-2025,2,PDX,TPA,"Portland, OR","Tampa, FL (Metropolitan Area)",276.03,162,2497.0
-2025,2,PHL,PVD,"Philadelphia, PA","Boston, MA (Metropolitan Area)",86.7,124,289.0
-2025,2,PHL,MHT,"Philadelphia, PA","Boston, MA (Metropolitan Area)",86.7,80,289.0
-2025,2,RDU,PVD,"Raleigh/Durham, NC","Boston, MA (Metropolitan Area)",159.11,108,625.0
-2025,2,RDU,ISP,"Raleigh/Durham, NC","New York City, NY (Metropolitan Area)",138.42,57,461.4
-2025,2,RDU,MHT,"Raleigh/Durham, NC","Boston, MA (Metropolitan Area)",187.5,61,625.0
-2025,2,RDU,PHX,"Raleigh/Durham, NC","Phoenix, AZ",271.25,298,1891.0
-2025,2,SLC,TPA,"Salt Lake City, UT","Tampa, FL (Metropolitan Area)",286.41,313,1888.0
-2025,2,TUL,PHX,"Tulsa, OK","Phoenix, AZ",221.49,181,935.0
-2025,2,AUS,CMH,"Austin, TX","Columbus, OH",233.54,113,1073.0
-2025,2,AUS,PVD,"Austin, TX","Boston, MA (Metropolitan Area)",256.58,59,1698.0
-2025,2,AUS,TPA,"Austin, TX","Tampa, FL (Metropolitan Area)",199.23,317,928.0
-2025,2,CMH,BOS,"Columbus, OH","Boston, MA (Metropolitan Area)",192.0,276,640.0
-2025,2,CMH,DEN,"Columbus, OH","Denver, CO",198.72,338,1154.0
-2025,2,BHM,TPA,"Birmingham, AL","Tampa, FL (Metropolitan Area)",137.7,178,459.0
-2025,2,CLE,BOS,"Cleveland, OH (Metropolitan Area)","Boston, MA (Metropolitan Area)",162.43,313,563.0
-2025,2,CLE,CLT,"Cleveland, OH (Metropolitan Area)","Charlotte, NC",129.0,231,430.0
-2025,2,CLE,BNA,"Cleveland, OH (Metropolitan Area)","Nashville, TN",134.4,293,448.0
-2025,2,CLE,SAN,"Cleveland, OH (Metropolitan Area)","San Diego, CA",279.61,166,2045.0
-2025,2,BOS,CHS,"Boston, MA (Metropolitan Area)","Charleston, SC",183.72,315,836.0
-2025,2,BOS,STL,"Boston, MA (Metropolitan Area)","St. Louis, MO",230.96,311,1047.0
-2025,2,BOS,MCI,"Boston, MA (Metropolitan Area)","Kansas City, MO",223.26,278,1256.0
-2025,2,BOS,SAT,"Boston, MA (Metropolitan Area)","San Antonio, TX",242.34,294,1764.0
-2025,2,BOS,ORF,"Boston, MA (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",146.1,187,487.0
-2025,2,BOS,BUF,"Boston, MA (Metropolitan Area)","Buffalo, NY",118.5,234,395.0
-2025,2,BOS,CVG,"Boston, MA (Metropolitan Area)","Cincinnati, OH",225.6,280,752.0
-2025,2,BOS,SAV,"Boston, MA (Metropolitan Area)","Savannah, GA",198.06,307,917.0
-2025,2,BOS,SRQ,"Boston, MA (Metropolitan Area)",,218.48,308,1240.0
-2025,2,BOS,MYR,"Boston, MA (Metropolitan Area)","Myrtle Beach, SC",138.71,280,756.0
-2025,2,CHS,PVD,"Charleston, SC","Boston, MA (Metropolitan Area)",167.95,166,836.0
-2025,2,CHS,ISP,"Charleston, SC","New York City, NY (Metropolitan Area)",156.2,66,672.16
-2025,2,CHS,HPN,"Charleston, SC","New York City, NY (Metropolitan Area)",185.16,208,672.4166666666666
-2025,2,CLT,PVD,"Charlotte, NC","Boston, MA (Metropolitan Area)",213.66,191,737.0
-2025,2,CLT,MHT,"Charlotte, NC","Boston, MA (Metropolitan Area)",221.1,58,737.0
-2025,2,CLT,HPN,"Charlotte, NC","New York City, NY (Metropolitan Area)",172.5,91,575.0
-2025,2,CLT,CAK,"Charlotte, NC","Cleveland, OH (Metropolitan Area)",129.0,58,430.0
-2025,2,BDL,PHX,"Hartford, CT","Phoenix, AZ",299.63,202,2213.0
-2025,2,STL,PVD,"St. Louis, MO","Boston, MA (Metropolitan Area)",231.81,55,1047.0
-2025,2,DSM,PHX,"Des Moines, IA","Phoenix, AZ",219.56,287,1149.36
-2025,2,DSM,AZA,"Des Moines, IA","Phoenix, AZ",114.94,89,1149.36
-2025,2,GRR,TPA,"Grand Rapids, MI","Tampa, FL (Metropolitan Area)",201.23,155,1044.0
-2025,2,GRR,PHX,"Grand Rapids, MI","Phoenix, AZ",251.86,148,1574.0
-2025,2,GRR,AZA,"Grand Rapids, MI","Phoenix, AZ",157.4,104,1574.0
-2025,2,GRR,PIE,"Grand Rapids, MI",,108.41,225,1044.0
-2025,2,MCI,TPA,"Kansas City, MO","Tampa, FL (Metropolitan Area)",210.35,330,1048.0
-2025,2,SAT,TPA,"San Antonio, TX","Tampa, FL (Metropolitan Area)",214.86,202,972.0
-2025,2,ORF,PVD,"Norfolk, VA (Metropolitan Area)","Boston, MA (Metropolitan Area)",146.1,107,487.0
-2025,2,ORF,SAN,"Norfolk, VA (Metropolitan Area)","San Diego, CA",313.63,240,2330.0
-2025,2,ORF,TPA,"Norfolk, VA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",184.12,174,725.304347826087
-2025,2,ORF,ATL,"Norfolk, VA (Metropolitan Area)","Atlanta, GA (Metropolitan Area)",154.8,320,516.0
-2025,2,ORF,LAS,"Norfolk, VA (Metropolitan Area)","Las Vegas, NV",264.72,153,2154.0
-2025,2,ORF,DEN,"Norfolk, VA (Metropolitan Area)","Denver, CO",233.81,213,1553.0
-2025,2,ORF,MCO,"Norfolk, VA (Metropolitan Area)","Orlando, FL",163.23,310,662.0
-2025,2,PBI,PVD,,"Boston, MA (Metropolitan Area)",199.09,197,1222.0
-2025,2,RIC,TPA,"Richmond, VA","Tampa, FL (Metropolitan Area)",169.55,174,731.0
-2025,2,PVD,BNA,"Boston, MA (Metropolitan Area)","Nashville, TN",193.71,128,942.0
-2025,2,PVD,SAN,"Boston, MA (Metropolitan Area)","San Diego, CA",326.13,77,2588.0
-2025,2,PVD,CVG,"Boston, MA (Metropolitan Area)","Cincinnati, OH",205.03,56,752.0
-2025,2,PVD,MSY,"Boston, MA (Metropolitan Area)","New Orleans, LA",241.34,62,1371.0
-2025,2,PVD,TPA,"Boston, MA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",190.45,323,1204.0
-2025,2,PVD,PHX,"Boston, MA (Metropolitan Area)","Phoenix, AZ",300.15,63,2300.0
-2025,2,PVD,SRQ,"Boston, MA (Metropolitan Area)",,230.93,114,1240.0
-2025,2,PVD,ATL,"Boston, MA (Metropolitan Area)","Atlanta, GA (Metropolitan Area)",243.76,241,952.0
-2025,2,PVD,LAS,"Boston, MA (Metropolitan Area)","Las Vegas, NV",288.8,70,2381.0
-2025,2,PVD,DEN,"Boston, MA (Metropolitan Area)","Denver, CO",250.04,190,1754.0
-2025,2,ISP,BNA,"New York City, NY (Metropolitan Area)","Nashville, TN",188.41,66,803.0
-2025,2,ISP,TPA,"New York City, NY (Metropolitan Area)","Tampa, FL (Metropolitan Area)",141.13,267,1055.0
-2025,2,ISP,MYR,"New York City, NY (Metropolitan Area)","Myrtle Beach, SC",106.96,62,600.4
-2025,2,ISP,ATL,"New York City, NY (Metropolitan Area)","Atlanta, GA (Metropolitan Area)",142.73,84,795.0
-2025,2,ALB,TPA,"Albany, NY","Tampa, FL (Metropolitan Area)",218.37,250,1137.0
-2025,2,ALB,PIE,"Albany, NY",,113.8,76,1138.0
-2025,2,MHT,TPA,"Boston, MA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",205.99,211,1204.0
-2025,2,MHT,MYR,"Boston, MA (Metropolitan Area)","Myrtle Beach, SC",198.65,92,756.0
-2025,2,MHT,ATL,"Boston, MA (Metropolitan Area)","Atlanta, GA (Metropolitan Area)",221.49,53,952.0
-2025,2,MHT,LAS,"Boston, MA (Metropolitan Area)","Las Vegas, NV",281.11,56,2381.0
-2025,2,MHT,DEN,"Boston, MA (Metropolitan Area)","Denver, CO",259.47,53,1754.0
-2025,2,SAN,TPA,"San Diego, CA","Tampa, FL (Metropolitan Area)",274.53,288,2087.0
-2025,2,BUF,PHX,"Buffalo, NY","Phoenix, AZ",267.98,168,1912.0
-2025,2,CVG,AZA,"Cincinnati, OH","Phoenix, AZ",156.9,51,1569.0
-2025,2,CVG,PIE,"Cincinnati, OH",,96.37,168,776.0
-2025,2,MSY,PHX,"New Orleans, LA","Phoenix, AZ",239.92,309,1300.0
-2025,2,OKC,PHX,"Oklahoma City, OK","Phoenix, AZ",217.6,235,833.0
-2025,2,ROC,TPA,"Rochester, NY","Tampa, FL (Metropolitan Area)",195.47,222,1079.0
-2025,2,HPN,TPA,"New York City, NY (Metropolitan Area)","Tampa, FL (Metropolitan Area)",194.2,186,1055.0
-2025,2,HPN,ATL,"New York City, NY (Metropolitan Area)","Atlanta, GA (Metropolitan Area)",233.05,292,795.0
-2025,2,TPA,CAK,"Tampa, FL (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",167.25,69,929.8
-2025,2,TPA,SYR,"Tampa, FL (Metropolitan Area)","Syracuse, NY",202.81,150,1111.0
-2025,2,TPA,FNT,"Tampa, FL (Metropolitan Area)","Flint, MI",204.68,80,1040.0
-2025,2,PHX,EUG,"Phoenix, AZ","Eugene, OR",205.35,167,971.0
-2025,2,PHX,FSD,"Phoenix, AZ",,226.99,88,1081.0
-2025,2,PHX,PVU,"Phoenix, AZ",,83.93,153,477.0
-2025,2,PHX,BIS,"Phoenix, AZ","Bismarck/Mandan, ND",245.06,88,1094.0
-2025,2,PHX,CID,"Phoenix, AZ","Cedar Rapids/Iowa City, IA",223.95,117,1252.0
-2025,2,PHX,FAR,"Phoenix, AZ","Fargo, ND",277.42,81,1225.0
-2025,2,PHX,FAT,"Phoenix, AZ","Fresno, CA",147.9,196,493.0
-2025,2,CAK,ATL,"Cleveland, OH (Metropolitan Area)","Atlanta, GA (Metropolitan Area)",166.2,98,554.0
-2025,2,CAK,LAS,"Cleveland, OH (Metropolitan Area)","Las Vegas, NV",238.99,53,1846.0
-2025,2,CAK,MCO,"Cleveland, OH (Metropolitan Area)","Orlando, FL",134.3,114,895.0
-2025,2,CAK,PIE,"Cleveland, OH (Metropolitan Area)",,95.65,86,927.0
-2025,2,AZA,GEG,"Phoenix, AZ",,103.4,88,1034.0
-2025,2,AZA,EUG,"Phoenix, AZ","Eugene, OR",98.42,59,971.0
-2025,2,AZA,FSD,"Phoenix, AZ",,110.09,260,1081.0
-2025,2,AZA,PVU,"Phoenix, AZ",,80.39,201,477.0
-2025,2,AZA,BIS,"Phoenix, AZ","Bismarck/Mandan, ND",109.4,228,1094.0
-2025,2,AZA,CID,"Phoenix, AZ","Cedar Rapids/Iowa City, IA",125.2,158,1252.0
-2025,2,AZA,FAR,"Phoenix, AZ","Fargo, ND",122.5,207,1225.0
-2025,2,MYR,SWF,"Myrtle Beach, SC","New York City, NY (Metropolitan Area)",86.95,64,601.0
-2025,2,SYR,PIE,"Syracuse, NY",,114.11,87,1111.0
-2025,2,MCO,SWF,"Orlando, FL","New York City, NY (Metropolitan Area)",121.66,112,989.0
-2025,2,LCK,PIE,"Columbus, OH",,96.11,94,829.0
-2025,2,PIE,SWF,,"New York City, NY (Metropolitan Area)",105.5,61,1055.0
-2025,2,PIE,FNT,,"Flint, MI",113.8,157,1040.0
+Year,quarter,airport_1,airport_2,city1,city2,fare,passengers,distance,latitude1,longitude1,latitude2,longitude2
+2025,2,ABQ,DAL,"Albuquerque, NM","Dallas/Fort Worth, TX",174.0,226,580.0,35.084248,-106.649241,40.11086,-77.035636
+2025,2,ABQ,DFW,"Albuquerque, NM","Dallas/Fort Worth, TX",174.0,192,580.0,35.084248,-106.649241,40.11086,-77.035636
+2025,2,ABQ,BWI,"Albuquerque, NM","Washington, DC (Metropolitan Area)",276.53,176,1670.0,35.084248,-106.649241,38.892062,-77.019912
+2025,2,ABQ,DCA,"Albuquerque, NM","Washington, DC (Metropolitan Area)",301.95,148,1670.0,35.084248,-106.649241,38.892062,-77.019912
+2025,2,ABQ,IAD,"Albuquerque, NM","Washington, DC (Metropolitan Area)",327.73,63,1670.0,35.084248,-106.649241,38.892062,-77.019912
+2025,2,ABQ,MDW,"Albuquerque, NM","Chicago, IL",243.73,107,1121.0,35.084248,-106.649241,41.775002,-87.696388
+2025,2,ABQ,ORD,"Albuquerque, NM","Chicago, IL",267.22,150,1121.0,35.084248,-106.649241,41.775002,-87.696388
+2025,2,ABQ,HOU,"Albuquerque, NM","Houston, TX",227.7,155,759.0,35.084248,-106.649241,29.760803,-95.369506
+2025,2,ABQ,IAH,"Albuquerque, NM","Houston, TX",227.7,129,759.0,35.084248,-106.649241,29.760803,-95.369506
+2025,2,ABQ,EWR,"Albuquerque, NM","New York City, NY (Metropolitan Area)",334.12,72,1861.0,35.084248,-106.649241,40.123164,-75.333718
+2025,2,ABQ,JFK,"Albuquerque, NM","New York City, NY (Metropolitan Area)",235.9,146,1861.0,35.084248,-106.649241,40.123164,-75.333718
+2025,2,ABQ,LGA,"Albuquerque, NM","New York City, NY (Metropolitan Area)",260.12,118,1861.0,35.084248,-106.649241,40.123164,-75.333718
+2025,2,ABQ,OAK,"Albuquerque, NM","San Francisco, CA (Metropolitan Area)",191.98,241,896.0,35.084248,-106.649241,37.78008,-122.420168
+2025,2,ABQ,SFO,"Albuquerque, NM","San Francisco, CA (Metropolitan Area)",220.02,174,896.0,35.084248,-106.649241,37.78008,-122.420168
+2025,2,ABQ,SJC,"Albuquerque, NM","San Francisco, CA (Metropolitan Area)",213.61,124,896.0,35.084248,-106.649241,37.78008,-122.420168
+2025,2,ABQ,BUR,"Albuquerque, NM","Los Angeles, CA (Metropolitan Area)",187.95,85,677.0,35.084248,-106.649241,34.052238,-118.243344
+2025,2,ABQ,LAX,"Albuquerque, NM","Los Angeles, CA (Metropolitan Area)",176.91,294,677.0,35.084248,-106.649241,34.052238,-118.243344
+2025,2,ABQ,LGB,"Albuquerque, NM","Los Angeles, CA (Metropolitan Area)",172.68,61,677.0,35.084248,-106.649241,34.052238,-118.243344
+2025,2,ABQ,SNA,"Albuquerque, NM","Los Angeles, CA (Metropolitan Area)",203.1,101,677.0,35.084248,-106.649241,34.052238,-118.243344
+2025,2,DAL,ORD,"Dallas/Fort Worth, TX","Chicago, IL",179.17,198,802.0,40.11086,-77.035636,41.775002,-87.696388
+2025,2,DAL,IAH,"Dallas/Fort Worth, TX","Houston, TX",74.1,147,247.0,40.11086,-77.035636,29.760803,-95.369506
+2025,2,DAL,OAK,"Dallas/Fort Worth, TX","San Francisco, CA (Metropolitan Area)",190.98,250,1476.0,40.11086,-77.035636,37.78008,-122.420168
+2025,2,DAL,SFO,"Dallas/Fort Worth, TX","San Francisco, CA (Metropolitan Area)",189.05,209,1476.0,40.11086,-77.035636,37.78008,-122.420168
+2025,2,DAL,SJC,"Dallas/Fort Worth, TX","San Francisco, CA (Metropolitan Area)",200.19,284,1476.0,40.11086,-77.035636,37.78008,-122.420168
+2025,2,DAL,BUR,"Dallas/Fort Worth, TX","Los Angeles, CA (Metropolitan Area)",203.69,117,1246.0,40.11086,-77.035636,34.052238,-118.243344
+2025,2,DAL,LGB,"Dallas/Fort Worth, TX","Los Angeles, CA (Metropolitan Area)",157.31,150,1246.0,40.11086,-77.035636,34.052238,-118.243344
+2025,2,DAL,SNA,"Dallas/Fort Worth, TX","Los Angeles, CA (Metropolitan Area)",229.4,107,1246.0,40.11086,-77.035636,34.052238,-118.243344
+2025,2,DAL,ONT,"Dallas/Fort Worth, TX","Los Angeles, CA (Metropolitan Area)",201.01,117,1246.0,40.11086,-77.035636,34.052238,-118.243344
+2025,2,DAL,FLL,"Dallas/Fort Worth, TX","Miami, FL (Metropolitan Area)",179.09,225,1121.0,40.11086,-77.035636,44.977479,-93.264346
+2025,2,DAL,COS,"Dallas/Fort Worth, TX","Colorado Springs, CO",147.89,195,602.0,40.11086,-77.035636,,
+2025,2,DAL,PIT,"Dallas/Fort Worth, TX","Pittsburgh, PA",196.16,123,1067.0,40.11086,-77.035636,40.442169,-79.994945
+2025,2,DAL,SEA,"Dallas/Fort Worth, TX","Seattle, WA",207.98,287,1670.0,40.11086,-77.035636,47.603229,-122.33028
+2025,2,DAL,ELP,"Dallas/Fort Worth, TX","El Paso, TX",168.6,318,562.0,40.11086,-77.035636,31.76006,-106.492257
+2025,2,DAL,JAX,"Dallas/Fort Worth, TX","Jacksonville, FL",208.73,69,918.0,40.11086,-77.035636,30.325968,-81.65676
+2025,2,DAL,DTW,"Dallas/Fort Worth, TX","Detroit, MI",178.59,131,986.0,40.11086,-77.035636,42.332916,-83.047853
+2025,2,DAL,VPS,"Dallas/Fort Worth, TX",,192.3,72,641.0,40.11086,-77.035636,41.478143,-87.055372
+2025,2,DAL,MSP,"Dallas/Fort Worth, TX","Minneapolis/St. Paul, MN",177.36,91,853.0,40.11086,-77.035636,44.977479,-93.264346
+2025,2,DAL,RSW,"Dallas/Fort Worth, TX","Fort Myers, FL",222.83,62,1017.0,40.11086,-77.035636,40.253979,-103.801495
+2025,2,DAL,IND,"Dallas/Fort Worth, TX","Indianapolis, IN",180.29,168,761.0,40.11086,-77.035636,39.76845,-86.156212
+2025,2,DAL,MIA,"Dallas/Fort Worth, TX","Miami, FL (Metropolitan Area)",210.09,145,1121.0,40.11086,-77.035636,44.977479,-93.264346
+2025,2,DAL,LIT,"Dallas/Fort Worth, TX","Little Rock, AR",91.2,91,304.0,40.11086,-77.035636,34.748745,-92.275105
+2025,2,DAL,LBB,"Dallas/Fort Worth, TX",,87.9,196,293.0,40.11086,-77.035636,41.181125,-96.030508
+2025,2,DAL,SDF,"Dallas/Fort Worth, TX","Louisville, KY",181.52,64,733.0,40.11086,-77.035636,38.256078,-85.751569
+2025,2,DAL,MAF,"Dallas/Fort Worth, TX",,95.7,212,319.0,40.11086,-77.035636,31.997433,-102.078043
+2025,2,DAL,SMF,"Dallas/Fort Worth, TX","Sacramento, CA",244.7,122,1442.0,40.11086,-77.035636,38.582087,-121.50012
+2025,2,DAL,MEM,"Dallas/Fort Worth, TX","Memphis, TN",129.3,112,431.0,40.11086,-77.035636,35.143378,-90.052136
+2025,2,DAL,OMA,"Dallas/Fort Worth, TX","Omaha, NE",160.64,102,585.0,40.11086,-77.035636,46.07035,-93.666319
+2025,2,DAL,MKE,"Dallas/Fort Worth, TX","Milwaukee, WI",183.74,90,853.0,40.11086,-77.035636,43.041072,-87.909421
+2025,2,DAL,PNS,"Dallas/Fort Worth, TX","Pensacola, FL",175.81,84,604.0,40.11086,-77.035636,30.406931,-87.217578
+2025,2,DAL,PDX,"Dallas/Fort Worth, TX","Portland, OR",224.8,175,1626.0,40.11086,-77.035636,45.516018,-122.681425
+2025,2,DAL,PHL,"Dallas/Fort Worth, TX","Philadelphia, PA",207.39,117,1303.0,40.11086,-77.035636,39.951061,-75.16562
+2025,2,DAL,RDU,"Dallas/Fort Worth, TX","Raleigh/Durham, NC",207.67,159,1061.0,40.11086,-77.035636,42.673348,-72.179683
+2025,2,DAL,RNO,"Dallas/Fort Worth, TX","Reno, NV",241.55,51,1356.0,40.11086,-77.035636,30.177159,-95.162771
+2025,2,DAL,SLC,"Dallas/Fort Worth, TX","Salt Lake City, UT",198.29,141,999.0,40.11086,-77.035636,40.758478,-111.888142
+2025,2,DAL,TUL,"Dallas/Fort Worth, TX","Tulsa, OK",71.36,123,237.0,40.11086,-77.035636,61.096484,-160.967455
+2025,2,DAL,AMA,"Dallas/Fort Worth, TX","Amarillo, TX",96.9,111,323.0,40.11086,-77.035636,,
+2025,2,DAL,AUS,"Dallas/Fort Worth, TX","Austin, TX",57.0,278,190.0,40.11086,-77.035636,,
+2025,2,DAL,CMH,"Dallas/Fort Worth, TX","Columbus, OH",193.27,127,926.0,40.11086,-77.035636,39.962649,-82.996216
+2025,2,DAL,BHM,"Dallas/Fort Worth, TX","Birmingham, AL",177.93,153,597.0,40.11086,-77.035636,,
+2025,2,DAL,CLE,"Dallas/Fort Worth, TX","Cleveland, OH (Metropolitan Area)",213.27,50,1023.0,40.11086,-77.035636,41.505546,-81.6915
+2025,2,DAL,BOS,"Dallas/Fort Worth, TX","Boston, MA (Metropolitan Area)",193.35,151,1562.0,40.11086,-77.035636,42.358894,-71.056742
+2025,2,DAL,CHS,"Dallas/Fort Worth, TX","Charleston, SC",187.27,62,987.0,40.11086,-77.035636,32.77647,-79.931027
+2025,2,DAL,CLT,"Dallas/Fort Worth, TX","Charlotte, NC",185.52,126,936.0,40.11086,-77.035636,35.222936,-80.840161
+2025,2,DFW,MDW,"Dallas/Fort Worth, TX","Chicago, IL",204.06,158,802.0,40.11086,-77.035636,41.775002,-87.696388
+2025,2,DFW,HOU,"Dallas/Fort Worth, TX","Houston, TX",74.1,146,247.0,40.11086,-77.035636,29.760803,-95.369506
+2025,2,DFW,OAK,"Dallas/Fort Worth, TX","San Francisco, CA (Metropolitan Area)",179.29,140,1476.0,40.11086,-77.035636,37.78008,-122.420168
+2025,2,DFW,SJC,"Dallas/Fort Worth, TX","San Francisco, CA (Metropolitan Area)",276.25,300,1476.0,40.11086,-77.035636,37.78008,-122.420168
+2025,2,DFW,BUR,"Dallas/Fort Worth, TX","Los Angeles, CA (Metropolitan Area)",275.95,163,1246.0,40.11086,-77.035636,34.052238,-118.243344
+2025,2,DFW,COS,"Dallas/Fort Worth, TX","Colorado Springs, CO",179.22,195,592.0,40.11086,-77.035636,,
+2025,2,DFW,PIT,"Dallas/Fort Worth, TX","Pittsburgh, PA",253.16,334,1067.0,40.11086,-77.035636,40.442169,-79.994945
+2025,2,DFW,ELP,"Dallas/Fort Worth, TX","El Paso, TX",168.6,272,562.0,40.11086,-77.035636,31.76006,-106.492257
+2025,2,DFW,JAX,"Dallas/Fort Worth, TX","Jacksonville, FL",261.27,340,918.0,40.11086,-77.035636,30.325968,-81.65676
+2025,2,DFW,VPS,"Dallas/Fort Worth, TX",,192.3,270,641.0,40.11086,-77.035636,41.478143,-87.055372
+2025,2,DFW,RSW,"Dallas/Fort Worth, TX","Fort Myers, FL",282.5,225,1017.0,40.11086,-77.035636,40.253979,-103.801495
+2025,2,DFW,IND,"Dallas/Fort Worth, TX","Indianapolis, IN",219.92,325,761.0,40.11086,-77.035636,39.76845,-86.156212
+2025,2,DFW,LIT,"Dallas/Fort Worth, TX","Little Rock, AR",91.2,150,304.0,40.11086,-77.035636,34.748745,-92.275105
+2025,2,DFW,LBB,"Dallas/Fort Worth, TX",,87.9,112,293.0,40.11086,-77.035636,41.181125,-96.030508
+2025,2,DFW,SDF,"Dallas/Fort Worth, TX","Louisville, KY",219.9,272,733.0,40.11086,-77.035636,38.256078,-85.751569
+2025,2,DFW,MAF,"Dallas/Fort Worth, TX",,95.7,103,319.0,40.11086,-77.035636,31.997433,-102.078043
+2025,2,DFW,SMF,"Dallas/Fort Worth, TX","Sacramento, CA",290.71,324,1442.0,40.11086,-77.035636,38.582087,-121.50012
+2025,2,DFW,MEM,"Dallas/Fort Worth, TX","Memphis, TN",129.3,323,431.0,40.11086,-77.035636,35.143378,-90.052136
+2025,2,DFW,OMA,"Dallas/Fort Worth, TX","Omaha, NE",175.76,259,585.0,40.11086,-77.035636,46.07035,-93.666319
+2025,2,DFW,MKE,"Dallas/Fort Worth, TX","Milwaukee, WI",235.06,299,853.0,40.11086,-77.035636,43.041072,-87.909421
+2025,2,DFW,PNS,"Dallas/Fort Worth, TX","Pensacola, FL",181.2,188,604.0,40.11086,-77.035636,30.406931,-87.217578
+2025,2,DFW,RNO,"Dallas/Fort Worth, TX","Reno, NV",307.64,158,1356.0,40.11086,-77.035636,30.177159,-95.162771
+2025,2,DFW,TUL,"Dallas/Fort Worth, TX","Tulsa, OK",71.36,157,237.0,40.11086,-77.035636,61.096484,-160.967455
+2025,2,DFW,AMA,"Dallas/Fort Worth, TX","Amarillo, TX",96.9,102,323.0,40.11086,-77.035636,,
+2025,2,DFW,AUS,"Dallas/Fort Worth, TX","Austin, TX",57.0,293,190.0,40.11086,-77.035636,,
+2025,2,DFW,CMH,"Dallas/Fort Worth, TX","Columbus, OH",246.35,345,926.0,40.11086,-77.035636,39.962649,-82.996216
+2025,2,DFW,BHM,"Dallas/Fort Worth, TX","Birmingham, AL",179.1,206,597.0,40.11086,-77.035636,,
+2025,2,DFW,CHS,"Dallas/Fort Worth, TX","Charleston, SC",242.72,196,987.0,40.11086,-77.035636,32.77647,-79.931027
+2025,2,DFW,TUS,"Dallas/Fort Worth, TX","Tucson, AZ",247.2,203,824.0,40.11086,-77.035636,35.167852,-103.726151
+2025,2,DFW,BDL,"Dallas/Fort Worth, TX","Hartford, CT",327.78,176,1471.0,40.11086,-77.035636,41.765775,-72.673356
+2025,2,DFW,STL,"Dallas/Fort Worth, TX","St. Louis, MO",165.0,349,550.0,40.11086,-77.035636,38.630276,-90.200309
+2025,2,DFW,DSM,"Dallas/Fort Worth, TX","Des Moines, IA",187.2,163,624.0,40.11086,-77.035636,41.588822,-93.620309
+2025,2,DFW,GSP,"Dallas/Fort Worth, TX","Greenville/Spartanburg, SC",258.6,174,862.0,40.11086,-77.035636,44.513288,-88.013256
+2025,2,DFW,GRR,"Dallas/Fort Worth, TX","Grand Rapids, MI",279.3,170,931.0,40.11086,-77.035636,47.925705,-97.036068
+2025,2,DFW,BOI,"Dallas/Fort Worth, TX","Boise, ID",294.78,147,1282.0,40.11086,-77.035636,,
+2025,2,DFW,MCI,"Dallas/Fort Worth, TX","Kansas City, MO",138.28,329,460.0,40.11086,-77.035636,39.099792,-94.578559
+2025,2,DFW,SAT,"Dallas/Fort Worth, TX","San Antonio, TX",74.13,282,248.0,40.11086,-77.035636,29.425173,-98.494599
+2025,2,DFW,ORF,"Dallas/Fort Worth, TX","Norfolk, VA (Metropolitan Area)",272.91,195,1212.0,40.11086,-77.035636,36.846164,-76.285913
+2025,2,DFW,PBI,"Dallas/Fort Worth, TX",,314.5,218,1102.0,40.11086,-77.035636,33.90976,-98.500854
+2025,2,DFW,RIC,"Dallas/Fort Worth, TX","Richmond, VA",303.4,218,1158.0,40.11086,-77.035636,37.540759,-77.433932
+2025,2,DFW,PVD,"Dallas/Fort Worth, TX","Boston, MA (Metropolitan Area)",285.34,56,1562.0,40.11086,-77.035636,42.358894,-71.056742
+2025,2,BWI,MDW,"Washington, DC (Metropolitan Area)","Chicago, IL",134.29,300,621.0,38.892062,-77.019912,41.775002,-87.696388
+2025,2,BWI,JFK,"Washington, DC (Metropolitan Area)","New York City, NY (Metropolitan Area)",73.29,71,249.0,38.892062,-77.019912,40.123164,-75.333718
+2025,2,BWI,OAK,"Washington, DC (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",274.7,158,2457.0,38.892062,-77.019912,37.78008,-122.420168
+2025,2,BWI,SFO,"Washington, DC (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",327.96,270,2457.0,38.892062,-77.019912,37.78008,-122.420168
+2025,2,BWI,SJC,"Washington, DC (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",300.72,146,2457.0,38.892062,-77.019912,37.78008,-122.420168
+2025,2,BWI,SNA,"Washington, DC (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",330.12,74,2329.0,38.892062,-77.019912,34.052238,-118.243344
+2025,2,BWI,ONT,"Washington, DC (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",297.94,63,2329.0,38.892062,-77.019912,34.052238,-118.243344
+2025,2,BWI,PIT,"Washington, DC (Metropolitan Area)","Pittsburgh, PA",63.0,77,210.0,38.892062,-77.019912,40.442169,-79.994945
+2025,2,BWI,SEA,"Washington, DC (Metropolitan Area)","Seattle, WA",290.12,303,2335.0,38.892062,-77.019912,47.603229,-122.33028
+2025,2,BWI,ELP,"Washington, DC (Metropolitan Area)","El Paso, TX",321.48,63,1741.0,38.892062,-77.019912,31.76006,-106.492257
+2025,2,BWI,JAX,"Washington, DC (Metropolitan Area)","Jacksonville, FL",195.23,311,663.0,38.892062,-77.019912,30.325968,-81.65676
+2025,2,BWI,DTW,"Washington, DC (Metropolitan Area)","Detroit, MI",122.7,291,409.0,38.892062,-77.019912,42.332916,-83.047853
+2025,2,BWI,MSP,"Washington, DC (Metropolitan Area)","Minneapolis/St. Paul, MN",170.38,298,936.0,38.892062,-77.019912,44.977479,-93.264346
+2025,2,BWI,RSW,"Washington, DC (Metropolitan Area)","Fort Myers, FL",208.31,339,919.0,38.892062,-77.019912,40.253979,-103.801495
+2025,2,BWI,IND,"Washington, DC (Metropolitan Area)","Indianapolis, IN",154.8,300,516.0,38.892062,-77.019912,39.76845,-86.156212
+2025,2,BWI,SDF,"Washington, DC (Metropolitan Area)","Louisville, KY",148.5,241,495.0,38.892062,-77.019912,38.256078,-85.751569
+2025,2,BWI,SMF,"Washington, DC (Metropolitan Area)","Sacramento, CA",319.46,159,2395.0,38.892062,-77.019912,38.582087,-121.50012
+2025,2,BWI,MEM,"Washington, DC (Metropolitan Area)","Memphis, TN",220.34,163,787.0,38.892062,-77.019912,35.143378,-90.052136
+2025,2,BWI,OMA,"Washington, DC (Metropolitan Area)","Omaha, NE",246.52,62,1025.0,38.892062,-77.019912,46.07035,-93.666319
+2025,2,BWI,MKE,"Washington, DC (Metropolitan Area)","Milwaukee, WI",191.79,223,641.0,38.892062,-77.019912,43.041072,-87.909421
+2025,2,BWI,PNS,"Washington, DC (Metropolitan Area)","Pensacola, FL",235.26,54,846.0,38.892062,-77.019912,30.406931,-87.217578
+2025,2,BWI,PDX,"Washington, DC (Metropolitan Area)","Portland, OR",309.83,203,2358.0,38.892062,-77.019912,45.516018,-122.681425
+2025,2,BWI,RDU,"Washington, DC (Metropolitan Area)","Raleigh/Durham, NC",76.5,259,255.0,38.892062,-77.019912,42.673348,-72.179683
+2025,2,BWI,SLC,"Washington, DC (Metropolitan Area)","Salt Lake City, UT",298.49,282,1865.0,38.892062,-77.019912,40.758478,-111.888142
+2025,2,BWI,AUS,"Washington, DC (Metropolitan Area)","Austin, TX",231.02,329,1342.0,38.892062,-77.019912,,
+2025,2,BWI,CMH,"Washington, DC (Metropolitan Area)","Columbus, OH",101.1,204,337.0,38.892062,-77.019912,39.962649,-82.996216
+2025,2,BWI,BHM,"Washington, DC (Metropolitan Area)","Birmingham, AL",204.6,154,682.0,38.892062,-77.019912,,
+2025,2,BWI,CLE,"Washington, DC (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",94.2,173,314.0,38.892062,-77.019912,41.505546,-81.6915
+2025,2,BWI,CHS,"Washington, DC (Metropolitan Area)","Charleston, SC",141.6,244,472.0,38.892062,-77.019912,32.77647,-79.931027
+2025,2,BWI,TUS,"Washington, DC (Metropolitan Area)","Tucson, AZ",318.91,76,1977.0,38.892062,-77.019912,35.167852,-103.726151
+2025,2,BWI,BDL,"Washington, DC (Metropolitan Area)","Hartford, CT",97.73,216,326.0,38.892062,-77.019912,41.765775,-72.673356
+2025,2,BWI,STL,"Washington, DC (Metropolitan Area)","St. Louis, MO",215.81,324,738.0,38.892062,-77.019912,38.630276,-90.200309
+2025,2,BWI,GSP,"Washington, DC (Metropolitan Area)","Greenville/Spartanburg, SC",127.8,85,426.0,38.892062,-77.019912,44.513288,-88.013256
+2025,2,BWI,MCI,"Washington, DC (Metropolitan Area)","Kansas City, MO",231.88,285,967.0,38.892062,-77.019912,39.099792,-94.578559
+2025,2,BWI,SAT,"Washington, DC (Metropolitan Area)","San Antonio, TX",262.71,297,1407.0,38.892062,-77.019912,29.425173,-98.494599
+2025,2,BWI,PBI,"Washington, DC (Metropolitan Area)",,219.46,272,883.0,38.892062,-77.019912,33.90976,-98.500854
+2025,2,BWI,PVD,"Washington, DC (Metropolitan Area)","Boston, MA (Metropolitan Area)",125.4,245,418.0,38.892062,-77.019912,42.358894,-71.056742
+2025,2,BWI,ISP,"Washington, DC (Metropolitan Area)","New York City, NY (Metropolitan Area)",73.39,123,249.0,38.892062,-77.019912,40.123164,-75.333718
+2025,2,BWI,ALB,"Washington, DC (Metropolitan Area)","Albany, NY",97.5,158,325.0,38.892062,-77.019912,,
+2025,2,BWI,MHT,"Washington, DC (Metropolitan Area)","Boston, MA (Metropolitan Area)",125.4,269,418.0,38.892062,-77.019912,42.358894,-71.056742
+2025,2,BWI,BNA,"Washington, DC (Metropolitan Area)","Nashville, TN",166.04,319,587.0,38.892062,-77.019912,36.166687,-86.779932
+2025,2,BWI,SAN,"Washington, DC (Metropolitan Area)","San Diego, CA",303.16,317,2295.0,38.892062,-77.019912,32.71576,-117.163817
+2025,2,BWI,BUF,"Washington, DC (Metropolitan Area)","Buffalo, NY",88.8,200,296.0,38.892062,-77.019912,39.945422,-78.64671
+2025,2,BWI,CVG,"Washington, DC (Metropolitan Area)","Cincinnati, OH",129.0,279,430.0,38.892062,-77.019912,39.104427,-84.513808
+2025,2,BWI,MSY,"Washington, DC (Metropolitan Area)","New Orleans, LA",187.94,319,998.0,38.892062,-77.019912,29.950621,-90.074948
+2025,2,BWI,SAV,"Washington, DC (Metropolitan Area)","Savannah, GA",164.7,189,549.0,38.892062,-77.019912,40.115007,-111.654713
+2025,2,BWI,OKC,"Washington, DC (Metropolitan Area)","Oklahoma City, OK",262.53,108,1180.0,38.892062,-77.019912,35.468494,-97.521264
+2025,2,BWI,EYW,"Washington, DC (Metropolitan Area)","Key West, FL",298.1,59,1050.0,38.892062,-77.019912,,
+2025,2,BWI,PWM,"Washington, DC (Metropolitan Area)","Portland, ME",147.9,197,493.0,38.892062,-77.019912,45.516018,-122.681425
+2025,2,BWI,ROC,"Washington, DC (Metropolitan Area)","Rochester, NY",88.8,77,296.0,38.892062,-77.019912,43.155708,-77.612547
+2025,2,DCA,HOU,"Washington, DC (Metropolitan Area)","Houston, TX",209.87,316,1246.0,38.892062,-77.019912,29.760803,-95.369506
+2025,2,DCA,EWR,"Washington, DC (Metropolitan Area)","New York City, NY (Metropolitan Area)",73.39,202,249.0,38.892062,-77.019912,40.123164,-75.333718
+2025,2,DCA,JFK,"Washington, DC (Metropolitan Area)","New York City, NY (Metropolitan Area)",73.41,211,249.0,38.892062,-77.019912,40.123164,-75.333718
+2025,2,DCA,OAK,"Washington, DC (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",274.72,71,2457.0,38.892062,-77.019912,37.78008,-122.420168
+2025,2,DCA,SJC,"Washington, DC (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",286.53,116,2457.0,38.892062,-77.019912,37.78008,-122.420168
+2025,2,DCA,SNA,"Washington, DC (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",312.71,125,2329.0,38.892062,-77.019912,34.052238,-118.243344
+2025,2,DCA,ONT,"Washington, DC (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",294.06,87,2329.0,38.892062,-77.019912,34.052238,-118.243344
+2025,2,DCA,PIT,"Washington, DC (Metropolitan Area)","Pittsburgh, PA",63.0,148,210.0,38.892062,-77.019912,40.442169,-79.994945
+2025,2,DCA,SEA,"Washington, DC (Metropolitan Area)","Seattle, WA",285.7,285,2335.0,38.892062,-77.019912,47.603229,-122.33028
+2025,2,DCA,ELP,"Washington, DC (Metropolitan Area)","El Paso, TX",298.94,90,1741.0,38.892062,-77.019912,31.76006,-106.492257
+2025,2,DCA,IND,"Washington, DC (Metropolitan Area)","Indianapolis, IN",154.8,313,516.0,38.892062,-77.019912,39.76845,-86.156212
+2025,2,DCA,SDF,"Washington, DC (Metropolitan Area)","Louisville, KY",148.5,189,495.0,38.892062,-77.019912,38.256078,-85.751569
+2025,2,DCA,SMF,"Washington, DC (Metropolitan Area)","Sacramento, CA",312.97,128,2395.0,38.892062,-77.019912,38.582087,-121.50012
+2025,2,DCA,MEM,"Washington, DC (Metropolitan Area)","Memphis, TN",232.86,218,787.0,38.892062,-77.019912,35.143378,-90.052136
+2025,2,DCA,OMA,"Washington, DC (Metropolitan Area)","Omaha, NE",190.63,285,1025.0,38.892062,-77.019912,46.07035,-93.666319
+2025,2,DCA,MKE,"Washington, DC (Metropolitan Area)","Milwaukee, WI",179.32,281,641.0,38.892062,-77.019912,43.041072,-87.909421
+2025,2,DCA,PNS,"Washington, DC (Metropolitan Area)","Pensacola, FL",236.61,139,846.0,38.892062,-77.019912,30.406931,-87.217578
+2025,2,DCA,PDX,"Washington, DC (Metropolitan Area)","Portland, OR",317.19,285,2358.0,38.892062,-77.019912,45.516018,-122.681425
+2025,2,DCA,AUS,"Washington, DC (Metropolitan Area)","Austin, TX",259.29,318,1342.0,38.892062,-77.019912,,
+2025,2,DCA,CMH,"Washington, DC (Metropolitan Area)","Columbus, OH",101.1,284,337.0,38.892062,-77.019912,39.962649,-82.996216
+2025,2,DCA,BHM,"Washington, DC (Metropolitan Area)","Birmingham, AL",204.6,173,682.0,38.892062,-77.019912,,
+2025,2,DCA,CLE,"Washington, DC (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",94.2,227,314.0,38.892062,-77.019912,41.505546,-81.6915
+2025,2,DCA,CHS,"Washington, DC (Metropolitan Area)","Charleston, SC",141.6,302,472.0,38.892062,-77.019912,32.77647,-79.931027
+2025,2,DCA,TUS,"Washington, DC (Metropolitan Area)","Tucson, AZ",318.86,92,1977.0,38.892062,-77.019912,35.167852,-103.726151
+2025,2,DCA,BDL,"Washington, DC (Metropolitan Area)","Hartford, CT",97.71,241,326.0,38.892062,-77.019912,41.765775,-72.673356
+2025,2,DCA,GSP,"Washington, DC (Metropolitan Area)","Greenville/Spartanburg, SC",127.8,121,426.0,38.892062,-77.019912,44.513288,-88.013256
+2025,2,DCA,MCI,"Washington, DC (Metropolitan Area)","Kansas City, MO",189.96,310,967.0,38.892062,-77.019912,39.099792,-94.578559
+2025,2,DCA,SAT,"Washington, DC (Metropolitan Area)","San Antonio, TX",237.83,245,1407.0,38.892062,-77.019912,29.425173,-98.494599
+2025,2,DCA,PVD,"Washington, DC (Metropolitan Area)","Boston, MA (Metropolitan Area)",125.4,281,418.0,38.892062,-77.019912,42.358894,-71.056742
+2025,2,DCA,ALB,"Washington, DC (Metropolitan Area)","Albany, NY",97.5,151,325.0,38.892062,-77.019912,,
+2025,2,DCA,MHT,"Washington, DC (Metropolitan Area)","Boston, MA (Metropolitan Area)",125.4,166,418.0,38.892062,-77.019912,42.358894,-71.056742
+2025,2,DCA,SAN,"Washington, DC (Metropolitan Area)","San Diego, CA",288.53,327,2295.0,38.892062,-77.019912,32.71576,-117.163817
+2025,2,DCA,BUF,"Washington, DC (Metropolitan Area)","Buffalo, NY",88.8,135,296.0,38.892062,-77.019912,39.945422,-78.64671
+2025,2,DCA,CVG,"Washington, DC (Metropolitan Area)","Cincinnati, OH",129.0,298,430.0,38.892062,-77.019912,39.104427,-84.513808
+2025,2,DCA,SAV,"Washington, DC (Metropolitan Area)","Savannah, GA",164.7,121,549.0,38.892062,-77.019912,40.115007,-111.654713
+2025,2,DCA,OKC,"Washington, DC (Metropolitan Area)","Oklahoma City, OK",215.72,196,1180.0,38.892062,-77.019912,35.468494,-97.521264
+2025,2,DCA,EYW,"Washington, DC (Metropolitan Area)","Key West, FL",281.16,123,1050.0,38.892062,-77.019912,,
+2025,2,DCA,PWM,"Washington, DC (Metropolitan Area)","Portland, ME",147.9,197,493.0,38.892062,-77.019912,45.516018,-122.681425
+2025,2,DCA,ROC,"Washington, DC (Metropolitan Area)","Rochester, NY",88.8,77,296.0,38.892062,-77.019912,43.155708,-77.612547
+2025,2,DCA,HPN,"Washington, DC (Metropolitan Area)","New York City, NY (Metropolitan Area)",73.43,129,249.0,38.892062,-77.019912,40.123164,-75.333718
+2025,2,DCA,HSV,"Washington, DC (Metropolitan Area)","Huntsville, AL",192.3,185,641.0,38.892062,-77.019912,,
+2025,2,DCA,BTV,"Washington, DC (Metropolitan Area)","Burlington, VT",132.3,99,441.0,38.892062,-77.019912,,
+2025,2,DCA,CAE,"Washington, DC (Metropolitan Area)","Columbia, SC",131.4,154,438.0,38.892062,-77.019912,,
+2025,2,DCA,TYS,"Washington, DC (Metropolitan Area)","Knoxville, TN",139.4,149,465.0,38.892062,-77.019912,35.962631,-83.916677
+2025,2,DCA,DAY,"Washington, DC (Metropolitan Area)","Dayton, OH",121.8,152,406.0,38.892062,-77.019912,,
+2025,2,IAD,MDW,"Washington, DC (Metropolitan Area)","Chicago, IL",186.41,110,622.0,38.892062,-77.019912,41.775002,-87.696388
+2025,2,IAD,ORD,"Washington, DC (Metropolitan Area)","Chicago, IL",186.37,282,622.0,38.892062,-77.019912,41.775002,-87.696388
+2025,2,IAD,IAH,"Washington, DC (Metropolitan Area)","Houston, TX",282.8,314,1246.0,38.892062,-77.019912,29.760803,-95.369506
+2025,2,IAD,EWR,"Washington, DC (Metropolitan Area)","New York City, NY (Metropolitan Area)",73.39,150,249.0,38.892062,-77.019912,40.123164,-75.333718
+2025,2,IAD,JFK,"Washington, DC (Metropolitan Area)","New York City, NY (Metropolitan Area)",73.54,120,249.0,38.892062,-77.019912,40.123164,-75.333718
+2025,2,IAD,LGA,"Washington, DC (Metropolitan Area)","New York City, NY (Metropolitan Area)",73.39,154,249.0,38.892062,-77.019912,40.123164,-75.333718
+2025,2,IAD,SJC,"Washington, DC (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",285.05,83,2457.0,38.892062,-77.019912,37.78008,-122.420168
+2025,2,IAD,SNA,"Washington, DC (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",296.22,62,2329.0,38.892062,-77.019912,34.052238,-118.243344
+2025,2,IAD,FLL,"Washington, DC (Metropolitan Area)","Miami, FL (Metropolitan Area)",194.99,326,946.0,38.892062,-77.019912,44.977479,-93.264346
+2025,2,IAD,PIT,"Washington, DC (Metropolitan Area)","Pittsburgh, PA",63.0,65,210.0,38.892062,-77.019912,40.442169,-79.994945
+2025,2,IAD,JAX,"Washington, DC (Metropolitan Area)","Jacksonville, FL",183.81,205,663.0,38.892062,-77.019912,30.325968,-81.65676
+2025,2,IAD,DTW,"Washington, DC (Metropolitan Area)","Detroit, MI",122.7,247,409.0,38.892062,-77.019912,42.332916,-83.047853
+2025,2,IAD,MSP,"Washington, DC (Metropolitan Area)","Minneapolis/St. Paul, MN",216.88,271,936.0,38.892062,-77.019912,44.977479,-93.264346
+2025,2,IAD,RSW,"Washington, DC (Metropolitan Area)","Fort Myers, FL",198.51,215,919.0,38.892062,-77.019912,40.253979,-103.801495
+2025,2,IAD,IND,"Washington, DC (Metropolitan Area)","Indianapolis, IN",154.8,158,516.0,38.892062,-77.019912,39.76845,-86.156212
+2025,2,IAD,MIA,"Washington, DC (Metropolitan Area)","Miami, FL (Metropolitan Area)",208.95,233,946.0,38.892062,-77.019912,44.977479,-93.264346
+2025,2,IAD,SDF,"Washington, DC (Metropolitan Area)","Louisville, KY",148.5,56,495.0,38.892062,-77.019912,38.256078,-85.751569
+2025,2,IAD,SMF,"Washington, DC (Metropolitan Area)","Sacramento, CA",306.31,175,2395.0,38.892062,-77.019912,38.582087,-121.50012
+2025,2,IAD,PDX,"Washington, DC (Metropolitan Area)","Portland, OR",309.85,171,2358.0,38.892062,-77.019912,45.516018,-122.681425
+2025,2,IAD,RDU,"Washington, DC (Metropolitan Area)","Raleigh/Durham, NC",76.5,117,255.0,38.892062,-77.019912,42.673348,-72.179683
+2025,2,IAD,SLC,"Washington, DC (Metropolitan Area)","Salt Lake City, UT",299.76,177,1865.0,38.892062,-77.019912,40.758478,-111.888142
+2025,2,IAD,CMH,"Washington, DC (Metropolitan Area)","Columbus, OH",101.1,108,337.0,38.892062,-77.019912,39.962649,-82.996216
+2025,2,IAD,CLE,"Washington, DC (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",94.2,124,314.0,38.892062,-77.019912,41.505546,-81.6915
+2025,2,IAD,CHS,"Washington, DC (Metropolitan Area)","Charleston, SC",141.6,168,472.0,38.892062,-77.019912,32.77647,-79.931027
+2025,2,IAD,CLT,"Washington, DC (Metropolitan Area)","Charlotte, NC",108.3,215,361.0,38.892062,-77.019912,35.222936,-80.840161
+2025,2,IAD,TUS,"Washington, DC (Metropolitan Area)","Tucson, AZ",317.55,53,1977.0,38.892062,-77.019912,35.167852,-103.726151
+2025,2,IAD,BDL,"Washington, DC (Metropolitan Area)","Hartford, CT",97.73,163,326.0,38.892062,-77.019912,41.765775,-72.673356
+2025,2,IAD,STL,"Washington, DC (Metropolitan Area)","St. Louis, MO",221.4,88,738.0,38.892062,-77.019912,38.630276,-90.200309
+2025,2,IAD,GSP,"Washington, DC (Metropolitan Area)","Greenville/Spartanburg, SC",127.8,58,426.0,38.892062,-77.019912,44.513288,-88.013256
+2025,2,IAD,MCI,"Washington, DC (Metropolitan Area)","Kansas City, MO",245.7,118,967.0,38.892062,-77.019912,39.099792,-94.578559
+2025,2,IAD,SAT,"Washington, DC (Metropolitan Area)","San Antonio, TX",274.21,245,1407.0,38.892062,-77.019912,29.425173,-98.494599
+2025,2,IAD,PBI,"Washington, DC (Metropolitan Area)",,206.1,100,883.0,38.892062,-77.019912,33.90976,-98.500854
+2025,2,IAD,PVD,"Washington, DC (Metropolitan Area)","Boston, MA (Metropolitan Area)",125.4,60,418.0,38.892062,-77.019912,42.358894,-71.056742
+2025,2,IAD,BNA,"Washington, DC (Metropolitan Area)","Nashville, TN",176.1,268,587.0,38.892062,-77.019912,36.166687,-86.779932
+2025,2,IAD,BUF,"Washington, DC (Metropolitan Area)","Buffalo, NY",88.8,80,296.0,38.892062,-77.019912,39.945422,-78.64671
+2025,2,IAD,CVG,"Washington, DC (Metropolitan Area)","Cincinnati, OH",129.0,99,430.0,38.892062,-77.019912,39.104427,-84.513808
+2025,2,IAD,MSY,"Washington, DC (Metropolitan Area)","New Orleans, LA",234.45,175,998.0,38.892062,-77.019912,29.950621,-90.074948
+2025,2,IAD,SAV,"Washington, DC (Metropolitan Area)","Savannah, GA",164.7,104,549.0,38.892062,-77.019912,40.115007,-111.654713
+2025,2,IAD,OKC,"Washington, DC (Metropolitan Area)","Oklahoma City, OK",271.97,62,1180.0,38.892062,-77.019912,35.468494,-97.521264
+2025,2,IAD,EYW,"Washington, DC (Metropolitan Area)","Key West, FL",267.24,104,1050.0,38.892062,-77.019912,,
+2025,2,IAD,PWM,"Washington, DC (Metropolitan Area)","Portland, ME",147.9,105,493.0,38.892062,-77.019912,45.516018,-122.681425
+2025,2,IAD,ROC,"Washington, DC (Metropolitan Area)","Rochester, NY",88.8,67,296.0,38.892062,-77.019912,43.155708,-77.612547
+2025,2,IAD,HSV,"Washington, DC (Metropolitan Area)","Huntsville, AL",192.3,63,641.0,38.892062,-77.019912,,
+2025,2,IAD,BTV,"Washington, DC (Metropolitan Area)","Burlington, VT",132.3,99,441.0,38.892062,-77.019912,,
+2025,2,IAD,CAE,"Washington, DC (Metropolitan Area)","Columbia, SC",131.4,58,438.0,38.892062,-77.019912,,
+2025,2,IAD,TYS,"Washington, DC (Metropolitan Area)","Knoxville, TN",139.4,51,465.0,38.892062,-77.019912,35.962631,-83.916677
+2025,2,IAD,DAY,"Washington, DC (Metropolitan Area)","Dayton, OH",121.8,73,406.0,38.892062,-77.019912,,
+2025,2,IAD,TPA,"Washington, DC (Metropolitan Area)","Tampa, FL (Metropolitan Area)",205.22,338,842.0,38.892062,-77.019912,37.8606,-78.804199
+2025,2,IAD,PHX,"Washington, DC (Metropolitan Area)","Phoenix, AZ",292.6,300,1999.0,38.892062,-77.019912,30.406931,-87.217578
+2025,2,MDW,IAH,"Chicago, IL","Houston, TX",201.0,179,945.0,41.775002,-87.696388,29.760803,-95.369506
+2025,2,MDW,EWR,"Chicago, IL","New York City, NY (Metropolitan Area)",217.05,178,773.0,41.775002,-87.696388,40.123164,-75.333718
+2025,2,MDW,OAK,"Chicago, IL","San Francisco, CA (Metropolitan Area)",246.28,281,1855.0,41.775002,-87.696388,37.78008,-122.420168
+2025,2,MDW,SFO,"Chicago, IL","San Francisco, CA (Metropolitan Area)",216.33,185,1855.0,41.775002,-87.696388,37.78008,-122.420168
+2025,2,MDW,SJC,"Chicago, IL","San Francisco, CA (Metropolitan Area)",258.57,155,1855.0,41.775002,-87.696388,37.78008,-122.420168
+2025,2,MDW,BUR,"Chicago, IL","Los Angeles, CA (Metropolitan Area)",258.11,89,1750.0,41.775002,-87.696388,34.052238,-118.243344
+2025,2,MDW,LGB,"Chicago, IL","Los Angeles, CA (Metropolitan Area)",194.65,128,1750.0,41.775002,-87.696388,34.052238,-118.243344
+2025,2,MDW,SNA,"Chicago, IL","Los Angeles, CA (Metropolitan Area)",263.06,89,1750.0,41.775002,-87.696388,34.052238,-118.243344
+2025,2,MDW,ONT,"Chicago, IL","Los Angeles, CA (Metropolitan Area)",245.58,188,1750.0,41.775002,-87.696388,34.052238,-118.243344
+2025,2,MDW,PIT,"Chicago, IL","Pittsburgh, PA",123.9,261,413.0,41.775002,-87.696388,40.442169,-79.994945
+2025,2,MDW,SEA,"Chicago, IL","Seattle, WA",221.77,188,1733.0,41.775002,-87.696388,47.603229,-122.33028
+2025,2,MDW,ELP,"Chicago, IL","El Paso, TX",229.63,52,1237.0,41.775002,-87.696388,31.76006,-106.492257
+2025,2,MDW,JAX,"Chicago, IL","Jacksonville, FL",208.76,118,864.0,41.775002,-87.696388,30.325968,-81.65676
+2025,2,MDW,DTW,"Chicago, IL","Detroit, MI",70.5,217,235.0,41.775002,-87.696388,42.332916,-83.047853
+2025,2,MDW,MSP,"Chicago, IL","Minneapolis/St. Paul, MN",104.7,257,349.0,41.775002,-87.696388,44.977479,-93.264346
+2025,2,MDW,SDF,"Chicago, IL","Louisville, KY",85.8,121,286.0,41.775002,-87.696388,38.256078,-85.751569
+2025,2,MDW,SMF,"Chicago, IL","Sacramento, CA",279.92,135,1790.0,41.775002,-87.696388,38.582087,-121.50012
+2025,2,MDW,MEM,"Chicago, IL","Memphis, TN",147.3,166,491.0,41.775002,-87.696388,35.143378,-90.052136
+2025,2,MDW,OMA,"Chicago, IL","Omaha, NE",126.9,234,423.0,41.775002,-87.696388,46.07035,-93.666319
+2025,2,MDW,PDX,"Chicago, IL","Portland, OR",256.22,147,1751.0,41.775002,-87.696388,45.516018,-122.681425
+2025,2,MDW,PHL,"Chicago, IL","Philadelphia, PA",169.37,304,678.0,41.775002,-87.696388,39.951061,-75.16562
+2025,2,MDW,RDU,"Chicago, IL","Raleigh/Durham, NC",160.69,296,646.0,41.775002,-87.696388,42.673348,-72.179683
+2025,2,MDW,SLC,"Chicago, IL","Salt Lake City, UT",240.78,89,1259.0,41.775002,-87.696388,40.758478,-111.888142
+2025,2,MDW,AUS,"Chicago, IL","Austin, TX",181.32,343,977.0,41.775002,-87.696388,,
+2025,2,MDW,CMH,"Chicago, IL","Columbus, OH",88.8,289,296.0,41.775002,-87.696388,39.962649,-82.996216
+2025,2,MDW,BHM,"Chicago, IL","Birmingham, AL",175.01,128,584.0,41.775002,-87.696388,,
+2025,2,MDW,CLE,"Chicago, IL","Cleveland, OH (Metropolitan Area)",102.9,233,343.0,41.775002,-87.696388,41.505546,-81.6915
+2025,2,MDW,BOS,"Chicago, IL","Boston, MA (Metropolitan Area)",142.91,290,867.0,41.775002,-87.696388,42.358894,-71.056742
+2025,2,MDW,CHS,"Chicago, IL","Charleston, SC",160.52,121,760.0,41.775002,-87.696388,32.77647,-79.931027
+2025,2,MDW,CLT,"Chicago, IL","Charlotte, NC",169.5,210,599.0,41.775002,-87.696388,35.222936,-80.840161
+2025,2,MDW,TUS,"Chicago, IL","Tucson, AZ",264.27,52,1440.0,41.775002,-87.696388,35.167852,-103.726151
+2025,2,MDW,BDL,"Chicago, IL","Hartford, CT",220.88,122,783.0,41.775002,-87.696388,41.765775,-72.673356
+2025,2,MDW,STL,"Chicago, IL","St. Louis, MO",77.4,290,258.0,41.775002,-87.696388,38.630276,-90.200309
+2025,2,MDW,MCI,"Chicago, IL","Kansas City, MO",121.5,304,405.0,41.775002,-87.696388,39.099792,-94.578559
+2025,2,MDW,SAT,"Chicago, IL","San Antonio, TX",217.46,234,1041.0,41.775002,-87.696388,29.425173,-98.494599
+2025,2,MDW,ORF,"Chicago, IL","Norfolk, VA (Metropolitan Area)",165.96,103,717.0,41.775002,-87.696388,36.846164,-76.285913
+2025,2,MDW,RIC,"Chicago, IL","Richmond, VA",192.6,85,642.0,41.775002,-87.696388,37.540759,-77.433932
+2025,2,MDW,PVD,"Chicago, IL","Boston, MA (Metropolitan Area)",185.12,177,867.0,41.775002,-87.696388,42.358894,-71.056742
+2025,2,MDW,ALB,"Chicago, IL","Albany, NY",216.9,87,723.0,41.775002,-87.696388,,
+2025,2,MDW,MHT,"Chicago, IL","Boston, MA (Metropolitan Area)",202.46,103,867.0,41.775002,-87.696388,42.358894,-71.056742
+2025,2,MDW,BNA,"Chicago, IL","Nashville, TN",122.7,293,409.0,41.775002,-87.696388,36.166687,-86.779932
+2025,2,MDW,SAN,"Chicago, IL","San Diego, CA",219.54,307,1728.0,41.775002,-87.696388,32.71576,-117.163817
+2025,2,MDW,BUF,"Chicago, IL","Buffalo, NY",142.02,136,474.0,41.775002,-87.696388,39.945422,-78.64671
+2025,2,MDW,CVG,"Chicago, IL","Cincinnati, OH",79.2,152,264.0,41.775002,-87.696388,39.104427,-84.513808
+2025,2,MDW,MSY,"Chicago, IL","New Orleans, LA",167.0,307,837.0,41.775002,-87.696388,29.950621,-90.074948
+2025,2,MDW,SAV,"Chicago, IL","Savannah, GA",224.29,121,773.0,41.775002,-87.696388,40.115007,-111.654713
+2025,2,MDW,OKC,"Chicago, IL","Oklahoma City, OK",176.99,72,693.0,41.775002,-87.696388,35.468494,-97.521264
+2025,2,MDW,SRQ,"Chicago, IL",,248.47,202,1050.0,41.775002,-87.696388,27.336483,-82.538602
+2025,2,ORD,OAK,"Chicago, IL","San Francisco, CA (Metropolitan Area)",185.5,196,1855.0,41.775002,-87.696388,37.78008,-122.420168
+2025,2,ORD,SJC,"Chicago, IL","San Francisco, CA (Metropolitan Area)",277.29,216,1855.0,41.775002,-87.696388,37.78008,-122.420168
+2025,2,ORD,ONT,"Chicago, IL","Los Angeles, CA (Metropolitan Area)",262.84,148,1750.0,41.775002,-87.696388,34.052238,-118.243344
+2025,2,ORD,PIT,"Chicago, IL","Pittsburgh, PA",123.9,259,413.0,41.775002,-87.696388,40.442169,-79.994945
+2025,2,ORD,ELP,"Chicago, IL","El Paso, TX",266.81,164,1237.0,41.775002,-87.696388,31.76006,-106.492257
+2025,2,ORD,JAX,"Chicago, IL","Jacksonville, FL",231.35,345,864.0,41.775002,-87.696388,30.325968,-81.65676
+2025,2,ORD,SDF,"Chicago, IL","Louisville, KY",85.8,181,286.0,41.775002,-87.696388,38.256078,-85.751569
+2025,2,ORD,SMF,"Chicago, IL","Sacramento, CA",285.51,314,1790.0,41.775002,-87.696388,38.582087,-121.50012
+2025,2,ORD,MEM,"Chicago, IL","Memphis, TN",147.3,283,491.0,41.775002,-87.696388,35.143378,-90.052136
+2025,2,ORD,OMA,"Chicago, IL","Omaha, NE",126.9,229,423.0,41.775002,-87.696388,46.07035,-93.666319
+2025,2,ORD,PNS,"Chicago, IL","Pensacola, FL",222.81,165,794.0,41.775002,-87.696388,30.406931,-87.217578
+2025,2,ORD,PDX,"Chicago, IL","Portland, OR",233.34,284,1751.0,41.775002,-87.696388,45.516018,-122.681425
+2025,2,ORD,CMH,"Chicago, IL","Columbus, OH",88.8,284,296.0,41.775002,-87.696388,39.962649,-82.996216
+2025,2,ORD,BHM,"Chicago, IL","Birmingham, AL",175.01,143,584.0,41.775002,-87.696388,,
+2025,2,ORD,CHS,"Chicago, IL","Charleston, SC",201.63,312,760.0,41.775002,-87.696388,32.77647,-79.931027
+2025,2,ORD,TUS,"Chicago, IL","Tucson, AZ",288.61,200,1440.0,41.775002,-87.696388,35.167852,-103.726151
+2025,2,ORD,BDL,"Chicago, IL","Hartford, CT",234.9,276,783.0,41.775002,-87.696388,41.765775,-72.673356
+2025,2,ORD,STL,"Chicago, IL","St. Louis, MO",77.4,276,258.0,41.775002,-87.696388,38.630276,-90.200309
+2025,2,ORD,MCI,"Chicago, IL","Kansas City, MO",121.5,241,405.0,41.775002,-87.696388,39.099792,-94.578559
+2025,2,ORD,SAT,"Chicago, IL","San Antonio, TX",232.71,316,1041.0,41.775002,-87.696388,29.425173,-98.494599
+2025,2,ORD,ORF,"Chicago, IL","Norfolk, VA (Metropolitan Area)",192.15,245,717.0,41.775002,-87.696388,36.846164,-76.285913
+2025,2,ORD,RIC,"Chicago, IL","Richmond, VA",192.6,259,642.0,41.775002,-87.696388,37.540759,-77.433932
+2025,2,ORD,PVD,"Chicago, IL","Boston, MA (Metropolitan Area)",221.6,176,867.0,41.775002,-87.696388,42.358894,-71.056742
+2025,2,ORD,ALB,"Chicago, IL","Albany, NY",216.9,207,723.0,41.775002,-87.696388,,
+2025,2,ORD,MHT,"Chicago, IL","Boston, MA (Metropolitan Area)",248.3,57,867.0,41.775002,-87.696388,42.358894,-71.056742
+2025,2,ORD,BUF,"Chicago, IL","Buffalo, NY",142.02,294,474.0,41.775002,-87.696388,39.945422,-78.64671
+2025,2,ORD,CVG,"Chicago, IL","Cincinnati, OH",79.2,284,264.0,41.775002,-87.696388,39.104427,-84.513808
+2025,2,ORD,SAV,"Chicago, IL","Savannah, GA",231.9,179,773.0,41.775002,-87.696388,40.115007,-111.654713
+2025,2,ORD,OKC,"Chicago, IL","Oklahoma City, OK",207.9,174,693.0,41.775002,-87.696388,35.468494,-97.521264
+2025,2,ORD,HPN,"Chicago, IL","New York City, NY (Metropolitan Area)",231.8,174,773.0,41.775002,-87.696388,40.123164,-75.333718
+2025,2,ORD,TYS,"Chicago, IL","Knoxville, TN",142.5,175,475.0,41.775002,-87.696388,35.962631,-83.916677
+2025,2,ORD,SRQ,"Chicago, IL",,260.13,296,1050.0,41.775002,-87.696388,27.336483,-82.538602
+2025,2,ORD,CAK,"Chicago, IL","Cleveland, OH (Metropolitan Area)",102.9,87,343.0,41.775002,-87.696388,41.505546,-81.6915
+2025,2,ORD,PSP,"Chicago, IL","Palm Springs, CA",312.48,308,1657.0,41.775002,-87.696388,33.830302,-116.546843
+2025,2,HOU,EWR,"Houston, TX","New York City, NY (Metropolitan Area)",239.75,68,1465.0,29.760803,-95.369506,40.123164,-75.333718
+2025,2,HOU,JFK,"Houston, TX","New York City, NY (Metropolitan Area)",232.07,127,1465.0,29.760803,-95.369506,40.123164,-75.333718
+2025,2,HOU,OAK,"Houston, TX","San Francisco, CA (Metropolitan Area)",220.54,282,1649.0,29.760803,-95.369506,37.78008,-122.420168
+2025,2,HOU,SFO,"Houston, TX","San Francisco, CA (Metropolitan Area)",231.31,53,1649.0,29.760803,-95.369506,37.78008,-122.420168
+2025,2,HOU,SJC,"Houston, TX","San Francisco, CA (Metropolitan Area)",233.94,136,1649.0,29.760803,-95.369506,37.78008,-122.420168
+2025,2,HOU,BUR,"Houston, TX","Los Angeles, CA (Metropolitan Area)",212.08,69,1390.0,29.760803,-95.369506,34.052238,-118.243344
+2025,2,HOU,LGB,"Houston, TX","Los Angeles, CA (Metropolitan Area)",185.09,170,1390.0,29.760803,-95.369506,34.052238,-118.243344
+2025,2,HOU,SNA,"Houston, TX","Los Angeles, CA (Metropolitan Area)",229.2,133,1390.0,29.760803,-95.369506,34.052238,-118.243344
+2025,2,HOU,ONT,"Houston, TX","Los Angeles, CA (Metropolitan Area)",231.14,76,1390.0,29.760803,-95.369506,34.052238,-118.243344
+2025,2,HOU,FLL,"Houston, TX","Miami, FL (Metropolitan Area)",171.94,214,966.0,29.760803,-95.369506,44.977479,-93.264346
+2025,2,HOU,PIT,"Houston, TX","Pittsburgh, PA",218.36,122,1131.0,29.760803,-95.369506,40.442169,-79.994945
+2025,2,HOU,SEA,"Houston, TX","Seattle, WA",254.95,63,1894.0,29.760803,-95.369506,47.603229,-122.33028
+2025,2,HOU,ELP,"Houston, TX","El Paso, TX",200.37,210,677.0,29.760803,-95.369506,31.76006,-106.492257
+2025,2,HOU,JAX,"Houston, TX","Jacksonville, FL",215.83,66,817.0,29.760803,-95.369506,30.325968,-81.65676
+2025,2,HOU,DTW,"Houston, TX","Detroit, MI",185.86,76,1092.0,29.760803,-95.369506,42.332916,-83.047853
+2025,2,HOU,MSP,"Houston, TX","Minneapolis/St. Paul, MN",207.7,55,1057.0,29.760803,-95.369506,44.977479,-93.264346
+2025,2,HOU,IND,"Houston, TX","Indianapolis, IN",192.51,151,861.0,29.760803,-95.369506,39.76845,-86.156212
+2025,2,HOU,MIA,"Houston, TX","Miami, FL (Metropolitan Area)",190.29,229,966.0,29.760803,-95.369506,44.977479,-93.264346
+2025,2,HOU,LBB,"Houston, TX",,142.27,87,474.0,29.760803,-95.369506,41.181125,-96.030508
+2025,2,HOU,SDF,"Houston, TX","Louisville, KY",189.9,75,803.0,29.760803,-95.369506,38.256078,-85.751569
+2025,2,HOU,MAF,"Houston, TX",,132.3,271,441.0,29.760803,-95.369506,31.997433,-102.078043
+2025,2,HOU,SMF,"Houston, TX","Sacramento, CA",251.52,91,1624.0,29.760803,-95.369506,38.582087,-121.50012
+2025,2,HOU,MEM,"Houston, TX","Memphis, TN",145.2,110,484.0,29.760803,-95.369506,35.143378,-90.052136
+2025,2,HOU,OMA,"Houston, TX","Omaha, NE",167.29,87,804.0,29.760803,-95.369506,46.07035,-93.666319
+2025,2,HOU,MKE,"Houston, TX","Milwaukee, WI",183.23,103,1004.0,29.760803,-95.369506,43.041072,-87.909421
+2025,2,HOU,PDX,"Houston, TX","Portland, OR",243.39,88,1843.0,29.760803,-95.369506,45.516018,-122.681425
+2025,2,HOU,PHL,"Houston, TX","Philadelphia, PA",221.63,117,1336.0,29.760803,-95.369506,39.951061,-75.16562
+2025,2,HOU,RDU,"Houston, TX","Raleigh/Durham, NC",213.78,131,1050.0,29.760803,-95.369506,42.673348,-72.179683
+2025,2,HOU,SLC,"Houston, TX","Salt Lake City, UT",233.76,90,1214.0,29.760803,-95.369506,40.758478,-111.888142
+2025,2,HOU,TUL,"Houston, TX","Tulsa, OK",135.9,231,453.0,29.760803,-95.369506,61.096484,-160.967455
+2025,2,HOU,CMH,"Houston, TX","Columbus, OH",204.38,108,1001.0,29.760803,-95.369506,39.962649,-82.996216
+2025,2,HOU,BHM,"Houston, TX","Birmingham, AL",171.0,112,570.0,29.760803,-95.369506,,
+2025,2,HOU,CLE,"Houston, TX","Cleveland, OH (Metropolitan Area)",208.33,62,1106.0,29.760803,-95.369506,41.505546,-81.6915
+2025,2,HOU,BOS,"Houston, TX","Boston, MA (Metropolitan Area)",216.86,237,1609.0,29.760803,-95.369506,42.358894,-71.056742
+2025,2,HOU,CHS,"Houston, TX","Charleston, SC",189.48,63,928.0,29.760803,-95.369506,32.77647,-79.931027
+2025,2,HOU,CLT,"Houston, TX","Charlotte, NC",200.37,91,920.0,29.760803,-95.369506,35.222936,-80.840161
+2025,2,HOU,STL,"Houston, TX","St. Louis, MO",194.75,324,687.0,29.760803,-95.369506,38.630276,-90.200309
+2025,2,HOU,MCI,"Houston, TX","Kansas City, MO",190.22,256,666.0,29.760803,-95.369506,39.099792,-94.578559
+2025,2,HOU,SAT,"Houston, TX","San Antonio, TX",57.6,131,192.0,29.760803,-95.369506,29.425173,-98.494599
+2025,2,HOU,BNA,"Houston, TX","Nashville, TN",187.17,316,670.0,29.760803,-95.369506,36.166687,-86.779932
+2025,2,HOU,SAN,"Houston, TX","San Diego, CA",208.65,241,1313.0,29.760803,-95.369506,32.71576,-117.163817
+2025,2,HOU,OKC,"Houston, TX","Oklahoma City, OK",125.7,194,419.0,29.760803,-95.369506,35.468494,-97.521264
+2025,2,HOU,TPA,"Houston, TX","Tampa, FL (Metropolitan Area)",173.44,223,787.0,29.760803,-95.369506,37.8606,-78.804199
+2025,2,HOU,AZA,"Houston, TX","Phoenix, AZ",102.0,53,1020.0,29.760803,-95.369506,30.406931,-87.217578
+2025,2,HOU,HRL,"Houston, TX","Harlingen/San Benito, TX",88.5,184,295.0,29.760803,-95.369506,,
+2025,2,IAH,JFK,"Houston, TX","New York City, NY (Metropolitan Area)",219.45,211,1465.0,29.760803,-95.369506,40.123164,-75.333718
+2025,2,IAH,OAK,"Houston, TX","San Francisco, CA (Metropolitan Area)",164.9,146,1649.0,29.760803,-95.369506,37.78008,-122.420168
+2025,2,IAH,SJC,"Houston, TX","San Francisco, CA (Metropolitan Area)",290.82,148,1649.0,29.760803,-95.369506,37.78008,-122.420168
+2025,2,IAH,SNA,"Houston, TX","Los Angeles, CA (Metropolitan Area)",286.05,294,1390.0,29.760803,-95.369506,34.052238,-118.243344
+2025,2,IAH,ONT,"Houston, TX","Los Angeles, CA (Metropolitan Area)",272.57,103,1390.0,29.760803,-95.369506,34.052238,-118.243344
+2025,2,IAH,PIT,"Houston, TX","Pittsburgh, PA",282.66,308,1131.0,29.760803,-95.369506,40.442169,-79.994945
+2025,2,IAH,ELP,"Houston, TX","El Paso, TX",203.1,125,677.0,29.760803,-95.369506,31.76006,-106.492257
+2025,2,IAH,JAX,"Houston, TX","Jacksonville, FL",245.1,162,817.0,29.760803,-95.369506,30.325968,-81.65676
+2025,2,IAH,IND,"Houston, TX","Indianapolis, IN",241.73,226,861.0,29.760803,-95.369506,39.76845,-86.156212
+2025,2,IAH,LBB,"Houston, TX",,142.27,84,474.0,29.760803,-95.369506,41.181125,-96.030508
+2025,2,IAH,SDF,"Houston, TX","Louisville, KY",235.53,123,803.0,29.760803,-95.369506,38.256078,-85.751569
+2025,2,IAH,MAF,"Houston, TX",,132.3,267,441.0,29.760803,-95.369506,31.997433,-102.078043
+2025,2,IAH,SMF,"Houston, TX","Sacramento, CA",290.19,179,1624.0,29.760803,-95.369506,38.582087,-121.50012
+2025,2,IAH,MEM,"Houston, TX","Memphis, TN",145.2,190,484.0,29.760803,-95.369506,35.143378,-90.052136
+2025,2,IAH,OMA,"Houston, TX","Omaha, NE",216.83,121,804.0,29.760803,-95.369506,46.07035,-93.666319
+2025,2,IAH,MKE,"Houston, TX","Milwaukee, WI",244.65,197,1004.0,29.760803,-95.369506,43.041072,-87.909421
+2025,2,IAH,PDX,"Houston, TX","Portland, OR",299.03,311,1843.0,29.760803,-95.369506,45.516018,-122.681425
+2025,2,IAH,RDU,"Houston, TX","Raleigh/Durham, NC",244.92,305,1050.0,29.760803,-95.369506,42.673348,-72.179683
+2025,2,IAH,TUL,"Houston, TX","Tulsa, OK",135.9,195,453.0,29.760803,-95.369506,61.096484,-160.967455
+2025,2,IAH,CMH,"Houston, TX","Columbus, OH",256.67,209,1001.0,29.760803,-95.369506,39.962649,-82.996216
+2025,2,IAH,BHM,"Houston, TX","Birmingham, AL",171.0,138,570.0,29.760803,-95.369506,,
+2025,2,IAH,CLE,"Houston, TX","Cleveland, OH (Metropolitan Area)",282.66,292,1106.0,29.760803,-95.369506,41.505546,-81.6915
+2025,2,IAH,CHS,"Houston, TX","Charleston, SC",238.06,120,928.0,29.760803,-95.369506,32.77647,-79.931027
+2025,2,IAH,STL,"Houston, TX","St. Louis, MO",206.1,201,687.0,29.760803,-95.369506,38.630276,-90.200309
+2025,2,IAH,MCI,"Houston, TX","Kansas City, MO",199.8,206,666.0,29.760803,-95.369506,39.099792,-94.578559
+2025,2,IAH,SAT,"Houston, TX","San Antonio, TX",57.6,102,192.0,29.760803,-95.369506,29.425173,-98.494599
+2025,2,IAH,ORF,"Houston, TX","Norfolk, VA (Metropolitan Area)",260.68,119,1209.0,29.760803,-95.369506,36.846164,-76.285913
+2025,2,IAH,CVG,"Houston, TX","Cincinnati, OH",219.58,279,886.0,29.760803,-95.369506,39.104427,-84.513808
+2025,2,IAH,OKC,"Houston, TX","Oklahoma City, OK",125.7,221,419.0,29.760803,-95.369506,35.468494,-97.521264
+2025,2,EWR,OAK,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",261.72,125,2619.0,40.123164,-75.333718,37.78008,-122.420168
+2025,2,EWR,SJC,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",317.77,130,2619.0,40.123164,-75.333718,37.78008,-122.420168
+2025,2,EWR,ONT,"New York City, NY (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",308.64,59,2510.0,40.123164,-75.333718,34.052238,-118.243344
+2025,2,EWR,PIT,"New York City, NY (Metropolitan Area)","Pittsburgh, PA",112.5,281,375.0,40.123164,-75.333718,40.442169,-79.994945
+2025,2,EWR,ELP,"New York City, NY (Metropolitan Area)","El Paso, TX",373.67,50,1944.0,40.123164,-75.333718,31.76006,-106.492257
+2025,2,EWR,SDF,"New York City, NY (Metropolitan Area)","Louisville, KY",209.7,157,699.0,40.123164,-75.333718,38.256078,-85.751569
+2025,2,EWR,SMF,"New York City, NY (Metropolitan Area)","Sacramento, CA",330.73,209,2553.0,40.123164,-75.333718,38.582087,-121.50012
+2025,2,EWR,MEM,"New York City, NY (Metropolitan Area)","Memphis, TN",259.29,185,1002.0,40.123164,-75.333718,35.143378,-90.052136
+2025,2,EWR,OMA,"New York City, NY (Metropolitan Area)","Omaha, NE",283.91,152,1188.0,40.123164,-75.333718,46.07035,-93.666319
+2025,2,EWR,MKE,"New York City, NY (Metropolitan Area)","Milwaukee, WI",224.19,250,777.0,40.123164,-75.333718,43.041072,-87.909421
+2025,2,EWR,PDX,"New York City, NY (Metropolitan Area)","Portland, OR",250.18,264,2482.0,40.123164,-75.333718,45.516018,-122.681425
+2025,2,EWR,RNO,"New York City, NY (Metropolitan Area)","Reno, NV",353.24,67,2443.0,40.123164,-75.333718,30.177159,-95.162771
+2025,2,EWR,CMH,"New York City, NY (Metropolitan Area)","Columbus, OH",155.7,320,519.0,40.123164,-75.333718,39.962649,-82.996216
+2025,2,EWR,CLE,"New York City, NY (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",137.7,303,459.0,40.123164,-75.333718,41.505546,-81.6915
+2025,2,EWR,TUS,"New York City, NY (Metropolitan Area)","Tucson, AZ",357.72,81,2173.0,40.123164,-75.333718,35.167852,-103.726151
+2025,2,EWR,STL,"New York City, NY (Metropolitan Area)","St. Louis, MO",251.66,287,929.0,40.123164,-75.333718,38.630276,-90.200309
+2025,2,EWR,DSM,"New York City, NY (Metropolitan Area)","Des Moines, IA",257.43,84,1037.0,40.123164,-75.333718,41.588822,-93.620309
+2025,2,EWR,GSP,"New York City, NY (Metropolitan Area)","Greenville/Spartanburg, SC",192.9,160,643.0,40.123164,-75.333718,44.513288,-88.013256
+2025,2,EWR,GRR,"New York City, NY (Metropolitan Area)","Grand Rapids, MI",196.8,174,656.0,40.123164,-75.333718,47.925705,-97.036068
+2025,2,EWR,MCI,"New York City, NY (Metropolitan Area)","Kansas City, MO",242.14,287,1148.0,40.123164,-75.333718,39.099792,-94.578559
+2025,2,EWR,SAT,"New York City, NY (Metropolitan Area)","San Antonio, TX",269.84,290,1624.0,40.123164,-75.333718,29.425173,-98.494599
+2025,2,EWR,ORF,"New York City, NY (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",98.38,128,337.0,40.123164,-75.333718,36.846164,-76.285913
+2025,2,EWR,RIC,"New York City, NY (Metropolitan Area)","Richmond, VA",96.35,158,325.0,40.123164,-75.333718,37.540759,-77.433932
+2025,2,EWR,MHT,"New York City, NY (Metropolitan Area)","Boston, MA (Metropolitan Area)",62.7,61,209.0,40.123164,-75.333718,42.358894,-71.056742
+2025,2,EWR,BUF,"New York City, NY (Metropolitan Area)","Buffalo, NY",97.8,211,326.0,40.123164,-75.333718,39.945422,-78.64671
+2025,2,EWR,CVG,"New York City, NY (Metropolitan Area)","Cincinnati, OH",187.8,293,626.0,40.123164,-75.333718,39.104427,-84.513808
+2025,2,EWR,SAV,"New York City, NY (Metropolitan Area)","Savannah, GA",169.35,308,756.0,40.123164,-75.333718,40.115007,-111.654713
+2025,2,EWR,OKC,"New York City, NY (Metropolitan Area)","Oklahoma City, OK",330.74,116,1381.0,40.123164,-75.333718,35.468494,-97.521264
+2025,2,EWR,EYW,"New York City, NY (Metropolitan Area)","Key West, FL",299.7,160,1248.0,40.123164,-75.333718,,
+2025,2,EWR,PWM,"New York City, NY (Metropolitan Area)","Portland, ME",85.2,158,284.0,40.123164,-75.333718,45.516018,-122.681425
+2025,2,EWR,ROC,"New York City, NY (Metropolitan Area)","Rochester, NY",85.5,120,285.0,40.123164,-75.333718,43.155708,-77.612547
+2025,2,EWR,BTV,"New York City, NY (Metropolitan Area)","Burlington, VT",79.8,118,266.0,40.123164,-75.333718,,
+2025,2,EWR,TYS,"New York City, NY (Metropolitan Area)","Knoxville, TN",168.07,163,684.0,40.123164,-75.333718,35.962631,-83.916677
+2025,2,EWR,CAK,"New York City, NY (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",137.7,86,459.0,40.123164,-75.333718,41.505546,-81.6915
+2025,2,EWR,PSP,"New York City, NY (Metropolitan Area)","Palm Springs, CA",407.84,99,2381.0,40.123164,-75.333718,33.830302,-116.546843
+2025,2,EWR,AVL,"New York City, NY (Metropolitan Area)","Asheville, NC",151.02,160,633.0,40.123164,-75.333718,,
+2025,2,EWR,MYR,"New York City, NY (Metropolitan Area)","Myrtle Beach, SC",137.67,236,601.0,40.123164,-75.333718,33.68785,-78.883852
+2025,2,EWR,BZN,"New York City, NY (Metropolitan Area)","Bozeman, MT",383.01,167,1902.0,40.123164,-75.333718,,
+2025,2,EWR,EGE,"New York City, NY (Metropolitan Area)","Eagle, CO",417.36,101,1746.0,40.123164,-75.333718,,
+2025,2,EWR,ILM,"New York City, NY (Metropolitan Area)",,159.3,91,540.0,40.123164,-75.333718,39.744432,-75.5451
+2025,2,EWR,SYR,"New York City, NY (Metropolitan Area)","Syracuse, NY",66.65,80,223.0,40.123164,-75.333718,43.047945,-76.147448
+2025,2,EWR,XNA,"New York City, NY (Metropolitan Area)","Fayetteville, AR",347.29,86,1159.0,40.123164,-75.333718,36.061928,-94.160583
+2025,2,EWR,GSO,"New York City, NY (Metropolitan Area)","Greensboro/High Point, NC",146.61,165,492.0,40.123164,-75.333718,,
+2025,2,EWR,JAC,"New York City, NY (Metropolitan Area)","Jackson, WY",383.01,133,1894.0,40.123164,-75.333718,,
+2025,2,EWR,MSN,"New York City, NY (Metropolitan Area)","Madison, WI",251.74,125,850.0,40.123164,-75.333718,43.073926,-89.385244
+2025,2,JFK,OAK,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",273.31,73,2619.0,40.123164,-75.333718,37.78008,-122.420168
+2025,2,JFK,SJC,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",261.61,167,2619.0,40.123164,-75.333718,37.78008,-122.420168
+2025,2,JFK,BUR,"New York City, NY (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",251.0,267,2510.0,40.123164,-75.333718,34.052238,-118.243344
+2025,2,JFK,LGB,"New York City, NY (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",251.0,180,2510.0,40.123164,-75.333718,34.052238,-118.243344
+2025,2,JFK,SNA,"New York City, NY (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",389.03,122,2510.0,40.123164,-75.333718,34.052238,-118.243344
+2025,2,JFK,ONT,"New York City, NY (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",251.0,194,2510.0,40.123164,-75.333718,34.052238,-118.243344
+2025,2,JFK,PIT,"New York City, NY (Metropolitan Area)","Pittsburgh, PA",112.5,160,375.0,40.123164,-75.333718,40.442169,-79.994945
+2025,2,JFK,JAX,"New York City, NY (Metropolitan Area)","Jacksonville, FL",155.46,243,858.0,40.123164,-75.333718,30.325968,-81.65676
+2025,2,JFK,DTW,"New York City, NY (Metropolitan Area)","Detroit, MI",162.0,261,540.0,40.123164,-75.333718,42.332916,-83.047853
+2025,2,JFK,MSP,"New York City, NY (Metropolitan Area)","Minneapolis/St. Paul, MN",233.4,274,1057.0,40.123164,-75.333718,44.977479,-93.264346
+2025,2,JFK,IND,"New York City, NY (Metropolitan Area)","Indianapolis, IN",182.54,214,701.0,40.123164,-75.333718,39.76845,-86.156212
+2025,2,JFK,MIA,"New York City, NY (Metropolitan Area)","Miami, FL (Metropolitan Area)",168.58,235,1118.0,40.123164,-75.333718,44.977479,-93.264346
+2025,2,JFK,SMF,"New York City, NY (Metropolitan Area)","Sacramento, CA",255.13,241,2553.0,40.123164,-75.333718,38.582087,-121.50012
+2025,2,JFK,MKE,"New York City, NY (Metropolitan Area)","Milwaukee, WI",208.14,140,777.0,40.123164,-75.333718,43.041072,-87.909421
+2025,2,JFK,PDX,"New York City, NY (Metropolitan Area)","Portland, OR",246.96,279,2482.0,40.123164,-75.333718,45.516018,-122.681425
+2025,2,JFK,RNO,"New York City, NY (Metropolitan Area)","Reno, NV",269.0,140,2443.0,40.123164,-75.333718,30.177159,-95.162771
+2025,2,JFK,CMH,"New York City, NY (Metropolitan Area)","Columbus, OH",155.7,181,519.0,40.123164,-75.333718,39.962649,-82.996216
+2025,2,JFK,CLE,"New York City, NY (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",137.7,180,459.0,40.123164,-75.333718,41.505546,-81.6915
+2025,2,JFK,BOS,"New York City, NY (Metropolitan Area)","Boston, MA (Metropolitan Area)",61.35,261,209.0,40.123164,-75.333718,42.358894,-71.056742
+2025,2,JFK,CHS,"New York City, NY (Metropolitan Area)","Charleston, SC",148.47,313,677.0,40.123164,-75.333718,32.77647,-79.931027
+2025,2,JFK,CLT,"New York City, NY (Metropolitan Area)","Charlotte, NC",171.95,333,575.0,40.123164,-75.333718,35.222936,-80.840161
+2025,2,JFK,MCI,"New York City, NY (Metropolitan Area)","Kansas City, MO",197.25,159,1148.0,40.123164,-75.333718,39.099792,-94.578559
+2025,2,JFK,SAT,"New York City, NY (Metropolitan Area)","San Antonio, TX",221.19,283,1624.0,40.123164,-75.333718,29.425173,-98.494599
+2025,2,JFK,ORF,"New York City, NY (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",98.38,171,337.0,40.123164,-75.333718,36.846164,-76.285913
+2025,2,JFK,RIC,"New York City, NY (Metropolitan Area)","Richmond, VA",96.35,109,325.0,40.123164,-75.333718,37.540759,-77.433932
+2025,2,JFK,BNA,"New York City, NY (Metropolitan Area)","Nashville, TN",174.68,254,803.0,40.123164,-75.333718,36.166687,-86.779932
+2025,2,JFK,SAN,"New York City, NY (Metropolitan Area)","San Diego, CA",278.84,173,2481.0,40.123164,-75.333718,32.71576,-117.163817
+2025,2,JFK,CVG,"New York City, NY (Metropolitan Area)","Cincinnati, OH",187.8,165,626.0,40.123164,-75.333718,39.104427,-84.513808
+2025,2,JFK,MSY,"New York City, NY (Metropolitan Area)","New Orleans, LA",195.1,291,1218.0,40.123164,-75.333718,29.950621,-90.074948
+2025,2,JFK,SAV,"New York City, NY (Metropolitan Area)","Savannah, GA",146.0,309,756.0,40.123164,-75.333718,40.115007,-111.654713
+2025,2,JFK,EYW,"New York City, NY (Metropolitan Area)","Key West, FL",267.17,71,1248.0,40.123164,-75.333718,,
+2025,2,JFK,PWM,"New York City, NY (Metropolitan Area)","Portland, ME",85.2,229,284.0,40.123164,-75.333718,45.516018,-122.681425
+2025,2,JFK,ROC,"New York City, NY (Metropolitan Area)","Rochester, NY",85.5,265,285.0,40.123164,-75.333718,43.155708,-77.612547
+2025,2,JFK,BTV,"New York City, NY (Metropolitan Area)","Burlington, VT",79.8,186,266.0,40.123164,-75.333718,,
+2025,2,JFK,PHX,"New York City, NY (Metropolitan Area)","Phoenix, AZ",223.17,294,2189.0,40.123164,-75.333718,30.406931,-87.217578
+2025,2,JFK,SRQ,"New York City, NY (Metropolitan Area)",,174.44,170,1084.0,40.123164,-75.333718,27.336483,-82.538602
+2025,2,JFK,PSP,"New York City, NY (Metropolitan Area)","Palm Springs, CA",281.45,200,2381.0,40.123164,-75.333718,33.830302,-116.546843
+2025,2,JFK,AZA,"New York City, NY (Metropolitan Area)","Phoenix, AZ",0.0,186,0.0,40.123164,-75.333718,30.406931,-87.217578
+2025,2,JFK,BZN,"New York City, NY (Metropolitan Area)","Bozeman, MT",272.37,127,1902.0,40.123164,-75.333718,,
+2025,2,JFK,EGE,"New York City, NY (Metropolitan Area)","Eagle, CO",386.92,55,1746.0,40.123164,-75.333718,,
+2025,2,JFK,SYR,"New York City, NY (Metropolitan Area)","Syracuse, NY",66.65,167,223.0,40.123164,-75.333718,43.047945,-76.147448
+2025,2,JFK,JAC,"New York City, NY (Metropolitan Area)","Jackson, WY",356.44,135,1894.0,40.123164,-75.333718,,
+2025,2,LGA,SFO,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",342.25,125,2619.0,40.123164,-75.333718,37.78008,-122.420168
+2025,2,LGA,SJC,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",261.68,68,2619.0,40.123164,-75.333718,37.78008,-122.420168
+2025,2,LGA,LAX,"New York City, NY (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",302.4,285,2510.0,40.123164,-75.333718,34.052238,-118.243344
+2025,2,LGA,SNA,"New York City, NY (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",319.7,91,2510.0,40.123164,-75.333718,34.052238,-118.243344
+2025,2,LGA,ONT,"New York City, NY (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",253.96,73,2510.0,40.123164,-75.333718,34.052238,-118.243344
+2025,2,LGA,SEA,"New York City, NY (Metropolitan Area)","Seattle, WA",330.19,55,2448.0,40.123164,-75.333718,47.603229,-122.33028
+2025,2,LGA,ELP,"New York City, NY (Metropolitan Area)","El Paso, TX",356.98,111,1944.0,40.123164,-75.333718,31.76006,-106.492257
+2025,2,LGA,JAX,"New York City, NY (Metropolitan Area)","Jacksonville, FL",203.33,289,869.0,40.123164,-75.333718,30.325968,-81.65676
+2025,2,LGA,SDF,"New York City, NY (Metropolitan Area)","Louisville, KY",209.7,301,699.0,40.123164,-75.333718,38.256078,-85.751569
+2025,2,LGA,SMF,"New York City, NY (Metropolitan Area)","Sacramento, CA",298.77,110,2553.0,40.123164,-75.333718,38.582087,-121.50012
+2025,2,LGA,MEM,"New York City, NY (Metropolitan Area)","Memphis, TN",259.82,274,1002.0,40.123164,-75.333718,35.143378,-90.052136
+2025,2,LGA,OMA,"New York City, NY (Metropolitan Area)","Omaha, NE",255.35,204,1188.0,40.123164,-75.333718,46.07035,-93.666319
+2025,2,LGA,MKE,"New York City, NY (Metropolitan Area)","Milwaukee, WI",233.1,314,777.0,40.123164,-75.333718,43.041072,-87.909421
+2025,2,LGA,SLC,"New York City, NY (Metropolitan Area)","Salt Lake City, UT",309.68,115,2022.0,40.123164,-75.333718,40.758478,-111.888142
+2025,2,LGA,AUS,"New York City, NY (Metropolitan Area)","Austin, TX",235.37,194,1559.0,40.123164,-75.333718,,
+2025,2,LGA,BHM,"New York City, NY (Metropolitan Area)","Birmingham, AL",270.6,254,902.0,40.123164,-75.333718,,
+2025,2,LGA,CLE,"New York City, NY (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",137.7,308,459.0,40.123164,-75.333718,41.505546,-81.6915
+2025,2,LGA,CHS,"New York City, NY (Metropolitan Area)","Charleston, SC",183.69,331,677.0,40.123164,-75.333718,32.77647,-79.931027
+2025,2,LGA,TUS,"New York City, NY (Metropolitan Area)","Tucson, AZ",356.98,121,2173.0,40.123164,-75.333718,35.167852,-103.726151
+2025,2,LGA,DSM,"New York City, NY (Metropolitan Area)","Des Moines, IA",283.79,142,1037.0,40.123164,-75.333718,41.588822,-93.620309
+2025,2,LGA,GSP,"New York City, NY (Metropolitan Area)","Greenville/Spartanburg, SC",192.9,254,643.0,40.123164,-75.333718,44.513288,-88.013256
+2025,2,LGA,GRR,"New York City, NY (Metropolitan Area)","Grand Rapids, MI",196.8,177,656.0,40.123164,-75.333718,47.925705,-97.036068
+2025,2,LGA,SAT,"New York City, NY (Metropolitan Area)","San Antonio, TX",251.58,248,1624.0,40.123164,-75.333718,29.425173,-98.494599
+2025,2,LGA,ORF,"New York City, NY (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",98.38,190,337.0,40.123164,-75.333718,36.846164,-76.285913
+2025,2,LGA,RIC,"New York City, NY (Metropolitan Area)","Richmond, VA",96.35,294,325.0,40.123164,-75.333718,37.540759,-77.433932
+2025,2,LGA,SAN,"New York City, NY (Metropolitan Area)","San Diego, CA",328.09,96,2481.0,40.123164,-75.333718,32.71576,-117.163817
+2025,2,LGA,BUF,"New York City, NY (Metropolitan Area)","Buffalo, NY",97.8,221,326.0,40.123164,-75.333718,39.945422,-78.64671
+2025,2,LGA,CVG,"New York City, NY (Metropolitan Area)","Cincinnati, OH",187.8,289,626.0,40.123164,-75.333718,39.104427,-84.513808
+2025,2,LGA,SAV,"New York City, NY (Metropolitan Area)","Savannah, GA",182.16,253,756.0,40.123164,-75.333718,40.115007,-111.654713
+2025,2,LGA,OKC,"New York City, NY (Metropolitan Area)","Oklahoma City, OK",284.04,170,1381.0,40.123164,-75.333718,35.468494,-97.521264
+2025,2,LGA,EYW,"New York City, NY (Metropolitan Area)","Key West, FL",313.9,98,1248.0,40.123164,-75.333718,,
+2025,2,LGA,PWM,"New York City, NY (Metropolitan Area)","Portland, ME",85.2,177,284.0,40.123164,-75.333718,45.516018,-122.681425
+2025,2,LGA,ROC,"New York City, NY (Metropolitan Area)","Rochester, NY",85.5,161,285.0,40.123164,-75.333718,43.155708,-77.612547
+2025,2,LGA,BTV,"New York City, NY (Metropolitan Area)","Burlington, VT",79.8,71,266.0,40.123164,-75.333718,,
+2025,2,LGA,TYS,"New York City, NY (Metropolitan Area)","Knoxville, TN",203.84,185,684.0,40.123164,-75.333718,35.962631,-83.916677
+2025,2,LGA,PHX,"New York City, NY (Metropolitan Area)","Phoenix, AZ",285.74,174,2189.0,40.123164,-75.333718,30.406931,-87.217578
+2025,2,LGA,SRQ,"New York City, NY (Metropolitan Area)",,227.62,275,1084.0,40.123164,-75.333718,27.336483,-82.538602
+2025,2,LGA,AVL,"New York City, NY (Metropolitan Area)","Asheville, NC",188.3,159,633.0,40.123164,-75.333718,,
+2025,2,LGA,MYR,"New York City, NY (Metropolitan Area)","Myrtle Beach, SC",129.33,265,601.0,40.123164,-75.333718,33.68785,-78.883852
+2025,2,LGA,BZN,"New York City, NY (Metropolitan Area)","Bozeman, MT",323.76,53,1902.0,40.123164,-75.333718,,
+2025,2,LGA,EGE,"New York City, NY (Metropolitan Area)","Eagle, CO",452.76,64,1746.0,40.123164,-75.333718,,
+2025,2,LGA,ILM,"New York City, NY (Metropolitan Area)",,159.3,221,540.0,40.123164,-75.333718,39.744432,-75.5451
+2025,2,LGA,SYR,"New York City, NY (Metropolitan Area)","Syracuse, NY",66.65,128,223.0,40.123164,-75.333718,43.047945,-76.147448
+2025,2,LGA,XNA,"New York City, NY (Metropolitan Area)","Fayetteville, AR",322.81,131,1159.0,40.123164,-75.333718,36.061928,-94.160583
+2025,2,LGA,GSO,"New York City, NY (Metropolitan Area)","Greensboro/High Point, NC",146.56,251,492.0,40.123164,-75.333718,,
+2025,2,LGA,JAC,"New York City, NY (Metropolitan Area)","Jackson, WY",419.06,53,1894.0,40.123164,-75.333718,,
+2025,2,LGA,MSN,"New York City, NY (Metropolitan Area)","Madison, WI",251.74,163,850.0,40.123164,-75.333718,43.073926,-89.385244
+2025,2,LGA,ASE,"New York City, NY (Metropolitan Area)","Aspen, CO",462.53,109,1750.0,40.123164,-75.333718,,
+2025,2,LGA,LAS,"New York City, NY (Metropolitan Area)","Las Vegas, NV",254.99,176,2282.0,40.123164,-75.333718,36.169202,-115.140597
+2025,2,OAK,DTW,"San Francisco, CA (Metropolitan Area)","Detroit, MI",208.08,180,2079.0,37.78008,-122.420168,42.332916,-83.047853
+2025,2,OAK,MSP,"San Francisco, CA (Metropolitan Area)","Minneapolis/St. Paul, MN",230.74,90,1589.0,37.78008,-122.420168,44.977479,-93.264346
+2025,2,OAK,IND,"San Francisco, CA (Metropolitan Area)","Indianapolis, IN",219.04,121,1943.0,37.78008,-122.420168,39.76845,-86.156212
+2025,2,OAK,PHL,"San Francisco, CA (Metropolitan Area)","Philadelphia, PA",252.1,95,2521.0,37.78008,-122.420168,39.951061,-75.16562
+2025,2,OAK,RNO,"San Francisco, CA (Metropolitan Area)","Reno, NV",57.6,136,192.0,37.78008,-122.420168,30.177159,-95.162771
+2025,2,OAK,AUS,"San Francisco, CA (Metropolitan Area)","Austin, TX",224.37,138,1504.0,37.78008,-122.420168,,
+2025,2,OAK,CMH,"San Francisco, CA (Metropolitan Area)","Columbus, OH",252.73,134,2120.0,37.78008,-122.420168,39.962649,-82.996216
+2025,2,OAK,BOS,"San Francisco, CA (Metropolitan Area)","Boston, MA (Metropolitan Area)",287.23,93,2704.0,37.78008,-122.420168,42.358894,-71.056742
+2025,2,OAK,TUS,"San Francisco, CA (Metropolitan Area)","Tucson, AZ",183.46,56,751.0,37.78008,-122.420168,35.167852,-103.726151
+2025,2,OAK,STL,"San Francisco, CA (Metropolitan Area)","St. Louis, MO",253.58,104,1735.0,37.78008,-122.420168,38.630276,-90.200309
+2025,2,OAK,BOI,"San Francisco, CA (Metropolitan Area)","Boise, ID",156.9,131,523.0,37.78008,-122.420168,,
+2025,2,OAK,MCI,"San Francisco, CA (Metropolitan Area)","Kansas City, MO",252.24,136,1499.0,37.78008,-122.420168,39.099792,-94.578559
+2025,2,OAK,SAT,"San Francisco, CA (Metropolitan Area)","San Antonio, TX",217.2,118,1482.0,37.78008,-122.420168,29.425173,-98.494599
+2025,2,OAK,BNA,"San Francisco, CA (Metropolitan Area)","Nashville, TN",255.46,121,1969.0,37.78008,-122.420168,36.166687,-86.779932
+2025,2,OAK,MSY,"San Francisco, CA (Metropolitan Area)","New Orleans, LA",240.57,173,1911.0,37.78008,-122.420168,29.950621,-90.074948
+2025,2,OAK,TPA,"San Francisco, CA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",260.05,51,2393.0,37.78008,-122.420168,37.8606,-78.804199
+2025,2,OAK,PSP,"San Francisco, CA (Metropolitan Area)","Palm Springs, CA",126.3,156,421.0,37.78008,-122.420168,33.830302,-116.546843
+2025,2,OAK,ATL,"San Francisco, CA (Metropolitan Area)","Atlanta, GA (Metropolitan Area)",248.65,200,2139.0,37.78008,-122.420168,,
+2025,2,OAK,DEN,"San Francisco, CA (Metropolitan Area)","Denver, CO",167.53,317,967.0,37.78008,-122.420168,39.738453,-104.984853
+2025,2,OAK,GEG,"San Francisco, CA (Metropolitan Area)",,167.71,103,742.0,37.78008,-122.420168,47.658999,-117.425022
+2025,2,OAK,MCO,"San Francisco, CA (Metropolitan Area)","Orlando, FL",250.12,122,2446.0,37.78008,-122.420168,28.538331,-81.378879
+2025,2,OAK,EUG,"San Francisco, CA (Metropolitan Area)","Eugene, OR",119.41,137,471.0,37.78008,-122.420168,,
+2025,2,SFO,LGB,"San Francisco, CA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",111.6,161,372.0,37.78008,-122.420168,34.052238,-118.243344
+2025,2,SFO,ONT,"San Francisco, CA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",111.6,235,372.0,37.78008,-122.420168,34.052238,-118.243344
+2025,2,SFO,PIT,"San Francisco, CA (Metropolitan Area)","Pittsburgh, PA",335.63,295,2254.0,37.78008,-122.420168,40.442169,-79.994945
+2025,2,SFO,JAX,"San Francisco, CA (Metropolitan Area)","Jacksonville, FL",335.81,139,2366.0,37.78008,-122.420168,30.325968,-81.65676
+2025,2,SFO,RSW,"San Francisco, CA (Metropolitan Area)","Fort Myers, FL",386.04,142,2481.0,37.78008,-122.420168,40.253979,-103.801495
+2025,2,SFO,IND,"San Francisco, CA (Metropolitan Area)","Indianapolis, IN",279.03,299,1943.0,37.78008,-122.420168,39.76845,-86.156212
+2025,2,SFO,RNO,"San Francisco, CA (Metropolitan Area)","Reno, NV",57.6,146,192.0,37.78008,-122.420168,30.177159,-95.162771
+2025,2,SFO,CMH,"San Francisco, CA (Metropolitan Area)","Columbus, OH",318.06,202,2120.0,37.78008,-122.420168,39.962649,-82.996216
+2025,2,SFO,CLE,"San Francisco, CA (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",326.59,306,2187.0,37.78008,-122.420168,41.505546,-81.6915
+2025,2,SFO,CLT,"San Francisco, CA (Metropolitan Area)","Charlotte, NC",331.8,313,2296.0,37.78008,-122.420168,35.222936,-80.840161
+2025,2,SFO,TUS,"San Francisco, CA (Metropolitan Area)","Tucson, AZ",225.3,166,751.0,37.78008,-122.420168,35.167852,-103.726151
+2025,2,SFO,STL,"San Francisco, CA (Metropolitan Area)","St. Louis, MO",303.49,253,1735.0,37.78008,-122.420168,38.630276,-90.200309
+2025,2,SFO,BOI,"San Francisco, CA (Metropolitan Area)","Boise, ID",156.9,198,523.0,37.78008,-122.420168,,
+2025,2,SFO,MCI,"San Francisco, CA (Metropolitan Area)","Kansas City, MO",277.02,230,1499.0,37.78008,-122.420168,39.099792,-94.578559
+2025,2,SFO,SAT,"San Francisco, CA (Metropolitan Area)","San Antonio, TX",257.56,198,1482.0,37.78008,-122.420168,29.425173,-98.494599
+2025,2,SFO,BNA,"San Francisco, CA (Metropolitan Area)","Nashville, TN",311.77,296,1969.0,37.78008,-122.420168,36.166687,-86.779932
+2025,2,SFO,CVG,"San Francisco, CA (Metropolitan Area)","Cincinnati, OH",294.22,269,2036.0,37.78008,-122.420168,39.104427,-84.513808
+2025,2,SFO,MSY,"San Francisco, CA (Metropolitan Area)","New Orleans, LA",286.66,272,1911.0,37.78008,-122.420168,29.950621,-90.074948
+2025,2,SFO,GEG,"San Francisco, CA (Metropolitan Area)",,191.83,144,742.0,37.78008,-122.420168,47.658999,-117.425022
+2025,2,SFO,EUG,"San Francisco, CA (Metropolitan Area)","Eugene, OR",141.3,113,471.0,37.78008,-122.420168,,
+2025,2,SFO,SBA,"San Francisco, CA (Metropolitan Area)",,78.8,191,262.0,37.78008,-122.420168,34.420867,-119.698342
+2025,2,SJC,LGB,"San Francisco, CA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",106.46,246,372.0,37.78008,-122.420168,34.052238,-118.243344
+2025,2,SJC,ONT,"San Francisco, CA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",111.6,270,372.0,37.78008,-122.420168,34.052238,-118.243344
+2025,2,SJC,PIT,"San Francisco, CA (Metropolitan Area)","Pittsburgh, PA",300.62,60,2254.0,37.78008,-122.420168,40.442169,-79.994945
+2025,2,SJC,DTW,"San Francisco, CA (Metropolitan Area)","Detroit, MI",316.34,135,2079.0,37.78008,-122.420168,42.332916,-83.047853
+2025,2,SJC,MSP,"San Francisco, CA (Metropolitan Area)","Minneapolis/St. Paul, MN",282.79,151,1589.0,37.78008,-122.420168,44.977479,-93.264346
+2025,2,SJC,IND,"San Francisco, CA (Metropolitan Area)","Indianapolis, IN",255.94,63,1943.0,37.78008,-122.420168,39.76845,-86.156212
+2025,2,SJC,PHL,"San Francisco, CA (Metropolitan Area)","Philadelphia, PA",308.77,71,2521.0,37.78008,-122.420168,39.951061,-75.16562
+2025,2,SJC,RDU,"San Francisco, CA (Metropolitan Area)","Raleigh/Durham, NC",306.14,102,2400.0,37.78008,-122.420168,42.673348,-72.179683
+2025,2,SJC,RNO,"San Francisco, CA (Metropolitan Area)","Reno, NV",57.6,165,192.0,37.78008,-122.420168,30.177159,-95.162771
+2025,2,SJC,SLC,"San Francisco, CA (Metropolitan Area)","Salt Lake City, UT",179.31,332,599.0,37.78008,-122.420168,40.758478,-111.888142
+2025,2,SJC,CMH,"San Francisco, CA (Metropolitan Area)","Columbus, OH",303.58,52,2120.0,37.78008,-122.420168,39.962649,-82.996216
+2025,2,SJC,BOS,"San Francisco, CA (Metropolitan Area)","Boston, MA (Metropolitan Area)",270.4,185,2704.0,37.78008,-122.420168,42.358894,-71.056742
+2025,2,SJC,CLT,"San Francisco, CA (Metropolitan Area)","Charlotte, NC",317.74,81,2296.0,37.78008,-122.420168,35.222936,-80.840161
+2025,2,SJC,TUS,"San Francisco, CA (Metropolitan Area)","Tucson, AZ",175.23,170,751.0,37.78008,-122.420168,35.167852,-103.726151
+2025,2,SJC,STL,"San Francisco, CA (Metropolitan Area)","St. Louis, MO",248.74,107,1735.0,37.78008,-122.420168,38.630276,-90.200309
+2025,2,SJC,BOI,"San Francisco, CA (Metropolitan Area)","Boise, ID",156.9,177,523.0,37.78008,-122.420168,,
+2025,2,SJC,MCI,"San Francisco, CA (Metropolitan Area)","Kansas City, MO",255.83,74,1499.0,37.78008,-122.420168,39.099792,-94.578559
+2025,2,SJC,SAT,"San Francisco, CA (Metropolitan Area)","San Antonio, TX",207.51,101,1482.0,37.78008,-122.420168,29.425173,-98.494599
+2025,2,SJC,BNA,"San Francisco, CA (Metropolitan Area)","Nashville, TN",257.67,129,1969.0,37.78008,-122.420168,36.166687,-86.779932
+2025,2,SJC,CVG,"San Francisco, CA (Metropolitan Area)","Cincinnati, OH",299.02,86,2036.0,37.78008,-122.420168,39.104427,-84.513808
+2025,2,SJC,MSY,"San Francisco, CA (Metropolitan Area)","New Orleans, LA",258.96,90,1911.0,37.78008,-122.420168,29.950621,-90.074948
+2025,2,SJC,TPA,"San Francisco, CA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",293.25,64,2393.0,37.78008,-122.420168,37.8606,-78.804199
+2025,2,SJC,PSP,"San Francisco, CA (Metropolitan Area)","Palm Springs, CA",126.3,81,421.0,37.78008,-122.420168,33.830302,-116.546843
+2025,2,SJC,ATL,"San Francisco, CA (Metropolitan Area)","Atlanta, GA (Metropolitan Area)",340.08,257,2139.0,37.78008,-122.420168,,
+2025,2,SJC,GEG,"San Francisco, CA (Metropolitan Area)",,174.71,103,742.0,37.78008,-122.420168,47.658999,-117.425022
+2025,2,SJC,MCO,"San Francisco, CA (Metropolitan Area)","Orlando, FL",272.26,195,2446.0,37.78008,-122.420168,28.538331,-81.378879
+2025,2,SJC,EUG,"San Francisco, CA (Metropolitan Area)","Eugene, OR",141.3,53,471.0,37.78008,-122.420168,,
+2025,2,BUR,RNO,"Los Angeles, CA (Metropolitan Area)","Reno, NV",124.5,119,415.0,34.052238,-118.243344,30.177159,-95.162771
+2025,2,BUR,SLC,"Los Angeles, CA (Metropolitan Area)","Salt Lake City, UT",172.62,318,590.0,34.052238,-118.243344,40.758478,-111.888142
+2025,2,BUR,AUS,"Los Angeles, CA (Metropolitan Area)","Austin, TX",213.91,117,1242.0,34.052238,-118.243344,,
+2025,2,BUR,BOS,"Los Angeles, CA (Metropolitan Area)","Boston, MA (Metropolitan Area)",261.1,81,2611.0,34.052238,-118.243344,42.358894,-71.056742
+2025,2,BUR,BOI,"Los Angeles, CA (Metropolitan Area)","Boise, ID",164.74,181,688.0,34.052238,-118.243344,,
+2025,2,BUR,BNA,"Los Angeles, CA (Metropolitan Area)","Nashville, TN",240.16,91,1797.0,34.052238,-118.243344,36.166687,-86.779932
+2025,2,BUR,ATL,"Los Angeles, CA (Metropolitan Area)","Atlanta, GA (Metropolitan Area)",303.91,61,1947.0,34.052238,-118.243344,,
+2025,2,BUR,DEN,"Los Angeles, CA (Metropolitan Area)","Denver, CO",172.5,327,862.0,34.052238,-118.243344,39.738453,-104.984853
+2025,2,BUR,GEG,"Los Angeles, CA (Metropolitan Area)",,199.86,69,962.0,34.052238,-118.243344,47.658999,-117.425022
+2025,2,BUR,EUG,"Los Angeles, CA (Metropolitan Area)","Eugene, OR",165.31,176,776.0,34.052238,-118.243344,,
+2025,2,BUR,STS,"Los Angeles, CA (Metropolitan Area)",,129.9,179,433.0,34.052238,-118.243344,38.439698,-122.715642
+2025,2,BUR,RDM,"Los Angeles, CA (Metropolitan Area)","Bend/Redmond, OR",153.72,82,751.0,34.052238,-118.243344,,
+2025,2,LAX,PIT,"Los Angeles, CA (Metropolitan Area)","Pittsburgh, PA",226.54,302,2136.0,34.052238,-118.243344,40.442169,-79.994945
+2025,2,LAX,ELP,"Los Angeles, CA (Metropolitan Area)","El Paso, TX",177.09,270,715.0,34.052238,-118.243344,31.76006,-106.492257
+2025,2,LAX,JAX,"Los Angeles, CA (Metropolitan Area)","Jacksonville, FL",290.28,193,2153.0,34.052238,-118.243344,30.325968,-81.65676
+2025,2,LAX,RSW,"Los Angeles, CA (Metropolitan Area)","Fort Myers, FL",323.14,167,2238.0,34.052238,-118.243344,40.253979,-103.801495
+2025,2,LAX,IND,"Los Angeles, CA (Metropolitan Area)","Indianapolis, IN",244.63,292,1814.0,34.052238,-118.243344,39.76845,-86.156212
+2025,2,LAX,SDF,"Los Angeles, CA (Metropolitan Area)","Louisville, KY",245.03,200,1843.0,34.052238,-118.243344,38.256078,-85.751569
+2025,2,LAX,MEM,"Los Angeles, CA (Metropolitan Area)","Memphis, TN",226.51,300,1619.0,34.052238,-118.243344,35.143378,-90.052136
+2025,2,LAX,OMA,"Los Angeles, CA (Metropolitan Area)","Omaha, NE",200.81,247,1330.0,34.052238,-118.243344,46.07035,-93.666319
+2025,2,LAX,MKE,"Los Angeles, CA (Metropolitan Area)","Milwaukee, WI",256.74,277,1756.0,34.052238,-118.243344,43.041072,-87.909421
+2025,2,LAX,TUL,"Los Angeles, CA (Metropolitan Area)","Tulsa, OK",203.66,165,1283.0,34.052238,-118.243344,61.096484,-160.967455
+2025,2,LAX,CMH,"Los Angeles, CA (Metropolitan Area)","Columbus, OH",240.09,324,1995.0,34.052238,-118.243344,39.962649,-82.996216
+2025,2,LAX,CLE,"Los Angeles, CA (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",207.3,278,2073.0,34.052238,-118.243344,41.505546,-81.6915
+2025,2,LAX,CHS,"Los Angeles, CA (Metropolitan Area)","Charleston, SC",257.18,206,2206.0,34.052238,-118.243344,32.77647,-79.931027
+2025,2,LAX,TUS,"Los Angeles, CA (Metropolitan Area)","Tucson, AZ",135.9,251,453.0,34.052238,-118.243344,35.167852,-103.726151
+2025,2,LAX,BDL,"Los Angeles, CA (Metropolitan Area)","Hartford, CT",284.72,311,2527.0,34.052238,-118.243344,41.765775,-72.673356
+2025,2,LAX,BOI,"Los Angeles, CA (Metropolitan Area)","Boise, ID",163.36,320,688.0,34.052238,-118.243344,,
+2025,2,LAX,ORF,"Los Angeles, CA (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",309.58,156,2371.0,34.052238,-118.243344,36.846164,-76.285913
+2025,2,LAX,PBI,"Los Angeles, CA (Metropolitan Area)",,305.89,172,2330.0,34.052238,-118.243344,33.90976,-98.500854
+2025,2,LAX,RIC,"Los Angeles, CA (Metropolitan Area)","Richmond, VA",290.28,200,2305.0,34.052238,-118.243344,37.540759,-77.433932
+2025,2,LAX,PVD,"Los Angeles, CA (Metropolitan Area)","Boston, MA (Metropolitan Area)",287.19,94,2611.0,34.052238,-118.243344,42.358894,-71.056742
+2025,2,LAX,BUF,"Los Angeles, CA (Metropolitan Area)","Buffalo, NY",244.05,280,2218.0,34.052238,-118.243344,39.945422,-78.64671
+2025,2,LAX,CVG,"Los Angeles, CA (Metropolitan Area)","Cincinnati, OH",272.28,335,1900.0,34.052238,-118.243344,39.104427,-84.513808
+2025,2,LAX,OKC,"Los Angeles, CA (Metropolitan Area)","Oklahoma City, OK",261.38,236,1187.0,34.052238,-118.243344,35.468494,-97.521264
+2025,2,LAX,HPN,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",284.74,66,2510.0,34.052238,-118.243344,40.123164,-75.333718
+2025,2,LAX,ASE,"Los Angeles, CA (Metropolitan Area)","Aspen, CO",221.1,145,737.0,34.052238,-118.243344,,
+2025,2,LAX,GEG,"Los Angeles, CA (Metropolitan Area)",,197.05,230,962.0,34.052238,-118.243344,47.658999,-117.425022
+2025,2,LAX,EUG,"Los Angeles, CA (Metropolitan Area)","Eugene, OR",166.46,226,776.0,34.052238,-118.243344,,
+2025,2,LAX,STS,"Los Angeles, CA (Metropolitan Area)",,129.9,217,433.0,34.052238,-118.243344,38.439698,-122.715642
+2025,2,LAX,RDM,"Los Angeles, CA (Metropolitan Area)","Bend/Redmond, OR",196.11,162,751.0,34.052238,-118.243344,,
+2025,2,LAX,MFR,"Los Angeles, CA (Metropolitan Area)",,160.92,185,659.0,34.052238,-118.243344,42.064492,-87.93678
+2025,2,LGB,FLL,"Los Angeles, CA (Metropolitan Area)","Miami, FL (Metropolitan Area)",234.3,110,2343.0,34.052238,-118.243344,44.977479,-93.264346
+2025,2,LGB,SEA,"Los Angeles, CA (Metropolitan Area)","Seattle, WA",153.55,227,978.0,34.052238,-118.243344,47.603229,-122.33028
+2025,2,LGB,ELP,"Los Angeles, CA (Metropolitan Area)","El Paso, TX",198.23,58,715.0,34.052238,-118.243344,31.76006,-106.492257
+2025,2,LGB,PDX,"Los Angeles, CA (Metropolitan Area)","Portland, OR",153.52,235,859.0,34.052238,-118.243344,45.516018,-122.681425
+2025,2,LGB,RNO,"Los Angeles, CA (Metropolitan Area)","Reno, NV",124.09,221,415.0,34.052238,-118.243344,30.177159,-95.162771
+2025,2,LGB,AUS,"Los Angeles, CA (Metropolitan Area)","Austin, TX",158.15,229,1242.0,34.052238,-118.243344,,
+2025,2,LGB,BOS,"Los Angeles, CA (Metropolitan Area)","Boston, MA (Metropolitan Area)",261.1,103,2611.0,34.052238,-118.243344,42.358894,-71.056742
+2025,2,LGB,STL,"Los Angeles, CA (Metropolitan Area)","St. Louis, MO",226.8,102,1592.0,34.052238,-118.243344,38.630276,-90.200309
+2025,2,LGB,MCI,"Los Angeles, CA (Metropolitan Area)","Kansas City, MO",218.81,84,1363.0,34.052238,-118.243344,39.099792,-94.578559
+2025,2,LGB,BNA,"Los Angeles, CA (Metropolitan Area)","Nashville, TN",215.6,131,1797.0,34.052238,-118.243344,36.166687,-86.779932
+2025,2,LGB,DEN,"Los Angeles, CA (Metropolitan Area)","Denver, CO",139.07,248,862.0,34.052238,-118.243344,39.738453,-104.984853
+2025,2,SNA,FLL,"Los Angeles, CA (Metropolitan Area)","Miami, FL (Metropolitan Area)",314.19,63,2343.0,34.052238,-118.243344,44.977479,-93.264346
+2025,2,SNA,PIT,"Los Angeles, CA (Metropolitan Area)","Pittsburgh, PA",320.32,88,2136.0,34.052238,-118.243344,40.442169,-79.994945
+2025,2,SNA,JAX,"Los Angeles, CA (Metropolitan Area)","Jacksonville, FL",343.2,51,2153.0,34.052238,-118.243344,30.325968,-81.65676
+2025,2,SNA,DTW,"Los Angeles, CA (Metropolitan Area)","Detroit, MI",341.73,154,1979.0,34.052238,-118.243344,42.332916,-83.047853
+2025,2,SNA,MSP,"Los Angeles, CA (Metropolitan Area)","Minneapolis/St. Paul, MN",312.51,243,1535.0,34.052238,-118.243344,44.977479,-93.264346
+2025,2,SNA,IND,"Los Angeles, CA (Metropolitan Area)","Indianapolis, IN",276.74,77,1814.0,34.052238,-118.243344,39.76845,-86.156212
+2025,2,SNA,MIA,"Los Angeles, CA (Metropolitan Area)","Miami, FL (Metropolitan Area)",322.5,103,2343.0,34.052238,-118.243344,44.977479,-93.264346
+2025,2,SNA,SDF,"Los Angeles, CA (Metropolitan Area)","Louisville, KY",321.35,51,1843.0,34.052238,-118.243344,38.256078,-85.751569
+2025,2,SNA,OMA,"Los Angeles, CA (Metropolitan Area)","Omaha, NE",235.5,58,1330.0,34.052238,-118.243344,46.07035,-93.666319
+2025,2,SNA,MKE,"Los Angeles, CA (Metropolitan Area)","Milwaukee, WI",291.82,62,1756.0,34.052238,-118.243344,43.041072,-87.909421
+2025,2,SNA,PHL,"Los Angeles, CA (Metropolitan Area)","Philadelphia, PA",333.6,121,2402.0,34.052238,-118.243344,39.951061,-75.16562
+2025,2,SNA,RDU,"Los Angeles, CA (Metropolitan Area)","Raleigh/Durham, NC",324.29,70,2239.0,34.052238,-118.243344,42.673348,-72.179683
+2025,2,SNA,RNO,"Los Angeles, CA (Metropolitan Area)","Reno, NV",124.5,82,415.0,34.052238,-118.243344,30.177159,-95.162771
+2025,2,SNA,AUS,"Los Angeles, CA (Metropolitan Area)","Austin, TX",220.33,270,1242.0,34.052238,-118.243344,,
+2025,2,SNA,CMH,"Los Angeles, CA (Metropolitan Area)","Columbus, OH",304.96,89,1995.0,34.052238,-118.243344,39.962649,-82.996216
+2025,2,SNA,CLE,"Los Angeles, CA (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",324.79,62,2073.0,34.052238,-118.243344,41.505546,-81.6915
+2025,2,SNA,BOS,"Los Angeles, CA (Metropolitan Area)","Boston, MA (Metropolitan Area)",349.78,107,2611.0,34.052238,-118.243344,42.358894,-71.056742
+2025,2,SNA,CLT,"Los Angeles, CA (Metropolitan Area)","Charlotte, NC",327.52,100,2125.0,34.052238,-118.243344,35.222936,-80.840161
+2025,2,SNA,TUS,"Los Angeles, CA (Metropolitan Area)","Tucson, AZ",135.9,75,453.0,34.052238,-118.243344,35.167852,-103.726151
+2025,2,SNA,STL,"Los Angeles, CA (Metropolitan Area)","St. Louis, MO",273.31,90,1592.0,34.052238,-118.243344,38.630276,-90.200309
+2025,2,SNA,BOI,"Los Angeles, CA (Metropolitan Area)","Boise, ID",182.97,181,688.0,34.052238,-118.243344,,
+2025,2,SNA,MCI,"Los Angeles, CA (Metropolitan Area)","Kansas City, MO",263.35,117,1363.0,34.052238,-118.243344,39.099792,-94.578559
+2025,2,SNA,SAT,"Los Angeles, CA (Metropolitan Area)","San Antonio, TX",231.36,90,1211.0,34.052238,-118.243344,29.425173,-98.494599
+2025,2,SNA,BNA,"Los Angeles, CA (Metropolitan Area)","Nashville, TN",283.77,149,1797.0,34.052238,-118.243344,36.166687,-86.779932
+2025,2,SNA,CVG,"Los Angeles, CA (Metropolitan Area)","Cincinnati, OH",309.22,102,1900.0,34.052238,-118.243344,39.104427,-84.513808
+2025,2,SNA,MSY,"Los Angeles, CA (Metropolitan Area)","New Orleans, LA",284.69,70,1670.0,34.052238,-118.243344,29.950621,-90.074948
+2025,2,SNA,OKC,"Los Angeles, CA (Metropolitan Area)","Oklahoma City, OK",267.94,51,1187.0,34.052238,-118.243344,35.468494,-97.521264
+2025,2,SNA,TPA,"Los Angeles, CA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",309.91,84,2158.0,34.052238,-118.243344,37.8606,-78.804199
+2025,2,SNA,ATL,"Los Angeles, CA (Metropolitan Area)","Atlanta, GA (Metropolitan Area)",356.95,311,1947.0,34.052238,-118.243344,,
+2025,2,SNA,GEG,"Los Angeles, CA (Metropolitan Area)",,201.31,164,962.0,34.052238,-118.243344,47.658999,-117.425022
+2025,2,SNA,MCO,"Los Angeles, CA (Metropolitan Area)","Orlando, FL",293.81,197,2218.0,34.052238,-118.243344,28.538331,-81.378879
+2025,2,SNA,EUG,"Los Angeles, CA (Metropolitan Area)","Eugene, OR",189.3,68,776.0,34.052238,-118.243344,,
+2025,2,SNA,STS,"Los Angeles, CA (Metropolitan Area)",,129.9,119,433.0,34.052238,-118.243344,38.439698,-122.715642
+2025,2,ONT,DTW,"Los Angeles, CA (Metropolitan Area)","Detroit, MI",315.76,64,1979.0,34.052238,-118.243344,42.332916,-83.047853
+2025,2,ONT,MSP,"Los Angeles, CA (Metropolitan Area)","Minneapolis/St. Paul, MN",286.15,51,1535.0,34.052238,-118.243344,44.977479,-93.264346
+2025,2,ONT,IND,"Los Angeles, CA (Metropolitan Area)","Indianapolis, IN",273.77,51,1814.0,34.052238,-118.243344,39.76845,-86.156212
+2025,2,ONT,PDX,"Los Angeles, CA (Metropolitan Area)","Portland, OR",184.34,338,859.0,34.052238,-118.243344,45.516018,-122.681425
+2025,2,ONT,PHL,"Los Angeles, CA (Metropolitan Area)","Philadelphia, PA",310.89,77,2402.0,34.052238,-118.243344,39.951061,-75.16562
+2025,2,ONT,RDU,"Los Angeles, CA (Metropolitan Area)","Raleigh/Durham, NC",291.36,70,2239.0,34.052238,-118.243344,42.673348,-72.179683
+2025,2,ONT,SLC,"Los Angeles, CA (Metropolitan Area)","Salt Lake City, UT",177.0,251,590.0,34.052238,-118.243344,40.758478,-111.888142
+2025,2,ONT,AUS,"Los Angeles, CA (Metropolitan Area)","Austin, TX",201.67,117,1242.0,34.052238,-118.243344,,
+2025,2,ONT,BOS,"Los Angeles, CA (Metropolitan Area)","Boston, MA (Metropolitan Area)",325.41,64,2611.0,34.052238,-118.243344,42.358894,-71.056742
+2025,2,ONT,CLT,"Los Angeles, CA (Metropolitan Area)","Charlotte, NC",316.71,88,2125.0,34.052238,-118.243344,35.222936,-80.840161
+2025,2,ONT,STL,"Los Angeles, CA (Metropolitan Area)","St. Louis, MO",275.65,51,1592.0,34.052238,-118.243344,38.630276,-90.200309
+2025,2,ONT,BOI,"Los Angeles, CA (Metropolitan Area)","Boise, ID",193.45,52,688.0,34.052238,-118.243344,,
+2025,2,ONT,SAT,"Los Angeles, CA (Metropolitan Area)","San Antonio, TX",211.18,118,1211.0,34.052238,-118.243344,29.425173,-98.494599
+2025,2,ONT,BNA,"Los Angeles, CA (Metropolitan Area)","Nashville, TN",278.13,74,1797.0,34.052238,-118.243344,36.166687,-86.779932
+2025,2,ONT,CVG,"Los Angeles, CA (Metropolitan Area)","Cincinnati, OH",300.8,51,1900.0,34.052238,-118.243344,39.104427,-84.513808
+2025,2,ONT,TPA,"Los Angeles, CA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",301.88,56,2158.0,34.052238,-118.243344,37.8606,-78.804199
+2025,2,ONT,ATL,"Los Angeles, CA (Metropolitan Area)","Atlanta, GA (Metropolitan Area)",299.51,287,1947.0,34.052238,-118.243344,,
+2025,2,ONT,GEG,"Los Angeles, CA (Metropolitan Area)",,209.08,62,962.0,34.052238,-118.243344,47.658999,-117.425022
+2025,2,ONT,MCO,"Los Angeles, CA (Metropolitan Area)","Orlando, FL",221.8,200,2218.0,34.052238,-118.243344,28.538331,-81.378879
+2025,2,FLL,JAX,"Miami, FL (Metropolitan Area)","Jacksonville, FL",100.5,254,335.0,44.977479,-93.264346,30.325968,-81.65676
+2025,2,FLL,SDF,"Miami, FL (Metropolitan Area)","Louisville, KY",160.03,200,910.0,44.977479,-93.264346,38.256078,-85.751569
+2025,2,FLL,SMF,"Miami, FL (Metropolitan Area)","Sacramento, CA",310.6,100,2552.0,44.977479,-93.264346,38.582087,-121.50012
+2025,2,FLL,MEM,"Miami, FL (Metropolitan Area)","Memphis, TN",183.71,126,859.0,44.977479,-93.264346,35.143378,-90.052136
+2025,2,FLL,OMA,"Miami, FL (Metropolitan Area)","Omaha, NE",216.44,124,1393.0,44.977479,-93.264346,46.07035,-93.666319
+2025,2,FLL,MKE,"Miami, FL (Metropolitan Area)","Milwaukee, WI",202.55,280,1258.0,44.977479,-93.264346,43.041072,-87.909421
+2025,2,FLL,PDX,"Miami, FL (Metropolitan Area)","Portland, OR",275.71,144,2700.0,44.977479,-93.264346,45.516018,-122.681425
+2025,2,FLL,CHS,"Miami, FL (Metropolitan Area)","Charleston, SC",141.92,217,489.0,44.977479,-93.264346,32.77647,-79.931027
+2025,2,FLL,GRR,"Miami, FL (Metropolitan Area)","Grand Rapids, MI",209.0,159,1214.0,44.977479,-93.264346,47.925705,-97.036068
+2025,2,FLL,MCI,"Miami, FL (Metropolitan Area)","Kansas City, MO",215.05,298,1251.0,44.977479,-93.264346,39.099792,-94.578559
+2025,2,FLL,SAT,"Miami, FL (Metropolitan Area)","San Antonio, TX",195.1,163,1145.0,44.977479,-93.264346,29.425173,-98.494599
+2025,2,FLL,ORF,"Miami, FL (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",170.1,169,812.0,44.977479,-93.264346,36.846164,-76.285913
+2025,2,FLL,RIC,"Miami, FL (Metropolitan Area)","Richmond, VA",143.33,299,825.0,44.977479,-93.264346,37.540759,-77.433932
+2025,2,FLL,PVD,"Miami, FL (Metropolitan Area)","Boston, MA (Metropolitan Area)",169.19,294,1283.0,44.977479,-93.264346,42.358894,-71.056742
+2025,2,FLL,ISP,"Miami, FL (Metropolitan Area)","New York City, NY (Metropolitan Area)",169.02,261,1139.0,44.977479,-93.264346,40.123164,-75.333718
+2025,2,FLL,ALB,"Miami, FL (Metropolitan Area)","Albany, NY",187.33,320,1225.0,44.977479,-93.264346,,
+2025,2,FLL,MHT,"Miami, FL (Metropolitan Area)","Boston, MA (Metropolitan Area)",181.87,90,1283.0,44.977479,-93.264346,42.358894,-71.056742
+2025,2,FLL,CVG,"Miami, FL (Metropolitan Area)","Cincinnati, OH",157.65,324,948.0,44.977479,-93.264346,39.104427,-84.513808
+2025,2,FLL,ROC,"Miami, FL (Metropolitan Area)","Rochester, NY",208.55,131,1203.0,44.977479,-93.264346,43.155708,-77.612547
+2025,2,FLL,TYS,"Miami, FL (Metropolitan Area)","Knoxville, TN",128.39,169,724.0,44.977479,-93.264346,35.962631,-83.916677
+2025,2,FLL,TPA,"Miami, FL (Metropolitan Area)","Tampa, FL (Metropolitan Area)",61.2,258,204.0,44.977479,-93.264346,37.8606,-78.804199
+2025,2,FLL,AVL,"Miami, FL (Metropolitan Area)","Asheville, NC",105.94,210,677.0,44.977479,-93.264346,,
+2025,2,FLL,SYR,"Miami, FL (Metropolitan Area)","Syracuse, NY",174.55,182,1217.0,44.977479,-93.264346,43.047945,-76.147448
+2025,2,FLL,MCO,"Miami, FL (Metropolitan Area)","Orlando, FL",57.6,174,192.0,44.977479,-93.264346,28.538331,-81.378879
+2025,2,FLL,ACY,"Miami, FL (Metropolitan Area)","Atlantic City, NJ",98.65,267,977.0,44.977479,-93.264346,,
+2025,2,FLL,LCK,"Miami, FL (Metropolitan Area)","Columbus, OH",99.0,58,990.0,44.977479,-93.264346,39.962649,-82.996216
+2025,2,PIT,MIA,"Pittsburgh, PA","Miami, FL (Metropolitan Area)",202.3,269,1013.0,40.442169,-79.994945,44.977479,-93.264346
+2025,2,PIT,PVD,"Pittsburgh, PA","Boston, MA (Metropolitan Area)",148.8,85,496.0,40.442169,-79.994945,42.358894,-71.056742
+2025,2,PIT,PHX,"Pittsburgh, PA","Phoenix, AZ",259.93,312,1814.0,40.442169,-79.994945,30.406931,-87.217578
+2025,2,PIT,PIE,"Pittsburgh, PA",,96.37,84,878.0,40.442169,-79.994945,37.8606,-78.804199
+2025,2,SEA,MIA,"Seattle, WA","Miami, FL (Metropolitan Area)",311.26,300,2724.0,47.603229,-122.33028,44.977479,-93.264346
+2025,2,SEA,CMH,"Seattle, WA","Columbus, OH",254.51,278,2016.0,47.603229,-122.33028,39.962649,-82.996216
+2025,2,SEA,PVD,"Seattle, WA","Boston, MA (Metropolitan Area)",313.67,52,2496.0,47.603229,-122.33028,42.358894,-71.056742
+2025,2,ELP,PHX,"El Paso, TX","Phoenix, AZ",104.1,219,347.0,31.76006,-106.492257,30.406931,-87.217578
+2025,2,JAX,MIA,"Jacksonville, FL","Miami, FL (Metropolitan Area)",100.5,209,335.0,30.325968,-81.65676,44.977479,-93.264346
+2025,2,JAX,PVD,"Jacksonville, FL","Boston, MA (Metropolitan Area)",195.32,69,1028.0,30.325968,-81.65676,42.358894,-71.056742
+2025,2,DTW,PVD,"Detroit, MI","Boston, MA (Metropolitan Area)",189.6,116,632.0,42.332916,-83.047853,42.358894,-71.056742
+2025,2,DTW,MHT,"Detroit, MI","Boston, MA (Metropolitan Area)",189.6,57,632.0,42.332916,-83.047853,42.358894,-71.056742
+2025,2,DTW,HPN,"Detroit, MI","New York City, NY (Metropolitan Area)",162.0,147,540.0,42.332916,-83.047853,40.123164,-75.333718
+2025,2,MSP,CMH,"Minneapolis/St. Paul, MN","Columbus, OH",187.8,234,626.0,44.977479,-93.264346,39.962649,-82.996216
+2025,2,MSP,CLE,"Minneapolis/St. Paul, MN","Cleveland, OH (Metropolitan Area)",197.1,292,657.0,44.977479,-93.264346,41.505546,-81.6915
+2025,2,MSP,PVD,"Minneapolis/St. Paul, MN","Boston, MA (Metropolitan Area)",190.2,106,1124.0,44.977479,-93.264346,42.358894,-71.056742
+2025,2,MSP,AZA,"Minneapolis/St. Paul, MN","Phoenix, AZ",143.57,192,1276.0,44.977479,-93.264346,30.406931,-87.217578
+2025,2,MSP,PIE,"Minneapolis/St. Paul, MN",,151.74,100,1307.0,44.977479,-93.264346,37.8606,-78.804199
+2025,2,RSW,PVD,"Fort Myers, FL","Boston, MA (Metropolitan Area)",178.48,221,1271.0,40.253979,-103.801495,42.358894,-71.056742
+2025,2,RSW,ISP,"Fort Myers, FL","New York City, NY (Metropolitan Area)",158.28,117,1120.0,40.253979,-103.801495,40.123164,-75.333718
+2025,2,RSW,MHT,"Fort Myers, FL","Boston, MA (Metropolitan Area)",204.6,89,1271.0,40.253979,-103.801495,42.358894,-71.056742
+2025,2,RSW,HPN,"Fort Myers, FL","New York City, NY (Metropolitan Area)",215.23,287,1120.0,40.253979,-103.801495,40.123164,-75.333718
+2025,2,RSW,CAK,"Fort Myers, FL","Cleveland, OH (Metropolitan Area)",179.59,62,1025.0,40.253979,-103.801495,41.505546,-81.6915
+2025,2,IND,MIA,"Indianapolis, IN","Miami, FL (Metropolitan Area)",225.71,252,1020.0,39.76845,-86.156212,44.977479,-93.264346
+2025,2,IND,BOS,"Indianapolis, IN","Boston, MA (Metropolitan Area)",222.21,315,818.0,39.76845,-86.156212,42.358894,-71.056742
+2025,2,IND,PVD,"Indianapolis, IN","Boston, MA (Metropolitan Area)",222.49,51,818.0,39.76845,-86.156212,42.358894,-71.056742
+2025,2,IND,PIE,"Indianapolis, IN",,101.3,131,840.0,39.76845,-86.156212,37.8606,-78.804199
+2025,2,MIA,SDF,"Miami, FL (Metropolitan Area)","Louisville, KY",245.96,126,910.0,44.977479,-93.264346,38.256078,-85.751569
+2025,2,MIA,SMF,"Miami, FL (Metropolitan Area)","Sacramento, CA",333.72,112,2552.0,44.977479,-93.264346,38.582087,-121.50012
+2025,2,MIA,MEM,"Miami, FL (Metropolitan Area)","Memphis, TN",245.94,161,859.0,44.977479,-93.264346,35.143378,-90.052136
+2025,2,MIA,OMA,"Miami, FL (Metropolitan Area)","Omaha, NE",236.55,126,1393.0,44.977479,-93.264346,46.07035,-93.666319
+2025,2,MIA,MKE,"Miami, FL (Metropolitan Area)","Milwaukee, WI",223.07,121,1258.0,44.977479,-93.264346,43.041072,-87.909421
+2025,2,MIA,PDX,"Miami, FL (Metropolitan Area)","Portland, OR",340.92,149,2700.0,44.977479,-93.264346,45.516018,-122.681425
+2025,2,MIA,CMH,"Miami, FL (Metropolitan Area)","Columbus, OH",216.77,193,990.0,44.977479,-93.264346,39.962649,-82.996216
+2025,2,MIA,CLE,"Miami, FL (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",176.61,279,1080.0,44.977479,-93.264346,41.505546,-81.6915
+2025,2,MIA,CHS,"Miami, FL (Metropolitan Area)","Charleston, SC",146.7,136,489.0,44.977479,-93.264346,32.77647,-79.931027
+2025,2,MIA,BDL,"Miami, FL (Metropolitan Area)","Hartford, CT",191.62,265,1194.0,44.977479,-93.264346,41.765775,-72.673356
+2025,2,MIA,STL,"Miami, FL (Metropolitan Area)","St. Louis, MO",222.63,296,1068.0,44.977479,-93.264346,38.630276,-90.200309
+2025,2,MIA,GRR,"Miami, FL (Metropolitan Area)","Grand Rapids, MI",269.48,128,1214.0,44.977479,-93.264346,47.925705,-97.036068
+2025,2,MIA,MCI,"Miami, FL (Metropolitan Area)","Kansas City, MO",253.66,176,1251.0,44.977479,-93.264346,39.099792,-94.578559
+2025,2,MIA,SAT,"Miami, FL (Metropolitan Area)","San Antonio, TX",260.91,192,1145.0,44.977479,-93.264346,29.425173,-98.494599
+2025,2,MIA,ORF,"Miami, FL (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",231.96,168,812.0,44.977479,-93.264346,36.846164,-76.285913
+2025,2,MIA,RIC,"Miami, FL (Metropolitan Area)","Richmond, VA",193.19,136,825.0,44.977479,-93.264346,37.540759,-77.433932
+2025,2,MIA,PVD,"Miami, FL (Metropolitan Area)","Boston, MA (Metropolitan Area)",213.71,89,1283.0,44.977479,-93.264346,42.358894,-71.056742
+2025,2,MIA,ISP,"Miami, FL (Metropolitan Area)","New York City, NY (Metropolitan Area)",213.07,54,1139.0,44.977479,-93.264346,40.123164,-75.333718
+2025,2,MIA,ALB,"Miami, FL (Metropolitan Area)","Albany, NY",242.41,56,1225.0,44.977479,-93.264346,,
+2025,2,MIA,SAN,"Miami, FL (Metropolitan Area)","San Diego, CA",302.32,289,2269.0,44.977479,-93.264346,32.71576,-117.163817
+2025,2,MIA,BUF,"Miami, FL (Metropolitan Area)","Buffalo, NY",211.57,113,1185.0,44.977479,-93.264346,39.945422,-78.64671
+2025,2,MIA,CVG,"Miami, FL (Metropolitan Area)","Cincinnati, OH",200.76,263,948.0,44.977479,-93.264346,39.104427,-84.513808
+2025,2,MIA,ROC,"Miami, FL (Metropolitan Area)","Rochester, NY",223.85,112,1203.0,44.977479,-93.264346,43.155708,-77.612547
+2025,2,MIA,TYS,"Miami, FL (Metropolitan Area)","Knoxville, TN",217.2,88,724.0,44.977479,-93.264346,35.962631,-83.916677
+2025,2,MIA,TPA,"Miami, FL (Metropolitan Area)","Tampa, FL (Metropolitan Area)",61.2,319,204.0,44.977479,-93.264346,37.8606,-78.804199
+2025,2,MIA,SYR,"Miami, FL (Metropolitan Area)","Syracuse, NY",247.41,85,1217.0,44.977479,-93.264346,43.047945,-76.147448
+2025,2,MIA,MCO,"Miami, FL (Metropolitan Area)","Orlando, FL",57.6,294,192.0,44.977479,-93.264346,28.538331,-81.378879
+2025,2,SDF,TPA,"Louisville, KY","Tampa, FL (Metropolitan Area)",176.37,244,729.0,38.256078,-85.751569,37.8606,-78.804199
+2025,2,SDF,PHX,"Louisville, KY","Phoenix, AZ",248.05,162,1506.0,38.256078,-85.751569,30.406931,-87.217578
+2025,2,SDF,PIE,"Louisville, KY",,90.42,51,729.0,38.256078,-85.751569,37.8606,-78.804199
+2025,2,MEM,PHX,"Memphis, TN","Phoenix, AZ",258.91,167,1264.0,35.143378,-90.052136,30.406931,-87.217578
+2025,2,OMA,TPA,"Omaha, NE","Tampa, FL (Metropolitan Area)",218.34,138,1190.0,46.07035,-93.666319,37.8606,-78.804199
+2025,2,OMA,AZA,"Omaha, NE","Phoenix, AZ",103.7,61,1037.0,46.07035,-93.666319,30.406931,-87.217578
+2025,2,OMA,PIE,"Omaha, NE",,119.0,71,1190.0,46.07035,-93.666319,37.8606,-78.804199
+2025,2,MKE,BOS,"Milwaukee, WI","Boston, MA (Metropolitan Area)",209.53,330,860.0,43.041072,-87.909421,42.358894,-71.056742
+2025,2,MKE,TPA,"Milwaukee, WI","Tampa, FL (Metropolitan Area)",195.6,323,1077.0,43.041072,-87.909421,37.8606,-78.804199
+2025,2,PDX,BOS,"Portland, OR","Boston, MA (Metropolitan Area)",277.17,286,2537.0,45.516018,-122.681425,42.358894,-71.056742
+2025,2,PDX,TPA,"Portland, OR","Tampa, FL (Metropolitan Area)",276.03,162,2497.0,45.516018,-122.681425,37.8606,-78.804199
+2025,2,PHL,PVD,"Philadelphia, PA","Boston, MA (Metropolitan Area)",86.7,124,289.0,39.951061,-75.16562,42.358894,-71.056742
+2025,2,PHL,MHT,"Philadelphia, PA","Boston, MA (Metropolitan Area)",86.7,80,289.0,39.951061,-75.16562,42.358894,-71.056742
+2025,2,RDU,PVD,"Raleigh/Durham, NC","Boston, MA (Metropolitan Area)",159.11,108,625.0,42.673348,-72.179683,42.358894,-71.056742
+2025,2,RDU,ISP,"Raleigh/Durham, NC","New York City, NY (Metropolitan Area)",138.42,57,463.0,42.673348,-72.179683,40.123164,-75.333718
+2025,2,RDU,MHT,"Raleigh/Durham, NC","Boston, MA (Metropolitan Area)",187.5,61,625.0,42.673348,-72.179683,42.358894,-71.056742
+2025,2,RDU,PHX,"Raleigh/Durham, NC","Phoenix, AZ",271.25,298,1891.0,42.673348,-72.179683,30.406931,-87.217578
+2025,2,SLC,TPA,"Salt Lake City, UT","Tampa, FL (Metropolitan Area)",286.41,313,1888.0,40.758478,-111.888142,37.8606,-78.804199
+2025,2,TUL,PHX,"Tulsa, OK","Phoenix, AZ",221.49,181,935.0,61.096484,-160.967455,30.406931,-87.217578
+2025,2,AUS,CMH,"Austin, TX","Columbus, OH",233.54,113,1073.0,30.264979,-97.746598,39.962649,-82.996216
+2025,2,AUS,PVD,"Austin, TX","Boston, MA (Metropolitan Area)",256.58,59,1698.0,30.264979,-97.746598,42.358894,-71.056742
+2025,2,AUS,TPA,"Austin, TX","Tampa, FL (Metropolitan Area)",199.23,317,928.0,30.264979,-97.746598,37.8606,-78.804199
+2025,2,CMH,BOS,"Columbus, OH","Boston, MA (Metropolitan Area)",192.0,276,640.0,39.962649,-82.996216,42.358894,-71.056742
+2025,2,CMH,DEN,"Columbus, OH","Denver, CO",198.72,338,1154.0,39.962649,-82.996216,39.738453,-104.984853
+2025,2,BHM,TPA,"Birmingham, AL","Tampa, FL (Metropolitan Area)",137.7,178,459.0,33.522859,-86.807705,37.8606,-78.804199
+2025,2,CLE,BOS,"Cleveland, OH (Metropolitan Area)","Boston, MA (Metropolitan Area)",162.43,313,563.0,41.505546,-81.6915,42.358894,-71.056742
+2025,2,CLE,CLT,"Cleveland, OH (Metropolitan Area)","Charlotte, NC",129.0,231,430.0,41.505546,-81.6915,35.222936,-80.840161
+2025,2,CLE,BNA,"Cleveland, OH (Metropolitan Area)","Nashville, TN",134.4,293,448.0,41.505546,-81.6915,36.166687,-86.779932
+2025,2,CLE,SAN,"Cleveland, OH (Metropolitan Area)","San Diego, CA",279.61,166,2045.0,41.505546,-81.6915,32.71576,-117.163817
+2025,2,BOS,CHS,"Boston, MA (Metropolitan Area)","Charleston, SC",183.72,315,836.0,42.358894,-71.056742,32.77647,-79.931027
+2025,2,BOS,STL,"Boston, MA (Metropolitan Area)","St. Louis, MO",230.96,311,1047.0,42.358894,-71.056742,38.630276,-90.200309
+2025,2,BOS,MCI,"Boston, MA (Metropolitan Area)","Kansas City, MO",223.26,278,1256.0,42.358894,-71.056742,39.099792,-94.578559
+2025,2,BOS,SAT,"Boston, MA (Metropolitan Area)","San Antonio, TX",242.34,294,1764.0,42.358894,-71.056742,29.425173,-98.494599
+2025,2,BOS,ORF,"Boston, MA (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",146.1,187,487.0,42.358894,-71.056742,36.846164,-76.285913
+2025,2,BOS,BUF,"Boston, MA (Metropolitan Area)","Buffalo, NY",118.5,234,395.0,42.358894,-71.056742,39.945422,-78.64671
+2025,2,BOS,CVG,"Boston, MA (Metropolitan Area)","Cincinnati, OH",225.6,280,752.0,42.358894,-71.056742,39.104427,-84.513808
+2025,2,BOS,SAV,"Boston, MA (Metropolitan Area)","Savannah, GA",198.06,307,917.0,42.358894,-71.056742,40.115007,-111.654713
+2025,2,BOS,SRQ,"Boston, MA (Metropolitan Area)",,218.48,308,1240.0,42.358894,-71.056742,27.336483,-82.538602
+2025,2,BOS,MYR,"Boston, MA (Metropolitan Area)","Myrtle Beach, SC",138.71,280,756.0,42.358894,-71.056742,33.68785,-78.883852
+2025,2,CHS,PVD,"Charleston, SC","Boston, MA (Metropolitan Area)",167.95,166,836.0,32.77647,-79.931027,42.358894,-71.056742
+2025,2,CHS,ISP,"Charleston, SC","New York City, NY (Metropolitan Area)",156.2,66,677.0,32.77647,-79.931027,40.123164,-75.333718
+2025,2,CHS,HPN,"Charleston, SC","New York City, NY (Metropolitan Area)",185.16,208,677.0,32.77647,-79.931027,40.123164,-75.333718
+2025,2,CLT,PVD,"Charlotte, NC","Boston, MA (Metropolitan Area)",213.66,191,737.0,35.222936,-80.840161,42.358894,-71.056742
+2025,2,CLT,MHT,"Charlotte, NC","Boston, MA (Metropolitan Area)",221.1,58,737.0,35.222936,-80.840161,42.358894,-71.056742
+2025,2,CLT,HPN,"Charlotte, NC","New York City, NY (Metropolitan Area)",172.5,91,575.0,35.222936,-80.840161,40.123164,-75.333718
+2025,2,CLT,CAK,"Charlotte, NC","Cleveland, OH (Metropolitan Area)",129.0,58,430.0,35.222936,-80.840161,41.505546,-81.6915
+2025,2,BDL,PHX,"Hartford, CT","Phoenix, AZ",299.63,202,2213.0,41.765775,-72.673356,30.406931,-87.217578
+2025,2,STL,PVD,"St. Louis, MO","Boston, MA (Metropolitan Area)",231.81,55,1047.0,38.630276,-90.200309,42.358894,-71.056742
+2025,2,DSM,PHX,"Des Moines, IA","Phoenix, AZ",219.56,287,1150.0,41.588822,-93.620309,30.406931,-87.217578
+2025,2,DSM,AZA,"Des Moines, IA","Phoenix, AZ",114.94,89,1150.0,41.588822,-93.620309,30.406931,-87.217578
+2025,2,GRR,TPA,"Grand Rapids, MI","Tampa, FL (Metropolitan Area)",201.23,155,1044.0,47.925705,-97.036068,37.8606,-78.804199
+2025,2,GRR,PHX,"Grand Rapids, MI","Phoenix, AZ",251.86,148,1574.0,47.925705,-97.036068,30.406931,-87.217578
+2025,2,GRR,AZA,"Grand Rapids, MI","Phoenix, AZ",157.4,104,1574.0,47.925705,-97.036068,30.406931,-87.217578
+2025,2,GRR,PIE,"Grand Rapids, MI",,108.41,225,1044.0,47.925705,-97.036068,37.8606,-78.804199
+2025,2,MCI,TPA,"Kansas City, MO","Tampa, FL (Metropolitan Area)",210.35,330,1048.0,39.099792,-94.578559,37.8606,-78.804199
+2025,2,SAT,TPA,"San Antonio, TX","Tampa, FL (Metropolitan Area)",214.86,202,972.0,29.425173,-98.494599,37.8606,-78.804199
+2025,2,ORF,PVD,"Norfolk, VA (Metropolitan Area)","Boston, MA (Metropolitan Area)",146.1,107,487.0,36.846164,-76.285913,42.358894,-71.056742
+2025,2,ORF,SAN,"Norfolk, VA (Metropolitan Area)","San Diego, CA",313.63,240,2330.0,36.846164,-76.285913,32.71576,-117.163817
+2025,2,ORF,TPA,"Norfolk, VA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",184.12,174,726.0,36.846164,-76.285913,37.8606,-78.804199
+2025,2,ORF,ATL,"Norfolk, VA (Metropolitan Area)","Atlanta, GA (Metropolitan Area)",154.8,320,516.0,36.846164,-76.285913,,
+2025,2,ORF,LAS,"Norfolk, VA (Metropolitan Area)","Las Vegas, NV",264.72,153,2154.0,36.846164,-76.285913,36.169202,-115.140597
+2025,2,ORF,DEN,"Norfolk, VA (Metropolitan Area)","Denver, CO",233.81,213,1553.0,36.846164,-76.285913,39.738453,-104.984853
+2025,2,ORF,MCO,"Norfolk, VA (Metropolitan Area)","Orlando, FL",163.23,310,662.0,36.846164,-76.285913,28.538331,-81.378879
+2025,2,PBI,PVD,,"Boston, MA (Metropolitan Area)",199.09,197,1222.0,,,42.358894,-71.056742
+2025,2,RIC,TPA,"Richmond, VA","Tampa, FL (Metropolitan Area)",169.55,174,731.0,37.540759,-77.433932,37.8606,-78.804199
+2025,2,PVD,BNA,"Boston, MA (Metropolitan Area)","Nashville, TN",193.71,128,942.0,42.358894,-71.056742,36.166687,-86.779932
+2025,2,PVD,SAN,"Boston, MA (Metropolitan Area)","San Diego, CA",326.13,77,2588.0,42.358894,-71.056742,32.71576,-117.163817
+2025,2,PVD,CVG,"Boston, MA (Metropolitan Area)","Cincinnati, OH",205.03,56,752.0,42.358894,-71.056742,39.104427,-84.513808
+2025,2,PVD,MSY,"Boston, MA (Metropolitan Area)","New Orleans, LA",241.34,62,1371.0,42.358894,-71.056742,29.950621,-90.074948
+2025,2,PVD,TPA,"Boston, MA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",190.45,323,1204.0,42.358894,-71.056742,37.8606,-78.804199
+2025,2,PVD,PHX,"Boston, MA (Metropolitan Area)","Phoenix, AZ",300.15,63,2300.0,42.358894,-71.056742,30.406931,-87.217578
+2025,2,PVD,SRQ,"Boston, MA (Metropolitan Area)",,230.93,114,1240.0,42.358894,-71.056742,27.336483,-82.538602
+2025,2,PVD,ATL,"Boston, MA (Metropolitan Area)","Atlanta, GA (Metropolitan Area)",243.76,241,952.0,42.358894,-71.056742,,
+2025,2,PVD,LAS,"Boston, MA (Metropolitan Area)","Las Vegas, NV",288.8,70,2381.0,42.358894,-71.056742,36.169202,-115.140597
+2025,2,PVD,DEN,"Boston, MA (Metropolitan Area)","Denver, CO",250.04,190,1754.0,42.358894,-71.056742,39.738453,-104.984853
+2025,2,ISP,BNA,"New York City, NY (Metropolitan Area)","Nashville, TN",188.41,66,803.0,40.123164,-75.333718,36.166687,-86.779932
+2025,2,ISP,TPA,"New York City, NY (Metropolitan Area)","Tampa, FL (Metropolitan Area)",141.13,267,1055.0,40.123164,-75.333718,37.8606,-78.804199
+2025,2,ISP,MYR,"New York City, NY (Metropolitan Area)","Myrtle Beach, SC",106.96,62,601.0,40.123164,-75.333718,33.68785,-78.883852
+2025,2,ISP,ATL,"New York City, NY (Metropolitan Area)","Atlanta, GA (Metropolitan Area)",142.73,84,795.0,40.123164,-75.333718,,
+2025,2,ALB,TPA,"Albany, NY","Tampa, FL (Metropolitan Area)",218.37,250,1130.0,42.651242,-73.755418,37.8606,-78.804199
+2025,2,ALB,PIE,"Albany, NY",,113.8,76,1138.0,42.651242,-73.755418,37.8606,-78.804199
+2025,2,MHT,TPA,"Boston, MA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",205.99,211,1204.0,42.358894,-71.056742,37.8606,-78.804199
+2025,2,MHT,MYR,"Boston, MA (Metropolitan Area)","Myrtle Beach, SC",198.65,92,756.0,42.358894,-71.056742,33.68785,-78.883852
+2025,2,MHT,ATL,"Boston, MA (Metropolitan Area)","Atlanta, GA (Metropolitan Area)",221.49,53,952.0,42.358894,-71.056742,,
+2025,2,MHT,LAS,"Boston, MA (Metropolitan Area)","Las Vegas, NV",281.11,56,2381.0,42.358894,-71.056742,36.169202,-115.140597
+2025,2,MHT,DEN,"Boston, MA (Metropolitan Area)","Denver, CO",259.47,53,1754.0,42.358894,-71.056742,39.738453,-104.984853
+2025,2,SAN,TPA,"San Diego, CA","Tampa, FL (Metropolitan Area)",274.53,288,2087.0,32.71576,-117.163817,37.8606,-78.804199
+2025,2,BUF,PHX,"Buffalo, NY","Phoenix, AZ",267.98,168,1912.0,39.945422,-78.64671,30.406931,-87.217578
+2025,2,CVG,AZA,"Cincinnati, OH","Phoenix, AZ",156.9,51,1569.0,39.104427,-84.513808,30.406931,-87.217578
+2025,2,CVG,PIE,"Cincinnati, OH",,96.37,168,776.0,39.104427,-84.513808,37.8606,-78.804199
+2025,2,MSY,PHX,"New Orleans, LA","Phoenix, AZ",239.92,309,1300.0,29.950621,-90.074948,30.406931,-87.217578
+2025,2,OKC,PHX,"Oklahoma City, OK","Phoenix, AZ",217.6,235,833.0,35.468494,-97.521264,30.406931,-87.217578
+2025,2,ROC,TPA,"Rochester, NY","Tampa, FL (Metropolitan Area)",195.47,222,1079.0,43.155708,-77.612547,37.8606,-78.804199
+2025,2,HPN,TPA,"New York City, NY (Metropolitan Area)","Tampa, FL (Metropolitan Area)",194.2,186,1055.0,40.123164,-75.333718,37.8606,-78.804199
+2025,2,HPN,ATL,"New York City, NY (Metropolitan Area)","Atlanta, GA (Metropolitan Area)",233.05,292,795.0,40.123164,-75.333718,,
+2025,2,TPA,CAK,"Tampa, FL (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",167.25,69,932.0,37.8606,-78.804199,41.505546,-81.6915
+2025,2,TPA,SYR,"Tampa, FL (Metropolitan Area)","Syracuse, NY",202.81,150,1111.0,37.8606,-78.804199,43.047945,-76.147448
+2025,2,TPA,FNT,"Tampa, FL (Metropolitan Area)","Flint, MI",204.68,80,1040.0,37.8606,-78.804199,,
+2025,2,PHX,EUG,"Phoenix, AZ","Eugene, OR",205.35,167,971.0,30.406931,-87.217578,,
+2025,2,PHX,FSD,"Phoenix, AZ",,226.99,88,1081.0,30.406931,-87.217578,43.488765,-96.743185
+2025,2,PHX,PVU,"Phoenix, AZ",,83.93,153,477.0,30.406931,-87.217578,41.824461,-71.412747
+2025,2,PHX,BIS,"Phoenix, AZ","Bismarck/Mandan, ND",245.06,88,1094.0,30.406931,-87.217578,,
+2025,2,PHX,CID,"Phoenix, AZ","Cedar Rapids/Iowa City, IA",223.95,117,1252.0,30.406931,-87.217578,,
+2025,2,PHX,FAR,"Phoenix, AZ","Fargo, ND",277.42,81,1225.0,30.406931,-87.217578,,
+2025,2,PHX,FAT,"Phoenix, AZ","Fresno, CA",147.9,196,493.0,30.406931,-87.217578,,
+2025,2,CAK,ATL,"Cleveland, OH (Metropolitan Area)","Atlanta, GA (Metropolitan Area)",166.2,98,554.0,41.505546,-81.6915,,
+2025,2,CAK,LAS,"Cleveland, OH (Metropolitan Area)","Las Vegas, NV",238.99,53,1846.0,41.505546,-81.6915,36.169202,-115.140597
+2025,2,CAK,MCO,"Cleveland, OH (Metropolitan Area)","Orlando, FL",134.3,114,895.0,41.505546,-81.6915,28.538331,-81.378879
+2025,2,CAK,PIE,"Cleveland, OH (Metropolitan Area)",,95.65,86,927.0,41.505546,-81.6915,37.8606,-78.804199
+2025,2,AZA,GEG,"Phoenix, AZ",,103.4,88,1034.0,30.406931,-87.217578,47.658999,-117.425022
+2025,2,AZA,EUG,"Phoenix, AZ","Eugene, OR",98.42,59,971.0,30.406931,-87.217578,,
+2025,2,AZA,FSD,"Phoenix, AZ",,110.09,260,1081.0,30.406931,-87.217578,43.488765,-96.743185
+2025,2,AZA,PVU,"Phoenix, AZ",,80.39,201,477.0,30.406931,-87.217578,41.824461,-71.412747
+2025,2,AZA,BIS,"Phoenix, AZ","Bismarck/Mandan, ND",109.4,228,1094.0,30.406931,-87.217578,,
+2025,2,AZA,CID,"Phoenix, AZ","Cedar Rapids/Iowa City, IA",125.2,158,1252.0,30.406931,-87.217578,,
+2025,2,AZA,FAR,"Phoenix, AZ","Fargo, ND",122.5,207,1225.0,30.406931,-87.217578,,
+2025,2,MYR,SWF,"Myrtle Beach, SC","New York City, NY (Metropolitan Area)",86.95,64,601.0,33.68785,-78.883852,40.123164,-75.333718
+2025,2,SYR,PIE,"Syracuse, NY",,114.11,87,1111.0,43.047945,-76.147448,37.8606,-78.804199
+2025,2,MCO,SWF,"Orlando, FL","New York City, NY (Metropolitan Area)",121.66,112,989.0,28.538331,-81.378879,40.123164,-75.333718
+2025,2,LCK,PIE,"Columbus, OH",,96.11,94,829.0,39.962649,-82.996216,37.8606,-78.804199
+2025,2,PIE,SWF,,"New York City, NY (Metropolitan Area)",105.5,61,1055.0,,,40.123164,-75.333718
+2025,2,PIE,FNT,,"Flint, MI",113.8,157,1040.0,,,,
