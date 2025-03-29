@@ -3,6 +3,8 @@ import networkx as nx
 from scipy.stats import pearsonr
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
+import streamlit as st
+from streamlit_folium import st_folium
 
 def load_dataset(filepath="filled_geocoded_airline_data.csv"):
     """
@@ -119,13 +121,42 @@ def plot_full_network_routes(G, coord_map, title="Full Predicted Routes"):
     import folium
     from streamlit_folium import st_folium
 
-    m = folium.Map(location=[39.8283, -98.5795], zoom_start=4)  # Centered on USA
+    # 初始化美国中心地图
+    m = folium.Map(location=[39.8283, -98.5795], zoom_start=4)
+
+    def is_valid_number(value):
+        try:
+            float(value)
+            return True
+        except (ValueError, TypeError):
+            return False
+
     for u, v in G.edges():
         if u in coord_map and v in coord_map:
             loc_u = coord_map[u]
             loc_v = coord_map[v]
-            folium.PolyLine(locations=[loc_u, loc_v], weight=2, color="blue").add_to(m)
+
+            if (
+                isinstance(loc_u, (tuple, list)) and
+                isinstance(loc_v, (tuple, list)) and
+                len(loc_u) == 2 and len(loc_v) == 2 and
+                all(is_valid_number(c) for c in loc_u + loc_v)
+            ):
+                lat_u, lon_u = float(loc_u[0]), float(loc_u[1])
+                lat_v, lon_v = float(loc_v[0]), float(loc_v[1])
+
+                folium.PolyLine(
+                    locations=[(lat_u, lon_u), (lat_v, lon_v)],
+                    weight=2,
+                    color="blue",
+                    opacity=0.7
+                ).add_to(m)
+            else:
+                print(f"[WARN] Invalid coordinate: {u} -> {loc_u}, {v} -> {loc_v}")
+
+    st.markdown(f"### {title}")
     st_folium(m, width=800, height=600)
+
 
 def plot_route_on_map(route, coord_map, title="Route Map"):
     """
