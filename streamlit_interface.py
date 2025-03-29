@@ -25,6 +25,9 @@ with st.spinner("Loading data..."):
 
 label_map = build_airport_labels(df, "airport_1", "city1")
 
+airport_to_city = build_airport_labels(df, "airport_1", "city1")
+city_to_airport = {v: k for k, v in airport_to_city.items()}
+
 def summarize_route(G, route, label_map):
     total_cost = 0
     total_distance = 0
@@ -48,8 +51,11 @@ with tab1:
     col1, col2 = st.columns(2)
 
     with col1:
-        origin = st.text_input("Origin Airport Code", "JFK").upper()
-        dest = st.text_input("Destination Airport Code", "LAX").upper()
+        origin_city = st.selectbox("Origin City", sorted(city_to_airport.keys()), index=0)
+        dest_city = st.selectbox("Destination City", sorted(city_to_airport.keys()), index=10)
+
+        origin = city_to_airport[origin_city]
+        dest = city_to_airport[dest_city]
 
     with col2:
         allow_transfers = st.checkbox("Allow Transfers", value=True)
@@ -117,20 +123,7 @@ with tab3:
         if os.path.exists(filename):
             pred_df = pd.read_csv(filename)
             pred_df = pred_df[pred_df["fare"] > 0]
-
-            G_pred = build_graph(pred_df, "airport_1", "airport_2", "fare")
-
-            # 创建 route → distance 映射表
-            distance_map = {
-                tuple(sorted((row["airport_1"], row["airport_2"]))): row.get("distance", 0)
-                for _, row in pred_df.iterrows()
-            }
-
-            # 为 G_pred 中所有边添加 distance（不依赖 direction）
-            for u, v in G_pred.edges():
-                key = tuple(sorted((u, v)))
-                G_pred[u][v]["distance"] = distance_map.get(key, 0)
-
+            G_pred = build_graph(pred_df, "airport_1", "airport_2", "fare", extra_cols=["distance"])
             st.session_state.pred_df = pred_df
             st.session_state.G_pred = G_pred
             st.success(f"Loaded prediction data for 2025 {quarter}")
@@ -143,6 +136,7 @@ with tab3:
 
         st.dataframe(pred_df.head(50))
         label_map_pred = build_airport_labels(pred_df, "airport_1", "city1")
+        city_to_airport_pred = {v: k for k, v in label_map_pred.items()}
 
         st.markdown("#### Available Airports in Prediction Graph")
         st.text(", ".join(list(G_pred.nodes())[:30]) + " ...")
@@ -151,8 +145,11 @@ with tab3:
         draw_network(G_pred, f"Predicted Fare Graph ({quarter})", label_map_pred)
 
         st.markdown("### Try Route Search on Prediction")
-        pred_origin = st.text_input("Origin (Prediction)", "JFK", key="pred_origin").upper()
-        pred_dest = st.text_input("Destination (Prediction)", "LAX", key="pred_dest").upper()
+        pred_origin_city = st.selectbox("Origin City (Prediction)", sorted(city_to_airport_pred.keys()), key="pred_origin_city")
+        pred_dest_city = st.selectbox("Destination City (Prediction)", sorted(city_to_airport_pred.keys()), key="pred_dest_city")
+
+        pred_origin = city_to_airport_pred[pred_origin_city]
+        pred_dest = city_to_airport_pred[pred_dest_city]
 
         if st.button("Show Predicted Route"):
             try:
