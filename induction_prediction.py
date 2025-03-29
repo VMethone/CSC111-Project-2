@@ -233,8 +233,13 @@ def main():
         current_graph = G_pred
 
 def export_predictions(G, period, df_template):
+    import pandas as pd
+
     records = []
+
     city_map = df_template[['airport_1', 'city1']].drop_duplicates().set_index('airport_1')['city1'].to_dict()
+
+    coord_map = df_template[['airport_1', 'lat1', 'long1']].dropna().drop_duplicates().set_index('airport_1').T.to_dict('list')
 
     for u, v, data in G.edges(data=True):
         records.append({
@@ -244,9 +249,13 @@ def export_predictions(G, period, df_template):
             'airport_2': v,
             'city1': city_map.get(u, ''),
             'city2': city_map.get(v, ''),
-            'fare': data['fare'],
-            'passengers': data['passengers'],
-            'distance': data.get('distance', 0)
+            'fare': data.get('fare', 0),
+            'passengers': data.get('passengers', 0),
+            'distance': data.get('distance', 0),
+            'latitude1': coord_map.get(u, [None, None])[0],
+            'longitude1': coord_map.get(u, [None, None])[1],
+            'latitude2': coord_map.get(v, [None, None])[0],
+            'longitude2': coord_map.get(v, [None, None])[1]
         })
 
     df_out = pd.DataFrame(records)
@@ -255,6 +264,7 @@ def export_predictions(G, period, df_template):
     df_out = df_out.dropna(subset=["airport_1", "airport_2", "fare", "passengers", "distance"])
 
     df_out.to_csv(f"prediction_{period[0]}Q{period[1]}.csv", index=False)
+
 
 
 if __name__ == "__main__":
