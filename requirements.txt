@@ -6,3 +6,5 @@ plotly
 scipy
 streamlit
 streamlit_folium
+dash
+dash_bootstrap_components
