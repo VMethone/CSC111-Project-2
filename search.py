@@ -115,6 +115,7 @@ def reconstruct(end_location: Location, predecessors: dict[int, tuple[Location, 
 def plot_all_routes(flights: Flights, title: str, valid = lambda *args: True):
     coords = {l.location_id: l.geo_loc for l in flights.cities}
     labels = [list(l.airport_codes) for l in flights.cities]
+    city_names = [l.city_name for l in flights.cities] 
     lons = [coords[airport][1] for airport in coords]
     lats = [coords[airport][0] for airport in coords]
 
@@ -125,17 +126,6 @@ def plot_all_routes(flights: Flights, title: str, valid = lambda *args: True):
     line_lons = []
     line_lats = []
     done = set()
-
-    fig = go.Figure(go.Scattergeo(
-        lon=lons,
-        lat=lats,
-        mode='markers+text',
-        text=labels,
-        textposition="top center",
-        line=dict(width=2, color='blue'),
-        marker=dict(size=6),
-        name=""
-    ))
 
     number_of_routes = 0
     for location in flights.flight_routes:
@@ -154,11 +144,31 @@ def plot_all_routes(flights: Flights, title: str, valid = lambda *args: True):
                 line_lats.extend([coords[dep_city][0], coords[arr_city][0], None])
 
 
+    fig = go.Figure(go.Scattergeo(
+        lon=lons,
+        lat=lats,
+        mode='markers',
+        hoverinfo="text",  # Show only custom hover info
+        hovertemplate=(
+            "<b>City:</b> %{customdata[0]}<br>"
+            "<b>Airports:</b> %{text}<br>"
+            "<b>Lat:</b> %{lat:.2f}°<br>"
+            "<b>Lon:</b> %{lon:.2f}°"
+            "<extra></extra>"  # Removes trace name
+        ),
+        text=labels,
+        customdata=list(zip(city_names)), 
+        textposition="top center",
+        line=dict(width=2, color='blue'),
+        marker=dict(size=6),
+        name=""
+    ))
 
     if line_lons and line_lats:
         fig.add_trace(go.Scattergeo(
             lon=line_lons,
             lat=line_lats,
+            hoverinfo='text',
             mode='lines',
             line=dict(width=0.2, color='rgba(255, 0, 0, 0.2)'),
             name=""
@@ -183,7 +193,7 @@ def get_default_map(flights: Flights | None = None) -> go.Figure:
         flights = Flights()
     coords = {l.location_id: l.geo_loc for l in flights.cities}
     labels = [f"[{' '.join(list(l.airport_codes))}]" for l in flights.cities]
-    city_names = [l.city_name for l in flights.cities]  # New line for city names
+    city_names = [l.city_name for l in flights.cities] 
 
     lons = [coords[airport][1] for airport in coords]
     lats = [coords[airport][0] for airport in coords]

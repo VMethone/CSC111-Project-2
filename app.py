@@ -488,7 +488,7 @@ def predict_route(n, quarter, origin_code, dest_code, priority):
     if not n:
         return get_default_map(), "", get_default_map()
 
-    filename = f"prediction_2025{quarter}.csv"
+    filename = f"Predicted_Airlines_2025.csv"
     if not os.path.exists(filename):
         return get_default_map(), f"Prediction file {filename} not found.", get_default_map()
 
@@ -510,7 +510,21 @@ def predict_route(n, quarter, origin_code, dest_code, priority):
         priorities = [priority]
     
 
-    dist, final_route = find_shortest_path(pred, origin, dest, priorities)
+    def filter_routes(r: Route) -> bool:
+        # filter start and end locations to match airport codes
+
+        if {origin_code, dest_code} <= (r.arrival_loc.airport_codes).union(r.depart_loc.airport_codes):
+            return {origin_code, dest_code} == {r.arrival_airport, r.depart_airport}
+
+        if origin_code in (r.arrival_loc.airport_codes).union(r.depart_loc.airport_codes):
+            return origin_code in [r.arrival_airport, r.depart_airport]
+        
+        if dest_code in (r.arrival_loc.airport_codes).union(r.depart_loc.airport_codes):
+            return dest_code in [r.arrival_airport, r.depart_airport]
+        
+        return True
+
+    dist, final_route = find_shortest_path(pred, origin, dest, priorities, valid=filter_routes)
     
     if not final_route:
         return get_default_map(), "No predicted route found.", plot_all_routes(pred)

@@ -1,4 +1,4 @@
-Year,quarter,citymarketid_1,citymarketid_2,city1,city2,airportid_1,airportid_2,airport_1,airport_2,nsmiles,fare,Geocoded_City1,Geocoded_City2,tbl1apk,period
+year,quarter,citymarketid_1,citymarketid_2,city1,city2,airportid_1,airportid_2,airport_1,airport_2,nsmiles,fare,Geocoded_City1,Geocoded_City2,tbl1apk,period
 2025,1,32467,30559,"Miami, FL (Metropolitan Area)","Seattle, WA",11697,14747,FLL,SEA,2724,317.08,"(44.977479, -93.264346)","(47.603229, -122.33028)",202411169714747FLLSEA,Post-Pandemic
 2025,1,30647,31453,"Cleveland, OH (Metropolitan Area)","Houston, TX",11042,12266,CLE,IAH,1106,212.58,"(41.505546, -81.6915)","(29.760803, -95.369506)",202411104212266CLEIAH,Post-Pandemic
 2025,1,33105,30466,"Cincinnati, OH","Phoenix, AZ",11193,10466,CVG,AZA,1569,125.66,"(39.104427, -84.513808)","(30.406931, -87.217578)",202411119310466CVGAZA,Post-Pandemic
