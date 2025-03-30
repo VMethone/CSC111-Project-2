@@ -3,7 +3,7 @@ import dash_bootstrap_components as dbc
 import pandas as pd
 import os
 from flights import Flights, Location, Route
-from search import find_shortest_path, create_route_map, plot_route, get_default_map
+from search import find_shortest_path, plot_route, get_default_map, plot_all_routes
 import plotly.graph_objects as go
 
 # App setup
@@ -321,24 +321,124 @@ def fare_trends_layout():
     years = list(range(2018, 2025))
     avg_fares = []
     for year in years:
-        year_all_flights = all_flights.filter_by_period(year, year)
-        fares = [r.fare for routes in year_all_flights.flight_routes.values() for r in routes]
-        avg_fare = sum(fares) / len(fares) if fares else 0
-        avg_fares.append({"year": year, "fare": avg_fare})
+        for quarter in [1, 2, 3, 4]:
+            # Missing data
+            if year == 2024 and quarter > 1:
+                continue
+            filtered_flights = [r for routes in all_flights.flight_routes.values()
+                                for r in routes if r.year == year and r.quarter == quarter]
+            fares = [r.fare for r in filtered_flights]
+            avg_fare = sum(fares) / len(fares) if fares else 0
+            avg_fares.append({"year": year + (quarter / 4), "fare": avg_fare})
     df = pd.DataFrame(avg_fares)
 
     return dbc.Container([
         html.H5("Average Fare per Year"),
         dcc.Graph(figure={
-            'data': [{'x': df['year'], 'y': df['fare'], 'type': 'line', 'name': 'Fare'}],
-            'layout': {'title': 'Fare Trends (2018-2024)'}
+            'data': [{
+                'x': df['year'],
+                'y': df['fare'],
+                'type': 'line',
+                'name': 'Fare'
+            }],
+            'layout': {
+                'title': 'Fare Trends (2018-2024)',
+                'shapes': [{
+                    'type': 'line', 'x0': 2020.25, 'x1': 2020.25,
+                    'y0': 0, 'y1': 1, 'yref': 'paper',
+                    'line': {'color': 'red', 'width': 2, 'dash': 'dash'}
+                },
+                {
+                    'type': 'line', 'x0': 2022.5, 'x1': 2022.5,
+                    'y0': 0, 'y1': 1, 'yref': 'paper',
+                    'line': {'color': 'red', 'width': 2, 'dash': 'dash'}
+                    }
+                ],
+                'annotations': [
+                    {
+                        'x': 2020.25, 'y': 1,
+                        'yanchor': 'bottom',
+                        'text': 'COVID Start',
+                        'showarrow': False,
+                        'font': {'color': 'red'}
+                    },
+                    {
+                        'x': 2022.5, 'y': 1,
+                        'yanchor': 'bottom',
+                        'text': 'COVID End',
+                        'showarrow': False,
+                        'font': {'color': 'red'}
+                    }
+                ]
+            }
         }),
         html.Hr(),
-        html.H5("Network Maps by Period"),
-        dcc.Graph(figure=create_route_map(all_flights.filter_by_period(2018, 2020), "Pre-pandemic (2018-2020)")),
-        dcc.Graph(figure=create_route_map(all_flights.filter_by_period(2021, 2022), "During-pandemic (2021-2022)")),
-        dcc.Graph(figure=create_route_map(all_flights.filter_by_period(2023, 2024), "Post-pandemic (2023-2024)")),
+        html.Div([
+            html.H5("Network Map Timeline"),
+            dcc.Graph(
+                id='network-map-timeline', 
+                figure=plot_all_routes(
+                    all_flights,
+                    title=f"Pre-pandemic: 2018 (Q1)",
+                    valid=lambda x: (x.year == 2018 and x.quarter == 1)
+                    ),
+                style={
+                    'width': '100%', 
+                    'height': '80vh',
+                    'border': '1px solid #ddd',
+                    'borderRadius': '5px',
+                    'margin': '0 auto'
+                    },
+                config={'scrollZoom': True, 'displayModeBar': False}
+            ),
+            dcc.Slider(
+                id='year-slider',
+                min=2018.25,
+                max=2024.25,
+                step=0.25,
+                value=2018.25,
+                marks={
+                    y: {'label': f"{int(y)} Q1", 'style': {'transform': 'rotate(45deg)'}}
+                    for y in [2018.25, 2019.25, 2020.25, 2021.25, 2022.25, 2023.25, 2024.25]
+                },
+                tooltip={
+                    "placement": "bottom",
+                    "always_visible": False,
+                    "template": "{value}"
+                },
+                included=False,
+                className="mt-3 mb-5"
+            )
+        ], style={
+            'maxWidth': '1200px',
+            'margin': '0 auto',
+            'padding': '20px'
+        })
     ])
+
+@app.callback(
+    Output('network-map-timeline', 'figure'),
+    Input('year-slider', 'value')
+)
+def update_network_map(selected_year):
+    selected_quarter = round((selected_year - int(selected_year - 0.25)) * 4)
+
+    def filter_by_year(year, quarter):
+        return lambda x: (x.year == year and x.quarter == quarter)
+    
+    if selected_year - 0.25 <= 2020:
+        title = "Pre-pandemic"
+    elif 2020 <= selected_year - 0.25 <= 2022:
+        title = "During-pandemic"
+    else:
+        title = "Post-pandemic"
+    
+    
+    return plot_all_routes(
+        all_flights,
+        title=f"{title}: {int(selected_year - 0.25)} (Q{selected_quarter})",
+        valid=filter_by_year(int(selected_year - 0.25), selected_quarter)
+    )
 
 
 # === Tab 3 ===
@@ -386,57 +486,48 @@ def prediction_layout():
 )
 def predict_route(n, quarter, origin_code, dest_code, priority):
     if not n:
-        return go.Figure(), "", go.Figure()
+        return get_default_map(), "", get_default_map()
 
     filename = f"prediction_2025{quarter}.csv"
     if not os.path.exists(filename):
-        return go.Figure(), f"Prediction file {filename} not found.", go.Figure()
+        return get_default_map(), f"Prediction file {filename} not found.", get_default_map()
 
     pred = Flights(filename)
 
-    origin = next((loc for loc in pred.cities if loc.airport_code == origin_code), None)
-    dest = next((loc for loc in pred.cities if loc.airport_code == dest_code), None)
+    origin = next((loc for loc in pred.cities if origin_code in loc.airport_codes), None)
+    dest = next((loc for loc in pred.cities if dest_code in loc.airport_codes), None)
 
     if not origin or not dest:
-        return go.Figure(), "Invalid cities.", create_route_map(pred)
+        return get_default_map(pred), "Invalid cities.", plot_all_routes(pred)
 
     if priority == "fare_dist":
         priorities = ["fare", "dist"]
     elif priority == "fare_transfers":
         priorities = ["fare", "transfers"]
+    elif priority == "transfers":
+        priorities = ["transfers", "fare"]
     else:
         priorities = [priority]
+    
 
-    result = find_shortest_path(pred, origin, dest, priorities)
+    dist, final_route = find_shortest_path(pred, origin, dest, priorities)
+    
+    if not final_route:
+        return get_default_map(), "No predicted route found.", plot_all_routes(pred)
 
-    if not result:
-        return go.Figure(), "No predicted route found.", create_route_map(pred)
 
-    route = [origin.airport_code] + [r.arrival_loc.airport_code for r in result["path"]]
-    coords = {l.airport_code: l.geo_loc for l in pred.cities}
-    lats = [coords[c][0] for c in route if c in coords]
-    lons = [coords[c][1] for c in route if c in coords]
+    fig = plot_route(pred, final_route)
+    output_route = Route.get_route_path_string(final_route)
 
-    fig = go.Figure(go.Scattergeo(
-        lon=lons,
-        lat=lats,
-        mode='lines+markers',
-        line=dict(width=2, color='blue'),
-        marker=dict(size=6),
-        text=route
-    ))
-    fig.update_layout(title=f"Predicted Route 2025 {quarter}", geo=dict(scope='usa', projection_type='albers usa'))
-
-    cost = result["cost"]
     summary_div = html.Div([
-        html.H6("Predicted Route"),
-        html.P(" → ".join(route)),
-        html.P(f"Predicted Fare: ${cost[0]:.2f}"),
-        html.P(f"Distance: {int(cost[1])} miles"),
-        html.P(f"Transfers: {int(cost[2])}")
+        html.H6("Route Summary"),
+        html.P(output_route),
+        html.P(f"Total Fare: ${dist["fare"]:.2f}"),
+        html.P(f"Total Distance: {int(dist["dist"])} miles"),
+        html.P(f"Transfers: {int(dist["transfers"]) - 1}")
     ])
 
-    return fig, summary_div, create_route_map(pred, title=f"All Predicted Routes for 2025 {quarter}")
+    return fig, summary_div, plot_all_routes(pred, title=f"All Predicted Routes for 2025 {quarter}")
 
 # Run the app
 if __name__ == '__main__':

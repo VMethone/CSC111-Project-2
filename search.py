@@ -112,63 +112,19 @@ def reconstruct(end_location: Location, predecessors: dict[int, tuple[Location, 
 
     return list(reversed(path_routes))
 
-def create_route_map(flights: Flights, title: str = "Flight Routes"):
+def plot_all_routes(flights: Flights, title: str, valid = lambda *args: True):
     coords = {l.location_id: l.geo_loc for l in flights.cities}
     labels = [list(l.airport_codes) for l in flights.cities]
-
-    lons = [coords[airport][1] for airport in coords]
-    lats = [coords[airport][0] for airport in coords]
-
-    fig = go.Figure(go.Scattergeo(
-        lon=lons,
-        lat=lats,
-        mode='markers+text',
-        text=labels,
-        textposition="top center",
-        marker=dict(size=6),
-    ))
-
-    line_lons = []
-    line_lats = []
-    done = set()
-    for location in flights.flight_routes:
-        for route in flights.flight_routes[location]:
-            dep = route.depart_loc.location_id
-            arr = route.arrival_loc.location_id
-            key = tuple(sorted((dep, arr)))
-            if key in done:
-                continue
-            done.add(key)
-            if dep in coords and arr in coords:
-                line_lons += [coords[dep][1], coords[arr][1], None]
-                line_lats += [coords[dep][0], coords[arr][0], None]
-
-    fig.add_trace(go.Scattergeo(
-        lon=line_lons,
-        lat=line_lats,
-        mode='lines',
-        line=dict(width=1, color='red'),
-        name='Routes'
-    ))
-
-    fig.update_layout(
-        title=title,
-        geo=dict(scope='usa', projection_type='albers usa', showland=True)
-    )
-
-    return fig
-
-
-def plot_map(flights: Flights):
-    coords = {l.location_id: l.geo_loc for l in flights.cities}
-    labels = [list(l.airport_codes) for l in flights.cities]
-
     lons = [coords[airport][1] for airport in coords]
     lats = [coords[airport][0] for airport in coords]
 
     if not lons or not lats:
         print("Map plotting skipped: missing coordinates for some airports.")
         return
+
+    line_lons = []
+    line_lats = []
+    done = set()
 
     fig = go.Figure(go.Scattergeo(
         lon=lons,
@@ -178,36 +134,39 @@ def plot_map(flights: Flights):
         textposition="top center",
         line=dict(width=2, color='blue'),
         marker=dict(size=6),
+        name=""
     ))
 
-    # Collect line segments for all flight routes
-    line_lons = []
-    line_lats = []
-    done = set()
+    number_of_routes = 0
     for location in flights.flight_routes:
         for route in flights.flight_routes[location]:
+            if not valid(route):
+                continue
+            number_of_routes += 1
             dep_city = route.depart_loc.location_id
             arr_city = route.arrival_loc.location_id
             if (dep_city, arr_city) in done:
                 continue
+
             done.add((dep_city, arr_city))
             if dep_city in coords and arr_city in coords:
-                # Add departure and arrival coordinates, separated by None
                 line_lons.extend([coords[dep_city][1], coords[arr_city][1], None])
                 line_lats.extend([coords[dep_city][0], coords[arr_city][0], None])
 
-        # Add all flight routes as lines
+
+
     if line_lons and line_lats:
         fig.add_trace(go.Scattergeo(
             lon=line_lons,
             lat=line_lats,
             mode='lines',
-            line=dict(width=1, color='red'),
-            name='Flight Routes'
+            line=dict(width=0.2, color='rgba(255, 0, 0, 0.2)'),
+            name=""
         ))
 
+
     fig.update_layout(
-        title="Airports and Flight Routes",
+        title=f"{title} ({number_of_routes} Total Routes)",
         geo=dict(
             scope='usa',
             projection_type='albers usa',
@@ -217,11 +176,14 @@ def plot_map(flights: Flights):
         )
     )
 
-    fig.show()
+    return fig
 
-def get_default_map(flights: Flights) -> go.Figure:
+def get_default_map(flights: Flights | None = None) -> go.Figure:
+    if not flights:
+        flights = Flights()
     coords = {l.location_id: l.geo_loc for l in flights.cities}
     labels = [f"[{' '.join(list(l.airport_codes))}]" for l in flights.cities]
+    city_names = [l.city_name for l in flights.cities]  # New line for city names
 
     lons = [coords[airport][1] for airport in coords]
     lats = [coords[airport][0] for airport in coords]
@@ -229,8 +191,17 @@ def get_default_map(flights: Flights) -> go.Figure:
     fig = go.Figure(go.Scattergeo(
         lon=lons,
         lat=lats,
-        mode='markers+text',
+        mode='markers',
+        hoverinfo="text",  # Show only custom hover info
+        hovertemplate=(
+            "<b>City:</b> %{customdata[0]}<br>"
+            "<b>Airports:</b> %{text}<br>"
+            "<b>Lat:</b> %{lat:.2f}°<br>"
+            "<b>Lon:</b> %{lon:.2f}°"
+            "<extra></extra>"  # Removes trace name
+        ),
         text=labels,
+        customdata=list(zip(city_names)), 
         textposition="top center",
         line=dict(width=2, color='blue'),
         marker=dict(size=6),
@@ -251,9 +222,12 @@ def get_default_map(flights: Flights) -> go.Figure:
 def plot_route(flights: Flights, total_route: list[Route]) -> go.Figure:
     route_cities = [total_route[0].depart_loc]
     labels = [total_route[0].depart_airport]
+    city_names = [total_route[0].depart_loc.city_name]
+
     for route in total_route:
         route_cities.append(route.arrival_loc)
         labels.append(route.arrival_airport)
+        city_names.append(route.arrival_loc.city_name)
 
     coords = {l.location_id: l.geo_loc for l in route_cities}
 
@@ -263,8 +237,16 @@ def plot_route(flights: Flights, total_route: list[Route]) -> go.Figure:
     fig = go.Figure(go.Scattergeo(
         lon=lons,
         lat=lats,
-        mode='markers+text',
-        text=labels,
+        mode="markers+text",
+        text=city_names,
+        customdata=labels, 
+        hovertemplate=(
+            "<b>City:</b> %{text}<br>"
+            "<b>Airports:</b> %{customdata}<br>"
+            "<b>Lat:</b> %{lat:.2f}°<br>"
+            "<b>Lon:</b> %{lon:.2f}°"
+            "<extra></extra>"
+        ),
         textposition="top center",
         line=dict(width=2, color='blue'),
         marker=dict(size=6),
@@ -287,6 +269,7 @@ def plot_route(flights: Flights, total_route: list[Route]) -> go.Figure:
             lon=line_lons,
             lat=line_lats,
             mode='lines',
+            hoverinfo='skip',
             line=dict(width=1, color='red'),
             name='Flight Routes'
         ))
