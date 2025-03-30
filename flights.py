@@ -13,13 +13,13 @@ class Location():
     year: int
     quarter: int
     geo_loc: tuple[float, float]
-    airport_code: str
+    airport_codes: set[str]
 
     def __init__(self, loc_id: int, name: str, geo_loc, code: str) -> None:
         self.location_id = loc_id
         self.city_name = name
         self.geo_loc = geo_loc
-        self.airport_code = code
+        self.airport_codes = {code}
 
     def __str__(self) -> str:
         return f"({self.city_name}: {self.location_id})"
@@ -35,15 +35,17 @@ class Route():
     route_id: str
     depart_loc: Location
     arrival_loc: Location
+    depart_airport: str
+    arrival_airport: str
     year: int
     quarter: int
     dist: float
     fare: float
 
-    def __init__(self, route_id: str, departure_city: Location, arrival_city: Location,
+    def __init__(self, route_id: str, departure_city: tuple[Location, str], arrival_city: tuple[Location, str],
                  year: int, quarter: int, dist: float, fare: float):
-        self.depart_loc = departure_city
-        self.arrival_loc = arrival_city
+        self.depart_loc, self.depart_airport = departure_city
+        self.arrival_loc, self.arrival_airport = arrival_city
         self.route_id = route_id
         self.year = year
         self.quarter = quarter
@@ -93,8 +95,8 @@ class Flights():
 
             self.add_route(
                 route_id=row_dict['tbl1apk'],
-                depart_loc=start_location,
-                arrival_loc=end_location,
+                depart_loc=(start_location, row_dict['airport_1']),
+                arrival_loc=(end_location, row_dict['airport_2']),
                 year=row_dict['year'],
                 quarter=row_dict['quarter'],
                 dist=row_dict['nsmiles'],
@@ -118,99 +120,51 @@ class Flights():
             self.id_to_city[city_id] = new_city
             self.cities.add(new_city)
             return
+        
+        else:
+            self.id_to_city[city_id].airport_codes.add(code)
 
         if city_name != self.id_to_city[city_id]:
             pass
             # print(f"Found Duplicate for {city_name}: {city_name} != {self.id_to_city[city_id]}")
 
-    def add_route(self, route_id: str, depart_loc: Location, arrival_loc: Location,
-                  year: int, quarter: int, dist: float, fare: float) -> None:
+    def add_route(self, route_id: str, depart_loc: tuple[Location, str], 
+                  arrival_loc: tuple[Location, str], year: int, quarter: int, dist: float, fare: float) -> None:
         """
         Add at route between two locations
         """
-        self.flight_routes[depart_loc].append(Route(
+        self.flight_routes[depart_loc[0]].append(Route(
             route_id=route_id, departure_city=depart_loc, arrival_city=arrival_loc,
             year=year, quarter=quarter, dist=dist, fare=fare
         ))
-        self.flight_routes[arrival_loc].append(Route(
+        self.flight_routes[arrival_loc[0]].append(Route(
             route_id=route_id, departure_city=arrival_loc, arrival_city=depart_loc,
             year=year, quarter=quarter, dist=dist, fare=fare
         ))
 
-    def filter_by_period(self, start_year: int, end_year: int) -> Flights:
-        filtered = Flights()
-        for loc in self.cities:
-            filtered.add_city(loc.location_id, loc.city_name, loc.geo_loc, loc.airport_code)
-
-        for loc, routes in self.flight_routes.items():
-            for route in routes:
-                if start_year <= route.year <= end_year:
-                    filtered.add_route(
-                        route_id=route.route_id,
-                        depart_loc=filtered.id_to_city[route.depart_loc.location_id],
-                        arrival_loc=filtered.id_to_city[route.arrival_loc.location_id],
-                        year=route.year,
-                        quarter=route.quarter,
-                        dist=route.dist,
-                        fare=route.fare
-                    )
-        return filtered
+    def __repr__(self):
+        output = []
+        for city in self.cities:
+            for route in self.flight_routes[city]:
+                output.append(str(route))
+        return "".join(output)
 
 
-class AllFlights():
-    year_to_flights: dict[int, Flights]
-    quarter_to_flights: list[Flights]
-    year_quarter_to_flights: dict[int, list[Flights]]
+    # def filter_by_period(self, start_year: int, end_year: int) -> Flights:
+    #     filtered = Flights()
+    #     for loc in self.cities:
+    #         filtered.add_city(loc.location_id, loc.city_name, loc.geo_loc, loc.airport_codes)
 
-    def __init__(self, csv: str = ""):
-        self.year_quarter_to_flights = defaultdict(lambda: defaultdict(Flights))
-        self.year_to_flights = defaultdict(Flights)
-        self.quarter_to_flights = defaultdict(Flights)
-        if csv:
-            self.load_from_cvs(csv)
-
-    def load_from_cvs(self, csv_path: str):
-        """
-        Load csv file into the Flights class extracting relevant information
-        """
-        df = pd.read_csv(csv_path, low_memory=False)
-        df.columns = df.columns.str.strip()
-
-        for index, row in df.iterrows():
-            row_dict = row.to_dict()
-            # city_id, city_name = row_dict['citymarketid_1'], row_dict['city1']
-            year = row_dict['year']
-            quarter = row_dict['quarter'],
-
-            self._add_city(row_dict['citymarketid_1'], row_dict["city1"], year, quarter)
-            self._add_city(row_dict['citymarketid_2'], row_dict["city2"], year, quarter)
-
-            start_location: Location = self.id_to_city[row_dict['citymarketid_1']]
-            end_location: Location = self.id_to_city[row_dict['citymarketid_2']]
-
-            self._add_route(
-                route_id=row_dict['tbl1apk'],
-                depart_loc=start_location,
-                arrival_loc=end_location,
-                year=row_dict['year'],
-                quarter=row_dict['quarter'],
-                dist=row_dict['nsmiles'],
-                fare=row_dict['fare']
-            )
-
-    def _add_city(self, city_id: int, city_name: str, year: int, quarter: int) -> None:
-        self.quarter_to_flights[quarter].add_city(city_id, city_name)
-        self.year_quarter_to_flights[year][quarter].add_city(city_id, city_name)
-        self.year_to_flights[year].add_city(city_id, city_name)
-
-    def _add_route(self, route_id: str, depart_loc: Location, arrival_loc: Location,
-                   year: int, quarter: int, dist: float, fare: float) -> None:
-        self._add_route(
-            route_id=route_id,
-            depart_loc=depart_loc,
-            arrival_loc=arrival_loc,
-            year=year,
-            quarter=quarter,
-            dist=dist,
-            fare=fare
-        )
+    #     for loc, routes in self.flight_routes.items():
+    #         for route in routes:
+    #             if start_year <= route.year <= end_year:
+    #                 filtered.add_route(
+    #                     route_id=route.route_id,
+    #                     depart_loc=filtered.id_to_city[route.depart_loc.location_id],
+    #                     arrival_loc=filtered.id_to_city[route.arrival_loc.location_id],
+    #                     year=route.year,
+    #                     quarter=route.quarter,
+    #                     dist=route.dist,
+    #                     fare=route.fare
+    #                 )
+    #     return filtered
