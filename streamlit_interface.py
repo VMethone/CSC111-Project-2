@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import networkx as nx
 import plotly.graph_objects as go
-from main import (
+from another_main import (
     load_dataset, filter_by_period, build_graph, build_airport_labels,
     show_shortest_path, plot_full_network_routes
 )
