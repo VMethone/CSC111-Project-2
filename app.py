@@ -3,7 +3,7 @@ import dash_bootstrap_components as dbc
 import pandas as pd
 import os
 from flights import Flights, Location, Route
-from search import find_shortest_path, create_route_map, plot_route
+from search import find_shortest_path, create_route_map, plot_route, get_default_map
 import plotly.graph_objects as go
 
 # App setup
@@ -245,16 +245,16 @@ def update_destination_airports(selected_city_value):
     State('dest-city', 'value'),
     State('dest-airport', 'value'),
     State('period-select', 'value'),
-    State('priority-select', 'value')
+    State('priority-select', 'value'),
+    State('allow-transfers', 'value')
 )
-def find_route(n, origin_city, origin_airport, dest_city, dest_airport, period, priority):
+def find_route(n, origin_city, origin_airport, dest_city, dest_airport, period, priority, allow_transfers):
     if not n:
-        return go.Figure(), ""
+        return get_default_map(all_flights), ""
 
     start_year, end_year = period_map[period]
 
     def filter_routes(r: Route) -> bool:
-        return True
         if not (start_year <= r.year <= end_year):
             return False
         
@@ -277,7 +277,7 @@ def find_route(n, origin_city, origin_airport, dest_city, dest_airport, period, 
                        (dest_airport == 'Any' and loc.city_name == dest_city))), None)
     
     if not origin or not dest:
-        return go.Figure(), f"Invalid origin or destination."
+        return get_default_map(all_flights), f"Invalid origin or destination."
 
     if priority == "fare_dist":
         priorities = ["fare", "dist"]
@@ -288,18 +288,27 @@ def find_route(n, origin_city, origin_airport, dest_city, dest_airport, period, 
     else:
         priorities = [priority]
 
+    if not allow_transfers:
+        if "transfers" in priorities:
+            priorities.pop(priorities.index("transfers"))
+        priorities = ["transfers"] + priorities
+    
     print(f"Searching for shortest path with: \n{origin} TO {dest}\n{priorities = }")
     dist, final_route = find_shortest_path(all_flights, origin, dest, priorities, valid=filter_routes)
+    print(f"Results: {dist}")
 
-    fig = plot_route(all_flights, final_route)
+    if not allow_transfers and len(final_route) > 1:
+        final_route = []
 
     if not final_route:
-        return go.Figure(), "No route found."
+        return get_default_map(all_flights), "No route found."
+
+    fig = plot_route(all_flights, final_route)
     
-    output_route = [str(final_route[0].depart_loc)] + [str(route.arrival_loc) for route in final_route]
+    output_route = Route.get_route_path_string(final_route)
     return fig, html.Div([
         html.H6("Route Summary"),
-        html.P(" → ".join(output_route)),
+        html.P(output_route),
         html.P(f"Total Fare: ${dist["fare"]:.2f}"),
         html.P(f"Total Distance: {int(dist["dist"])} miles"),
         html.P(f"Transfers: {int(dist["transfers"]) - 1}")

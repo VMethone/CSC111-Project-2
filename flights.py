@@ -52,6 +52,14 @@ class Route():
         self.dist = dist
         self.fare = fare
 
+    def get_route_path_string(all_routes: list[Route]) -> str:
+        output = []
+        output.append(f"({all_routes[0].depart_loc.city_name}: {all_routes[0].depart_airport})")
+        for route in all_routes:
+            output.append(f"({route.arrival_loc.city_name}: {route.arrival_airport})")
+
+        return " → ".join(output)
+
     def __str__(self):
         return f"Route: {self.depart_loc} -> {self.arrival_loc} for ${self.fare} in {self.year} (Q{self.quarter})"
 
@@ -124,10 +132,6 @@ class Flights():
         else:
             self.id_to_city[city_id].airport_codes.add(code)
 
-        if city_name != self.id_to_city[city_id]:
-            pass
-            # print(f"Found Duplicate for {city_name}: {city_name} != {self.id_to_city[city_id]}")
-
     def add_route(self, route_id: str, depart_loc: tuple[Location, str], 
                   arrival_loc: tuple[Location, str], year: int, quarter: int, dist: float, fare: float) -> None:
         """
@@ -148,23 +152,3 @@ class Flights():
             for route in self.flight_routes[city]:
                 output.append(str(route))
         return "".join(output)
-
-
-    # def filter_by_period(self, start_year: int, end_year: int) -> Flights:
-    #     filtered = Flights()
-    #     for loc in self.cities:
-    #         filtered.add_city(loc.location_id, loc.city_name, loc.geo_loc, loc.airport_codes)
-
-    #     for loc, routes in self.flight_routes.items():
-    #         for route in routes:
-    #             if start_year <= route.year <= end_year:
-    #                 filtered.add_route(
-    #                     route_id=route.route_id,
-    #                     depart_loc=filtered.id_to_city[route.depart_loc.location_id],
-    #                     arrival_loc=filtered.id_to_city[route.arrival_loc.location_id],
-    #                     year=route.year,
-    #                     quarter=route.quarter,
-    #                     dist=route.dist,
-    #                     fare=route.fare
-    #                 )
-    #     return filtered

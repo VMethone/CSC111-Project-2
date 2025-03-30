@@ -32,6 +32,7 @@ def find_shortest_path(flights: Flights, start: Location, end: Location, priorit
         "dist": end_tuple[priorities.index("dist")],
         "transfers": end_tuple[priorities.index("transfers")],
     }
+    print()
     return sorted_dist, reconstruct(end, prev)
 
 
@@ -109,7 +110,7 @@ def reconstruct(end_location: Location, predecessors: dict[int, tuple[Location, 
         path_routes.append(route)
         current_id = prev_loc.location_id
 
-    return path_routes
+    return list(reversed(path_routes))
 
 def create_route_map(flights: Flights, title: str = "Flight Routes"):
     coords = {l.location_id: l.geo_loc for l in flights.cities}
@@ -218,9 +219,43 @@ def plot_map(flights: Flights):
 
     fig.show()
 
-def plot_route(flights: Flights, total_route: list[Route]) -> go.Figure:
+def get_default_map(flights: Flights) -> go.Figure:
     coords = {l.location_id: l.geo_loc for l in flights.cities}
-    labels = [list(l.airport_codes) for l in flights.cities]
+    labels = [f"[{' '.join(list(l.airport_codes))}]" for l in flights.cities]
+
+    lons = [coords[airport][1] for airport in coords]
+    lats = [coords[airport][0] for airport in coords]
+
+    fig = go.Figure(go.Scattergeo(
+        lon=lons,
+        lat=lats,
+        mode='markers+text',
+        text=labels,
+        textposition="top center",
+        line=dict(width=2, color='blue'),
+        marker=dict(size=6),
+    ))
+
+    fig.update_layout(
+        title="Airports",
+        geo=dict(
+            scope='usa',
+            projection_type='albers usa',
+            showland=True,
+            landcolor='rgb(217, 217, 217)',
+            countrycolor='rgb(255, 255, 255)'
+        )
+    )
+    return fig
+
+def plot_route(flights: Flights, total_route: list[Route]) -> go.Figure:
+    route_cities = [total_route[0].depart_loc]
+    labels = [total_route[0].depart_airport]
+    for route in total_route:
+        route_cities.append(route.arrival_loc)
+        labels.append(route.arrival_airport)
+
+    coords = {l.location_id: l.geo_loc for l in route_cities}
 
     lons = [coords[airport][1] for airport in coords]
     lats = [coords[airport][0] for airport in coords]
