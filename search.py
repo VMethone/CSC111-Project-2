@@ -140,8 +140,6 @@ def create_route_map(flights: Flights, title: str = "Flight Routes"):
 
     return fig
 
-def find_all_shortest_paths(flights: Flights, start: Location, priorities: List[str], valid=lambda: True) -> Optional[
-    Dict]:
 
 def find_shortest_path(flights: Flights, start: Location, end: Location, priorities: List[str], valid = lambda *args: True) -> tuple[list[int], list[Route]]:
     """

@@ -3,7 +3,6 @@ from collections import defaultdict
 import pandas as pd
 from ast import literal_eval
 
-
 class Location():
     """
     Stores the location of an airport
@@ -143,7 +142,7 @@ class Flights():
     def filter_by_period(self, start_year: int, end_year: int) -> Flights:
         filtered = Flights()
         for loc in self.cities:
-            filtered.add_city(loc.location_id, loc.city_name, loc.geo_loc, loc.airport_code)
+            filtered.add_city(loc.location_id, loc.city_name, loc.geo_loc, next(iter(loc.airport_codes)))
 
         for loc, routes in self.flight_routes.items():
             for route in routes:
