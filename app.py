@@ -3,7 +3,7 @@ import dash_bootstrap_components as dbc
 import pandas as pd
 import os
 from flights import Flights
-from search import find_shortest_path, create_route_map, find_city_to_city_path
+from search import find_shortest_path, create_route_map
 import plotly.graph_objects as go
 
 # App setup
@@ -14,16 +14,26 @@ server = app.server
 # Load data
 flights = Flights("Final.csv")
 period_map = {
-    "Pre-pandemic (2018-2020)": (2018, 2020),
-    "During-pandemic (2021-2022)": (2021, 2022),
-    "Post-pandemic (2023-2024)": (2023, 2024)
+    "Pre-pandemic (2018–2020)": (2018, 2020),
+    "During-pandemic (2021–2022)": (2021, 2022),
+    "Post-pandemic (2023–2024)": (2023, 2024)
 }
-city_code_pairs = sorted([(f"{loc.city_name} ({loc.airport_code})", loc.airport_code) for loc in flights.cities])
-airport_options = [{"label": name, "value": code} for name, code in city_code_pairs]
+
+df = pd.read_csv("Final.csv")
+df = df.dropna(subset=["city1", "airport_1"])
+df = df.drop_duplicates(subset=["airport_1"])
+
+airport_options = [
+    {
+        "label": f"{row['city1'].strip()} ({row['airport_1'].strip()})",
+        "value": row["airport_1"].strip()
+    }
+    for _, row in df.iterrows()
+]
 
 # Layout
 app.layout = dbc.Container([
-    html.H2("Airline Route & Fare Explorer (2018-2025)", className="text-center my-4"),
+    html.H2("Airline Route & Fare Explorer (2018–2025)", className="text-center my-4"),
     dcc.Tabs(id='tabs', value='tab1', children=[
         dcc.Tab(label='Route Finder', value='tab1'),
         dcc.Tab(label='Fare Trends', value='tab2'),
@@ -49,7 +59,7 @@ def route_finder_layout():
             html.H5("Select Cities and Period"),
             dcc.Dropdown(airport_options, id='origin-airport', placeholder="Origin Airport", value=airport_options[0]["value"]),
             dcc.Dropdown(airport_options, id='dest-airport', placeholder="Destination Airport", value=airport_options[10]["value"]),
-            dcc.Dropdown(list(period_map.keys()), id='period-select', value="Pre-pandemic (2018-2020)"),
+            dcc.Dropdown(list(period_map.keys()), id='period-select', value="Pre-pandemic (2018–2020)"),
             dbc.Input(id='max-budget', type='number', placeholder="Max Budget (USD)", min=0, value=500),
             dbc.Checkbox(id='allow-transfers', value=True, label="Allow Transfers"),
             html.Br(),
@@ -75,22 +85,28 @@ def route_finder_layout():
     ])
 
 
+
 @app.callback(
     Output('route-map', 'figure'),
     Output('route-summary', 'children'),
     Input('find-route-btn', 'n_clicks'),
-    State('origin-airport', 'value'),  # 注意：这里是城市名
+    State('origin-airport', 'value'),
     State('dest-airport', 'value'),
     State('period-select', 'value'),
     State('priority-select', 'value')
 )
-
-def find_route(n, origin_city, dest_city, period, priority):
+def find_route(n, origin_code, dest_code, period, priority):
     if not n:
         return go.Figure(), ""
 
     start_year, end_year = period_map[period]
     filtered = flights.filter_by_period(start_year, end_year)
+
+    origin = next((loc for loc in filtered.cities if loc.airport_code == origin_code), None)
+    dest = next((loc for loc in filtered.cities if loc.airport_code == dest_code), None)
+
+    if not origin or not dest:
+        return go.Figure(), f"Invalid origin or destination."
 
     if priority == "fare_dist":
         priorities = ["fare", "dist"]
@@ -99,12 +115,12 @@ def find_route(n, origin_city, dest_city, period, priority):
     else:
         priorities = [priority]
 
-    result = find_city_to_city_path(filtered, origin_city, dest_city, priorities)
+    result = find_shortest_path(filtered, origin, dest, priorities)
 
     if not result:
-        return go.Figure(), f"No route found from {origin_city} to {dest_city}."
+        return go.Figure(), "No route found."
 
-    route = [result["path"][0].depart_loc.airport_code] + [r.arrival_loc.airport_code for r in result["path"]]
+    route = [origin.airport_code] + [r.arrival_loc.airport_code for r in result["path"]]
     coords = {l.airport_code: l.geo_loc for l in filtered.cities}
     lats = [coords[c][0] for c in route if c in coords]
     lons = [coords[c][1] for c in route if c in coords]
@@ -129,6 +145,7 @@ def find_route(n, origin_city, dest_city, period, priority):
     ])
 
 
+
 # === Tab 2 ===
 def fare_trends_layout():
     years = list(range(2018, 2025))
@@ -144,13 +161,13 @@ def fare_trends_layout():
         html.H5("Average Fare per Year"),
         dcc.Graph(figure={
             'data': [{'x': df['year'], 'y': df['fare'], 'type': 'line', 'name': 'Fare'}],
-            'layout': {'title': 'Fare Trends (2018-2024)'}
+            'layout': {'title': 'Fare Trends (2018–2024)'}
         }),
         html.Hr(),
         html.H5("Network Maps by Period"),
-        dcc.Graph(figure=create_route_map(flights.filter_by_period(2018, 2020), "Pre-pandemic (2018-2020)")),
-        dcc.Graph(figure=create_route_map(flights.filter_by_period(2021, 2022), "During-pandemic (2021-2022)")),
-        dcc.Graph(figure=create_route_map(flights.filter_by_period(2023, 2024), "Post-pandemic (2023-2024)")),
+        dcc.Graph(figure=create_route_map(flights.filter_by_period(2018, 2020), "Pre-pandemic (2018–2020)")),
+        dcc.Graph(figure=create_route_map(flights.filter_by_period(2021, 2022), "During-pandemic (2021–2022)")),
+        dcc.Graph(figure=create_route_map(flights.filter_by_period(2023, 2024), "Post-pandemic (2023–2024)")),
     ])
 
 
@@ -186,6 +203,7 @@ def prediction_layout():
     ])
 
 
+
 @app.callback(
     Output('pred-map', 'figure'),
     Output('pred-summary', 'children'),
@@ -212,7 +230,6 @@ def predict_route(n, quarter, origin_code, dest_code, priority):
     if not origin or not dest:
         return go.Figure(), "Invalid cities.", create_route_map(pred)
 
-    # 处理优先级选项
     if priority == "fare_dist":
         priorities = ["fare", "dist"]
     elif priority == "fare_transfers":
@@ -220,7 +237,7 @@ def predict_route(n, quarter, origin_code, dest_code, priority):
     else:
         priorities = [priority]
 
-    result = find_city_to_city_path(pred, origin_code, dest_code, priorities)
+    result = find_shortest_path(pred, origin, dest, priorities)
 
     if not result:
         return go.Figure(), "No predicted route found.", create_route_map(pred)
@@ -250,7 +267,6 @@ def predict_route(n, quarter, origin_code, dest_code, priority):
     ])
 
     return fig, summary_div, create_route_map(pred, title=f"All Predicted Routes for 2025 {quarter}")
-
 
 # Run the app
 if __name__ == '__main__':
