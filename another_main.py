@@ -102,7 +102,7 @@ def fare_distance_correlation(df, label):
     Correlation between fare and distance.
     """
     corr, _ = pearsonr(df["fare"], df["nsmiles"])
-    print(f"Fare–Distance correlation ({label}): {corr:.3f}")
+    print(f"Fare-Distance correlation ({label}): {corr:.3f}")
 
 # === Visualization ===
 def draw_network(G, coord_map, label_map=None, title="Network Map"):

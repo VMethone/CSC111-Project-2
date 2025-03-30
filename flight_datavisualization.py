@@ -276,7 +276,7 @@ for year in range(2018, 2025):
         nx.draw_networkx_edges(G_sub, pos, alpha=0.2, width=0.7, edge_color='gray')
         nx.draw_networkx_labels(G_sub, pos, font_size=5)
 
-        plt.title(f"Airline Network – {year} Q{quarter}", fontsize=14)
+        plt.title(f"Airline Network - {year} Q{quarter}", fontsize=14)
         plt.axis('off')
         plt.tight_layout()
         plt.savefig(f"airline_network_quarters/network_{year}_Q{quarter}.png")

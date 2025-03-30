@@ -11,7 +11,7 @@ from streamlit_folium import st_folium
 import folium
 
 st.set_page_config(layout="wide")
-st.title("Airline Route & Fare Explorer (2018–2025)")
+st.title("Airline Route & Fare Explorer (2018-2025)")
 
 tab1, tab2, tab3 = st.tabs(["Route Finder", "Fare Trends", "Future Predictions"])
 
@@ -103,14 +103,14 @@ with tab1:
         max_budget = st.number_input("Max Budget (USD, optional)", min_value=0.0, value=500.0)
 
     period = st.selectbox("Select Time Period", [
-        "Pre-pandemic (2018–2020)",
-        "During-pandemic (2021–2022)",
-        "Post-pandemic (2023–2024)"
+        "Pre-pandemic (2018-2020)",
+        "During-pandemic (2021-2022)",
+        "Post-pandemic (2023-2024)"
     ])
     period_map = {
-        "Pre-pandemic (2018–2020)": (2018, 2020),
-        "During-pandemic (2021–2022)": (2021, 2022),
-        "Post-pandemic (2023–2024)": (2023, 2024)
+        "Pre-pandemic (2018-2020)": (2018, 2020),
+        "During-pandemic (2021-2022)": (2021, 2022),
+        "Post-pandemic (2023-2024)": (2023, 2024)
     }
 
     if st.button("Find Route"):
@@ -155,9 +155,9 @@ with tab2:
     st.line_chart(yearly_fare.set_index("year"))
 
     periods = {
-        "Pre-pandemic (2018–2020)": (2018, 2020),
-        "During-pandemic (2021–2022)": (2021, 2022),
-        "Post-pandemic (2023–2024)": (2023, 2024),
+        "Pre-pandemic (2018-2020)": (2018, 2020),
+        "During-pandemic (2021-2022)": (2021, 2022),
+        "Post-pandemic (2023-2024)": (2023, 2024),
     }
 
     for label, (start, end) in periods.items():

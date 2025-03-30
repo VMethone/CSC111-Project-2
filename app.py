@@ -14,16 +14,16 @@ server = app.server
 # Load data
 flights = Flights("Final.csv")
 period_map = {
-    "Pre-pandemic (2018–2020)": (2018, 2020),
-    "During-pandemic (2021–2022)": (2021, 2022),
-    "Post-pandemic (2023–2024)": (2023, 2024)
+    "Pre-pandemic (2018-2020)": (2018, 2020),
+    "During-pandemic (2021-2022)": (2021, 2022),
+    "Post-pandemic (2023-2024)": (2023, 2024)
 }
 city_code_pairs = sorted([(f"{loc.city_name} ({loc.airport_code})", loc.airport_code) for loc in flights.cities])
 airport_options = [{"label": name, "value": code} for name, code in city_code_pairs]
 
 # Layout
 app.layout = dbc.Container([
-    html.H2("Airline Route & Fare Explorer (2018–2025)", className="text-center my-4"),
+    html.H2("Airline Route & Fare Explorer (2018-2025)", className="text-center my-4"),
     dcc.Tabs(id='tabs', value='tab1', children=[
         dcc.Tab(label='Route Finder', value='tab1'),
         dcc.Tab(label='Fare Trends', value='tab2'),
@@ -49,7 +49,7 @@ def route_finder_layout():
             html.H5("Select Cities and Period"),
             dcc.Dropdown(airport_options, id='origin-airport', placeholder="Origin Airport", value=airport_options[0]["value"]),
             dcc.Dropdown(airport_options, id='dest-airport', placeholder="Destination Airport", value=airport_options[10]["value"]),
-            dcc.Dropdown(list(period_map.keys()), id='period-select', value="Pre-pandemic (2018–2020)"),
+            dcc.Dropdown(list(period_map.keys()), id='period-select', value="Pre-pandemic (2018-2020)"),
             dbc.Input(id='max-budget', type='number', placeholder="Max Budget (USD)", min=0, value=500),
             dbc.Checkbox(id='allow-transfers', value=True, label="Allow Transfers"),
             html.Br(),
@@ -144,13 +144,13 @@ def fare_trends_layout():
         html.H5("Average Fare per Year"),
         dcc.Graph(figure={
             'data': [{'x': df['year'], 'y': df['fare'], 'type': 'line', 'name': 'Fare'}],
-            'layout': {'title': 'Fare Trends (2018–2024)'}
+            'layout': {'title': 'Fare Trends (2018-2024)'}
         }),
         html.Hr(),
         html.H5("Network Maps by Period"),
-        dcc.Graph(figure=create_route_map(flights.filter_by_period(2018, 2020), "Pre-pandemic (2018–2020)")),
-        dcc.Graph(figure=create_route_map(flights.filter_by_period(2021, 2022), "During-pandemic (2021–2022)")),
-        dcc.Graph(figure=create_route_map(flights.filter_by_period(2023, 2024), "Post-pandemic (2023–2024)")),
+        dcc.Graph(figure=create_route_map(flights.filter_by_period(2018, 2020), "Pre-pandemic (2018-2020)")),
+        dcc.Graph(figure=create_route_map(flights.filter_by_period(2021, 2022), "During-pandemic (2021-2022)")),
+        dcc.Graph(figure=create_route_map(flights.filter_by_period(2023, 2024), "Post-pandemic (2023-2024)")),
     ])
 
 
