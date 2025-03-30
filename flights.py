@@ -3,6 +3,7 @@ from collections import defaultdict
 import pandas as pd
 from ast import literal_eval
 
+
 class Location():
     """
     Stores the location of an airport
@@ -21,9 +22,10 @@ class Location():
 
     def __str__(self) -> str:
         return f"({self.city_name}: {self.location_id})"
-    
+
     def __repr__(self) -> str:
         return f"({self.city_name}: {self.location_id})"
+
 
 class Route():
     """
@@ -36,7 +38,8 @@ class Route():
     quarter: int
     dist: float
     fare: float
-    def __init__(self, route_id: str, departure_city: Location, arrival_city: Location, 
+
+    def __init__(self, route_id: str, departure_city: Location, arrival_city: Location,
                  year: int, quarter: int, dist: float, fare: float):
         self.depart_loc = departure_city
         self.arrival_loc = arrival_city
@@ -52,6 +55,7 @@ class Route():
     def __repr__(self):
         return f"Route: {self.depart_loc} -> {self.arrival_loc} for ${self.fare} in {self.year} (Q{self.quarter})"
 
+
 class Flights():
     """
     Parent class storing flight information
@@ -59,7 +63,8 @@ class Flights():
     id_to_city: dict[int, Location]
     cities: set[Location]
     flight_routes: dict[Location, list[Route]]
-    def __init__(self, csv: str=""):
+
+    def __init__(self, csv: str = ""):
         self.cities = set()
         self.flight_routes = defaultdict(list)
         self.id_to_city = defaultdict(Location)
@@ -72,15 +77,14 @@ class Flights():
         """
         df = pd.read_csv(csv_path, low_memory=False)
         df.columns = df.columns.str.strip()
-        
+
         for index, row in df.iterrows():
             row_dict = row.to_dict()
             # city_id, city_name = row_dict['citymarketid_1'], row_dict['city1']
 
-
-            self.add_city(row_dict['citymarketid_1'], row_dict["city1"], 
+            self.add_city(row_dict['citymarketid_1'], row_dict["city1"],
                           literal_eval(row_dict["Geocoded_City1"]), row_dict["airport_1"])
-            self.add_city(row_dict['citymarketid_2'], row_dict["city2"], 
+            self.add_city(row_dict['citymarketid_2'], row_dict["city2"],
                           literal_eval(row_dict["Geocoded_City2"]), row_dict["airport_2"])
 
             start_location: Location = self.id_to_city[row_dict['citymarketid_1']]
@@ -101,7 +105,7 @@ class Flights():
             if city_name in loc.city_name:
                 print(f"Found location: {loc}")
                 return loc
-        
+
         return None
     
     def get_location_from_airport_code(self, code: str) -> Location:
@@ -123,7 +127,7 @@ class Flights():
             self.id_to_city[city_id].airport_codes.add(code)
 
     def add_route(self, route_id: str, depart_loc: Location, arrival_loc: Location,
-                   year: int, quarter: int, dist: float, fare: float) -> None:
+                  year: int, quarter: int, dist: float, fare: float) -> None:
         """
         Add at route between two locations
         """
@@ -135,3 +139,22 @@ class Flights():
             route_id=route_id, departure_city=arrival_loc, arrival_city=depart_loc,
             year=year, quarter=quarter, dist=dist, fare=fare
         ))
+
+    def filter_by_period(self, start_year: int, end_year: int) -> Flights:
+        filtered = Flights()
+        for loc in self.cities:
+            filtered.add_city(loc.location_id, loc.city_name, loc.geo_loc, loc.airport_code)
+
+        for loc, routes in self.flight_routes.items():
+            for route in routes:
+                if start_year <= route.year <= end_year:
+                    filtered.add_route(
+                        route_id=route.route_id,
+                        depart_loc=filtered.id_to_city[route.depart_loc.location_id],
+                        arrival_loc=filtered.id_to_city[route.arrival_loc.location_id],
+                        year=route.year,
+                        quarter=route.quarter,
+                        dist=route.dist,
+                        fare=route.fare
+                    )
+        return filtered

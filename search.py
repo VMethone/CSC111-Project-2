@@ -2,6 +2,146 @@ from flights import Flights, Location, Route
 from queue import PriorityQueue
 from typing import Optional, Dict, List
 import plotly.graph_objects as go
+from collections import defaultdict
+from itertools import count
+import heapq
+
+from collections import defaultdict
+from itertools import count
+import heapq
+
+def find_shortest_path(flights, origin, destination, priorities):
+    graph = defaultdict(list)
+    for depart, routes in flights.flight_routes.items():
+        for r in routes:
+            graph[r.depart_loc.airport_code].append((r.arrival_loc.airport_code, r))
+
+    def get_priority(path):
+        fare = sum(r.fare for r in path)
+        dist = sum(r.dist for r in path)
+        transfers = len(path) - 1
+        metrics = {
+            "fare": fare,
+            "dist": dist,
+            "transfers": transfers
+        }
+        return tuple(metrics[p] for p in priorities)
+
+    visited = set()
+    heap = []
+    tie_breaker = count()
+
+    # 初始状态（空路径）
+    heapq.heappush(heap, (get_priority([]), next(tie_breaker), origin.airport_code, []))
+
+    while heap:
+        _, _, current_code, path = heapq.heappop(heap)
+
+        if current_code == destination.airport_code:
+            total_fare = sum(r.fare for r in path)
+            total_dist = sum(r.dist for r in path)
+            transfers = len(path) - 1
+            return {
+                "path": path,
+                "cost": (total_fare, total_dist, transfers)
+            }
+
+        state_id = (current_code, len(path))
+        if state_id in visited:
+            continue
+        visited.add(state_id)
+
+        for neighbor_code, route in graph[current_code]:
+            if neighbor_code == current_code:
+                continue
+            if route in path:
+                continue
+            new_path = path + [route]
+            heapq.heappush(heap, (get_priority(new_path), next(tie_breaker), neighbor_code, new_path))
+
+    return None
+
+def find_city_to_city_path(flights, origin_city: str, dest_city: str, priorities: List[str]) -> Optional[dict]:
+    from collections import defaultdict
+
+    city_to_airports = defaultdict(set)
+    for loc in flights.cities:
+        city_to_airports[loc.city_name.strip().lower()].add(loc.airport_code)
+
+    origin_airports = list(city_to_airports.get(origin_city.strip().lower(), []))
+    dest_airports = list(city_to_airports.get(dest_city.strip().lower(), []))
+
+    if not origin_airports or not dest_airports:
+        print(f"无法找到城市机场: {origin_city} 或 {dest_city}")
+        return None
+
+    best_result = None
+    for o_code in origin_airports:
+        for d_code in dest_airports:
+            origin = flights.airport_to_city.get(o_code)
+            dest = flights.airport_to_city.get(d_code)
+
+            if not origin or not dest:
+                continue
+
+            result = find_shortest_path(flights, origin, dest, priorities)
+            if result:
+                if best_result is None or result['cost'] < best_result['cost']:
+                    best_result = result
+
+    return best_result
+
+
+def create_route_map(flights: Flights, title: str = "Flight Routes"):
+    coords = {
+        l.airport_code: l.geo_loc for l in flights.cities
+    }
+
+    lons = [coords[airport][1] for airport in coords]
+    lats = [coords[airport][0] for airport in coords]
+    labels = list(coords.keys())
+
+    fig = go.Figure(go.Scattergeo(
+        lon=lons,
+        lat=lats,
+        mode='markers+text',
+        text=labels,
+        textposition="top center",
+        marker=dict(size=6),
+    ))
+
+    line_lons = []
+    line_lats = []
+    done = set()
+    for location in flights.flight_routes:
+        for route in flights.flight_routes[location]:
+            dep = route.depart_loc.airport_code
+            arr = route.arrival_loc.airport_code
+            key = tuple(sorted((dep, arr)))
+            if key in done:
+                continue
+            done.add(key)
+            if dep in coords and arr in coords:
+                line_lons += [coords[dep][1], coords[arr][1], None]
+                line_lats += [coords[dep][0], coords[arr][0], None]
+
+    fig.add_trace(go.Scattergeo(
+        lon=line_lons,
+        lat=line_lats,
+        mode='lines',
+        line=dict(width=1, color='red'),
+        name='Routes'
+    ))
+
+    fig.update_layout(
+        title=title,
+        geo=dict(scope='usa', projection_type='albers usa', showland=True)
+    )
+
+    return fig
+
+def find_all_shortest_paths(flights: Flights, start: Location, priorities: List[str], valid=lambda: True) -> Optional[
+    Dict]:
 
 def find_shortest_path(flights: Flights, start: Location, end: Location, priorities: List[str], valid = lambda *args: True) -> tuple[list[int], list[Route]]:
     """
@@ -26,14 +166,14 @@ def find_all_shortest_paths(flights: Flights, start: Location, priorities: List[
     """
     Finds the shortest path between start and end locations using Dijkstra's algorithm,
     prioritizing the given attributes in order.
-    
+
     Args:
         flights: The Flights object containing all locations and routes.
         start: The starting Location.
         end: The target Location.
         priorities: List of strings indicating the priority order of attributes (e.g., ['fare', 'dist']).
         valid: A function Route -> Bool: A filter to exclude specific routes.
-    
+
     Returns:
         A tuple of the final distances and all paths taken, which can be reconstructed 
     """
@@ -54,7 +194,7 @@ def find_all_shortest_paths(flights: Flights, start: Location, priorities: List[
     distances: dict[int, list[int]] = {start.location_id: initial_cost}
     
     predecessors: dict[int, tuple[Location, Route]] = {start.location_id: None}
-    
+
     while not pq.empty():
         current_cost, current_id, current_loc = pq.get()
 
@@ -82,8 +222,9 @@ def find_all_shortest_paths(flights: Flights, start: Location, priorities: List[
                 distances[neighbor.location_id] = new_cost
                 predecessors[neighbor.location_id] = (current_loc, route)
                 pq.put((new_cost, neighbor.location_id, neighbor))
-    
+
     return distances, predecessors
+
 
 def reconstruct(end_location: Location, predecessors: dict[int, tuple[Location, Route]]) -> list[Route]:
     path_routes = []
@@ -98,13 +239,14 @@ def reconstruct(end_location: Location, predecessors: dict[int, tuple[Location, 
 
     return path_routes
 
+
 def plot_map(flights: Flights):
     coords = {
         l.location_id: l.geo_loc for l in flights.cities
     }
 
     lons = [coords[airport][1] for airport in coords]
-    lats = [coords[airport][0] for airport in coords] 
+    lats = [coords[airport][0] for airport in coords]
     labels = list(coords.keys())
 
     print(lons)
@@ -124,7 +266,7 @@ def plot_map(flights: Flights):
         marker=dict(size=6),
     ))
 
-        # Collect line segments for all flight routes
+    # Collect line segments for all flight routes
     line_lons = []
     line_lats = []
     done = set()
