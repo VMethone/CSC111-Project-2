@@ -1,3 +1,7 @@
+"""
+This module defines data classes for modeling airport locations, routes, and flight connections.
+It includes functionality to load and parse airline route data from CSV files into structured objects.
+"""
 from __future__ import annotations
 from collections import defaultdict
 import pandas as pd
@@ -15,7 +19,7 @@ class Location():
     geo_loc: tuple[float, float]
     airport_codes: set[str]
 
-    def __init__(self, loc_id: int, name: str, geo_loc, code: str) -> None:
+    def __init__(self, loc_id: int, name: str, geo_loc: tuple[float, float], code: str) -> None:
         self.location_id = loc_id
         self.city_name = name
         self.geo_loc = geo_loc
@@ -43,7 +47,7 @@ class Route():
     fare: float
 
     def __init__(self, route_id: str, departure_city: tuple[Location, str], arrival_city: tuple[Location, str],
-                 year: int, quarter: int, dist: float, fare: float):
+                 year: int, quarter: int, dist: float, fare: float) -> None:
         self.depart_loc, self.depart_airport = departure_city
         self.arrival_loc, self.arrival_airport = arrival_city
         self.route_id = route_id
@@ -52,7 +56,11 @@ class Route():
         self.dist = dist
         self.fare = fare
 
+    @staticmethod
     def get_route_path_string(all_routes: list[Route]) -> str:
+        """
+        Return a string representation of the route like: "CityA → CityB → CityC"
+        """
         output = []
         output.append(f"({all_routes[0].depart_loc.city_name}: {all_routes[0].depart_airport})")
         for route in all_routes:
@@ -60,10 +68,10 @@ class Route():
 
         return " → ".join(output)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"Route: {self.depart_loc} -> {self.arrival_loc} for ${self.fare} in {self.year} (Q{self.quarter})"
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"Route: {self.depart_loc} -> {self.arrival_loc} for ${self.fare} in {self.year} (Q{self.quarter})"
 
 
@@ -75,21 +83,21 @@ class Flights():
     cities: set[Location]
     flight_routes: dict[Location, list[Route]]
 
-    def __init__(self, csv: str = ""):
+    def __init__(self, csv: str = "") -> None:
         self.cities = set()
         self.flight_routes = defaultdict(list)
-        self.id_to_city = defaultdict(Location)
+        self.id_to_city = {}
         if csv:
             self.load_from_cvs(csv)
 
-    def load_from_cvs(self, csv_path: str):
+    def load_from_cvs(self, csv_path: str) -> None:
         """
         Load csv file into the Flights class extracting relevant information
         """
         df = pd.read_csv(csv_path, low_memory=False)
         df.columns = df.columns.str.strip()
 
-        for index, row in df.iterrows():
+        for _, row in df.iterrows():
             row_dict = row.to_dict()
             # city_id, city_name = row_dict['citymarketid_1'], row_dict['city1']
 
@@ -112,27 +120,37 @@ class Flights():
             )
 
     def get_location_from_name(self, city_name: str) -> Location:
+        """
+            Returns the Location object matching the given city name.
+
+            Parameters:
+                - city_name (str): The name (or partial name) of the city to look for.
+
+            Returns:
+                - Location: The corresponding Location object if found; otherwise, None.
+        """
         for loc in self.cities:
             if city_name in loc.city_name:
-                print(f"Found location: {loc}")
                 return loc
-
         return None
 
     def add_city(self, city_id: int, city_name: str, location: tuple[int, int], code: str) -> None:
         """
         Add a new location to the list of locations
         """
-        if not city_id in self.id_to_city:
+        if city_id not in self.id_to_city:
             new_city = Location(city_id, city_name, location, code)
             self.id_to_city[city_id] = new_city
             self.cities.add(new_city)
             return
-        
         else:
             self.id_to_city[city_id].airport_codes.add(code)
 
-    def add_route(self, route_id: str, depart_loc: tuple[Location, str], 
+        if city_name != self.id_to_city[city_id]:
+            pass
+            # print(f"Found Duplicate for {city_name}: {city_name} != {self.id_to_city[city_id]}")
+
+    def add_route(self, route_id: str, depart_loc: tuple[Location, str],
                   arrival_loc: tuple[Location, str], year: int, quarter: int, dist: float, fare: float) -> None:
         """
         Add at route between two locations
@@ -146,9 +164,23 @@ class Flights():
             year=year, quarter=quarter, dist=dist, fare=fare
         ))
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         output = []
         for city in self.cities:
             for route in self.flight_routes[city]:
                 output.append(str(route))
         return "".join(output)
+
+
+if __name__ == '__main__':
+    # When you are ready to check your work with python_ta, uncomment the following lines.
+    # (In PyCharm, select the lines below and press Ctrl/Cmd + / to toggle comments.)
+    # You can use "Run file in Python Console" to run both pytest and PythonTA,
+    # and then also test your methods manually in the console.
+    import python_ta
+    python_ta.check_all(config={
+        'extra-imports': ["collections", 'pandas', 'ast'],  # the names (strs) of imported modules
+        'allowed-io': [],  # the names (strs) of functions that call print/open/input
+        'max-line-length': 120,
+        'disable': ["E0611", "R0902", "R0913", "C0411"]
+    })
