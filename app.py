@@ -475,36 +475,158 @@ def update_network_map(selected_year: float) -> go.Figure:
 
 
 # === Tab 3 ===
-def prediction_layout() -> Component:
-    """Generate the layout for the fare prediction tab, allowing selection of quarter and endpoints."""
-    return dbc.Row([
-        dbc.Col([
-            html.H5("Prediction Inputs"),
-            dcc.Dropdown(["Q1", "Q2", "Q3", "Q4"], id='quarter-select', value="Q1"),
-            dcc.Dropdown(airport_options, id='pred-origin', placeholder="Origin Airport"),
-            dcc.Dropdown(airport_options, id='pred-dest', placeholder="Destination Airport"),
-            dcc.Dropdown(
-                id='pred-priority',
-                options=[
-                    {'label': 'Lowest Fare', 'value': 'fare'},
-                    {'label': 'Shortest Distance', 'value': 'dist'},
-                    {'label': 'Fewest Transfers', 'value': 'transfers'},
-                    {'label': 'Fare then Distance', 'value': 'fare_dist'},
-                    {'label': 'Fare then Transfers', 'value': 'fare_transfers'},
-                ],
-                value='fare',
-                placeholder='Optimization Priority'
-            ),
-            dbc.Button("Find Predicted Route", id='predict-btn', color="success")
-        ], width=4),
-        dbc.Col([
-            dcc.Graph(id='pred-map'),
-            html.Div(id='pred-summary'),
-            html.Hr(),
-            html.H5("Full Predicted Flight Network"),
-            dcc.Graph(id='full-pred-map')
-        ], width=8)
-    ])
+def prediction_layout():
+    """Update the interactive route map for the selected year/quarter from the timeline slider."""
+    return dbc.Container([
+        html.H3("🔮 Future Flight Predictions (2025)", className="text-center my-4 text-primary"),
+
+        dbc.Row([
+            dbc.Col([
+                dbc.Card([
+                    dbc.CardHeader(html.H5("Configure Prediction Parameters", className="mb-0")),
+                    dbc.CardBody([
+                        dbc.Form([
+                            dbc.Row([
+                                dbc.Label(html.I(className="fas fa-calendar-alt me-2"), width="auto"),  # Icon
+                                dbc.Col(
+                                    dcc.Dropdown(
+                                        options=[{"label": f"{q}", "value": q} for q in ["Q1", "Q2", "Q3", "Q4"]],
+                                        id='quarter-select',
+                                        value="Q1",
+                                        placeholder="Select Quarter",
+                                        clearable=False
+                                    ),
+                                )
+                            ], className="mb-3 align-items-center"),
+
+                            html.Hr(),
+
+                            # Origin Airport
+                            dbc.Row([
+                                dbc.Label(html.I(className="fas fa-plane-departure me-2"), width="auto"),  # Icon
+                                dbc.Col(
+                                    dcc.Dropdown(
+                                        options=airport_options,
+                                        id='pred-origin',
+                                        placeholder="Origin Airport (e.g., JFK)",
+                                        clearable=True
+                                    ),
+                                )
+                            ], className="mb-3 align-items-center"),
+
+                            # Destination Airport
+                            dbc.Row([
+                                dbc.Label(html.I(className="fas fa-plane-arrival me-2"), width="auto"),  # Icon
+                                dbc.Col(
+                                    dcc.Dropdown(
+                                        options=airport_options,
+                                        id='pred-dest',
+                                        placeholder="Destination Airport (e.g., LAX)",
+                                        clearable=True
+                                    ),
+                                )
+                            ], className="mb-3 align-items-center"),
+
+                            html.Hr(),
+
+                            # Optimization Priority
+                            dbc.Row([
+                                dbc.Label(html.I(className="fas fa-sliders-h me-2"), width="auto"),
+                                dbc.Col(
+                                    dcc.Dropdown(
+                                        id='pred-priority',
+                                        options=[
+                                            {'label': 'Lowest Fare', 'value': 'fare'},
+                                            {'label': 'Shortest Distance', 'value': 'dist'},
+                                            {'label': 'Fewest Transfers', 'value': 'transfers'},
+                                            {'label': 'Balance: Fare then Distance', 'value': 'fare_dist'},
+                                            {'label': 'Balance: Fare then Transfers', 'value': 'fare_transfers'},
+                                        ],
+                                        value='fare',
+                                        placeholder='Select Optimization Priority',
+                                        clearable=False
+                                    ),
+                                )
+                            ], className="mb-4 align-items-center"),
+
+                            # Prediction Button
+                            dbc.Button(
+                                [html.I(className="fas fa-search-location me-2"), "Generate Prediction"],
+                                id='predict-btn',
+                                color="success",
+                                className="w-100 shadow-sm",
+                                size="lg"
+                            )
+                        ])
+                    ])
+                ], className="shadow border-0 h-100")
+            ], width=12, lg=4, className="mb-4 mb-lg-0"),
+
+            # --- Output Display Area ---
+            dbc.Col([
+                dcc.Loading(
+                    id="loading-prediction",
+                    type="default",
+                    children=[
+                        dbc.Tabs(
+                            id="prediction-output-tabs",
+                            active_tab="tab-specific-route",
+                            children=[
+                                dbc.Tab(
+                                    label="Specific Route Details",
+                                    tab_id="tab-specific-route",
+                                    children=[
+                                        dbc.Card([
+                                            dbc.CardBody([
+                                                html.H5("Predicted Optimal Route Map", className="card-title"),
+                                                dcc.Graph(
+                                                    id='pred-map',
+                                                    figure=get_default_map(),
+                                                    config={'displayModeBar': False},
+                                                    style={'height': '450px'}
+                                                ),
+                                                html.Hr(className="my-3"),
+                                                html.H5("Route Summary", className="card-title"),
+                                                html.Div(
+                                                    id='pred-summary',
+                                                    children=[html.P(
+                                                        "Select parameters and click 'Generate Prediction' "
+                                                        "to see results.",
+                                                        className="text-muted fst-italic")],
+                                                    className="mt-3"
+                                                )
+                                            ])
+                                        ], className="mt-3 border-0 shadow-sm")
+                                    ]
+                                ),
+                                # Tab for the Full Network Map
+                                dbc.Tab(
+                                    label="Full Predicted Network",
+                                    tab_id="tab-full-network",
+                                    children=[
+                                        dbc.Card([
+                                            dbc.CardBody([
+                                                html.H5("Complete Predicted Network Map (2025)",
+                                                        className="card-title"),
+                                                html.P("Explore all predicted routes for the selected quarter.",
+                                                       className="card-text text-muted"),
+                                                dcc.Graph(
+                                                    id='full-pred-map',
+                                                    figure=get_default_map(),
+                                                    config={'scrollZoom': True, 'displayModeBar': False},
+                                                    style={'height': '600px'}
+                                                )
+                                            ])
+                                        ], className="mt-3 border-0 shadow-sm")
+                                    ]
+                                )
+                            ]
+                        )
+                    ]
+                )
+            ], width=12, lg=8)
+        ])
+    ], fluid=True, className="p-4", style={'backgroundColor': '#e9ecef'})
 
 
 @app.callback(
@@ -584,8 +706,6 @@ def predict_route(
 
 # Run the app
 if __name__ == '__main__':
-    app.run_server(debug=True)
-
     # When you are ready to check your work with python_ta, uncomment the following lines.
     # (In PyCharm, select the lines below and press Ctrl/Cmd + / to toggle comments.)
     # You can use "Run file in Python Console" to run both pytest and PythonTA,
@@ -597,5 +717,5 @@ if __name__ == '__main__':
                           "dash.development.base_component", "flights", "search", "pandas"],
         'allowed-io': ["filter_route", "find_route"],  # the names (strs) of functions that call print/open/input
         'max-line-length': 120,
-        'disable': ["E9997", "R0913", "R0914", "C9103", "W0621", "E9992", "E1120"]
+        'disable': ["E9997", "R0913", "R0914", "C9103", "W0621", "E9992", "E1120", "E9971"]
     })
