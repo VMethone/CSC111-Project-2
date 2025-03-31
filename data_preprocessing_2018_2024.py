@@ -155,7 +155,7 @@ def test_output_file_creation() -> None:
     You can simply use this to test the file.
     """
     input_csv = "US Airline Flight Routes and Fares 1993-2024.csv"
-    output_csv = "USA_Filtered_Airline_2018-2024.csv"
+    output_csv = "USA_Filtered_Airline_2018-2024_FILLED.csv"
 
     cleaned_df = run_preprocessing_pipeline(input_csv, output_csv)
 
