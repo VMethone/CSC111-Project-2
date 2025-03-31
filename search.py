@@ -36,7 +36,7 @@ def find_shortest_path(flights: Flights, start: Location, end: Location, priorit
     return sorted_dist, reconstruct(end, prev)
 
 
-def find_all_shortest_paths(flights: Flights, start: Location, priorities: List[str], valid=lambda *args: True) -> tuple[dict[list[int]], dict[int, tuple[Location, Route]]]:
+def find_all_shortest_paths(flights: Flights, start: Location, priorities: List[str], valid=lambda *args: True) -> tuple[dict[int, list[int]], dict[int, tuple[Location, Route]]]:
     """
     Finds the shortest path between start and end locations using Dijkstra's algorithm,
     prioritizing the given attributes in order.

@@ -7,7 +7,12 @@ from search import find_shortest_path, plot_route, get_default_map, plot_all_rou
 import plotly.graph_objects as go
 
 # App setup
-app = Dash(__name__, external_stylesheets=[dbc.themes.FLATLY], suppress_callback_exceptions=True)
+app = Dash(__name__, 
+           external_stylesheets=[
+               dbc.themes.FLATLY,
+               dbc.icons.FONT_AWESOME
+               ], 
+           suppress_callback_exceptions=True)
 app.title = "Airline Route & Fare Explorer"
 server = app.server
 
@@ -325,96 +330,143 @@ def fare_trends_layout():
             # Missing data
             if year == 2024 and quarter > 1:
                 continue
+
             filtered_flights = [r for routes in all_flights.flight_routes.values()
                                 for r in routes if r.year == year and r.quarter == quarter]
             fares = [r.fare for r in filtered_flights]
             avg_fare = sum(fares) / len(fares) if fares else 0
             avg_fares.append({"year": year + (quarter / 4), "fare": avg_fare})
     df = pd.DataFrame(avg_fares)
+    mark_keys = [2018.25, 2019.25, 2020.25, 2021.25, 2022.25, 2023.25, 2024.25]
+
 
     return dbc.Container([
-        html.H5("Average Fare per Year"),
-        dcc.Graph(figure={
-            'data': [{
-                'x': df['year'],
-                'y': df['fare'],
-                'type': 'line',
-                'name': 'Fare'
-            }],
-            'layout': {
-                'title': 'Fare Trends (2018-2024)',
-                'shapes': [{
-                    'type': 'line', 'x0': 2020.25, 'x1': 2020.25,
-                    'y0': 0, 'y1': 1, 'yref': 'paper',
-                    'line': {'color': 'red', 'width': 2, 'dash': 'dash'}
-                },
-                {
-                    'type': 'line', 'x0': 2022.5, 'x1': 2022.5,
-                    'y0': 0, 'y1': 1, 'yref': 'paper',
-                    'line': {'color': 'red', 'width': 2, 'dash': 'dash'}
-                    }
-                ],
-                'annotations': [
-                    {
-                        'x': 2020.25, 'y': 1,
-                        'yanchor': 'bottom',
-                        'text': 'COVID Start',
-                        'showarrow': False,
-                        'font': {'color': 'red'}
-                    },
-                    {
-                        'x': 2022.5, 'y': 1,
-                        'yanchor': 'bottom',
-                        'text': 'COVID End',
-                        'showarrow': False,
-                        'font': {'color': 'red'}
-                    }
-                ]
-            }
-        }),
-        html.Hr(),
-        html.Div([
-            html.H5("Network Map Timeline"),
-            dcc.Graph(
-                id='network-map-timeline', 
-                figure=plot_all_routes(
-                    all_flights,
-                    title=f"Pre-pandemic: 2018 (Q1)",
-                    valid=lambda x: (x.year == 2018 and x.quarter == 1)
-                    ),
-                style={
-                    'width': '100%', 
-                    'height': '80vh',
-                    'border': '1px solid #ddd',
-                    'borderRadius': '5px',
-                    'margin': '0 auto'
-                    },
-                config={'scrollZoom': True, 'displayModeBar': False}
-            ),
-            dcc.Slider(
-                id='year-slider',
-                min=2018.25,
-                max=2024.25,
-                step=0.25,
-                value=2018.25,
-                marks={
-                    y: {'label': f"{int(y)} Q1", 'style': {'transform': 'rotate(45deg)'}}
-                    for y in [2018.25, 2019.25, 2020.25, 2021.25, 2022.25, 2023.25, 2024.25]
-                },
-                tooltip={
-                    "placement": "bottom",
-                    "always_visible": False,
-                    "template": "{value}"
-                },
-                included=False,
-                className="mt-3 mb-5"
-            )
-        ], style={
-            'maxWidth': '1200px',
-            'margin': '0 auto',
-            'padding': '20px'
-        })
-    ])
+        # Tab Title
+        html.H3("📊 Historical Fare & Network Analysis", className="text-center my-4 text-info"), # Themed title
+
+        # --- Section 1: Overall Fare Trend ---
+        dbc.Row([
+            dbc.Col([
+                dbc.Card([
+                    dbc.CardHeader(html.H5("Average Quarterly Fare Evolution (2018-2024)", className="mb-0")),
+                    dbc.CardBody([
+                        dcc.Graph(
+                            id='fare-trend-graph',
+                            figure={
+                                'data': [{
+                                    'x': df['year'],
+                                    'y': df['fare'],
+                                    'type': 'line',
+                                    'name': 'Average Fare',
+                                    'hovertemplate': '<b>%{x:.2f}</b><br>Avg Fare: $%{y:.2f}<extra></extra>',
+                                    'line': {'color': '#17a2b8', 'width': 3}
+                                }],
+                                'layout': {
+                                    'shapes': [
+                                        {'type': 'line', 'x0': 2020.25, 'x1': 2020.25, 'y0': 0, 'y1': 0.9, 'yref': 'paper', 'line': {'color': '#e74c3c', 'width': 1.5, 'dash': 'dot'}, 'name': 'COVID Start'},
+                                        {'type': 'line', 'x0': 2022.50, 'x1': 2022.50, 'y0': 0, 'y1': 0.9, 'yref': 'paper', 'line': {'color': '#28a745', 'width': 1.5, 'dash': 'dot'}, 'name': 'Restrictions Ease'} # Green for easing
+                                    ],
+                                    'annotations': [
+                                        {'x': 2020.25, 'y': 0.95, 'yref': 'paper', 'yanchor': 'bottom', 'text': 'Pandemic Start', 'showarrow': False, 'font': {'color': '#e74c3c', 'size': 11}},
+                                        {'x': 2022.50, 'y': 0.95, 'yref': 'paper', 'yanchor': 'bottom', 'text': 'Travel Resumes', 'showarrow': False, 'font': {'color': '#28a745', 'size': 11}}
+                                    ],
+                                    'template': 'plotly_white',
+                                    'margin': {'t': 20, 'b': 40, 'l': 60, 'r': 40},
+                                    'xaxis': {
+                                        'title': 'Year & Quarter',
+                                        'gridcolor': '#ecf0f1',
+                                        'tickformat': '.2f',
+                                        'showline': True, 'linecolor': '#bdc3c7', 'linewidth': 1
+                                    },
+                                    'yaxis': {
+                                        'title': 'Average Fare (USD)',
+                                        'gridcolor': '#ecf0f1',
+                                        'tickprefix': '$',
+                                        'showline': True, 'linecolor': '#bdc3c7', 'linewidth': 1
+                                    },
+                                    'hovermode': 'x unified'
+                                }
+                            },
+                            style={'height': '350px'},
+                            config={'displayModeBar': False}
+                        ),
+                        html.P(
+                            "Observe the overall trend in average domestic flight fares across major US routes.",
+                            className="text-muted small mt-2"
+                        )
+                    ])
+                ], className="shadow border-0 mb-4")
+            ], width=12)
+        ]),
+
+        # --- Section 2: Interactive Network Timeline ---
+        dbc.Row([
+            dbc.Col([
+                dbc.Card([
+                    dbc.CardHeader(html.H5("Explore Flight Network Over Time", className="mb-0")),
+                    dbc.CardBody([
+                        # --- Slider Control ---
+                        html.Div([
+                            dbc.Row([
+                                dbc.Col(html.I(className="fas fa-sliders-h me-2 fa-lg"), width="auto", className="d-flex align-items-center text-secondary"),
+                                dbc.Col(
+                                     dcc.Slider(
+                                        id='year-slider',
+                                        min=2018.25,
+                                        max=2024.25,
+                                        step=0.25,
+                                        value=2018.25,
+                                        marks={
+                                            y: {
+                                                'label': f"{int(y)} Q1",
+                                                'style': {
+                                                    'transform': 'rotate(45deg)',
+                                                    'whiteSpace': 'nowrap',
+                                                    'fontSize': '11px',
+                                                    'color': '#7f8c8d'
+                                                }
+                                            }
+                                            for y in mark_keys
+                                        },
+                                        tooltip={
+                                            "placement": "bottom",
+                                            "always_visible": True,
+                                            "template": "{value}",
+                                            "style": {"fontSize": "14px"}
+                                        },
+                                        included=False,
+                                        className="flex-grow-1" 
+                                    ),
+                                    className="px-md-5" 
+                                )
+                            ], className="align-items-center mb-4")
+                        ]),
+                        # --- Network Map ---
+                        dcc.Graph(
+                            id='network-map-timeline',
+                            figure=plot_all_routes(
+                                all_flights,
+                                title=f"Network Map: 2018 Q1", 
+                                valid=lambda x: (x.year == 2018 and x.quarter == 1)
+                            ),
+                            style={
+                                'height': '65vh',
+                                'border': '1px solid #dee2e6',
+                                'borderRadius': '5px'
+                            },
+                            config={'scrollZoom': True, 'displayModeBar': False}
+                        ),
+                        html.P(
+                            "Use the slider above to visualize the state of the flight network for any given quarter.",
+                            className="text-muted small mt-3 text-center" 
+                        )
+                    ])
+                ], className="shadow border-0")
+            ], width=12)
+        ])
+
+    ], fluid=True, style={'backgroundColor': '#f8f9fa'}, className="p-4")
+
 
 @app.callback(
     Output('network-map-timeline', 'figure'),
@@ -443,35 +495,151 @@ def update_network_map(selected_year):
 
 # === Tab 3 ===
 def prediction_layout():
-    return dbc.Row([
-        dbc.Col([
-            html.H5("Prediction Inputs"),
-            dcc.Dropdown(["Q1", "Q2", "Q3", "Q4"], id='quarter-select', value="Q1"),
-            dcc.Dropdown(airport_options, id='pred-origin', placeholder="Origin Airport"),
-            dcc.Dropdown(airport_options, id='pred-dest', placeholder="Destination Airport"),
-            dcc.Dropdown(
-                id='pred-priority',
-                options=[
-                    {'label': 'Lowest Fare', 'value': 'fare'},
-                    {'label': 'Shortest Distance', 'value': 'dist'},
-                    {'label': 'Fewest Transfers', 'value': 'transfers'},
-                    {'label': 'Fare then Distance', 'value': 'fare_dist'},
-                    {'label': 'Fare then Transfers', 'value': 'fare_transfers'},
-                ],
-                value='fare',
-                placeholder='Optimization Priority'
-            ),
-            dbc.Button("Find Predicted Route", id='predict-btn', color="success")
-        ], width=4),
-        dbc.Col([
-            dcc.Graph(id='pred-map'),
-            html.Div(id='pred-summary'),
-            html.Hr(),
-            html.H5("Full Predicted Flight Network"),
-            dcc.Graph(id='full-pred-map')
-        ], width=8)
-    ])
+    return dbc.Container([
+        html.H3("🔮 Future Flight Predictions (2025)", className="text-center my-4 text-primary"),
 
+        dbc.Row([
+            dbc.Col([
+                dbc.Card([
+                    dbc.CardHeader(html.H5("Configure Prediction Parameters", className="mb-0")),
+                    dbc.CardBody([
+                        dbc.Form([
+                            dbc.Row([
+                                dbc.Label(html.I(className="fas fa-calendar-alt me-2"), width="auto"), # Icon
+                                dbc.Col(
+                                    dcc.Dropdown(
+                                        options=[{"label": f"{q}", "value": q} for q in ["Q1", "Q2", "Q3", "Q4"]],
+                                        id='quarter-select',
+                                        value="Q1",
+                                        placeholder="Select Quarter",
+                                        clearable=False
+                                    ),
+                                )
+                            ], className="mb-3 align-items-center"),
+
+                            html.Hr(),
+
+                            # Origin Airport
+                            dbc.Row([
+                                dbc.Label(html.I(className="fas fa-plane-departure me-2"), width="auto"), # Icon
+                                dbc.Col(
+                                    dcc.Dropdown(
+                                        options=airport_options,
+                                        id='pred-origin',
+                                        placeholder="Origin Airport (e.g., JFK)",
+                                        clearable=True
+                                    ),
+                                )
+                            ], className="mb-3 align-items-center"),
+
+                            # Destination Airport
+                            dbc.Row([
+                                dbc.Label(html.I(className="fas fa-plane-arrival me-2"), width="auto"), # Icon
+                                dbc.Col(
+                                    dcc.Dropdown(
+                                        options=airport_options,
+                                        id='pred-dest',
+                                        placeholder="Destination Airport (e.g., LAX)",
+                                        clearable=True
+                                    ),
+                                )
+                            ], className="mb-3 align-items-center"),
+
+                            html.Hr(),
+
+                            # Optimization Priority
+                            dbc.Row([
+                                dbc.Label(html.I(className="fas fa-sliders-h me-2"), width="auto"),
+                                dbc.Col(
+                                    dcc.Dropdown(
+                                        id='pred-priority',
+                                        options=[
+                                            {'label': 'Lowest Fare', 'value': 'fare'},
+                                            {'label': 'Shortest Distance', 'value': 'dist'},
+                                            {'label': 'Fewest Transfers', 'value': 'transfers'},
+                                            {'label': 'Balance: Fare then Distance', 'value': 'fare_dist'},
+                                            {'label': 'Balance: Fare then Transfers', 'value': 'fare_transfers'},
+                                        ],
+                                        value='fare',
+                                        placeholder='Select Optimization Priority',
+                                        clearable=False
+                                    ),
+                                )
+                            ], className="mb-4 align-items-center"),
+
+                            # Prediction Button
+                            dbc.Button(
+                                [html.I(className="fas fa-search-location me-2"), "Generate Prediction"],
+                                id='predict-btn',
+                                color="success",
+                                className="w-100 shadow-sm",
+                                size="lg"
+                            )
+                        ])
+                    ])
+                ], className="shadow border-0 h-100")
+            ], width=12, lg=4, className="mb-4 mb-lg-0"), 
+
+            # --- Output Display Area ---
+            dbc.Col([
+                dcc.Loading(
+                    id="loading-prediction",
+                    type="default",
+                    children=[
+                        dbc.Tabs(
+                            id="prediction-output-tabs",
+                            active_tab="tab-specific-route",
+                            children=[
+                                dbc.Tab(
+                                    label="Specific Route Details",
+                                    tab_id="tab-specific-route",
+                                    children=[
+                                        dbc.Card([
+                                            dbc.CardBody([
+                                                html.H5("Predicted Optimal Route Map", className="card-title"),
+                                                dcc.Graph(
+                                                    id='pred-map',
+                                                    figure=get_default_map(),
+                                                    config={'displayModeBar': False},
+                                                    style={'height': '450px'}
+                                                ),
+                                                html.Hr(className="my-3"),
+                                                html.H5("Route Summary", className="card-title"),
+                                                html.Div(
+                                                    id='pred-summary',
+                                                    children=[html.P("Select parameters and click 'Generate Prediction' to see results.", className="text-muted fst-italic")],
+                                                    className="mt-3"
+                                                )
+                                            ])
+                                        ], className="mt-3 border-0 shadow-sm")
+                                    ]
+                                ),
+                                # Tab for the Full Network Map
+                                dbc.Tab(
+                                    label="Full Predicted Network",
+                                    tab_id="tab-full-network",
+                                    children=[
+                                        dbc.Card([
+                                            dbc.CardBody([
+                                                html.H5("Complete Predicted Network Map (2025)", className="card-title"),
+                                                html.P("Explore all predicted routes for the selected quarter.", className="card-text text-muted"),
+                                                dcc.Graph(
+                                                    id='full-pred-map',
+                                                    figure=get_default_map(),
+                                                    config={'scrollZoom': True, 'displayModeBar': False},
+                                                    style={'height': '600px'}
+                                                )
+                                            ])
+                                        ], className="mt-3 border-0 shadow-sm")
+                                    ]
+                                )
+                            ]
+                        )
+                    ]
+                )
+            ], width=12, lg=8)
+        ])
+    ], fluid=True, className="p-4", style={'backgroundColor': '#e9ecef'})
 
 
 @app.callback(
