@@ -8,7 +8,7 @@ import pandas as pd
 from ast import literal_eval
 
 
-class Location():
+class Location:
     """
     Stores the location of an airport
     """
@@ -32,7 +32,7 @@ class Location():
         return f"({self.city_name}: {self.location_id})"
 
 
-class Route():
+class Route:
     """
     A connection between two locations
     """
@@ -75,7 +75,7 @@ class Route():
         return f"Route: {self.depart_loc} -> {self.arrival_loc} for ${self.fare} in {self.year} (Q{self.quarter})"
 
 
-class Flights():
+class Flights:
     """
     Parent class storing flight information
     """

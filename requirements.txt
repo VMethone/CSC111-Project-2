@@ -1,14 +1,32 @@
-pandas~=2.2.3
-networkx~=3.4.2
-kagglehub
-matplotlib~=3.10.1
+# CSC111 Winter 2025 Project 2
+
+# Testing and code checking
+python-ta~=2.9.1
+
+# Graphics and data visualization
 plotly~=6.0.1
-scipy~=1.15.2
+
+# Web framework and interactive UI
+dash~=3.0.1
+dash-bootstrap-components~=2.0.0
 streamlit~=1.44.0
 streamlit_folium~=0.24.0
-dash~=3.0.1
-dash_bootstrap_components
-dash-bootstrap-components~=2.0.0
-scikit-learn~=1.6.1
 folium~=0.19.5
+
+# Core scientific stack
+pandas~=2.2.3
 numpy~=2.2.4
+scipy~=1.15.2
+matplotlib~=3.10.1
+
+# Data structures and graph algorithms
+networkx~=3.4.2
+
+# Machine learning (for prediction)
+scikit-learn~=1.6.1
+
+# Other utilities
+app
+ast # No installation needed — it comes built-in with every Python distribution
+os # No installation needed — it comes built-in with every Python distribution.
+re # No installation needed — it comes built-in with every Python distribution.

@@ -358,7 +358,7 @@ def fare_trends_layout() -> Component:
             avg_fare = sum(fares) / len(fares) if fares else 0
             avg_fares.append({"year": year + (quarter / 4), "fare": avg_fare})
 
-    df = pd.DataFrame(avg_fares)
+    df.pd.DataFrame(avg_fares)
     mark_keys = [2018.25, 2019.25, 2020.25, 2021.25, 2022.25, 2023.25, 2024.25]
 
     return dbc.Container([
