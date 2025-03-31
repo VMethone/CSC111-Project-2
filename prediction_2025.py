@@ -4,7 +4,6 @@ and generates fare forecasts for each route for all quarters of 2025.
 
 It uses linear regression to detect fare trends per route over time.
 """
-import os
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 
@@ -92,7 +91,6 @@ def save_predictions_to_csv(df: pd.DataFrame, filename: str) -> None:
     Saves the DataFrame to a CSV file.
     """
     df.to_csv(filename, index=False)
-
 
 
 if __name__ == '__main__':
