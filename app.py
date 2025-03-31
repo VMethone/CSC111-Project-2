@@ -17,14 +17,14 @@ app.title = "Airline Route & Fare Explorer"
 server = app.server
 
 # Load data
-all_flights = Flights("Final.csv")
+all_flights = Flights("USA_Filtered_Airline_2018-2024_FILLED.csv")
 period_map = {
     "Pre-pandemic (2018-2020)": (2018, 2020),
     "During-pandemic (2021-2022)": (2021, 2022),
     "Post-pandemic (2023-2024)": (2023, 2024)
 }
 
-df = pd.read_csv("Final.csv")
+df = pd.read_csv("USA_Filtered_Airline_2018-2024_FILLED.csv")
 df = df.dropna(subset=["city1", "airport_1"])
 df = df.drop_duplicates(subset=["airport_1"])
 
