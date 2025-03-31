@@ -51,14 +51,14 @@ with open("real_cities.txt", 'r') as file:
         print(f"Set {name} ({idd}) to {id_to_location[idd]}")
 
 # Open the input CSV file and create a reader object
-with open('USA_Filtered_Airline_2018-2024.csv', 'r', newline='', encoding='utf-8') as infile:
+with open('Predicted_Airlines_2025.csv', 'r', newline='', encoding='utf-8') as infile:
     reader = csv.DictReader(infile)
     # Get fieldnames from the reader to maintain header order
     fieldnames = reader.fieldnames
 
 
     # Open the output CSV file and create a writer object
-    with open('USA_Filtered_Airline_2018-2024_FILLED.csv', 'w', newline='', encoding='utf-8') as outfile:
+    with open('Predicted_Airlines_2025_FILLED.csv', 'w', newline='', encoding='utf-8') as outfile:
         writer = csv.DictWriter(outfile, fieldnames=fieldnames)
         writer.writeheader()
 
