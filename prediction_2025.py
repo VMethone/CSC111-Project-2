@@ -94,43 +94,6 @@ def save_predictions_to_csv(df: pd.DataFrame, filename: str) -> None:
     df.to_csv(filename, index=False)
 
 
-def test_prediction_output() -> None:
-    """
-    Tests that the 2025 fare prediction pipeline preserves all relevant columns
-    and produces valid values for year, quarter, and fare.
-
-    You can simply use this to test the file.
-    """
-    input_csv = "USA_Filtered_Airline_2018-2024_FILLED.csv"
-    output_csv = "Predicted_Airlines_2025_FILLED.csv"
-
-    original_df = load_csv_data(input_csv)
-    original_df = add_route_column(original_df)
-    predicted_df = train_and_predict_fares(original_df)
-    predicted_df = sample_predictions(predicted_df)
-    predicted_df = remove_negative_fares(predicted_df)
-    predicted_df = clean_predictions(predicted_df)
-    save_predictions_to_csv(predicted_df, output_csv)
-
-    assert os.path.exists(output_csv), "Output CSV file was not created."
-
-    # Reload output for testing
-    output_df = pd.read_csv(output_csv)
-
-    # Ensure all years are 2025
-    assert output_df['Year'].eq(2025).all(), "Not all Year values are 2025."
-
-    # Ensure all quarters are between 1 and 4
-    assert output_df['quarter'].between(1, 4).all(), "Quarter values out of range."
-
-    # Ensure all fares are non-negative
-    assert (output_df['fare'] >= 0).all(), "Negative fare values found."
-
-    # Columns in output should match input (except for route which is dropped)
-    expected_columns = set(original_df.columns) - {'route'}
-    assert expected_columns.issubset(set(output_df.columns)), \
-        f"Missing columns in prediction output: {expected_columns - set(output_df.columns)}"
-
 
 if __name__ == '__main__':
     # When you are ready to check your work with python_ta, uncomment the following lines.

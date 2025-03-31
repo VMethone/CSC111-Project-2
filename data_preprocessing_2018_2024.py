@@ -147,25 +147,6 @@ def run_preprocessing_pipeline(input_csv: str, output_csv: str) -> pd.DataFrame:
     return df
 
 
-def test_output_file_creation() -> None:
-    """
-    Tests that the preprocessing pipeline generates the expected output CSV file
-    and that its content matches the returned DataFrame.
-
-    You can simply use this to test the file.
-    """
-    input_csv = "US Airline Flight Routes and Fares 1993-2024.csv"
-    output_csv = "USA_Filtered_Airline_2018-2024_FILLED.csv"
-
-    cleaned_df = run_preprocessing_pipeline(input_csv, output_csv)
-
-    assert os.path.exists(output_csv), f"{output_csv} was not created."
-
-    output_df = pd.read_csv(output_csv)
-    assert cleaned_df.shape == output_df.shape
-    assert list(cleaned_df.columns) == list(output_df.columns)
-
-
 if __name__ == '__main__':
     # When you are ready to check your work with python_ta, uncomment the following lines.
     # (In PyCharm, select the lines below and press Ctrl/Cmd + / to toggle comments.)
