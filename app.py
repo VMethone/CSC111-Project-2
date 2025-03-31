@@ -359,96 +359,143 @@ def fare_trends_layout() -> Component:
             avg_fares.append({"year": year + (quarter / 4), "fare": avg_fare})
 
     df = pd.DataFrame(avg_fares)
+    mark_keys = [2018.25, 2019.25, 2020.25, 2021.25, 2022.25, 2023.25, 2024.25]
 
     return dbc.Container([
-        html.H5("Average Fare per Year"),
-        dcc.Graph(
-            figure={
-                'data': [{
-                    'x': df['year'],
-                    'y': df['fare'],
-                    'type': 'line',
-                    'name': 'Fare'
-                }],
-                'layout': {
-                    'title': 'Fare Trends (2018-2024)',
-                    'shapes': [
-                        {
-                            'type': 'line', 'x0': 2020.25, 'x1': 2020.25,
-                            'y0': 0, 'y1': 1, 'yref': 'paper',
-                            'line': {'color': 'red', 'width': 2, 'dash': 'dash'}
-                        },
-                        {
-                            'type': 'line', 'x0': 2022.5, 'x1': 2022.5,
-                            'y0': 0, 'y1': 1, 'yref': 'paper',
-                            'line': {'color': 'red', 'width': 2, 'dash': 'dash'}
-                        }
-                    ],
-                    'annotations': [
-                        {
-                            'x': 2020.25, 'y': 1,
-                            'yanchor': 'bottom',
-                            'text': 'COVID Start',
-                            'showarrow': False,
-                            'font': {'color': 'red'}
-                        },
-                        {
-                            'x': 2022.5, 'y': 1,
-                            'yanchor': 'bottom',
-                            'text': 'COVID End',
-                            'showarrow': False,
-                            'font': {'color': 'red'}
-                        }
-                    ]
-                }
-            }
-        ),
-        html.Hr(),
-        html.Div([
-            html.H5("Network Map Timeline"),
-            dcc.Graph(
-                id='network-map-timeline',
-                figure=plot_all_routes(
-                    all_flights,
-                    title="Pre-pandemic: 2018 (Q1)",
-                    valid=lambda x: (x.year == 2018 and x.quarter == 1)
-                ),
-                style={
-                    'width': '100%',
-                    'height': '80vh',
-                    'border': '1px solid #ddd',
-                    'borderRadius': '5px',
-                    'margin': '0 auto'
-                },
-                config={
-                    'scrollZoom': True,
-                    'displayModeBar': False
-                }
-            ),
-            dcc.Slider(
-                id='year-slider',
-                min=2018.25,
-                max=2024.25,
-                step=0.25,
-                value=2018.25,
-                marks={
-                    y: {'label': f"{int(y)} Q1", 'style': {'transform': 'rotate(45deg)'}}
-                    for y in [2018.25, 2019.25, 2020.25, 2021.25, 2022.25, 2023.25, 2024.25]
-                },
-                tooltip={
-                    "placement": "bottom",
-                    "always_visible": False,
-                    "template": "{value}"
-                },
-                included=False,
-                className="mt-3 mb-5"
-            )
-        ], style={
-            'maxWidth': '1200px',
-            'margin': '0 auto',
-            'padding': '20px'
-        })
-    ])
+        # Tab Title
+        html.H3("📊 Historical Fare & Network Analysis", className="text-center my-4 text-info"),  # Themed title
+
+        # --- Section 1: Overall Fare Trend ---
+        dbc.Row([
+            dbc.Col([
+                dbc.Card([
+                    dbc.CardHeader(html.H5("Average Quarterly Fare Evolution (2018-2024)", className="mb-0")),
+                    dbc.CardBody([
+                        dcc.Graph(
+                            id='fare-trend-graph',
+                            figure={
+                                'data': [{
+                                    'x': df['year'],
+                                    'y': df['fare'],
+                                    'type': 'line',
+                                    'name': 'Average Fare',
+                                    'hovertemplate': '<b>%{x:.2f}</b><br>Avg Fare: $%{y:.2f}<extra></extra>',
+                                    'line': {'color': '#17a2b8', 'width': 3}
+                                }],
+                                'layout': {
+                                    'shapes': [
+                                        {'type': 'line', 'x0': 2020.25, 'x1': 2020.25, 'y0': 0, 'y1': 0.9,
+                                         'yref': 'paper', 'line': {'color': '#e74c3c', 'width': 1.5, 'dash': 'dot'},
+                                         'name': 'COVID Start'},
+                                        {'type': 'line', 'x0': 2022.50, 'x1': 2022.50, 'y0': 0, 'y1': 0.9,
+                                         'yref': 'paper', 'line': {'color': '#28a745', 'width': 1.5, 'dash': 'dot'},
+                                         'name': 'Restrictions Ease'}  # Green for easing
+                                    ],
+                                    'annotations': [
+                                        {'x': 2020.25, 'y': 0.95, 'yref': 'paper', 'yanchor': 'bottom',
+                                         'text': 'Pandemic Start', 'showarrow': False,
+                                         'font': {'color': '#e74c3c', 'size': 11}},
+                                        {'x': 2022.50, 'y': 0.95, 'yref': 'paper', 'yanchor': 'bottom',
+                                         'text': 'Travel Resumes', 'showarrow': False,
+                                         'font': {'color': '#28a745', 'size': 11}}
+                                    ],
+                                    'template': 'plotly_white',
+                                    'margin': {'t': 20, 'b': 40, 'l': 60, 'r': 40},
+                                    'xaxis': {
+                                        'title': 'Year & Quarter',
+                                        'gridcolor': '#ecf0f1',
+                                        'tickformat': '.2f',
+                                        'showline': True, 'linecolor': '#bdc3c7', 'linewidth': 1
+                                    },
+                                    'yaxis': {
+                                        'title': 'Average Fare (USD)',
+                                        'gridcolor': '#ecf0f1',
+                                        'tickprefix': '$',
+                                        'showline': True, 'linecolor': '#bdc3c7', 'linewidth': 1
+                                    },
+                                    'hovermode': 'x unified'
+                                }
+                            },
+                            style={'height': '350px'},
+                            config={'displayModeBar': False}
+                        ),
+                        html.P(
+                            "Observe the overall trend in average domestic flight fares across major US routes.",
+                            className="text-muted small mt-2"
+                        )
+                    ])
+                ], className="shadow border-0 mb-4")
+            ], width=12)
+        ]),
+
+        # --- Section 2: Interactive Network Timeline ---
+        dbc.Row([
+            dbc.Col([
+                dbc.Card([
+                    dbc.CardHeader(html.H5("Explore Flight Network Over Time", className="mb-0")),
+                    dbc.CardBody([
+                        # --- Slider Control ---
+                        html.Div([
+                            dbc.Row([
+                                dbc.Col(html.I(className="fas fa-sliders-h me-2 fa-lg"), width="auto",
+                                        className="d-flex align-items-center text-secondary"),
+                                dbc.Col(
+                                    dcc.Slider(
+                                        id='year-slider',
+                                        min=2018.25,
+                                        max=2024.25,
+                                        step=0.25,
+                                        value=2018.25,
+                                        marks={
+                                            y: {
+                                                'label': f"{int(y)} Q1",
+                                                'style': {
+                                                    'transform': 'rotate(45deg)',
+                                                    'whiteSpace': 'nowrap',
+                                                    'fontSize': '11px',
+                                                    'color': '#7f8c8d'
+                                                }
+                                            }
+                                            for y in mark_keys
+                                        },
+                                        tooltip={
+                                            "placement": "bottom",
+                                            "always_visible": True,
+                                            "template": "{value}",
+                                            "style": {"fontSize": "14px"}
+                                        },
+                                        included=False,
+                                        className="flex-grow-1"
+                                    ),
+                                    className="px-md-5"
+                                )
+                            ], className="align-items-center mb-4")
+                        ]),
+                        # --- Network Map ---
+                        dcc.Graph(
+                            id='network-map-timeline',
+                            figure=plot_all_routes(
+                                all_flights,
+                                title="Network Map: 2018 Q1",
+                                valid=lambda x: (x.year == 2018 and x.quarter == 1)
+                            ),
+                            style={
+                                'height': '65vh',
+                                'border': '1px solid #dee2e6',
+                                'borderRadius': '5px'
+                            },
+                            config={'scrollZoom': True, 'displayModeBar': False}
+                        ),
+                        html.P(
+                            "Use the slider above to visualize the state of the flight network for any given quarter.",
+                            className="text-muted small mt-3 text-center"
+                        )
+                    ])
+                ], className="shadow border-0")
+            ], width=12)
+        ])
+
+    ], fluid=True, style={'backgroundColor': '#f8f9fa'}, className="p-4")
 
 
 @app.callback(
