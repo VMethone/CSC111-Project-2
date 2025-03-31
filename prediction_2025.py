@@ -101,8 +101,8 @@ def test_prediction_output() -> None:
 
     You can simply use this to test the file.
     """
-    input_csv = "USA_Filtered_Airline_2018-2024.csv"
-    output_csv = "Predicted_Airlines_2025.csv"
+    input_csv = "USA_Filtered_Airline_2018-2024_FILLED.csv"
+    output_csv = "Predicted_Airlines_2025_FILLED.csv"
 
     original_df = load_csv_data(input_csv)
     original_df = add_route_column(original_df)
